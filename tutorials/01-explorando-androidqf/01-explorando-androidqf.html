@@ -1347,7 +1347,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verificacion-de-la-extraccion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1357,11 +1362,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2147,32 +2147,32 @@
 <p>Este documento forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el <a data-preview="" href="../../references/00-glossary.html#diataxis">marco de referencia de documentación técnica Diataxis</a>.</p>
 <p>Este recurso en particular se enmarca dentro de la categoría de <a href="https://diataxis.fr/tutorials/">tutoriales</a>, y contiene actividades prácticas guiadas para familiarizarse con una extracción forense a través de la herramienta <a href="https://github.com/mvt-project/androidqf">AndroidQF</a>.</p>
 <p>Este tutorial tiene el <strong>objetivo de enseñar de forma prácrica</strong> de forma clara y accesible <strong>cómo usar AndroidQF para realizar extracciones forenses en dispositivos Android</strong>, destacando su utilidad en contextos de análisis de amenazas e incidentes que afectan a personas defensoras de derechos humanos, periodistas y organizaciones de la sociedad civil.</p>
-<p>!!! tip "¿Cómo seguir este tutorial?</p>
-<pre><code>Este tutorial pretende ser un **recurso para el aprendizaje**, por lo que algunos conceptos se exploran a profundidad, mostrando también alternativas y posibilidades. Si buscas una guía concisa, con instrucciones paso a paso para completar una extracción, consulta nuestra [guía de adquisición con androidqf.](../../how-tos/04-como-extraer-mediante-androidqf/04-como-extraer-mediante-androidqf.md)
-
-Se recomienda destinar un espacio de tiempo de al menos 90 minutos para la exploración inicial, es especial si no se cuenta con experiencia previa en la herramienta.
-</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">¿Cómo seguir este tutorial?</p>
+<p>Este tutorial pretende ser un <strong>recurso para el aprendizaje</strong>, por lo que algunos conceptos se exploran a profundidad, mostrando también alternativas y posibilidades. Si buscas una guía concisa, con instrucciones paso a paso para completar una extracción, consulta nuestra <a href="../../how-tos/04-como-extraer-mediante-androidqf/04-como-extraer-mediante-androidqf.html">guía de adquisición con androidqf.</a></p>
+<p>Se recomienda destinar un espacio de tiempo de al menos 90 minutos para la exploración inicial, es especial si no se cuenta con experiencia previa en la herramienta. </p>
+</div>
 <h2 id="requisitos-para-seguir-este-tutorial">Requisitos para seguir este tutorial</h2>
 <p>Para poder completar este tutorial es <strong>indispensable</strong> contar con  los siguientes elementos:</p>
 <ul>
-<li>Un <strong>dispositivo  Android</strong>. El dispositivo debe funcionar y se debe conocer su contraseña, PIN o patrón de desbloqueo, este debe contar con la <strong>depuración USB activa</strong>.</li>
-</ul>
+<li>
+<p>Un <strong>dispositivo  Android</strong>. El dispositivo debe funcionar y se debe conocer su contraseña, PIN o patrón de desbloqueo, este debe contar con la <strong>depuración USB activa</strong>.</p>
 <div class="admonition question">
 <p class="admonition-title">¿Cómo habilitar la depuración por USB?</p>
 <p>Si el dispositivo no tiene activa esta configuración, es necesario que primero sigas los pasos sobre <a href="../../how-tos/02-como-habilitar-opciones-desarrollador/02-como-habilitar-opciones-desarrollador.html">¿Cómo habilitar las opciones de desarrollador en diferentes dispositivos Android?</a> y posteriormente, seguir los pasos sobre <a href="../../how-tos/03-como-habilitar-adb/03-como-habilitar-adb.html">¿Cómo habilitar ADB (depuración por USB) en diferentes dispositivos Android?</a>. </p>
 </div>
-<ul>
+</li>
 <li>
 <p>Un <strong>equipo de cómputo</strong> con un sistema operativo Windows, Linux o macOS reciente.</p>
 </li>
 <li>
 <p>Cable USB para <strong>transferencia de datos</strong> en buen estado </p>
-</li>
-</ul>
 <div class="admonition info">
 <p class="admonition-title">No todos los cables USB son iguales</p>
 <p>Algunos cables USB no tienen las conexiones necesarias para transferir datos entre el dispositivo móvil y la computadora. Estos cables son útiles para cargar nuestro dispositivo, pero no funcionan para transferir información. Para la extracción, asegúrate de utilizar un cable que permita transferir datos. Es <a href="https://support.konnected.io/how-to-tell-a-usb-charge-only-cable-from-a-usb-data-cable">difícil distinguirlos a simple vista</a>, pero usualmente los cables de carga rápida o aquellos incluídos con los dispositivos suelen ser cables de datos. </p>
 </div>
+</li>
+</ul>
 <h2 id="acerca-de-androidqf">Acerca de AndroidQF</h2>
 <p><a href="https://github.com/mvt-project/androidqf">AndroidQF</a> es una herramienta de software libre y de código abierto <strong>enfocada en la extracción forense de dispositivos Android</strong>. Forma parte del <a href="https://github.com/mvt-project/">MVT Project</a>, desarrollada inicialmente por <a href="https://nex.sx/">Claudio Guarnieri</a> y es mantenida actualmente por el <a href="https://securitylab.amnesty.org/es/">Laboratorio de Seguridad de Amnistía Internacional</a>. </p>
 <p>Su nombre viene del inglés <em>Android Quick Forensics</em> (Forense Rápido en Android), y su diseño y elaboración están enfocados en <strong>facilitar la adquisición de información para realizar análisis forenses consensuados</strong> en contexto  de la sociedad civil.</p>
@@ -2402,7 +2402,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </code></pre></div>
 <p>El resultado se muestra en la imagen 16. </p>
 <figure>
-<!-- <img alt=" Captura de pantalla de terminal de linux con ejecución de comando *adb devices.*" src="assets/16-captura-linux-adb-devices.png" title="imagen 1" /> -->
+<p>&lt;!-- <img alt=" Captura de pantalla de terminal de linux con ejecución de comando *adb devices.*" src="assets/16-captura-linux-adb-devices.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 16</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>adb devices.</em></p>
 </figcaption>
@@ -2810,7 +2810,7 @@ adb shell ls -R /data/local/tmp/
 adb pull /data/local/tmp/ &lt;ruta_local&gt;
 ```
 </code></pre>
-<h3 id="verificacion-de-la-extraccion">Verificación de la extracción</h3>
+<h2 id="verificacion-de-la-extraccion">Verificación de la extracción</h2>
 <p>Una vez finalizada la ejecución de AndroidQF, es importante validar que la adquisición se completó correctamente. Para ello, realiza los siguientes pasos:</p>
 <ol>
 <li>
