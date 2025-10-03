@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://forensics.socialtic.org/tutorials/01-explorando-androidqf/01-explorando-androidqf.html">
       
       
+        <link rel="prev" href="../index.html">
+      
+      
+        <link rel="next" href="../../how-tos/index.html">
       
       
         
@@ -321,10 +325,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../index.html" class="md-tabs__link">
           
   
@@ -807,6 +813,8 @@
       
   
   
+    
+  
   
   
     
@@ -816,20 +824,25 @@
           
         
       
+        
+      
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -852,9 +865,14 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -865,6 +883,508 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando AndroidQF para la adquisición de información
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01-explorando-androidqf.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando AndroidQF para la adquisición de información
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-para-seguir-este-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Requisitos para seguir este tutorial
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acerca-de-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Acerca de AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acerca de AndroidQF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace-androidqf-a-nivel-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          ¿Qué hace AndroidQF a nivel técnico?
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-es-util-para-hacer-analisis-forense-en-sociedad-civil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          ¿Por qué es útil para hacer análisis forense en sociedad civil?
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-de-configuraciones-en-el-dispositivo-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Revisión de configuraciones en el dispositivo Android
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obteniendo-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Obteniendo AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obteniendo AndroidQF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descarga-e-instalacion-de-androidqf-desde-su-repositorio-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Descarga e instalación de AndroidQF desde su repositorio oficial
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternativa-compilacion-de-binario-de-androidqf-para-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Alternativa: Compilación de binario de AndroidQF para Linux
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-y-ejecucion-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Exploración y ejecución AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploración y ejecución AndroidQF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exploracion-de-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Exploración de AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecucion-de-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Ejecución de AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-durante-la-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Consideraciones durante la ejecución
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulos-ejecutados-durante-una-adquisicion-con-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Módulos ejecutados durante una adquisición con AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulos ejecutados durante una adquisición con AndroidQF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Collector
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Backup
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bugreport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Bugreport
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dumpsys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Dumpsys
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Env
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Files
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getprop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Getprop
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Logcat
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Logs
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Packages
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Processes
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-binaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Root binaries
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          SELinux
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Services
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Settings
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Temp
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacion-de-la-extraccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Verificación de la extracción
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-del-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Conclusión del tutorial
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
               
             
           </ul>
@@ -1680,20 +2200,20 @@ Se recomienda destinar un espacio de tiempo de al menos 90 minutos para la explo
 <p>Para iniciar este tutorial, es importante <strong>confirmar las configuraciones necesarias en el dispositivo Android y del equipo de cómputo</strong>, esto asegurará que haya una buena transmisión de información entre dispositivos al realizar la extracción forense.</p>
 <p>Con la depuración USB activa, es momento de <strong>conectar el dispositivo móvil al equipo de cómputo</strong> a través del cable de transferencia de archivos. Cuando conectes el teléfono, selecciona <strong>permitir</strong> en el momento en que el dispositivo Android <strong>solicite permiso de acceso a los datos del dispositivo.</strong></p>
 <figure>
-<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de acceso a datos." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de acceso a datos." src="assets/01-captura-android-permisos-datos.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 1</strong>. Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de acceso a datos.</p>
 </figcaption>
 </figure>
 <p>Posteriormente verifica en el panel de notificaciones que el dispositivo se encuentra conectado en modo <strong>USB para transferir archivos</strong> (ver imagen 2), para ello, da clic en la notificación de Sistema Android Y selecciona <em>USB para Transferir archivos/Android Auto</em> )ver imagen 3). Si no se observa ninguna notificación, puedes revisar las <strong>configuraciones de usb</strong> en el menú de ajustes del dispositivo, verificando que la opción de <em>transferencia de archivos</em> se encuentra habilitada. </p>
 <figure>
-<p><img alt=" Captura de pantalla del panel de notificaciones en dispositivo móvil android." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla del panel de notificaciones en dispositivo móvil android." src="assets/02-captura-android-panel-notificaciones.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 2</strong>. Captura de pantalla del panel de notificaciones en dispositivo móvil android.</p>
 </figcaption>
 </figure>
 <figure>
-<p><img alt="  Captura de pantalla de dispositivo móvil android con los ajustes de uso USB para transferir archivos" src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla de dispositivo móvil android con los ajustes de uso USB para transferir archivos" src="assets/03-captura-android-ajustes-usb.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 3</strong>. Captura de pantalla de dispositivo móvil android con los ajustes de uso USB para transferir archivos.</p>
 </figcaption>
@@ -1716,28 +2236,28 @@ Se recomienda destinar un espacio de tiempo de al menos 90 minutos para la explo
 <div class="tabbed-block">
 <p>En Linux y macOS: Abre la terminal y escribe <em>uname -m</em>. La salida de este comando te dirá la arquitectura de tu procesador (x86_64 o arm64). La imagen 4 muestra un ejemplo en un sistema Linux. </p>
 <figure>
-<p><img alt="  Captura de pantalla de terminal de Linux con la salida del comando *uname -m.*" src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla de terminal de Linux con la salida del comando *uname -m.*" src="assets/04-captura-linux-comando-uname.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 4</strong>. Captura de pantalla de terminal de Linux con la salida del comando <em>uname -m.</em></p>
 </figcaption>
 </figure>
 <p>Dependiendo de esta salida, descarga el binario correspondiente en la lista de descargas del <a href="https://github.com/mvt-project/androidqf/releases/">repositorio oficial de AndroidQF</a>. La imagen 5 muestra la lista de descargas. </p>
 <figure>
-<p><img alt="  Captura de pantalla de lista de descargas de androidqf en el repositorio oficial de github." src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla de lista de descargas de androidqf en el repositorio oficial de github." src="assets/05-captura-pantalla-repositorio-descargas-androidqf.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 5</strong>. Captura de pantalla de lista de descargas de androidqf en el repositorio oficial de github.</p>
 </figcaption>
 </figure>
 <p>En la imagen 6 se muestra el archivo descargado, en este caso particular la versión 1.7.0. La versión podría variar conforme se realicen actualizaciones a la herramienta. </p>
 <figure>
-<p><img alt="  Imagen de referencia de descarga de binario de AndroidQF en su versión 1.7.0 para sistema Linux amd64" src=".png" title="imagen 1" /></p>
+<p><img alt="  Imagen de referencia de descarga de binario de AndroidQF en su versión 1.7.0 para sistema Linux amd64" src="assets/06-captura-pantalla-descarga-binario-androidqf.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 6</strong>. Imagen de referencia de descarga de binario de AndroidQF en su versión 1.7.0 para sistema Linux amd64</p>
 </figcaption>
 </figure>
 <p>Opcionalmente, puedes mover el binario descargado a una carpeta exclusiva de la herramienta o a una carpeta donde realices extracciones forenses, aunque puedes mantener el binario en la carpeta de descargas.   </p>
 <figure>
-<p><img alt="  Captura de pantalla de terminal de linux con ejecución de comando *mv* para mover el binario descargado" src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla de terminal de linux con ejecución de comando *mv* para mover el binario descargado" src="assets/07-captura-linux-comando-mv.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 7</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>mv</em> para mover el binario descargado</p>
 </figcaption>
@@ -1746,7 +2266,7 @@ Se recomienda destinar un espacio de tiempo de al menos 90 minutos para la explo
 <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>./androidqf-XXX
 </code></pre></div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *chmod +x* para agregar permisos de ejecución al binario" src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *chmod +x* para agregar permisos de ejecución al binario" src="assets/08-captura-windows-explorador-binario-andoridqf.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 8</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>chmod +x</em> para agregar permisos de ejecución al binario</p>
 </figcaption>
@@ -1755,7 +2275,7 @@ Se recomienda destinar un espacio de tiempo de al menos 90 minutos para la explo
 <div class="tabbed-block">
 <p>Como se indicó anteriormente, para sistemas operativos Windows <strong>solamente existe un binario disponible</strong>, que llevará un nombre similar a <em>androidqf_v1.7.0_windows_amd64_signed.exe</em>. Para obtener AndroidQF debes descargar este archivo. En la imagen 9 mostramos una carpeta con el binario (archivo <em>.exe</em>) descargado. </p>
 <figure>
-<p><img alt=" Captura de pantalla del explorador de archivos de Windows con la carpeta del binario en la carpeta donde se guardará la extracción forense." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla del explorador de archivos de Windows con la carpeta del binario en la carpeta donde se guardará la extracción forense." src="assets/09-captura-linux-permisos-ejecucion-andoridqf.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 9</strong>. Captura de pantalla del explorador de archivos de Windows con la carpeta del binario en la carpeta donde se guardará la extracción forense.</p>
 </figcaption>
@@ -1809,7 +2329,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </code></pre></div>
 <p>Espera hasta que termine la construcción del collector, tal y como se muestra en la figura 10. .</p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando build collector." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando build collector." src="assets/10-captura-linux-make-collector.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 10</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>build collector.</em></p>
 </figcaption>
@@ -1818,7 +2338,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <div class="highlight"><pre><span></span><code>make<span class="w"> </span>linux
 </code></pre></div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *make linux.*" src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *make linux.*" src="assets/11-captura-linux-builder-done.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 11</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>make linux.</em></p>
 </figcaption>
@@ -1827,7 +2347,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <div class="highlight"><pre><span></span><code>ls<span class="w"> </span>build/
 </code></pre></div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando ls build/." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando ls build/." src="assets/12-captura-linux-ls-build.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 12</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>ls build/.</em></p>
 </figcaption>
@@ -1844,7 +2364,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <div class="tabbed-block">
 <p>Ejemplo en Linux:</p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de parámetro *–help*." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con ejecución de parámetro *–help*." src="assets/13-captura-androidqf-help.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 13</strong>. Captura de pantalla de terminal de linux con ejecución de parámetro <em>–help</em>.</p>
 </figcaption>
@@ -1854,14 +2374,14 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <p>Ejemplo en Windows: </p>
 <p>En la carpeta donde tienes guardado el binario de AndroidQF da clic derecho y selecciona opción Abrir en terminal, tal y como se muestra en la imagen 14:</p>
 <figure>
-<p><img alt=" Captura de pantalla de carpeta de Windows con el menú derecho activo y la opción *abrir en terminal* identificado" src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de carpeta de Windows con el menú derecho activo y la opción *abrir en terminal* identificado" src="assets/14-captura-windows-abrir-terminal.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 14</strong>. Captura de pantalla de carpeta de Windows con el menú derecho activo y la opción <em>abrir en terminal</em> identificado</p>
 </figcaption>
 </figure>
 <p>Una vez en la termina, puedes ejecutar el comando con el parámetro <em>–help</em>, tal y como se muestra en la imagen 15.   </p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de Windows Powershell con el parámetro *–help* ejecutado." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de Windows Powershell con el parámetro *–help* ejecutado." src="assets/15-captura-windows-androidqf-help.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 15</strong>. Captura de pantalla de terminal de Windows Powershell con el parámetro <em>–help</em> ejecutado.</p>
 </figcaption>
@@ -1882,7 +2402,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </code></pre></div>
 <p>El resultado se muestra en la imagen 16. </p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *adb devices.*" src=".png" title="imagen 1" /></p>
+<!-- <img alt=" Captura de pantalla de terminal de linux con ejecución de comando *adb devices.*" src="assets/16-captura-linux-adb-devices.png" title="imagen 1" /> -->
 <figcaption>
 <p><strong>Imagen 16</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>adb devices.</em></p>
 </figcaption>
@@ -1894,7 +2414,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </code></pre></div>
 <p>El resultado se muestra en la imagen 17. </p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de Windows PowerShell con ejecución del ejecutable *adb* y el parámetro *devices.*" src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de Windows PowerShell con ejecución del ejecutable *adb* y el parámetro *devices.*" src="assets/17-captura-windows-adb-devices.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 17</strong>. Captura de pantalla de terminal de Windows PowerShell con ejecución del ejecutable <em>adb</em> y el parámetro <em>devices.</em></p>
 </figcaption>
@@ -1903,7 +2423,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial
 </code></pre></div>
 <figure>
-<p><img alt="  Captura de pantalla de terminal de linux con integración del parámetro *-s*." src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla de terminal de linux con integración del parámetro *-s*." src="assets/18-captura-androidqf-serial-number.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 18</strong>.  Captura de pantalla de terminal de linux con integración del parámetro <em>-s</em>.</p>
 </figcaption>
@@ -1921,7 +2441,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 ```
 
 
-![  Captura de pantalla de terminal de linux con integración del parámetro *\-o*.](.png "imagen 1")
+![  Captura de pantalla de terminal de linux con integración del parámetro *\-o*.](assets/19-captura-andoridqf-output.png "imagen 1")
 /// caption
 **Imagen 19**.  Captura de pantalla de terminal de linux con integración del parámetro *\-o*.
 ///
@@ -1932,7 +2452,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>-complemento-opcional<span class="w"> </span>-v
 </code></pre></div>
 <figure>
-<p><img alt="  Captura de pantalla de terminal de linux con integración del parámetro *-o*." src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla de terminal de linux con integración del parámetro *-o*." src="assets/20-captura-androidqf-verbose.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 20</strong>.  Captura de pantalla de terminal de linux con integración del parámetro <em>-v</em>.</p>
 </figcaption>
@@ -1955,7 +2475,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </code></pre></div>
 <p>En la imagen 21 te presentamos un ejemplo de la salida en un sistema Linux. </p>
 <figure>
-<p><img alt="  Captura de pantalla de terminal de Linux con comando de ejecución preparado" src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla de terminal de Linux con comando de ejecución preparado" src="assets/21-captura-linux-ejecucion-andoridqf.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 21</strong>.  Captura de pantalla de terminal de Linux con comando de ejecución preparado.</p>
 </figcaption>
@@ -1970,7 +2490,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <div class="highlight"><pre><span></span><code>./androidqf.exe<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>Get-Date<span class="w"> </span>-Format<span class="w"> </span><span class="s1">&#39;yyyy-MM-dd&#39;</span><span class="k">)</span><span class="s2">-acquisition01</span>
 </code></pre></div>
 <figure>
-<p><img alt="  Captura de pantalla de la terminal de Windows PowerShell con comando de ejecución preparado." src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla de la terminal de Windows PowerShell con comando de ejecución preparado." src="assets/22-captura-windows-ejecuion-androidqf-terminal.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 22</strong>. Captura de pantalla de la terminal de Windows PowerShell con comando de ejecución preparado.</p>
 </figcaption>
@@ -1980,7 +2500,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </ol>
 <p>En la carpeta donde se guardó el binario se puede ejecutar el binario con doble clic.</p>
 <figure>
-<p><img alt="  Captura de pantalla del explorador de archivos con la carpeta de descarga del binario de androidqf." src=".png" title="imagen 1" /></p>
+<p><img alt="  Captura de pantalla del explorador de archivos con la carpeta de descarga del binario de androidqf." src="assets/23-captura-windows-ejecuion-androidqf-interfaz.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 23</strong>. Captura de pantalla del explorador de archivos con la carpeta de descarga del binario de androidqf.</p>
 </figcaption>
@@ -1988,14 +2508,14 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <p>Aparecerá un <strong>mensaje de protección de Windows</strong> diciendo que el sistema evitó ejecutar la aplicación para evitar riesgos, sin embargo, al ser AndroidQF una herramienta libre y de código abierto con constantes mejoras no hay una distribución comercial.</p>
 <p>Para ello da clic en <strong>“Más información”</strong> </p>
 <figure>
-<p><img alt=" Captura de pantalla de ventana emergente de protección de Windows." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de ventana emergente de protección de Windows." src="assets/24-captura-windows-proteccion.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 24</strong>. Captura de pantalla de ventana emergente de protección de Windows.</p>
 </figcaption>
 </figure>
 <p>Selecciona <strong>“Ejecutar de todas formas”</strong></p>
 <figure>
-<p><img alt=" Captura de pantalla de ventana emergente de protección de Windows con la selección de *Ejecutar de todas formas*." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de ventana emergente de protección de Windows con la selección de *Ejecutar de todas formas*." src="assets/25-captura-windows-ejecucion.png imagen 1&quot;" /></p>
 <figcaption>
 <p><strong>Imagen 25</strong>. Captura de pantalla de ventana emergente de protección de Windows con la selección de <em>Ejecutar de todas formas</em>.</p>
 </figcaption>
@@ -2014,7 +2534,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <li>
 <p>En el teléfono <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span>: Cuando aparezca el mensaje <strong><em>¿Permitir depuración por USB?</em></strong>, da clic en <strong><em>“Permitir siempre desde esta computadora”</em></strong> y luego <strong><em>“Aceptar”</em></strong> o <strong><em>“Permitir”</em></strong>.  </p>
 <figure>
-<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de depuración y confianza al equipo de cómputo para transferir archivos." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de depuración y confianza al equipo de cómputo para transferir archivos." src="assets/26-captura-android-permiso-depuracion.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 26</strong>. Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de depuración y confianza al equipo de cómputo para transferir archivos.</p>
 </figcaption>
@@ -2032,7 +2552,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <p>Para el ejemplo usamos la opción <strong>Only-SMS</strong> para limitar la extracción únicamente a mensajes, reduciendo la exposición de datos personales innecesarios. Si el contexto del caso se considera de alto riesgo o implica investigación más sofisticada se recomienda marcar la opción  <strong>Everything</strong>, aunque la opción <strong>Only-SMS</strong> en la mayoría de los casos sigue siendo suficiente para buscar intentos de phishing mediante SMS.*</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el menú backup de AndroidQF y la opción *Only-SMS* seleccionada." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con el menú backup de AndroidQF y la opción *Only-SMS* seleccionada." src="assets/27-captura-linux-only-sms.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 27</strong>. Captura de pantalla de terminal de linux con el menú backup de AndroidQF y la opción <em>Only-SMS</em> seleccionada.</p>
 </figcaption>
@@ -2047,7 +2567,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <p>Si bien reutilizar contraseñas no es una práctica de seguridad digital recomendada, es importante considerar el contexto y recordar que está contraseña protegerá únicamente uno de los archivos incluídos en la extracción forense. Sin embargo, los demás archivos recolectados no estarán cifrados, por lo que independientemente de la contraseña que se utilice, debemos manejar la carpeta de extracción como información sensible, y almacenarla únicamente en medios con medidas y estándares de protección adicional de acuerdo a nuestra política interna de manejo y protección de la información.</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando la contraseña temporal del backup “sd”" src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando la contraseña temporal del backup “sd”" src="assets/28-captura-android-contrase%C3%B1a.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 28</strong>. Captura de pantalla de dispositivo móvil Android Samsung solicitando la contraseña temporal del backup.</p>
 </figcaption>
@@ -2056,7 +2576,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <li>
 <p>En el teléfono <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span>: Posteriormente selecciona el botón<strong>: “Copia de seguridad de mis datos”.</strong></p>
 <figure>
-<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung con la opción “Copia de seguridad de mis datos” seleccionada." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung con la opción “Copia de seguridad de mis datos” seleccionada." src="assets/29-captura-android-copia-seguridad.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 29</strong>. Captura de pantalla de dispositivo móvil Android Samsung con la opción “Copia de seguridad de mis datos” seleccionada.</p>
 </figcaption>
@@ -2066,7 +2586,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <pre><code>En algunas ocasiones, suelen aparecer errores sobre la búsqueda de las rutas donde se encuentran los paquetes, por lo que es común ver algunas de estas marcas de error, sin embargo, **estas marcas de error no afectan la extracción de datos forenses en el dispositivo.***
 </code></pre>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux indicando la recolección de información de paquetes de aplicaciones por parte de AndroidQF." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux indicando la recolección de información de paquetes de aplicaciones por parte de AndroidQF." src="assets/30-captura-linux-recoleccion.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 30</strong>. Captura de pantalla de terminal de linux indicando la recolección de información de paquetes de aplicaciones por parte de AndroidQF.</p>
 </figcaption>
@@ -2085,7 +2605,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <p>Aunque nuestra recomendación es seleccionar “Only non-system packages”, la selección depende de tu enfoque de análisis e investigación, por lo que en casos con sospechas de ataques sofisticados se puede utilizar la opción “All”.*</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src="assets/31-captura-linux-copia-paquetes.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 31</strong>. Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “<em>Only non-system packages”</em> seleccionada.</p>
 </figcaption>
@@ -2099,7 +2619,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <p>Aunque nuestra recomendación es seleccionar “Yes”, la selección depende de tu enfoque de análisis e investigación, por lo que en casos con sospechas de ataques sofisticados se puede utilizar la opción “No”.</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src="assets/32-captura-linux-omision-aplicaciones.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 32</strong> Captura de pantalla de terminal de linux con el menú de omisión de aplicaciones con certificado confiable de AndroidQF y la opción Yes seleccionada.</p>
 </figcaption>
@@ -2110,7 +2630,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <p><strong>Esta etapa puede tomar varios minutos</strong>, dependiendo del modelo del teléfono y la cantidad de datos almacenados. El progreso se muestra línea por línea en la terminal y no requiere intervención adicional, salvo al final, donde se debe presionar Enter para completar.</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src="assets/33-captura-pantalla-ejecucion-correcta.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 33</strong> Captura de pantalla de terminal de linux con información de ejecución correcta de la extracción forense con AndroidQF y solicitando presionar <em>“Enter”</em> para terminar.</p>
 </figcaption>
@@ -2329,7 +2849,7 @@ adb pull /data/local/tmp/ &lt;ruta_local&gt;
 </code></pre></div>
 <p>La imagen 34 muestra la salida de búsqueda de errores en un sistema Linux.</p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el comando *grep* para buscar errores en el archivo command.log generado por AndoridQF." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con el comando *grep* para buscar errores en el archivo command.log generado por AndoridQF." src="assets/34-captura-pantalla-terminal-linux-errores.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 34</strong> Captura de pantalla de terminal de linux con el comando <em>grep</em> para buscar errores en el archivo command.log generado por AndoridQF.</p>
 </figcaption>
@@ -2339,7 +2859,7 @@ adb pull /data/local/tmp/ &lt;ruta_local&gt;
 <p>Abre el archivo con <em>Bloc de notas</em>. Si usas WIndows en español presiona  la combinación de teclas <strong>ctrl+b</strong> y si usas WIndows en inglés o portugues, utiliza  <strong>ctrl+f.</strong> Luego escribe <strong><em>WARNING</em></strong> y <strong><em>ERROR</em></strong> en el cuadro de búsqueda.</p>
 <p>La figura 35 muestra la salida de una búsqueda de errores en Windows. en este caso, no se encuentran  errores referentes al proceso de extracción forense.</p>
 <figure>
-<p><img alt=" Captura de pantalla de Bloc de notas de Windows con la búsqueda de  errores en el archivo command.log generado por AndoridQF." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de Bloc de notas de Windows con la búsqueda de  errores en el archivo command.log generado por AndoridQF." src="assets/35-captura-pantalla-windows-errores.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 35</strong> Captura de pantalla de Bloc de notas de Windows con la búsqueda de  errores en el archivo command.log generado por AndoridQF.</p>
 </figcaption>
@@ -2409,7 +2929,7 @@ adb pull /data/local/tmp/ &lt;ruta_local&gt;
 </ul>
 <p>Esto significa que los módulos se ejecutaron correctamente.</p>
 <figure>
-<p><img alt=" Captura de pantalla de la aplicación archivos en PopOS! mostrando la carpeta de salida de archivos y directorios generados con la extracción forense con AndroidQF." src=".png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de la aplicación archivos en PopOS! mostrando la carpeta de salida de archivos y directorios generados con la extracción forense con AndroidQF." src="assets/36-captura-pantalla-archivos-salida.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 36</strong> Captura de pantalla de la aplicación archivos en PopOS! mostrando la carpeta de salida de archivos y directorios generados con la extracción forense con AndroidQF.</p>
 </figcaption>
@@ -2504,6 +3024,44 @@ adb pull /data/local/tmp/ &lt;ruta_local&gt;
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Inicio">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Inicio
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../how-tos/index.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Inicio">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Inicio
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
