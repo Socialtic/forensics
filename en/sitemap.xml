@@ -2,110 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://forensics.socialtic.org/en/index.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/getting-started.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/roadmap.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/index.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/code-of-conduct.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/contributors.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/how-to-contribute.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/language-guide-en.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/license.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/limitation-of-responsibility.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/translations-localization-l10n.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/community/why-support.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/explainers/index.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/explainers/01-explainer-introduction-digital-forensics/01-explainer-introduction-digital-forensics.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/explainers/02-explainer-risks-threats/02-explainer-risks-threats.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/explainers/03-explainer-log-forensics-android/03-explainer-log-forensics-android.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/how-tos/index.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/how-tos/01-how-to-obtain-informed-consent/01-how-to-obtain-informed-consent.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/how-tos/02-how-to-enable-developer-options/02-how-to-enable-developer-options.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/how-tos/03-how-to-enable-adb/03-how-to-enable-adb.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/how-tos/04-how-to-extract-with-androidqf/04-how-to-extract-with-androidqf.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/how-tos/05-how-to-extract-bugreport/05-how-to-extract-bugreport.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/references/index.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/references/00-glossary.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/references/01-reference-androidqf-dictionary/01-reference-androidqf-dictionary.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/references/02-reference-mvt-bugreport-dictionary/02-reference-mvt-bugreport-dictionary.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://forensics.socialtic.org/en/tutorials/index.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
 </urlset>
