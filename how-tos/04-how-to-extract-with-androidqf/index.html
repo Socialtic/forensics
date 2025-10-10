@@ -1,0 +1,2440 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación para investigaciones forenses consentidas en Sociedad Civil">
+      
+      
+        <meta name="author" content="{'name': 'José Martínez', 'url': 'https://socialtic.org/quienes-somos/', 'description': 'SocialTIC'}">
+      
+      
+        <link rel="canonical" href="https://forensics.socialtic.org/how-tos/04-how-to-extract-with-androidqf/index.html">
+      
+      
+        <link rel="prev" href="../05-how-to-extract-bugreport/index.html">
+      
+      
+        <link rel="next" href="../../references/index.html">
+      
+      
+        
+          <link rel="alternate" href="index.html" hreflang="es">
+        
+          <link rel="alternate" href="../../en/how-tos/04-how-to-extract-with-androidqf/index.html" hreflang="en">
+        
+          <link rel="alternate" href="../../pt/how-tos/04-how-to-extract-with-androidqf/index.html" hreflang="pt">
+        
+      
+      
+      <link rel="icon" href="../../assets/img/ST_logo-01-bn.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21+insiders-4.53.17">
+    
+    
+      
+        <title>Adquisición y extracción de dispositivos Android mediante AndroidQF - SocialTIC Forensics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.010a373c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/user.config.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-como-realizar-una-extraccion-mediante-androidqf" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+    
+    
+    
+    
+    <script>
+        const gGM_SELECT_VERSION = "Seleccionar versión";
+        const gGMC_TRANSLATE_CTA = "";
+        const gGMC_PAGE_LOCALE = "es";
+        const gGMC_FILE_LOCALE = "es";
+        const gGMC_TRANSLATE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 12c0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2 0 .37-.03.73-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10C6.47 2 2 6.5 2 12s4.5 10 10 10c.59 0 1.16-.06 1.72-.16A5.9 5.9 0 0 1 13 19c0-.29.03-.57.07-.85-.32.63-.67 1.24-1.07 1.81-.83-1.2-1.5-2.53-1.91-3.96h3.72a5.95 5.95 0 0 1 2.59-2.4c.06-.53.1-1.06.1-1.6M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2zm.82 2H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m6.34 6H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2m.25-9.56c1.84.63 3.37 1.9 4.33 3.56h-2.95a15.7 15.7 0 0 0-1.38-3.56M23 18v2h-3v3h-2v-3h-3v-2h3v-3h2v3z"/></svg>';
+    </script>
+    
+    
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="SocialTIC Forensics" class="md-header__button md-logo" aria-label="SocialTIC Forensics" data-md-component="logo">
+      
+  <img src="../../assets/img/ST_logo-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SocialTIC Forensics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Adquisición y extracción de dispositivos Android mediante AndroidQF
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="index.html" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/how-tos/04-how-to-extract-with-androidqf/index.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/how-tos/04-how-to-extract-with-androidqf/index.html" hreflang="pt" class="md-select__link">
+              Portuguese
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Socialtic/forensics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../explainers/index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.9 8.9-1.7 1-4-6.9 1.7-1zm-12.1-1 3 5.2 6.1-3.5-3-5.2zm1.6 4.8-2-3.5-4.3 2.5 2 3.5zm-9.3 1.9 1 1.7 2.6-1.5-1-1.7zm10-.6-.3-.4-4.3 2.5.3.4c.2.3.5.6.8.8L7 22h2l1.4-4.3h.1L12 22h2l-1.9-5.6c.5-.7.5-1.6 0-2.4"/></svg>
+    
+  
+  Explainers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+    
+  
+  Tutoriales
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.94 17.94a3.3 3.3 0 0 0 0-.89l.97-.73a.22.22 0 0 0 .06-.29l-.92-1.56c-.05-.1-.19-.14-.29-.1l-1.15.45c-.24-.17-.49-.32-.78-.44l-.17-1.19a.235.235 0 0 0-.23-.19h-1.85c-.12 0-.22.08-.24.19l-.17 1.19c-.29.12-.54.27-.78.44l-1.15-.45c-.1-.04-.24 0-.28.1l-.93 1.56c-.06.1-.03.22.06.29l.97.73c-.01.15-.03.3-.03.45s.02.29.03.44l-.97.74a.22.22 0 0 0-.06.29l.93 1.56c.04.1.18.13.28.1l1.15-.46c.24.18.49.33.78.45l.17 1.19c.02.11.12.19.24.19h1.85c.11 0 .21-.08.23-.19l.17-1.19c.29-.12.54-.27.78-.45l1.15.46c.1.03.24 0 .29-.1l.92-1.56a.22.22 0 0 0-.06-.29zM16.5 19c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M9 2c1.8.6 3 2.3 3 4.2 0 2-1.2 3.7-3 4.3v11c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.6v-11c-1.8-.6-3-2.3-3-4.2S4.2 2.6 6 2v3.7h3z"/></svg>
+    
+  
+  How-to's
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../references/index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m1.39 18.36 1.77-1.76L4.58 18l1.06-1.05-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.42 1.41L10.59 12l-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.41 1.41 1.07-1.06-1.42-1.41 1.42-1.42L18 6.7l1.07-1.06-2.47-2.48 1.76-1.77 4.25 4.25L5.64 22.61z"/></svg>
+    
+  
+  Referencias
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../community/index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+    
+  
+  Comunidad
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="SocialTIC Forensics" class="md-nav__button md-logo" aria-label="SocialTIC Forensics" data-md-component="logo">
+      
+  <img src="../../assets/img/ST_logo-01.png" alt="logo">
+
+    </a>
+    SocialTIC Forensics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Socialtic/forensics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/getting-started/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-4 4.9V21h-2v-4.1A5 5 0 0 1 7 12a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeros pasos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/roadmap/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 11H1v2h6zm2.17-3.24L7.05 5.64 5.64 7.05l2.12 2.12zM13 1h-2v6h2zm5.36 6.05-1.41-1.41-2.12 2.12 1.41 1.41zM17 11v2h6v-2zm-5-2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m2.83 7.24 2.12 2.12 1.41-1.41-2.12-2.12zm-9.19.71 1.41 1.41 2.12-2.12-1.41-1.41zM11 23h2v-6h-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoja de que ruta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Comunidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../explainers/index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.9 8.9-1.7 1-4-6.9 1.7-1zm-12.1-1 3 5.2 6.1-3.5-3-5.2zm1.6 4.8-2-3.5-4.3 2.5 2 3.5zm-9.3 1.9 1 1.7 2.6-1.5-1-1.7zm10-.6-.3-.4-4.3 2.5.3.4c.2.3.5.6.8.8L7 22h2l1.4-4.3h.1L12 22h2l-1.9-5.6c.5-.7.5-1.6 0-2.4"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Explainers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Explainers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/01-explainer-introduction-digital-forensics/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción a la forense digital consentida
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/02-explainer-risks-threats/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riesgos y amenazas para laboratorios forenses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/03-explainer-log-forensics-android/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principios para forense basada en logs en Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorials/index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriales
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/01-tutorial-learning-androidqf/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando AndroidQF para la adquisición de información
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.94 17.94a3.3 3.3 0 0 0 0-.89l.97-.73a.22.22 0 0 0 .06-.29l-.92-1.56c-.05-.1-.19-.14-.29-.1l-1.15.45c-.24-.17-.49-.32-.78-.44l-.17-1.19a.235.235 0 0 0-.23-.19h-1.85c-.12 0-.22.08-.24.19l-.17 1.19c-.29.12-.54.27-.78.44l-1.15-.45c-.1-.04-.24 0-.28.1l-.93 1.56c-.06.1-.03.22.06.29l.97.73c-.01.15-.03.3-.03.45s.02.29.03.44l-.97.74a.22.22 0 0 0-.06.29l.93 1.56c.04.1.18.13.28.1l1.15-.46c.24.18.49.33.78.45l.17 1.19c.02.11.12.19.24.19h1.85c.11 0 .21-.08.23-.19l.17-1.19c.29-.12.54-.27.78-.45l1.15.46c.1.03.24 0 .29-.1l.92-1.56a.22.22 0 0 0-.06-.29zM16.5 19c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M9 2c1.8.6 3 2.3 3 4.2 0 2-1.2 3.7-3 4.3v11c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.6v-11c-1.8-.6-3-2.3-3-4.2S4.2 2.6 6 2v3.7h3z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    How-to's
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How-to's
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-how-to-obtain-informed-consent/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo obtener y documentar consentimiento informado?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-how-to-enable-developer-options/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo habilitar las opciones de desarrollador en Android?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-how-to-enable-adb/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo habilitar ADB en Android?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-how-to-extract-bugreport/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo generar un reporte de errores en Android?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo realizar una extracción mediante AndroidQF?
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo realizar una extracción mediante AndroidQF?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          ¿Qué es AndroidQF?
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-necesito-para-realizar-una-extraccion-con-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          ¿Qué necesito para realizar una extracción con AndroidQF?
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-para-obtener-un-extraccion-forense-con-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Pasos para obtener un extracción forense con AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pasos para obtener un extracción forense con AndroidQF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descargar-el-binario-en-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Descargar el binario en AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignar-permisos-de-ejecucion-al-binario-descargado-solo-linux-y-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Asignar permisos de ejecución al binario descargado (<strong>solo Linux y macOS</strong>)
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectar-el-telefono" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Conectar el teléfono
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutar-androidqf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Ejecutar AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirmar-y-configurar-la-extraccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9h-4v2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9v-2h4v-2H9V7h6m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Confirmar y configurar la extracción
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-la-extraccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9h-4v2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-8 12h2v-2h-2z"/></svg></span> Verificar la extracción
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Conclusión
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Comentarios
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../references/index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m1.39 18.36 1.77-1.76L4.58 18l1.06-1.05-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.42 1.41L10.59 12l-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.41 1.41 1.07-1.06-1.42-1.41 1.42-1.42L18 6.7l1.07-1.06-2.47-2.48 1.76-1.77 4.25 4.25L5.64 22.61z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencias
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Referencias
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/00-glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glosario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/01-reference-androidqf-dictionary/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario AndroidQF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/02-reference-mvt-bugreport-dictionary/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario MVT bugreport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../community/index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Comunidad
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comunidad
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/why-support/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Por qué contribuir con este repositorio?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/how-to-contribute/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo colaborar con este repositorio?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/contributors/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuidores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/language-guide/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mejores prácticas para el idioma español
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/translation-localization-i10n/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traducciones y localizaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/license/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licencia de uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/code-of-conduct/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Código de conducta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/limitation-of-responsibility/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limitación de responsabilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../index.html" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../index.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    How-to's
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Socialtic/forensics/edit/main/docs/es/es/how-tos/04-how-to-extract-with-androidqf/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Socialtic/forensics/raw/main/docs/es/es/how-tos/04-how-to-extract-with-androidqf/index.md" title="Ver código fuente de esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="guia-como-realizar-una-extraccion-mediante-androidqf">Guia: ¿Cómo realizar una extracción mediante AndroidQF?</h1>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-01'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-01T00:00:00'>2025-08-01</time></span><span data-tippy-content data-tippy-raw='2025-08-01'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-08-01T00:00:00'>2025-08-01</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org/quienes-somos/" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class="avatar" src="../../assets/external/avatars.githubusercontent.com/Socialtic.png"></div></div></div></div>
+
+<p>Este recurso se enmarca dentro de la categoría de <a href="../">Guia, how-to</a>, y contiene las instrucciones para realizar una extracción forense con la herramienta <a data-preview="" href="../../references/00-glossary/index.html#androidqf">AndroidQF</a>.</p>
+<h2 id="que-es-androidqf">¿Qué es AndroidQF?</h2>
+<p><a href="https://github.com/mvt-project/androidqf">AndroidQF</a> es una herramienta de software libre y de código abierto <strong>enfocada en la extracción forense de dispositivos Android</strong>. Actualmente mantenida por el <a href="https://securitylab.amnesty.org/es/">Laboratorio de Seguridad de Amnistía Internacional</a>. </p>
+<p>Su enfoque está pensado especialmente para periodistas, activistas, defensores de derechos humanos y los <strong>laboratorios técnicos que acompañan casos de vigilancia digital y amenazas de software espía.</strong></p>
+<p>AndroidQF funciona como un <a href="https://developer.mozilla.org/en-US/docs/Glossary/Wrapper">wrapper</a> forense sobre <a data-preview="" href="../../references/00-glossary/index.html#adb">ADB</a>, automatizando comandos comunes mediante módulos que <strong>permiten realizar extracciones rápidas, seguras y locales desde cualquier sistema operativo (Linux, Windows o macOS)</strong>, sin depender de servicios en la nube ni instalaciones complejas.</p>
+<p>Su utilidad en contextos de sociedad civil radica en su <strong><a data-preview="" href="../../references/00-glossary/index.html#herramienta-portable">portabilidad</a>, facilidad de uso y ejecución local.</strong></p>
+<p>Esta guía es complementaria se complementa con otros materiales, como el <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">diccionario de archivos generados por AndroidQF</a>, sus formatos y recomendaciones de uso o el <a href="../../explainers/03-explainer-log-forensics-android/">explainer sobre forense basada en logs para dispositivos Android</a>.</p>
+<h2 id="que-necesito-para-realizar-una-extraccion-con-androidqf">¿Qué necesito para realizar una extracción con AndroidQF?</h2>
+<p>Para poder realizar una extracción con AndroidQF es <strong>necesario</strong>:</p>
+<ul>
+<li>El <strong>dispositivo Android a ser analizado</strong>: Activar el <strong><a data-preview="" href="../../references/00-glossary/index.html#modo-de-desarrollador">modo desarrollador</a></strong> y <strong><a data-preview="" href="../../references/00-glossary/index.html#adb">activar la depuración por USB</a></strong>. De ser necesario, consulta nuestras <a href="../02-how-to-enable-developer-options/">guías sobre habilitar opciones de desarrollador</a> o <a href="../03-how-to-enable-adb/">la guía sobre cómo habilitar ADB</a>. </li>
+<li><strong>Computadora Windows, Linux o Mac</strong>: Se utilizará para realizar la extracción. Es necesario conocer cuál es <a href="https://servernet.com.ar/como-saber-si-mi-procesador-es-amd-o-arm/">chip integrado del equipo</a> </li>
+<li>Tener un <strong>cable para transferencia de archivos</strong> telefono-computadora. </li>
+</ul>
+<h2 id="pasos-para-obtener-un-extraccion-forense-con-androidqf">Pasos para obtener un extracción forense con AndroidQF</h2>
+<p>A continuación se presentan los pasos detallados para realizar la extracción forense:</p>
+<h3 id="descargar-el-binario-en-androidqf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Descargar el binario en AndroidQF</h3>
+<ul>
+<li>
+<p><strong>Descarga</strong> la versión más reciente del <a data-preview="" href="../../references/00-glossary/index.html#binario">binario</a>, y que <strong>corresponda a la arquitectura del equipo</strong> de cómputo donde se va a ejecutar. La descarga se realiza de los releases del repositorio: <a href="https://github.com/mvt-project/androidqf/releases/">https://github.com/mvt-project/androidqf/releases/</a> </p>
+<div class="admonition question">
+<p class="admonition-title">¿Cómo identificar la arquitectura?</p>
+<p>Si no estás seguro cuál es la arquitectura del equipo que estás utilizando, consulta este <a href="https://servernet.com.ar/como-saber-si-mi-procesador-es-amd-o-arm/">recurso para conocer cuál es el chip integrado en el dispositivo</a>. </p>
+</div>
+</li>
+<li>
+<p><strong>Crea una nueva carpeta</strong> para almacenar la exrtacción del dispositivo. Mueve el binario recién descargado a esta carpeta.</p>
+</li>
+</ul>
+<h3 id="asignar-permisos-de-ejecucion-al-binario-descargado-solo-linux-y-macos"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Asignar permisos de ejecución al binario descargado (<strong>solo Linux y macOS</strong>)</h3>
+<ul>
+<li>
+<p>Si estás utilizando un equipo con <strong>Linux o macOS</strong> para la extracción, es necesario asignar el permiso de ejcución al archivo antes de poder ejecutarlo. Para esto, <strong>abre una terminal y navega a la carpeta donde se encuentra el binario</strong>, luego ejecuta:</p>
+<div class="admonition warning">
+<p class="admonition-title">Completa el nombre</p>
+<p>Al ejecutar el comando, <strong>asegúrate de completar el nombre</strong> <em>androidqf_</em> con el nombre completo del binario descargado en el paso 1. El comando resultante será algo como: </p>
+<div class="highlight"><pre><span></span><code>chmod +x ./androidqf_v1.7.1_linux_amd64
+</code></pre></div>
+</div>
+<p><strong>En linux:</strong></p>
+<div class="highlight"><pre><span></span><code>chmod +x ./androidqf_
+</code></pre></div>
+<p><strong>En macOS:</strong></p>
+<div class="highlight"><pre><span></span><code>chmod +x ./androidqf_
+</code></pre></div>
+</li>
+</ul>
+<h3 id="conectar-el-telefono"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Conectar el teléfono</h3>
+<ul>
+<li>
+<p><strong>Conecta</strong>  el dispositivo desbloqueado a la computadora utilizando un cable de datos USB.</p>
+<div class="admonition failure">
+<p class="admonition-title">No todos los cables USB son iguales</p>
+<p>Algunos cables USB no tienen las conexiones necesarias para transferir datos entre el dispositivo móvil y la computadora. Asegúrate de utilizar un cable que permita transferir datos. Es <a href="https://support.konnected.io/how-to-tell-a-usb-charge-only-cable-from-a-usb-data-cable">difícil distinguirlos a simple vista</a>, pero usualmente los cables de carga rápida o aquellos incluídos con los dispositivos suelen ser cables de datos.  </p>
+</div>
+</li>
+<li>
+<p>Cuando se conecte el teléfono, aparecerá un nuevo mensaje. Selecciona <strong>permitir</strong> cuando el dispositivo Android <strong>solicite permiso de acceso a los datos del dispositivo</strong>, tal y como se muestra en la imagen 1.</p>
+<div class="admonition failure">
+<p class="admonition-title">No aparece ningún mensaje</p>
+<p>Si al conectar el dispositivo a la computadora no te aparece ningún mensaje sobre permisos, revisa lo siguiente: </p>
+<ul>
+<li>Asegúrate que la <a href="../03-how-to-enable-adb/">depuración por USB se encuentre habilitada</a>.</li>
+<li>Revisa las <strong>configuraciones de USB</strong> y asegúrate que la opción de <em>transferencia de archivos</em> se encuentra habilitada.</li>
+<li>Asegúrate de que el cable USB sea un <strong>cable de datos</strong>. </li>
+</ul>
+</div>
+<figure>
+<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de acceso a datos." src="../../assets/04-how-to/01-captura-android-permisos-datos.png" title="imagen 1" /></p>
+<figcaption>
+<p><strong>Imagen 1</strong>. Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de acceso a datos.</p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<h3 id="ejecutar-androidqf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Ejecutar AndroidQF</h3>
+<p>En este punto es posible ejecutar androidQF siguiendo estas instrucciones:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux y MacOS</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Ejecuta con el <strong>siguiente comando</strong>. <strong>Asegúrate de completar</strong> <em>androidqf_</em> con el nombre completo del binario descargado. </p>
+<div class="highlight"><pre><span></span><code>./androidqf-linux-v?
+./androidqf-macos-v?
+</code></pre></div>
+<figure>
+<p><img alt="Captura de pantalla de terminal de linux con ejecución del binario para el inicio de la extracción" src="../../assets/04-how-to/02-captura-terminal-linux-ejecucion.png" title="imagen 2" /></p>
+<figcaption>
+<p><strong>Imagen 2</strong>. Captura de pantalla de terminal de linux con ejecución del binario para el inicio de la extracción</p>
+</figcaption>
+</figure>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Ingresa a la carpeta donde se guardó el binario descargado en el paso 1, y <strong>da doble click primario sobre el archivo.</strong> Aparecerá una ventana de protección de Windows, da click en <strong>“Más información”</strong></li>
+</ul>
+<figure>
+<p><img alt="Captura de pantalla de ventana emergente de protección de Windows." src="../../assets/04-how-to/03-captura-terminal-windows-ejecucion.png" title="imagen 3" /></p>
+<figcaption>
+<p><strong>Imagen 3</strong>. Captura de pantalla de ventana emergente de protección de Windows.</p>
+</figcaption>
+</figure>
+<ul>
+<li>Selecciona <strong>“Ejecutar de todas formas”</strong></li>
+</ul>
+<figure>
+<p><img alt="Captura de pantalla de ventana emergente de protección de Windows con la selección de ejecutar de todas formas.." src="../../assets/04-how-to/04-captura-pantalla-proteccion-windows.png" title="imagen 4" /></p>
+<figcaption>
+<p><strong>Imagen 4</strong>. Captura de pantalla de ventana emergente de protección de Windows con la selección de ejecutar de todas formas.</p>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<h3 id="confirmar-y-configurar-la-extraccion"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9h-4v2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9v-2h4v-2H9V7h6m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Confirmar y configurar la extracción</h3>
+<p>Los próximos pasos se aplicarán de la <strong>misma manera</strong> en los 3 sistemas operativos considerados en este tutorial: <strong>Linux, Windows and macOS.</strong></p>
+<ul>
+<li>
+<p><strong>AndroidQF identificará el dispositivo de forma automática una vez que permita la depuración USB</strong> y generará una carpeta con un identificador único (UUID). En esta carpeta se almacenará la extracción. </p>
+<p>!!! question ¿Qué es un UUID?  </p>
+<pre><code>Es un número generado de forma aleatoria, tse expresa mediante 32 dígitos hexadecimales divididos en cinco grupos separados por guiones de la forma 8-4-4-4-12 lo que da un total de 36 caracteres (32 dígitos y 4 guiones), por ejemplo ```0caba18f-20a7-48d0-b9ba-724fdaa3ff85```
+</code></pre>
+</li>
+<li>
+<p>Posteriormente <strong>AndroidQF preguntará el tipo de respaldo</strong> que realizará la herramienta:</p>
+<ul>
+<li><strong>Only</strong> <strong>SMS</strong>: Realiza un respaldo limitado que incluye solo mensajes SMS y MMS.</li>
+<li><strong>Everything</strong>: Ejecuta un respaldo completo del dispositivo mediante adb backup.</li>
+<li><strong>No</strong> <strong>Backup</strong>: Omite completamente la generación de respaldos; solo extrae otros artefactos vía ADB.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Alternativa</p>
+<p>Para el ejemplo usamos la opción <strong>Only-SMS</strong> para limitar la extracción únicamente a mensajes, reduciendo la exposición de datos personales innecesarios. Si el <strong>contexto del caso se considera de alto riesgo</strong> o implica investigación más sofisticada se recomienda marcar la opción  <strong>Everything</strong>, aunque la opción <strong>Only-SMS</strong> en la mayoría de los casos sigue siendo suficiente para buscar intentos de phishing mediante SMS.</p>
+</div>
+<figure>
+<p><img alt="Captura de pantalla de terminal de linux con el menú backup de AndroidQF y la opción Only SMS seleccionada." src="../../assets/04-how-to/06-captura-linux-only-sms.png" title="imagen 7" /></p>
+<figcaption>
+<p><strong>Imagen 6</strong>. Captura de pantalla de terminal de linux con el menú backup de AndroidQF y la opción Only SMS seleccionada.</p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p>Al seleccionar el tipo de respaldo, el teléfono solicitará utilizar una <strong>contraseña temporal de cifrado</strong> para cifrar el <a data-preview="" href="../../references/00-glossary/index.html#respaldo-generado-por-adb">respaldo generado a través de ADB</a>. En nuestro ejemplo utilizamos <strong>la contraseña “sd”</strong> de seguridad digital en español, tal y como se muestra en la imagen 7. </p>
+<div class="admonition warning">
+<p class="admonition-title">Alternativa</p>
+<p>Esta contraseña permite cifrar la copia de seguridad que se genera al ejecutar androidqf. En caso de generar <strong>contraseñas aleatorias</strong>, asegúrate de utilizar un <strong>gestor con adecuadas prácticas de respaldo</strong>. De lo contrario, y sino representa un riesgo, establece una contraseá simple y equivalente para todas tus extracciones.</p>
+</div>
+<figure>
+<p><img alt="Captura de pantalla de dispositivo móvil Android Samsung solicitando la contraseña temporal del backup sd" src="../../assets/04-how-to/07-captura-android-contrase%C3%B1a.png" title="imagen 7" /></p>
+<figcaption>
+<p><strong>Imagen 7</strong>. Captura de pantalla de dispositivo móvil Android Samsung solicitando la contraseña temporal del backup “sd”</p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p>Selecciona: <strong>“Copia de seguridad de mis datos”.</strong></p>
+<figure>
+<p><img alt="Captura de pantalla de dispositivo móvil Android Samsung con la opción “Copia de seguridad de mis datos” seleccionada" src="../../assets/04-how-to/08-captura-android-copia-seguridad.png" title="imagen 8" /></p>
+<figcaption>
+<p><strong>Imagen 8</strong>. Captura de pantalla de dispositivo móvil Android Samsung con la opción “Copia de seguridad de mis datos” seleccionada</p>
+</figcaption>
+</figure>
+<div class="admonition failure">
+<p class="admonition-title">Mensajes de errores esperados</p>
+<p>En algunas ocasiones, suelen aparecer errores sobre la búsqueda de las rutas donde se encuentran los paquetes, por lo que es común ver algunas de estas marcas de error, sin embargo, <strong>estas marcas de error no afectan la extracción de datos forenses en el dispositivo.</strong>*</p>
+</div>
+<figure>
+<p><img alt="Captura de pantalla de terminal de linux indicando la recolección de información de paquetes de aplicaciones por parte de AndroidQF." src="../../assets/04-how-to/09-captura-linux-recoleccion.png" title="imagen 9" /></p>
+<figcaption>
+<p><strong>Imagen 9</strong>. Captura de pantalla de terminal de linux indicando la recolección de información de paquetes de aplicaciones por parte de AndroidQF.</p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p>Cuando AndoridQF encuentra todos los paquetes instalados en el dispositivo preguntará qué <strong>tipo de copias de las aplicaciones se desea descargar, para ello hay 3 opciones</strong>:  </p>
+<ul>
+<li><strong>All</strong>: Descarga los <a data-preview="" href="../../references/00-glossary/index.html#apk">APK</a> de todas las aplicaciones, incluidas las del sistema.  </li>
+<li><strong>Only</strong> <strong>non-system</strong> <strong>packages</strong>: Descarga solo los APK de aplicaciones instaladas por el usuario.  </li>
+<li><strong>Do</strong> <strong>not</strong> <strong>download</strong> <strong>any</strong>: Omite completamente la descarga de APKs del dispositivo.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Alternativa</p>
+<p>Aunque nuestra recomendación es seleccionar “Only non-system packages”, la selección depende de tu enfoque de análisis e investigación, por lo que en casos con sospechas de ataques sofisticados se puede utilizar la opción “All”.</p>
+</div>
+<figure>
+<p><img alt="Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción Only non-system packages seleccionada." src="../../assets/04-how-to/10-captura-linux-copia-paquetes.png" title="imagen 10" /></p>
+<figcaption>
+<p><strong>Imagen 10</strong>. Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción Only non-system packages seleccionada.</p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p>Una vez seleccionada la opción de descargas de copias de paquetes, <strong>AndroidQF preguntará acerca de eliminar los <a data-preview="" href="../../references/00-glossary/index.html#apk">APKs</a></strong> firmados por desarrolladores o entidades confiables (como Google o el fabricante del dispositivo), esto con el fin de reducir el tamaño de la carpeta de extracción.</p>
+<ul>
+<li>Responde <strong>“Yes”</strong> para que, al realizar la revisión de la información se pueda <strong>enfocar el análisis en los paquetes que sean potencialmente sospechosos</strong>, además de que ahorrará tiempo y espacio de almacenamiento.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Alternativa</p>
+<p>Aunque nuestra recomendación es seleccionar “Yes”, la selección depende de tu enfoque de análisis e investigación, por lo que en casos con sospechas de ataques sofisticados se puede utilizar la opción “No”.</p>
+</div>
+<figure>
+<p><img alt="Captura de pantalla de terminal de linux con el menú de omisión de aplicaciones con certificado confiable de AndroidQF y la opción Yes seleccionada." src="../../assets/04-how-to/11-captura-linux-omision-aplicaciones.png" title="imagen 11" /></p>
+<figcaption>
+<p><strong>Imagen 11</strong>. Captura de pantalla de terminal de linux con el menú de omisión de aplicaciones con certificado confiable de AndroidQF y la opción Yes seleccionada.</p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p><strong>Espera</strong> a que todos los módulos de AndroidQF se ejecuten de acuerdo a su programación.</p>
+<div class="admonition info">
+<p class="admonition-title">Duración del proceso</p>
+<p><strong>Esta etapa puede tomar varios minutos</strong>, dependiendo del modelo del teléfono y la cantidad de datos almacenados. El progreso se muestra línea por línea en la terminal y no requiere intervención adicional, salvo al final, donde se debe presionar Enter para completar.</p>
+</div>
+<figure>
+<p><img alt="Captura de pantalla de terminal de linux con el menú de omisión de aplicaciones con certificado confiable de AndroidQF y la opción Yes seleccionada." src="../../assets/04-how-to/12-captura-pantalla-ejecucion-correcta.png" title="imagen 12" /></p>
+<figcaption>
+<p><strong>Imagen 12</strong>. Captura de pantalla de terminal de linux con información de ejecución correcta de la extracción forense con AndroidQF y solicitando presionar enter para terminar.</p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<h3 id="verificar-la-extraccion"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9h-4v2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-8 12h2v-2h-2z"/></svg></span> Verificar la extracción</h3>
+<p>Una vez finalizada la ejecución de AndroidQF, es importante <strong>validar que la adquisición se completó correctamente</strong>. Para ello, realiza los siguientes pasos:</p>
+<ul>
+<li>Abre el archivo command.log con un editor de texto y <strong>busca las palabras warning o error</strong>. Si aparece revisa si corresponden a fallos críticos o eventos no relevantes.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux / MacOS</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Puedes usar el comando siguiente dentro de la carpeta de la adquisición:</p>
+<div class="highlight"><pre><span></span><code>grep -i &quot;WARNING\|ERROR&quot; command.log
+</code></pre></div>
+<figure>
+<p><img alt="Captura de pantalla de terminal de linux con el comando grep para buscar errores en el archivo command.log generado por AndoridQF." src="../../assets/04-how-to/13-captura-pantalla-terminal-linux-errores.png" title="imagen 12" /></p>
+<figcaption>
+<p><strong>Imagen 13</strong>. Captura de pantalla de terminal de linux con el comando grep para buscar errores en el archivo command.log generado por AndoridQF.</p>
+</figcaption>
+</figure>
+</div>
+<div class="tabbed-block">
+<p>Abre el archivo con “<em>Bloc de notas”</em>, selecciona la combinación de teclas <strong>ctrl+b</strong> y escribe <strong><em>WARNING</em></strong> o <strong><em>ERROR</em></strong><strong>.</strong></p>
+<figure>
+<p><img alt="Captura de pantalla de terminal de linux con el comando grep para buscar errores en el archivo command.log generado por AndoridQF." src="../../assets/04-how-to/14-captura-pantalla-windows-errores.png" title="imagen 14" /></p>
+<figcaption>
+<p><strong>Imagen 14</strong>. Captura de pantalla de Bloc de notas de Windows con la búsqueda de  errores en el archivo command.log generado por AndoridQF.</p>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>
+<p>Verifica la <strong>existencia del archivo <em>acquisition.json</em></strong> y que su contenido se vea adecuado.</p>
+<figure>
+<p><img alt="Captura de pantalla de Sublime Text Con la salida del archivo acquisition.json generado por AndoridQF." src="../../assets/04-how-to/15-captura-pantalla-acquisition.png" title="imagen 15" /></p>
+<figcaption>
+<p><strong>Imagen 15</strong>. Captura de pantalla de Sublime Text Con la salida del archivo acquisition.json generado por AndoridQF.</p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p>Comprueba la creación de archivos y carpetas de salida. <strong>Asegurate que se hayan generado los siguientes archivos y carpetas:</strong></p>
+<div class="highlight"><pre><span></span><code>├── apks/
+├── logs/
+├── tmp/
+├── .json  
+├── backup.ab  
+├── bugreport.zip  
+├── command.log  
+├── dumpsys.txt  
+├── env.txt  
+├── files.json  
+├── getprop.txt  
+├── hashes.csv  
+├── logcat.txt  
+├── packages.json  
+├── processes.txt  
+├── root_binaries.json  
+├── selinux.txt  
+├── services.txt  
+├── settings_global.txt  
+├── settings_secure.txt  
+└── settings_system.txt  
+</code></pre></div>
+<figure>
+<p><img alt="Captura de pantalla de la aplicación archivos en PopOS! mostrando la carpeta de salida de archivos y directorios generados con la extracción forense con AndroidQF." src="../../assets/04-how-to/16-captura-pantalla-archivos-salida.png" title="imagen 15" /></p>
+<figcaption>
+<p><strong>Imagen 16</strong>. Captura de pantalla de la aplicación archivos en PopOS! mostrando la carpeta de salida de archivos y directorios generados con la extracción forense con AndroidQF.</p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<h2 id="conclusion">Conclusión</h2>
+<p>AndroidQF permite realizar adquirir y extraer evidencia forense de dispositivos Android. Es una <strong>herramienta ampliamente utilizada por laboratorios de la sociedad civil</strong>, debido a su practicidad, simplicidad y portabilidad. En esta guía detallamos el paso a paso a seguir para realizar extracciones utilizando Windows, MacOS o Linux. </p>
+<p>La extracción de potencial evidencia es una de las <strong><a href="../../explainers/01-explainer-introduction-digital-forensics/index.html#cuáles-son-las-etapas-de-una-investigación-forense">primeras etapas a seguir dentro de una investigación forense</a></strong>, y es clave para poder iniciar un triaje. A partir de esta información extraída, se puede iniciar una etapa de análisis, ya sea de forma manual (<a data-preview="" href="../../references/01-reference-androidqf-dictionary/">pudes consultar el diccionario de archivos aquí</a> o utilizando una herramienta como <a href="https://docs.mvt.re/en/latest/">MVT</a>. </p>
+<p>Si deseas contribuir con el desarrollo, la traducción o difusión de este recurso u otros recursos, <strong>revisa nuestra <a href="../../community/">sección de comunidad</a></strong> donde encontrarás más información al respecto.</p>
+<h2 id="comentarios">Comentarios</h2>
+<p>¿Tienes <strong>comentarios o sugerencias</strong> sobre este recurso? Puedes utilizar la <strong>función de comentar que se muestra a continuación</strong> para dejarnos tus ideas o apreciaciones. Por favor asegúrate de seguir nuestro <a href="../../community/code-of-conduct/">código de conducta</a>. La función de comentarios enlaza directamente a la sección de <a href="https://github.com/Socialtic/forensics/discussions"><em>Discussions</em> de Github</a>, donde también <strong>puedes participar en las discusiones de forma directa</strong>, si lo prefieres.   </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+<!-- Insert generated snippet here -->
+
+
+
+<script src="https://giscus.app/client.js" data-repo="socialtic/forensics" data-repo-id="R_kgDONvIuiA" data-category="General" data-category-id="DIC_kwDONvIuiM4CuEFV" data-mapping="pathname" data-strict="0" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../05-how-to-extract-bugreport/index.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: ¿Cómo generar un reporte de errores en Android?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                ¿Cómo generar un reporte de errores en Android?
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../references/index.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Inicio">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Inicio
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
+<div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://docs.mvt.re/en/latest/license/">MVT License</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/socialtic" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/socialtic/forensics/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://socialtic.org" target="_blank" rel="noopener" title="socialtic.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant.prefetch", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.footer", "content.action.view", "content.action.edit", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.26099bd0.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9d1edc04.min.js"></script>
+      
+        <script src="../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../assets/document_dates/core/core.js"></script>
+      
+    
+  </body>
+</html>

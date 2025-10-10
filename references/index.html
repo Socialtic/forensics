@@ -9,20 +9,24 @@
         <meta name="description" content="Documentación para investigaciones forenses consentidas en Sociedad Civil">
       
       
+        <meta name="author" content="Daniel Bedoya Arroyo">
+      
       
         <link rel="canonical" href="https://forensics.socialtic.org/references/index.html">
       
       
-        <link rel="prev" href="../how-tos/04-como-extraer-mediante-androidqf/04-como-extraer-mediante-androidqf.html">
+        <link rel="prev" href="../how-tos/04-how-to-extract-with-androidqf/index.html">
       
       
-        <link rel="next" href="00-glossary.html">
+        <link rel="next" href="01-reference-androidqf-dictionary/index.html">
       
       
         
-          <link rel="alternate" href="/index.html" hreflang="es">
+          <link rel="alternate" href="index.html" hreflang="es">
         
-          <link rel="alternate" href="/en/index.html" hreflang="en">
+          <link rel="alternate" href="../en/references/index.html" hreflang="en">
+        
+          <link rel="alternate" href="../pt/references/index.html" hreflang="pt">
         
       
       
@@ -58,8 +62,6 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-    
-      <link rel="stylesheet" href="../assets/css/extra.css">
     
       <link rel="stylesheet" href="../assets/document_dates/fonts/material-icons.css">
     
@@ -111,6 +113,28 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+    
+    
+    
+    
+    <script>
+        const gGM_SELECT_VERSION = "Seleccionar versión";
+        const gGMC_TRANSLATE_CTA = "";
+        const gGMC_PAGE_LOCALE = "es";
+        const gGMC_FILE_LOCALE = "es";
+        const gGMC_TRANSLATE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 12c0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2 0 .37-.03.73-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10C6.47 2 2 6.5 2 12s4.5 10 10 10c.59 0 1.16-.06 1.72-.16A5.9 5.9 0 0 1 13 19c0-.29.03-.57.07-.85-.32.63-.67 1.24-1.07 1.81-.83-1.2-1.5-2.53-1.91-3.96h3.72a5.95 5.95 0 0 1 2.59-2.4c.06-.53.1-1.06.1-1.6M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2zm.82 2H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m6.34 6H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2m.25-9.56c1.84.63 3.37 1.9 4.33 3.56h-2.95a15.7 15.7 0 0 0-1.38-3.56M23 18v2h-3v3h-2v-3h-3v-2h3v-3h2v3z"/></svg>';
+    </script>
+    
+    
+
+          </div>
+          
+        </aside>
+      
     </div>
     
     
@@ -120,7 +144,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="SocialTIC Forensics" class="md-header__button md-logo" aria-label="SocialTIC Forensics" data-md-component="logo">
+    <a href="../index.html" title="SocialTIC Forensics" class="md-header__button md-logo" aria-label="SocialTIC Forensics" data-md-component="logo">
       
   <img src="../assets/img/ST_logo-01.png" alt="logo">
 
@@ -186,14 +210,20 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/index.html" hreflang="es" class="md-select__link">
+            <a href="index.html" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="/en/index.html" hreflang="en" class="md-select__link">
+            <a href="../en/references/index.html" hreflang="en" class="md-select__link">
               English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../pt/references/index.html" hreflang="pt" class="md-select__link">
+              Portuguese
             </a>
           </li>
         
@@ -359,7 +389,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.94 17.94a3.3 3.3 0 0 0 0-.89l.97-.73a.22.22 0 0 0 .06-.29l-.92-1.56c-.05-.1-.19-.14-.29-.1l-1.15.45c-.24-.17-.49-.32-.78-.44l-.17-1.19a.235.235 0 0 0-.23-.19h-1.85c-.12 0-.22.08-.24.19l-.17 1.19c-.29.12-.54.27-.78.44l-1.15-.45c-.1-.04-.24 0-.28.1l-.93 1.56c-.06.1-.03.22.06.29l.97.73c-.01.15-.03.3-.03.45s.02.29.03.44l-.97.74a.22.22 0 0 0-.06.29l.93 1.56c.04.1.18.13.28.1l1.15-.46c.24.18.49.33.78.45l.17 1.19c.02.11.12.19.24.19h1.85c.11 0 .21-.08.23-.19l.17-1.19c.29-.12.54-.27.78-.45l1.15.46c.1.03.24 0 .29-.1l.92-1.56a.22.22 0 0 0-.06-.29zM16.5 19c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M9 2c1.8.6 3 2.3 3 4.2 0 2-1.2 3.7-3 4.3v11c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.6v-11c-1.8-.6-3-2.3-3-4.2S4.2 2.6 6 2v3.7h3z"/></svg>
     
   
-  Guías how-to
+  How-to's
 
         </a>
       </li>
@@ -401,7 +431,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../comunidad/index.html" class="md-tabs__link">
+        <a href="../community/index.html" class="md-tabs__link">
           
   
   
@@ -447,7 +477,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="SocialTIC Forensics" class="md-nav__button md-logo" aria-label="SocialTIC Forensics" data-md-component="logo">
+    <a href="../index.html" title="SocialTIC Forensics" class="md-nav__button md-logo" aria-label="SocialTIC Forensics" data-md-component="logo">
       
   <img src="../assets/img/ST_logo-01.png" alt="logo">
 
@@ -551,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iniciar.html" class="md-nav__link">
+      <a href="../home/getting-started/index.html" class="md-nav__link">
         
   
   
@@ -581,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hoja-de-ruta.html" class="md-nav__link">
+      <a href="../home/roadmap/index.html" class="md-nav__link">
         
   
   
@@ -590,7 +620,7 @@
   <span class="md-ellipsis">
     
   
-    Hoja de ruta
+    Hoja de que ruta
   
 
     
@@ -611,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/index.html" class="md-nav__link">
+      <a href="../community/index.html" class="md-nav__link">
         
   
   
@@ -723,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../explainers/01-explainer-introduccion-forense-digital/01-explainer-introduccion-forense-digital.html" class="md-nav__link">
+      <a href="../explainers/01-explainer-introduction-digital-forensics/index.html" class="md-nav__link">
         
   
   
@@ -751,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../explainers/02-explainer-riesgos-amenazas/02-explainer-riesgos-amenazas.html" class="md-nav__link">
+      <a href="../explainers/02-explainer-risks-threats/index.html" class="md-nav__link">
         
   
   
@@ -779,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../explainers/03-explainer-forense-logs-android/03-explainer-forense-logs-android.html" class="md-nav__link">
+      <a href="../explainers/03-explainer-log-forensics-android/index.html" class="md-nav__link">
         
   
   
@@ -885,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorials/01-explorando-androidqf/01-explorando-androidqf.html" class="md-nav__link">
+      <a href="../tutorials/01-tutorial-learning-androidqf/index.html" class="md-nav__link">
         
   
   
@@ -962,7 +992,7 @@
   <span class="md-ellipsis">
     
   
-    Guías how-to
+    How-to's
   
 
     
@@ -984,7 +1014,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Guías how-to
+    How-to's
   
 
           </label>
@@ -999,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/01-como-obtener-consentimiento-informado/01-como-obtener-consentimiento-informado.html" class="md-nav__link">
+      <a href="../how-tos/01-how-to-obtain-informed-consent/index.html" class="md-nav__link">
         
   
   
@@ -1027,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/02-como-habilitar-opciones-desarrollador/02-como-habilitar-opciones-desarrollador.html" class="md-nav__link">
+      <a href="../how-tos/02-how-to-enable-developer-options/index.html" class="md-nav__link">
         
   
   
@@ -1055,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/03-como-habilitar-adb/03-como-habilitar-adb.html" class="md-nav__link">
+      <a href="../how-tos/03-how-to-enable-adb/index.html" class="md-nav__link">
         
   
   
@@ -1083,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/05-como-extraer-bugreport/05-como-extraer-bugreport.html" class="md-nav__link">
+      <a href="../how-tos/05-how-to-extract-bugreport/index.html" class="md-nav__link">
         
   
   
@@ -1111,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/04-como-extraer-mediante-androidqf/04-como-extraer-mediante-androidqf.html" class="md-nav__link">
+      <a href="../how-tos/04-how-to-extract-with-androidqf/index.html" class="md-nav__link">
         
   
   
@@ -1226,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="00-glossary.html" class="md-nav__link">
+      <a href="00-glossary.md" class="md-nav__link">
         
   
   
@@ -1254,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01-reference-diccionario-androidqf/01-reference-diccionario-androidqf.html" class="md-nav__link">
+      <a href="01-reference-androidqf-dictionary/index.html" class="md-nav__link">
         
   
   
@@ -1282,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02-reference-diccionario-mvt-bugreport/02-reference-diccionario-mvt-bugreport.html" class="md-nav__link">
+      <a href="02-reference-mvt-bugreport-dictionary/index.html" class="md-nav__link">
         
   
   
@@ -1356,7 +1386,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../comunidad/index.html" class="md-nav__link ">
+            <a href="../community/index.html" class="md-nav__link ">
               
   
   
@@ -1402,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/por-que-contribuir.html" class="md-nav__link">
+      <a href="../community/why-support/index.html" class="md-nav__link">
         
   
   
@@ -1430,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/como-colaborar.html" class="md-nav__link">
+      <a href="../community/how-to-contribute/index.html" class="md-nav__link">
         
   
   
@@ -1458,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/contributors.html" class="md-nav__link">
+      <a href="../community/contributors/index.html" class="md-nav__link">
         
   
   
@@ -1486,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/guia-idioma.html" class="md-nav__link">
+      <a href="../community/language-guide/index.html" class="md-nav__link">
         
   
   
@@ -1514,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/como-localizar-l10n.html" class="md-nav__link">
+      <a href="../community/translation-localization-i10n/index.html" class="md-nav__link">
         
   
   
@@ -1542,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/licencia.html" class="md-nav__link">
+      <a href="../community/license/index.html" class="md-nav__link">
         
   
   
@@ -1570,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/codigo-de-conducta.html" class="md-nav__link">
+      <a href="../community/code-of-conduct/index.html" class="md-nav__link">
         
   
   
@@ -1598,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comunidad/limitacion-responsabilidad.html" class="md-nav__link">
+      <a href="../community/limitation-of-responsibility/index.html" class="md-nav__link">
         
   
   
@@ -1641,6 +1671,48 @@
 
 
 
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../index.html" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="index.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Referencias
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
 
               
               <article class="md-content__inner md-typeset">
@@ -1649,7 +1721,7 @@
 
 
   
-    <a href="https://github.com/Socialtic/forensics/edit/main/docs/es/references/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Socialtic/forensics/edit/main/docs/es/es/references/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1658,7 +1730,7 @@
     
       
     
-    <a href="https://github.com/Socialtic/forensics/raw/main/docs/es/references/index.md" title="Ver código fuente de esta página" class="md-content__button md-icon">
+    <a href="https://github.com/Socialtic/forensics/raw/main/docs/es/es/references/index.md" title="Ver código fuente de esta página" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -1675,13 +1747,13 @@
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 512h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-66.7c18.6-6.6 32-24.4 32-45.3V48c0-26.5-21.5-48-48-48H96C43 0 0 43 0 96v320c0 53 43 96 96 96m-32-96c0-17.7 14.3-32 32-32h256v64H96c-17.7 0-32-14.3-32-32m246.6-208H279c-1.4 23.1-6 44.2-12.6 61.2 22.7-12.5 39.4-34.8 44.2-61.2m-173.1 0c4.8 26.4 21.5 48.7 44.2 61.2-6.7-17-11.2-38-12.6-61.2zm76.4 55c4.5 9.6 8.2 13.8 10.2 15.5 2-1.7 5.7-5.8 10.2-15.5 6.2-13.4 11.1-32.5 12.7-55h-45.8c1.6 22.5 6.5 41.6 12.7 55m-12.7-87H247c-1.6-22.5-6.5-41.6-12.7-55-4.5-9.6-8.2-13.8-10.2-15.5-2 1.7-5.7 5.8-10.2 15.5-6.2 13.4-11.1 32.5-12.7 55m109.5 0c-4.8-26.4-21.5-48.7-44.2-61.2 6.7 17 11.2 38 12.6 61.2zM169 176c1.4-23.1 6-44.2 12.6-61.2-22.7 12.5-39.4 34.8-44.2 61.2zm-73 16a128 128 0 1 1 256 0 128 128 0 1 1-256 0"/></svg></span>      <strong>Diccionario de archivos generados por la herramienta androidqf</strong></p>
 <hr />
 <p>Contiene <strong>información sobre los archivos generados por androidqf</strong> al realizar una extracción forense de un dispositivo Android, esto con el objetivo de que una persona analista conozca los archivos generados, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</p>
-<p><a href="01-reference-diccionario-androidqf/01-reference-diccionario-androidqf.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Diccionario de archivos generados por la herramienta androidqf</a></p>
+<p><a href="01-reference-androidqf-dictionary/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Diccionario de archivos generados por la herramienta androidqf</a></p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 7h-2.81c-.45-.8-1.07-1.5-1.82-2L16 3.41 14.59 2l-2.17 2.17a6 6 0 0 0-2.83 0L7.41 2 6 3.41 7.62 5c-.75.5-1.36 1.21-1.81 2H3v2h2.09c-.06.33-.09.66-.09 1v1H3v2h2v1c0 .34.03.67.09 1H3v2h2.81A6 6 0 0 0 13 19.65V19c0-2.54 1.61-4.8 4-5.65V13h2v-2h-2v-1c0-.34-.03-.67-.09-1H19zm-6 8H9v-2h4zm0-4H9V9h4zm4.75 11.16-2.75-3L16.16 18l1.59 1.59L21.34 16l1.16 1.41z"/></svg></span>      <strong>Diccionario de archivos generados por la herramienta mvt bugreport</strong></p>
 <hr />
 <p>Contiene <strong>información sobre los archivos generados por mvt-android check-bugreport</strong> para analizar un reporte de errores o bugreport de un dispositivo Android. El diccionario permite que una persona analista conozca los archivos generados, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</p>
-<p><a href="../references/02-reference-diccionario-mvt-bugreport/02-reference-diccionario-mvt-bugreport.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Diccionario de archivos generados por la herramienta androidqf</a></p>
+<p><a href="02-reference-mvt-bugreport-dictionary/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Diccionario de archivos generados por la herramienta androidqf</a></p>
 </li>
 </ul>
 </div>
@@ -1723,7 +1795,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../how-tos/04-como-extraer-mediante-androidqf/04-como-extraer-mediante-androidqf.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: ¿Cómo realizar una extracción mediante AndroidQF?">
+          <a href="../how-tos/04-how-to-extract-with-androidqf/index.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: ¿Cómo realizar una extracción mediante AndroidQF?">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1740,13 +1812,13 @@
         
         
           
-          <a href="00-glossary.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Glosario">
+          <a href="01-reference-androidqf-dictionary/index.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Diccionario AndroidQF">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Glosario
+                Diccionario AndroidQF
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1826,12 +1898,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.footer", "content.action.view", "content.action.edit", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.26099bd0.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant.prefetch", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.footer", "content.action.view", "content.action.edit", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.26099bd0.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.9d1edc04.min.js"></script>
-      
-        <script src="../assets/javascript/extra.js"></script>
       
         <script src="../assets/document_dates/tippy/popper.min.js"></script>
       

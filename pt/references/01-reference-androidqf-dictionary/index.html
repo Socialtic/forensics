@@ -1,0 +1,3416 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación para investigaciones forenses consentidas en Sociedad Civil">
+      
+      
+      
+        <link rel="canonical" href="https://forensics.socialtic.org/pt/references/01-reference-androidqf-dictionary/index.html">
+      
+      
+        <link rel="prev" href="../index.html">
+      
+      
+        <link rel="next" href="../02-reference-mvt-bugreport-dictionary/index.html">
+      
+      
+        
+          <link rel="alternate" href="../../../references/01-reference-androidqf-dictionary/index.html" hreflang="es">
+        
+          <link rel="alternate" href="../../../en/references/01-reference-androidqf-dictionary/index.html" hreflang="en">
+        
+          <link rel="alternate" href="index.html" hreflang="pt">
+        
+      
+      
+      <link rel="icon" href="../../../assets/img/ST_logo-01-bn.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21+insiders-4.53.17">
+    
+    
+      
+        <title>Dicionário de arquivos gerados pela ferramenta androidqf - SocialTIC Forensics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.010a373c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="../../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/user.config.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/user.config.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/user.config.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dicionario-de-arquivos-gerados-pela-ferramenta-androidqf" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+    
+    
+    
+    
+    <script>
+        const gGM_SELECT_VERSION = "Selecione a versão";
+        const gGMC_TRANSLATE_CTA = "Ajude-nos a traduzir!";
+        const gGMC_PAGE_LOCALE = "pt";
+        const gGMC_FILE_LOCALE = "pt";
+        const gGMC_TRANSLATE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 12c0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2 0 .37-.03.73-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10C6.47 2 2 6.5 2 12s4.5 10 10 10c.59 0 1.16-.06 1.72-.16A5.9 5.9 0 0 1 13 19c0-.29.03-.57.07-.85-.32.63-.67 1.24-1.07 1.81-.83-1.2-1.5-2.53-1.91-3.96h3.72a5.95 5.95 0 0 1 2.59-2.4c.06-.53.1-1.06.1-1.6M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2zm.82 2H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m6.34 6H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2m.25-9.56c1.84.63 3.37 1.9 4.33 3.56h-2.95a15.7 15.7 0 0 0-1.38-3.56M23 18v2h-3v3h-2v-3h-3v-2h3v-3h2v3z"/></svg>';
+    </script>
+    
+    
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../index.html" title="SocialTIC Forensics" class="md-header__button md-logo" aria-label="SocialTIC Forensics" data-md-component="logo">
+      
+  <img src="../../../assets/img/ST_logo-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SocialTIC Forensics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dicionário de arquivos gerados pela ferramenta androidqf
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../references/01-reference-androidqf-dictionary/index.html" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../en/references/01-reference-androidqf-dictionary/index.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="index.html" hreflang="pt" class="md-select__link">
+              Portuguese
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Socialtic/forensics" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../explainers/index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.9 8.9-1.7 1-4-6.9 1.7-1zm-12.1-1 3 5.2 6.1-3.5-3-5.2zm1.6 4.8-2-3.5-4.3 2.5 2 3.5zm-9.3 1.9 1 1.7 2.6-1.5-1-1.7zm10-.6-.3-.4-4.3 2.5.3.4c.2.3.5.6.8.8L7 22h2l1.4-4.3h.1L12 22h2l-1.9-5.6c.5-.7.5-1.6 0-2.4"/></svg>
+    
+  
+  Explicadores
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+    
+  
+  Tutoriales
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../how-tos/index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.94 17.94a3.3 3.3 0 0 0 0-.89l.97-.73a.22.22 0 0 0 .06-.29l-.92-1.56c-.05-.1-.19-.14-.29-.1l-1.15.45c-.24-.17-.49-.32-.78-.44l-.17-1.19a.235.235 0 0 0-.23-.19h-1.85c-.12 0-.22.08-.24.19l-.17 1.19c-.29.12-.54.27-.78.44l-1.15-.45c-.1-.04-.24 0-.28.1l-.93 1.56c-.06.1-.03.22.06.29l.97.73c-.01.15-.03.3-.03.45s.02.29.03.44l-.97.74a.22.22 0 0 0-.06.29l.93 1.56c.04.1.18.13.28.1l1.15-.46c.24.18.49.33.78.45l.17 1.19c.02.11.12.19.24.19h1.85c.11 0 .21-.08.23-.19l.17-1.19c.29-.12.54-.27.78-.45l1.15.46c.1.03.24 0 .29-.1l.92-1.56a.22.22 0 0 0-.06-.29zM16.5 19c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M9 2c1.8.6 3 2.3 3 4.2 0 2-1.2 3.7-3 4.3v11c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.6v-11c-1.8-.6-3-2.3-3-4.2S4.2 2.6 6 2v3.7h3z"/></svg>
+    
+  
+  How-to's
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m1.39 18.36 1.77-1.76L4.58 18l1.06-1.05-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.42 1.41L10.59 12l-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.41 1.41 1.07-1.06-1.42-1.41 1.42-1.42L18 6.7l1.07-1.06-2.47-2.48 1.76-1.77 4.25 4.25L5.64 22.61z"/></svg>
+    
+  
+  Referencias
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../community/index.html" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+    
+  
+  Community
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="SocialTIC Forensics" class="md-nav__button md-logo" aria-label="SocialTIC Forensics" data-md-component="logo">
+      
+  <img src="../../../assets/img/ST_logo-01.png" alt="logo">
+
+    </a>
+    SocialTIC Forensics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Socialtic/forensics" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/getting-started/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-4 4.9V21h-2v-4.1A5 5 0 0 1 7 12a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/roadmap/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 11H1v2h6zm2.17-3.24L7.05 5.64 5.64 7.05l2.12 2.12zM13 1h-2v6h2zm5.36 6.05-1.41-1.41-2.12 2.12 1.41 1.41zM17 11v2h6v-2zm-5-2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m2.83 7.24 2.12 2.12 1.41-1.41-2.12-2.12zm-9.19.71 1.41 1.41 2.12-2.12-1.41-1.41zM11 23h2v-6h-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../explainers/index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.9 8.9-1.7 1-4-6.9 1.7-1zm-12.1-1 3 5.2 6.1-3.5-3-5.2zm1.6 4.8-2-3.5-4.3 2.5 2 3.5zm-9.3 1.9 1 1.7 2.6-1.5-1-1.7zm10-.6-.3-.4-4.3 2.5.3.4c.2.3.5.6.8.8L7 22h2l1.4-4.3h.1L12 22h2l-1.9-5.6c.5-.7.5-1.6 0-2.4"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Explicadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Explicadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/01-explainer-introduction-digital-forensics/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução à perícia digital consentida para a defesa dos direitos humanos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/02-explainer-risks-threats/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riscos e ameaças para laboratórios forenses da sociedade civil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/03-explainer-log-forensics-android/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Princípios para perícia forense baseada em logs em dispositivos Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorials/index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriales
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/01-tutorial-learning-androidqf/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando AndroidQF para la adquisición de información
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../how-tos/index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.94 17.94a3.3 3.3 0 0 0 0-.89l.97-.73a.22.22 0 0 0 .06-.29l-.92-1.56c-.05-.1-.19-.14-.29-.1l-1.15.45c-.24-.17-.49-.32-.78-.44l-.17-1.19a.235.235 0 0 0-.23-.19h-1.85c-.12 0-.22.08-.24.19l-.17 1.19c-.29.12-.54.27-.78.44l-1.15-.45c-.1-.04-.24 0-.28.1l-.93 1.56c-.06.1-.03.22.06.29l.97.73c-.01.15-.03.3-.03.45s.02.29.03.44l-.97.74a.22.22 0 0 0-.06.29l.93 1.56c.04.1.18.13.28.1l1.15-.46c.24.18.49.33.78.45l.17 1.19c.02.11.12.19.24.19h1.85c.11 0 .21-.08.23-.19l.17-1.19c.29-.12.54-.27.78-.45l1.15.46c.1.03.24 0 .29-.1l.92-1.56a.22.22 0 0 0-.06-.29zM16.5 19c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M9 2c1.8.6 3 2.3 3 4.2 0 2-1.2 3.7-3 4.3v11c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.6v-11c-1.8-.6-3-2.3-3-4.2S4.2 2.6 6 2v3.7h3z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    How-to's
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How-to's
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-tos/01-how-to-obtain-informed-consent/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como obter um consentimento informado para uma investigação forense?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-tos/02-how-to-enable-developer-options/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo habilitar las opciones de desarrollador en Android?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-tos/03-how-to-enable-adb/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo habilitar ADB en Android?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-tos/05-how-to-extract-bugreport/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo generar un reporte de errores en Android?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-tos/04-how-to-extract-with-androidqf/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo realizar una extracción mediante AndroidQF?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m1.39 18.36 1.77-1.76L4.58 18l1.06-1.05-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.42 1.41L10.59 12l-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.41 1.41 1.07-1.06-1.42-1.41 1.42-1.42L18 6.7l1.07-1.06-2.47-2.48 1.76-1.77 4.25 4.25L5.64 22.61z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencias
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Referencias
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/00-glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glosario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dicionário de arquivos gerados pela ferramenta androidqf
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dicionário de arquivos gerados pela ferramenta androidqf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adquisicion-y-extraccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Adquisición y extracción
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adquisición y extracción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acquisitionjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          acquisition.json
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          command.log
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashescsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          hashes.csv
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-y-configuracion-del-dispositivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Información y configuración del dispositivo
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Información y configuración del dispositivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getproptxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          getprop.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selinuxtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          selinux.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_globaltxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          settings_global.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_securetxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          settings_secure.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings_systemtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          settings_system.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          env.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registros-e-eventos-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Registros e eventos do sistema
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registros e eventos do sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logcattxt-y-logcat_oldtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          logcat.txt y logcat_old.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dumpsystxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          dumpsys.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bugreportzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          bugreport.zip
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          logs/
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procesos-y-aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Procesos y aplicaciones
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procesos y aplicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packagesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          packages.json
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          apks/
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processestxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          processes.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicestxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          services.txt
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root_binariesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          root_binaries.json
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-dos-arquivos-no-dispositivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Informações dos arquivos no dispositivo
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Informações dos arquivos no dispositivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backupab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          backup.ab
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          files.json
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Comentários
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-reference-mvt-bugreport-dictionary/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de archivos generados por mvt bugreport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../community/index.html" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Community
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Community
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/why-support/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Por qué contribuir con este repositorio?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/how-to-contribute/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Cómo colaborar con este repositorio?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/contributors/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuidores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/language-guide/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mejores prácticas para el idioma español
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/translation-localization-i10n/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traducciones y localizaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/license/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licencia de uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/code-of-conduct/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Código de conducta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/limitation-of-responsibility/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limitación de responsabilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegação" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../index.html" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../index.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Referencias
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Socialtic/forensics/edit/main/docs/es/pt/references/01-reference-androidqf-dictionary/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Socialtic/forensics/raw/main/docs/es/pt/references/01-reference-androidqf-dictionary/index.md" title="Ver fonte desta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="dicionario-de-arquivos-gerados-pela-ferramenta-androidqf">Dicionário de arquivos gerados pela ferramenta androidqf</h1>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-06-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-06-16T00:00:00'>2025-06-16</time></span><span data-tippy-content data-tippy-raw='2025-09-05'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-09-05T00:00:00'>2025-09-05</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Jose Martinez' data-tippy-content data-tippy-raw='Jose Martinez'><span class='avatar-text'></span><img class='avatar' src='' /></div><div class='avatar-wrapper' data-name='MariaLab' data-tippy-content data-tippy-raw='MariaLab'><span class='avatar-text'></span><img class='avatar' src='' /></div><div class='avatar-wrapper' data-name='Data Privacy Brasil' data-tippy-content data-tippy-raw='Data Privacy Brasil'><span class='avatar-text'></span><img class='avatar' src='' /></div></div></div></div>
+
+<p>Este documento faz <strong>parte de um repositório de documentação técnica</strong> que tem como objetivo estabelecer uma base de conhecimento comprovada, flexível e acessível para <strong>impulsionar a análise forense consentida em benefício da sociedade civil</strong>. Para organizar o conteúdo, é utilizado o <a href="https://diataxis.fr/">quadro de referência de documentação técnica Diataxis</a>.</p>
+<p>Este recurso em particular se enquadra na categoria de <a href="https://diataxis.fr/reference">referências</a> e contém informações sobre os arquivos gerados pelo <a href="https://github.com/mvt-project/androidqf">androidqf</a> ao realizar uma extração forense de um dispositivo Android, com o objetivo de que uma pessoa analista **conheça os arquivos gerados, como utilizá-los, onde procurar informações específicas e em que formato as encontrará.</p>
+<p>Este recurso foi atualizado pela última vez em 16 de junho de 2025 e, para a compilação das informações, foi utilizado como base a <a href="https://github.com/mvt-project/androidqf/tree/v1.7.1">verção 1.7.1</a>.</p>
+<p><a href="https://github.com/mvt-project/androidqf">Androidqf</a> é uma ferramenta de extração forense que pertence ao <a href="https://github.com/mvt-project/">MVT Project</a>. Desenvolvida inicialmente por <a href="https://nex.sx/">Claudio Guarnieri</a> e atualmente mantida pelo <a href="https://securitylab.amnesty.org/es/">Laboratório de Segurança da Anistia Internacional</a>.</p>
+<p>Seu nome vem da expressão em inglês <em>Android Quick Forensics</em>. Caracteriza-se por ser uma <strong>ferramenta portátil</strong>, ou seja, pode ser executada no Windows, GNU/Linux e Mac OS através de um binário pré-compilado para a <a href="../../explainers/01-explainer-introduction-digital-forensics/index.html#quais-são-as-etapas-de-uma-investigação-forense">aquisição de informações forenses</a> de dispositivos Android. </p>
+<p>As informações geradas pelo androidqf podem ser agrupadas em 5 categorias principais:</p>
+<ul>
+<li>Detalhes da aquisição</li>
+<li>Configuração do dispositivo</li>
+<li>Informações sobre registros e eventos do sistema</li>
+<li>Processos e aplicativos</li>
+<li>Arquivos copiados</li>
+</ul>
+<h2 id="adquisicion-y-extraccion">Adquisición y extracción</h2>
+<h3 id="acquisitionjson">acquisition.json</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/acquisition/acquisition.go">acquisition.go</a><em>.</em></p>
+<p><strong>O que este arquivo contém?</strong></p>
+<p>Este arquivo está no formato <em>json</em> e registra informações relacionadas ao processo de aquisição de dados do dispositivo. Ele contém as seguintes informações:
+* Identificador único ou UUID da extração (usado como nome da pasta onde as informações são armazenadas.
+* Versão do androidqf.
+* Local onde a extração é armazenada.
+* Data e hora de início e término da aquisição.
+* Informações do binário <em>collector</em> utilizado.
+* Informações do binário <em>adb</em> utilizado.
+* Localização do armazenamento <em>sdcard</em>.
+* Arquitetura da CPU do dispositivo.
+* 
+<strong>Por que isso é importante?</strong></p>
+<p>Essas informações permitem conhecer informações básicas da extração e obter identificadores únicos do sistema que facilitam o <a href="../../explainers/01-explainer-introduction-digital-forensics/index.html#cadena-de-custodia">processo de custódia da extração forense</a>. </p>
+<p><strong>Exemplo:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+ &quot;uuid&quot;: &quot;0f615832-ed22-411e-9317-b429d28ecf9a&quot;,
+ &quot;androidqf_version&quot;: &quot;v1.7.0-1-gf7642bf&quot;,
+ &quot;storage_path&quot;: &quot;/home/user/0f615832-ed22-411e-9317-b429d28ecf9a&quot;,
+ &quot;started&quot;: &quot;2025-01-01T18:36:37.443498116Z&quot;,
+ &quot;completed&quot;: &quot;2025-01-01T18:50:04.947856405Z&quot;,
+ &quot;collector&quot;: {
+  &quot;ExePath&quot;: &quot;/data/local/tmp/collector&quot;,
+  &quot;Installed&quot;: false,
+  &quot;Adb&quot;: {
+   &quot;ExePath&quot;: &quot;/usr/bin/adb&quot;,
+  },
+  &quot;Architecture&quot;: &quot;arm64-v8a&quot;
+ },
+ &quot;tmp_dir&quot;: &quot;/data/local/tmp/&quot;,
+ &quot;sdcard&quot;: &quot;/sdcard/&quot;,
+ &quot;cpu&quot;: &quot;arm64-v8a&quot;
+}
+</code></pre></div>
+<h3 id="commandlog">command.log</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/log/logger.go">logger.go</a>. Este módulo apresenta os registros do processo de captura e aquisição das informações.</p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está em texto simples com extensão <em>.log</em> e contém um registro dos comandos executados durante a aquisição de dados. Ele documenta cada comando usado (<em>DEBUG</em>) e sua saída na tela (<em>INFO</em>), mensagens de alerta (<em>WARNING</em>) e mensagens de erro (<em>ERROR</em>) durante a execução. Ele usa o seguinte formato:</p>
+<ul>
+<li>Data e hora do comando ou mensagem</li>
+<li>Tipo de mensagem</li>
+<li>Conteúdo da mensagem</li>
+</ul>
+<p><strong>Por que é importante?</strong></p>
+<p>Permite gerar um registro das ações realizadas pelo aplicativo durante a aquisição de informações. Através deste registro, é possível  verificar a integridade da extração, garantindo que todas as etapas foram realizadas; ou, caso existam alertas ou erros, permite identificá-los.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>2025-01-01T14:22:39-06:00 [INFO] Started new acquisition in /home/user/1c3c6742-f225-479f-a836-4a6a86a056b7
+2025-01-01T14:22:39-06:00 [INFO] Would you like to take a backup of the device?
+2025-01-01T14:22:41-06:00 [INFO] Generating a backup with argument com.android.providers.telephony. Please check the device to authorize the backup...
+
+2025-01-01T14:22:52-06:00 [INFO] Backup completed!
+2025-01-01T14:22:52-06:00 [INFO] Collecting information on installed apps. This might take a while...
+2025-01-01T14:22:52-06:00 [INFO] Collecting device properties...
+2025-01-01T14:22:52-06:00 [INFO] Collecting device diagnostic information. This might take a while...
+2025-01-01T14:24:11-06:00 [INFO] Collecting list of running processes...
+2025-01-01T14:24:11-06:00 [DEBUG] Deploying collector binary &#39;collector_arm64&#39; for architecture &#39;arm64-v8a&#39;.
+2025-01-01T14:24:11-06:00 [INFO] Collecting list of services...
+2025-01-01T14:24:12-06:00 [INFO] Generating a bugreport for the device...
+2025-01-01T14:26:22-06:00 [DEBUG] Bugreport completed!
+2025-01-01T14:26:22-06:00 [INFO] Collecting list of files... This might take a while...
+2025-01-01T14:26:22-06:00 [DEBUG] Using collector to collect list of files
+2025-01-01T14:39:20-06:00 [INFO] Collecting device settings...
+2025-01-01T14:39:20-06:00 [INFO] Collecting SELinux status...
+</code></pre></div>
+<h3 id="hashescsv">hashes.csv</h3>
+<p>As informações deste arquivo são geradas pela função <a href="https://github.com/mvt-project/androidqf/blob/main/acquisition/acquisition.go#L134"><em>HashFiles</em></a> do módulo <a href="https://github.com/mvt-project/androidqf/blob/main/acquisition/acquisition.go">acquisition.go</a>. </p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <a href="https://pt.wikipedia.org/wiki/Comma-separated_values">csv</a> e armazena os hashes <a href="https://pt.wikipedia.org/wiki/SHA-2">SHA-256</a> para cada arquivo gerado durante a extração ou cópia do do dispositivo. Segue a estrutura:</p>
+<ul>
+<li>Localização e nome do arquivo</li>
+<li>Valor hash utilizando <em>sha256</em></li>
+</ul>
+<p><strong>Por que é importante?</strong></p>
+<p>Os hashes permitem garantir a integridade das informações e assegurar que elas não tenham sido modificadas após a aquisição, favorecendo também os procedimentos de cadeia de custódia.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>2ab44150-35d3-4b40-a820-c9152fe93a13\apks\gov.dhs.cbp.cbpone_gov.dhs.cbp.cbpone-NYwrqdamzef6AVKRRGXzgA.apk,2d553aada9039d4def18a09b84c317a70d9fdde87524a043db5f0eeb1862e89a
+2ab44150-35d3-4b40-a820-c9152fe93a13\backup.ab,48202a8cb422d7eeb12ff8ad13fac3a67b37600c63eae8089d9674465da32990
+2ab44150-35d3-4b40-a820-c9152fe93a13\bugreport.zip,ec82812dba70891b78d7130dc16e3474918e4a0e02bb15ec00e1015679f720ee
+2ab44150-35d3-4b40-a820-c9152fe93a13\command.log,c0ae883bebee7503b0ca94a54cdbb43628602046c68b770c760f730a55d6dc8c
+2ab44150-35d3-4b40-a820-c9152fe93a13\dumpsys.txt,e54a613502ca362584766c0f75e17ca366d7ecdc4aa6869c50424dff83acbc15
+2ab44150-35d3-4b40-a820-c9152fe93a13\env.txt,387301687084cca0e124a9c365e930b4e5e6303b3e6f9dc64e2146f168b79c1a
+2ab44150-35d3-4b40-a820-c9152fe93a13\files.json,832f8121a69f131c9f434e1ca68d7b1e2deda40de72ff8396ea386a6a8cf69d3
+2ab44150-35d3-4b40-a820-c9152fe93a13\getprop.txt,b8dbad7e900aeeb3c60e48dd988c44905741a7e5b124055a09c2c417aa1556b3
+2ab44150-35d3-4b40-a820-c9152fe93a13\hashes.csv,cea94f56c720436d217b44ee746e2a6d69ddd226325a94bf3a3adeb32be4658a
+2ab44150-35d3-4b40-a820-c9152fe93a13\logcat.txt,6c080ba0357c6e82818e5a89135ff06aa9386f811daf898fc1797e1b9e6299d3
+2ab44150-35d3-4b40-a820-c9152fe93a13\logs\data\anr\anr_2024-12-20-00-11-38-831,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2ab44150-35d3-4b40-a820-c9152fe93a13\logs\sdcard\log\thermal_log-shm,e9eed4a2f55edd11e022b7b089d69a5de929d2bd484041a64e957861a5ab055b
+2ab44150-35d3-4b40-a820-c9152fe93a13\packages.json,69d560bfbbb75e074a49d107811c350461badac885b3925ed816d716f1f1144a
+2ab44150-35d3-4b40-a820-c9152fe93a13\processes.txt,9e933447e79e4743722691af88e9a4bdcc11029a92b84b0ebd9d54e0bfcf2694
+2ab44150-35d3-4b40-a820-c9152fe93a13\root_binaries.json,4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+2ab44150-35d3-4b40-a820-c9152fe93a13\selinux.txt,1ca5672ae970bdc4f5b584898245b3d884e11deb6867e9563bdfbc8b82e8f62e
+2ab44150-35d3-4b40-a820-c9152fe93a13\services.txt,b3ae6ad626b3a5ba8fc3b68771d42baf9795e03cc7b4b1ccbe361d9625e0f1fe
+2ab44150-35d3-4b40-a820-c9152fe93a13\settings_global.txt,410f788450907331183ee36979e93fc7dc0b1805e574d1ac1d5fbc9869897c53
+2ab44150-35d3-4b40-a820-c9152fe93a13\settings_secure.txt,be67f431c457edfb88d733594aba662310dbe3863c62da21cbf7dad5bcc0f136
+2ab44150-35d3-4b40-a820-c9152fe93a13\settings_system.txt,b0e7452110867ca3f5c15ea52b9b9a198433a836f97d6fd8b95fcd39fd30c714
+</code></pre></div>
+<h2 id="informacion-y-configuracion-del-dispositivo">Información y configuración del dispositivo</h2>
+<h3 id="getproptxt">getprop.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/getprop.go">getprop.go</a>.</p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>TXT</em> e contém a saída do comando <code>adb getprop</code>, que detalha as <strong>propriedades do sistema</strong>.</p>
+<p>As propriedades do sistema são pares chave-valor de strings que são armazenadas no dicionário global <a href="https://xdaforums.com/t/guide-build-prop-wiki.2056266/"><em>build.prop</em></a> ou em arquivos de descrição <em>.sysprop</em>, e fornecem uma maneira conveniente de compartilhar configurações dentro do sistema.
+As informações podem ser encontradas usando o seguinte formato:</p>
+<div class="highlight"><pre><span></span><code>[{prefix}.]{group}[.{subgroup}]*.{name}[.{type}]
+</code></pre></div>
+<p>Algumas propriedades aparecem com o prefixo <em>ro</em>, indicando que são propriedades somente de leitura ou que foram atribuídas após a reinicialização do dispositivo. As propriedades com o prefixo <em>persist</em> referem-se a configurações resistentes à reinicialização. Algumas propriedades não terão prefixo, portanto, começam diretamente com o grupo ao qual pertencem.</p>
+<p>Os grupos mais comuns são:
+* <em>bluetooth</em>, relacionado ao Bluetooth
+* <em>boot</em>, sysprops da linha de comando do kernel
+* <em>build</em>, sysprops que identificam uma compilação
+* <em>telephony</em>, relacionado à telefonia
+* <em>audio</em>, relacionado ao áudio
+* <em>graphics</em>, relacionado aos gráficos
+* <em>vold</em>, relacionado ao vold que gerencia a montagem de volumes físicos de armazenamento externo</p>
+<p>Para mais detalhes, consulte a <a href="https://android.googlesource.com/platform/system/sepolicy/+/refs/heads/main/private/property_contexts">lista de propriedades já definidas no código-fonte do Android</a>.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>As propriedades fornecem informações importantes sobre o hardware e o software do dispositivo, que podem ser alteradas por software malicioso para ocultar sua presença ou modificar o comportamento do dispositivo de forma inadvertida.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>[property_name]: [value]
+[aaudio.hw_burst_min_usec]: [2000]
+[aaudio.mmap_exclusive_policy]: [2]
+[aaudio.mmap_policy]: [2]
+[apex.all.ready]: [true]
+[bluetooth.device.class_of_device]: [90,2,12]
+[ro.boot.product.model]: [SM-A715F]
+[ro.boot.serialno]: [R58N84XXXXX]
+[ro.bootimage.build.date]: [Thu Feb 29 13:55:21 +07 2024]
+[ro.bootimage.build.date.utc]: [1709189721]
+[ro.bootimage.build.fingerprint]: [samsung/a71naxx/a71:11/RP1A.200720.012/A715FXXSBDXB1:user/release-keys]
+[ro.build.selinux]: [1]
+[ro.build.selinux.enforce]: [1]
+[ro.build.version.security_patch]: [2024-02-01]
+[ro.gfx.driver.1]: [com.qualcomm.qti.gpudrivers.sm6150.api30]
+[ro.hardware]: [qcom]
+[ro.hardware.chipname]: [SM7150]
+[ro.product.system.model]: [SM-A715F]
+[ro.vendor.product.cpu.abilist]: [arm64-v8a,armeabi-v7a,armeabi]
+[ro.vendor.product.cpu.abilist32]: [armeabi-v7a,armeabi]
+[ro.vendor.product.cpu.abilist64]: [arm64-v8a]
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://source.android.com/docs/core/architecture/configuration?hl=es-419#system-properties">Visão geral da configuração | Propriedades do sistema | Android Open Source Project</a>   </li>
+<li><a href="https://source.android.com/docs/core/architecture/configuration/sysprops-apis?hl=es-419">Como implementar propriedades do sistema como APIs | Android Open Source Project</a>  </li>
+<li><a href="https://source.android.com/docs/core/architecture/configuration/add-system-properties?hl=es-419">Adicionar propriedades do sistema | Android Open Source Project</a>  </li>
+<li><a href="https://source.android.com/docs/security/features/selinux/compatibility?hl=es-419#system-property-and-ownership">Compatibilidade de políticas | Android Open Source Project</a> </li>
+</ul>
+<h3 id="selinuxtxt">selinux.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/selinux.go">selinux.go</a><em>.</em></p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>txt</em> e contém a saída do comando <code>adb shell getenforce</code> e indica a política de segurança <em>SELinux</em> aplicada no dispositivo, indicando o modo em que se encontra (<em>enforcing</em>, <em>permissive</em> ou <em>disabled</em>).</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p><a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux"><em>SELinux</em></a> é uma camada de segurança fundamental no Android. Alterações na sua configuração podem ser um indicativo de compromissos na segurança do dispositivo.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>Enforcing
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://source.android.com/docs/security/features/selinux/concepts?hl=pt-br">Conceitos do SELinux | Android Open Source Project</a></li>
+<li><a href="https://github.com/selinuxproject">Projeto SELinux</a></li>
+<li><a href="https://www.redhat.com/pt-br/topics/linux/what-is-selinux">O que é SElinux? SELinux (Security Enhanced Linux) permite configurar o nível de segurança dos seus sistemas Linux</a></li>
+</ul>
+<h3 id="settings_globaltxt">settings_global.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/settings.go">settings.go</a><em>.</em></p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>txt</em> e contém a saída do comando <code>adb shell cmd settings list global</code> , que mostra as preferências que sempre se aplicam de forma idêntica a todos os usuários definidos (<a href="https://source.android.com/docs/devices/admin/multi-user#user_types">well-defined user</a>). Os aplicativos podem lê-las, mas não podem gravá-las, pois são preferências que o usuário deve modificar explicitamente por meio da interface do usuário do sistema ou APIs especializadas para esses valores.</p>
+<p>Essas configurações incluem opções de desenvolvedor, inicialização e status da conexão Bluetooth, Wi-Fi e telefonia. Para ver a <a href="https://developer.android.com/reference/android/provider/Settings.Global">lista completa de preferências globais</a>, consulte a documentação correspondente do Android.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>Permite identificar configurações anormais que podem comprometer a segurança, a privacidade ou a funcionalidade do dispositivo. Configurações padrão incomuns podem indicar tentativas de alterar o comportamento do sistema, intencionais ou acidentais.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>Phenotype_boot_count=68
+adb_enabled=1
+airplane_mode_on=0
+bluetooth_on=1
+boot_count=71
+bug_report=0
+default_device_name=Galaxy A14 5G
+package_verifier_user_consent=1
+phone_play_store_availability=0
+require_password_to_decrypt=1
+spam_call_enable=1
+subscription_mode=0
+turnOff_5g_network_mode_set=0
+wifi_networks_available_notification_on=0
+wifi_on=1
+wifi_scan_always_enabled=1
+zram_enabled=1
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://developer.android.com/reference/android/provider/Settings">Configurações | Desenvolvedores Android</a></li>
+<li><a href="https://developer.android.com/reference/android/provider/Settings.Global?hl=es-419">Configurações.Global | Desenvolvedores Android</a></li>
+</ul>
+<h3 id="settings_securetxt">settings_secure.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/settings.go">settings.go</a><em>.</em></p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>txt</em> e contém a saída do comando <code>adb shell cmd settings list secure</code> Mostra as preferências de segurança do sistema que os aplicativos podem ler, mas não gravar. São preferências que o usuário deve modificar explicitamente através da interface do usuário de um aplicativo do sistema. </p>
+<p>Os aplicativos normais não podem modificar o banco de dados de configurações de segurança. Essas configurações incluem opções de desenvolvedor, acessibilidade, localização, entrada de dados, bloqueio de tela, controle parental, conversão de texto em fala e conexão Bluetooth, Wi-Fi e telefonia. </p>
+<p>Para ver a <a href="https://developer.android.com/reference/android/provider/Settings.Secure?hl=es-419">lista completa de preferências de segurança</a>, consulte a documentação correspondente do Android.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>Permite identificar configurações anormais que podem comprometer a segurança, a privacidade ou a funcionalidade do dispositivo. Configurações padrão incomuns podem indicar tentativas de modificar o comportamento do sistema, intencionais ou acidentais.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>accessibility_allow_diagonal_scrolling=1
+accessibility_button_mode=1
+accessibility_button_target_component=com.android.settings/com.samsung.android.settings.accessibility.shortcut.AmplifyShortcut
+accessibility_display_magnification_enabled=0
+accessibility_enabled=0
+android_id=af4de9XXXXXXXXXX
+autofill_service=null
+assistant=com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService
+aware_enabled=0
+backup_auto_restore=1
+backup_encryption_opt_in_displayed=1
+bluetooth_settings_foreground=0
+clipboard_show_access_notifications=0
+default_input_method=com.samsung.android.honeyboard/.service.HoneyBoardService
+fingerprint_screen_lock=1
+location_mode=3
+location_time_zone_detection_enabled=1
+lockscreen.disabled=0
+wifi_saved_state=0
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://developer.android.com/reference/android/provider/Settings?hl=es-419">Settings | Android Developers</a>   </li>
+<li><a href="https://developer.android.com/reference/android/provider/Settings.Secure?hl=es-419">Settings.Secure | Android Developers</a> </li>
+</ul>
+<h3 id="settings_systemtxt">settings_system.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/settings.go">settings.go</a><em>.</em></p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>txt</em> e contém a saída do comando <code>adb shell cmd settings list system</code> , que mostra várias preferências gerais do dispositivo. Essas preferências afetam a experiência do usuário e o funcionamento básico do dispositivo.</p>
+<p>Essas configurações incluem opções de sensores como acelerômetro ou giroscópio, fuso horário, tela, alarmes, som, vibração, atualizações e conexão Bluetooth, Wi-Fi e telefonia.</p>
+<p>Para ver a <a href="https://developer.android.com/reference/android/provider/Settings.System?hl=es-419">lista completa de preferências do sistema</a>, consulte a documentação correspondente do Android.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>Permite identificar configurações anormais que podem comprometer a segurança, privacidade ou funcionalidade do dispositivo. Configurações padrão incomuns podem indicar tentativas de modificar o comportamento do sistema, intencionais ou acidentais.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>FOTA_CLIENT_POLLING_TIME=1710699386219
+FOTA_CLIENT_REGISTRATION=1
+FOTA_CLIENT_TEST=0
+SEM_VIBRATION_FORCE_TOUCH_INTENSITY=4
+SEM_VIBRATION_NOTIFICATION_INTENSITY=5
+SOFTWARE_UPDATE_LAST_CHECKED_DATE=1728477705778
+SOFTWARE_UPDATE_WIFI_ONLY2=1
+alarm_alert_set=1
+anykey_mode=0
+aod_mode=0
+automatic_unlock=1
+block_unwanted_call=1
+block_unwanted_call_type=1
+lockscreen_sounds_enabled=1
+lockscreen_wallpaper=1
+login_state=0
+mic_mode_enable=0
+mic_mode_wificall=0
+samsung_errorlog_agree=1
+tty_mode=0
+unknown_mode=0
+volume_alarm=11
+volume_alarm_ble_headset=11
+volume_alarm_earpiece=11
+volume_alarm_speaker=11
+volume_assistant=7
+wifi_call_enable1=0
+wifi_call_preferred1=2
+wifi_call_when_roaming1=0
+wireless_fast_charging=0
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://developer.android.com/reference/android/provider/Settings?hl=es-419">Settings | Android Developers</a>   </li>
+<li><a href="https://developer.android.com/reference/android/provider/Settings.System?hl=es-419">Settings.System | Android Developers</a> </li>
+</ul>
+<h3 id="envtxt">env.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/env.go">env.go</a><em>.</em></p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>txt</em> e contém a saída do comando <code>adb shell env</code>, que mostra a configuração das variáveis de ambiente do terminal (shell) <a href="http://mirbsd.de/mksh"><em>mkshrc</em></a>, que é usado pelo Android.
+Por padrão, as variáveis <em>mkshrc</em> no Android estão no arquivo <em>mkshrc</em> ou <em>profile</em>, que pode estar em um dos seguintes diretórios.</p>
+<div class="highlight"><pre><span></span><code>/system/etc
+/system/etc/profile
+$HOME/
+/data/local
+</code></pre></div>
+<p>Enquanto que <a href="https://android.googlesource.com/platform/bionic/+/refs/heads/master/libc/include/paths.h#50">o binário <em>mkshrc</em> pode ser encontrado em algum dos seguintes diretórios</a>.</p>
+<div class="highlight"><pre><span></span><code>/product/bin
+/apex/com.android.runtime/bin
+/apex/com.android.art/bin
+/system_ext/bin
+/system/bin
+/system/xbin
+/odm/bin
+/vendor/bin
+/vendor/xbin
+</code></pre></div>
+<p>As variáveis contidas podem indicar:</p>
+<ul>
+<li>Localizações de partições</li>
+<li>Valores do ambiente de execução da máquina virtual Android</li>
+<li>Configurações do terminal</li>
+</ul>
+<p><strong>Por que isso é importante?</strong></p>
+<p>As variáveis de ambiente podem indicar alterações nas configurações do terminal, do interpretador de comandos, do ambiente de execução da máquina virtual Android ou dos pontos de montagem de algumas partições e pastas. Isso pode ser um indicador de comportamento suspeito.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>_=/system/bin/env
+ANDROID_DATA=/data
+ANDROID_ART_ROOT=/apex/com.android.art
+LOGNAME=shell
+STANDALONE_SYSTEMSERVER_JARS=/apex/com.android.btservices/javalib/service-bluetooth.jar:/apex/com.android.devicelock/javalib/service-devicelock.jar:/apex/com.android.os.statsd/javalib/service-statsd.jar:/apex/com.android.scheduling/javalib/service-scheduling.jar:/apex/com.android.tethering/javalib/service-connectivity.jar:/apex/com.android.uwb/javalib/service-uwb.jar:/apex/com.android.wifi/javalib/service-wifi.jar:/apex/com.samsung.android.lifeguard/javalib/service-lifeguard.jar
+HOME=/
+ANDROID_TZDATA_ROOT=/apex/com.android.tzdata
+ANDROID_ROOT=/system
+TERM=xterm-256color
+SHELL=/bin/sh
+ANDROID_BOOTLOGO=1
+ANDROID_ASSETS=/system/app
+ANDROID_SOCKET_adbd=21
+HOSTNAME=a14x
+DOWNLOAD_CACHE=/data/cache
+SECONDARY_STORAGE=/storage/sdcard:/storage/usb1:/storage/usb2
+ANDROID_STORAGE=/storage
+USER=shell
+TMPDIR=/data/local/tmp
+PATH=/product/bin:/apex/com.android.runtime/bin:/apex/com.android.art/bin:/system_ext/bin:/system/bin:/system/xbin:/odm/bin:/vendor/bin:/vendor/xbin
+SYSTEMSERVERCLASSPATH=/system/framework/com.android.location.provider.jar:/system/framework/knoxanalyticssdk.jar:/system/framework/mcfsdk.jar:/system/framework/uibc_java.jar:/system/framework/services.jar:/system/framework/semwifi-service.jar:/system/framework/ssrm.jar:/apex/com.android.adservices/javalib/service-adservices.jar:/apex/com.android.adservices/javalib/service-sdksandbox.jar:/apex/com.android.appsearch/javalib/service-appsearch.jar:/apex/com.android.art/javalib/service-art.jar:/apex/com.android.configinfrastructure/javalib/service-configinfrastructure.jar:/apex/com.android.healthfitness/javalib/service-healthfitness.jar:/apex/com.android.media/javalib/service-media-s.jar:/apex/com.android.ondevicepersonalization/javalib/service-ondevicepersonalization.jar:/apex/com.android.permission/javalib/service-permission.jar:/apex/com.android.rkpd/javalib/service-rkp.jar:/apex/com.samsung.android.shell/javalib/service-samsung-shell.jar
+ASEC_MOUNTPOINT=/mnt/asec
+ANDROID_I18N_ROOT=/apex/com.android.i18n
+EXTERNAL_STORAGE=/sdcard
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/Shell_(computa%C3%A7%C3%A3o)">Shell (informática) - Wikipedia, la enciclopedia libre</a>  </li>
+<li><a href="https://android.stackexchange.com/questions/53389/can-i-update-the-adb-shells-environment-variables/64926#64926">Can I update the adb shell's environment variables? - Android Enthusiasts Stack Exchange</a>   </li>
+<li><a href="https://android.stackexchange.com/questions/217617/update-mksh-to-latest-version/217627#217627">Update mksh to latest version - Android Enthusiasts Stack Exchange</a> </li>
+</ul>
+<h2 id="registros-e-eventos-do-sistema">Registros e eventos do sistema</h2>
+<h3 id="logcattxt-y-logcat_oldtxt">logcat.txt y logcat_old.txt</h3>
+<p>As informações desses arquivos são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/logcat.go">logcat.go</a> .</p>
+<p><strong>Informações contidas</strong></p>
+<p>Esses arquivos estão em texto simples com extensão .<em>txt</em> e contêm a saída dos comandos <code>adb shell logcat -d -b all</code> e <code>adb shell logcat -L -b all</code>, respectivamente, que mostram o registro de mensagens do sistema. Alguns exemplos das informações contidas são:</p>
+<ul>
+<li>Mensagens de erro e aviso (FATAL EXCEPTION).</li>
+<li>Mensagens de aplicativos, processos e serviços do sistema operacional.</li>
+<li>Logs de depuração e eventos informativos.</li>
+</ul>
+<p>O arquivo contém a seguinte estrutura:</p>
+<ul>
+<li>Início do registro (contém divisões de registros).</li>
+<li>Marca de tempo (timestamp).</li>
+<li>Identificador do processo e do thread (PID) e (TID).</li>
+<li>Nível de prioridade:<ul>
+<li>E: Erro </li>
+<li>W: Aviso</li>
+<li>I: Informação</li>
+<li>D: Depuração</li>
+<li>F: Fatal</li>
+<li>V: Verboso</li>
+</ul>
+</li>
+<li>Etiqueta que indica o componente ou processo do sistema.</li>
+<li>Descrição e detalhes das mensagens ou erros.</li>
+</ul>
+<p><strong>Por que é importante?</strong></p>
+<p>Essas informações podem ser utilizadas para analisar o comportamento e a execução de eventos no sistema e nas aplicações do dispositivo, a fim de identificar anomalias ou padrões que possam indicar a presença de malware. Em termos forenses, são os arquivos mais relevantes devido ao seu conteúdo.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>--------- beginning of crash  
+2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: FATAL EXCEPTION: main  
+2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: Process: example.android.app, PID: 12345  
+2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate receiver example.android.app.MyBroadCastReceiver  
+2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: at android.app.ActivityThread.handleReceiver(ActivityThread.java:4861)  
+2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: at android.os.Handler.dispatchMessage(Handler.java:106)  
+2025-01-01 00:00:00.000 30144 30860 I ActivityManager: Process example.android.app has died.  
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://developer.android.com/tools/logcat?hl=pt-br">Ferramenta de linha de comando Logcat</a></li>
+</ul>
+<h3 id="dumpsystxt">dumpsys.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/dumpsys.go">dumpsys.go</a> .</p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>txt</em> e contém a saída do comando <code>adb shell dumpsys</code>, que mostra informações detalhadas sobre os serviços em execução, incluindo processos e aplicativos.</p>
+<p>O arquivo é dividido em seções específicas para cada serviço, seguindo uma ordem:</p>
+<ul>
+<li>Lista de serviços ativos</li>
+<li>Detalhes de cada serviço</li>
+<li>Logs detalhados</li>
+</ul>
+<p>Para conhecer a lista de serviços que podem ser encontrados em um <em>dumpsys</em> de um dispositivo, execute o comando <code>adb shell service list</code></p>
+<p><strong>Por que é importante?</strong></p>
+<p>O arquivo fornece uma perspectiva completa do estado do sistema no dispositivo, fundamental para conhecer a atividade realizada por serviços, aplicativos e processos no dispositivo. Em termos forenses, é um dos arquivos mais relevantes devido ao seu conteúdo.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>Currently running services:
+  accessibility
+  account
+  adb
+  alarm
+  android.frameworks.cameraservice.service.ICameraService/default
+  android.hardware.biometrics.face.IFace/default
+  android.hardware.vibrator.IVibratorManager/default
+  android.os.UpdateEngineService
+  android.security.authorization
+  anrmanager
+  anti_root_dialog
+  app_binding
+  appops
+  audio
+  auth
+  battery
+  batteryproperties
+  batterystats
+  bluetooth_manager
+  bugreport
+  cpuinfo
+  critical.log
+  dataloader_manager
+  dbinfo
+  input
+  logcat
+  meminfo
+  netstats
+  ostats_pullerd
+  ostats_tpd
+  ostatsd
+  package
+  permission
+  phone
+  power
+  processinfo
+  procstats
+  settings
+  stats
+  statsbootstrap
+  usb
+  wifi
+  window
+
+-------------------------------------------------------------------------------
+DUMP OF SERVICE AtlasService:
+--------- 0.001s was the duration of dumpsys AtlasService, ending at: 2025-05-08 18:12:33
+-------------------------------------------------------------------------------
+DUMP OF SERVICE DockObserver:
+Current Dock Observer Service state:
+  reported state: 0
+  previous state: 0
+  actual state: 0
+--------- 0.007s was the duration of dumpsys DockObserver, ending at: 2025-05-08 18:12:33
+-------------------------------------------------------------------------------
+DUMP OF SERVICE ISubsysRadio:
+--------- 0.005s was the duration of dumpsys ISubsysRadio, ending at: 2025-05-08 18:12:33
+-------------------------------------------------------------------------------
+DUMP OF SERVICE MMListService:
+--------- 0.001s was the duration of dumpsys MMListService, ending at: 2025-05-08 18:12:33
+-------------------------------------------------------------------------------
+DUMP OF SERVICE OPLUSExService:
+--------- 0.001s was the duration of dumpsys OPLUSExService, ending at: 2025-05-08 18:12:33
+-------------------------------------------------------------------------------
+DUMP OF SERVICE OplusLocationManager:
+--------- 0.001s was the duration of dumpsys OplusLocationManager, ending at: 2025-05-08 18:&gt;
+-------------------------------------------------------------------------------
+DUMP OF SERVICE appops:
+Current AppOps Service state:
+  Settings:
+    top_state_settle_time=+5s0ms
+    fg_service_state_settle_time=+5s0ms
+    bg_state_settle_time=+1s0ms
+
+  Op mode watchers:
+    Op COARSE_LOCATION:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+    #1: ModeCallback{21558a8 watchinguid=-1 flags=0x1 op=MONITOR_LOCATION from uid=u0a124 pid=3315}
+    #2: ModeCallback{c7241f6 watchinguid=-1 flags=0x1 op=COARSE_LOCATION from uid=1000 pid=1807}
+    #3: ModeCallback{f993e3b watchinguid=-1 flags=0x1 op=FINE_LOCATION from uid=u0a124 pid=3315}
+    Op FINE_LOCATION:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+    #1: ModeCallback{e5bfc6d watchinguid=-1 flags=0x1 op=FINE_LOCATION from uid=1000 pid=1807}
+    #2: ModeCallback{f993e3b watchinguid=-1 flags=0x1 op=FINE_LOCATION from uid=u0a124 pid=3315}
+    Op READ_CONTACTS:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+    Op WRIT E_CONTACTS:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+    Op READ_CALL_LOG:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+    Op WRITE_CALL_LOG:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+    Op READ_CALENDAR:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+    Op WRITE_CALENDAR:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+    Op POST_NOTIFICATION:
+    #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://developer.android.com/tools/dumpsys?hl=es-419">dumpsys no Android</a></li>
+</ul>
+<h3 id="bugreportzip">bugreport.zip</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/bugreport.go">bugreport.go</a> .</p>
+<p><strong>Informações contidas</strong></p>
+<p>Este é um arquivo compactado no formato <em>zip</em> e contém a saída do comando <code>adb shell bugreport</code>, que é um relatório completo sobre o estado atual do dispositivo, incluindo dados do sistema, logs e configurações.</p>
+<p>Este arquivo compactado pode ser analisado pela ferramenta MVT através do comando <code>mvt-android check-bugreport bugreport.zip</code></p>
+<p>Os arquivos e pastas contidos no compactado incluem o seguinte:</p>
+<ul>
+<li><strong>dumpstate-yyyy-mm-dd-hh-mm-ss.txt:</strong> Arquivo que fornece um resumo das principais características do dispositivo móvel e o estado atual do sistema.</li>
+<li><strong>dumpstate_board.txt:</strong> Arquivo que fornece logs de inicialização do sistema com dados detalhados sobre os eventos e serviços executados durante a inicialização do dispositivo.</li>
+<li><strong>dumpstate_log.txt:</strong> Arquivo que apresenta os logs do processo de geração do relatório. Contém possíveis erros ou avisos durante a coleta de dados.</li>
+<li><strong>main_entry.txt:</strong> Este arquivo serve como um índice do conteúdo dos componentes coletados no bugreport.</li>
+<li><strong>version.txt:</strong> Mostra a versão do formato de geração dos registros do bugreport.</li>
+<li><code>fs/cache/recovery/</code><ul>
+<li><strong>last_data_partition_info:</strong> Esta informação fornece as características do armazenamento do dispositivo, o tamanho total, o tamanho do setor e o número de blocos presentes. Além disso, informa a capacidade de armazenamento utilizada e a disponibilidade.</li>
+<li><strong>last_dataresizing:</strong> Essas informações registram o início e a configuração de vários sensores do dispositivo. Também mostra mensagens de instâncias criadas para sensores específicos (como rotação automática, alerta inteligente, etc.).  </li>
+<li><strong>last_postrecovery:</strong> Essas informações descrevem atividades relacionadas à comunicação entre componentes de software seguros.  </li>
+</ul>
+</li>
+<li><code>fs/data/anr/</code><ul>
+<li><strong>arn_yyyy-mm-dd-hh-mm-ss:</strong> Fornece um diagnóstico detalhado de aplicativos que não respondem. ARN é originário de <em>App Not Responding</em>.</li>
+</ul>
+</li>
+<li><code>fs/data/log/bt/</code><ul>
+<li><strong>btsnooz_hci.log:</strong> Registro gerado por dispositivos Android que contém informações sobre a atividade da interface HCI (<em>Host Controller Interface</em>) do Bluetooth.</li>
+<li><strong>btsnooz_hci.log.last:</strong> Contém um registro mais detalhado e extenso do histórico de eventos da HCI Bluetooth.  </li>
+</ul>
+</li>
+<li><code>fs/misc/recovery</code><ul>
+<li><strong>ro.buil.fingerprint:</strong> O arquivo contém o identificador exclusivo da versão de software que está sendo executada no dispositivo.</li>
+<li><strong>ro.build.fingerprint.1:</strong> O arquivo contém uma variante do identificador de compilação no dispositivo.  </li>
+</ul>
+</li>
+<li><code>fs/data/tombstones/</code><ul>
+<li><strong>tombstone_xx:</strong> Esses arquivos são registros de falhas (<em>crash dumps</em>) que o sistema gera automaticamente quando um processo do usuário ou do sistema trava inesperadamente.</li>
+</ul>
+</li>
+<li><code>fs/proc/</code><ul>
+<li><strong>mountinfo:</strong> Este arquivo fornece informações detalhadas sobre os pontos de montagem em um sistema operacional baseado em Linux. Basicamente, ele permite entender como os sistemas de arquivos e as partições montadas estão configurados.  </li>
+</ul>
+</li>
+</ul>
+<p><strong>Por que isso é importante?</strong></p>
+<p>Este arquivo compactado é uma fonte de informações muito valiosa para a análise forense, permitindo identificar o estado geral do dispositivo e acompanhar irregularidades ou falhas de software ou hardware que possam surgir em contextos de exploração de vulnerabilidades.</p>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://developer.android.com/studio/debug/bug-report?hl=pt-br">Como capturar e ler relatórios de erros</a></li>
+</ul>
+<h3 id="logs">logs/</h3>
+<p>As informações desta pasta são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/logs.go">logs.go</a>.</p>
+<p><strong>Informações contidas</strong></p>
+<p>Contém arquivos de registro coletados diretamente do dispositivo, usando o comando <code>adb pull</code> em várias pastas.</p>
+<p>O módulo acessa rotas específicas do sistema para extrair arquivos que documentam o comportamento, erros e eventos do sistema operacional, que são:</p>
+<ul>
+<li>/data/anr/</li>
+<li>/data/log/</li>
+<li>/sdcard/log/</li>
+</ul>
+<p>Os arquivos e pastas contidos neste diretório são os seguintes:</p>
+<ul>
+<li><code>anr/anr_yyyy-mm-dd-hh-mm-ss</code><ul>
+<li><strong>anr_yyyy-mm-dd-hh-mm-ss</strong>: Arquivo que fornece um diagnóstico detalhado do estado do sistema e da atividade de um processo específico.</li>
+</ul>
+</li>
+<li><code>log/acore/0_dump_all.zip</code><ul>
+<li><strong>0_dump_all.zip</strong>: Arquivo que contém um dump do estado do sistema associado ao processo acore.  </li>
+</ul>
+</li>
+<li><code>log/batterystats/newbatterystats240905095247</code><ul>
+<li><strong>newbatterystats240905095247</strong>: Arquivo que contém métricas sobre o uso de energia do dispositivo.</li>
+</ul>
+</li>
+<li><code>log/dropbox.txt</code><ul>
+<li><strong>dropbox.txt</strong>: Arquivo que contém registros de eventos do sistema gerenciados pelo DropBoxManager.</li>
+</ul>
+</li>
+<li><code>log/dumpstate_debug_history.lst</code><ul>
+<li><strong>dumpstate_debug_history.lst</strong>: Arquivo que contém o histórico de execuções do processo de coleta de logs do sistema.</li>
+</ul>
+</li>
+<li><code>log/dumpstate_lastkmsg_20240423_152746_0_MP.log.gz</code><ul>
+<li><strong>dumpstate_lastkmsg_20240423_152746_0_MP.log.gz</strong>: Arquivo que contém a última mensagem do kernel após uma reinicialização inesperada.</li>
+</ul>
+</li>
+<li><code>log/dumpstate_latest_lastkmsg.log.gz</code><ul>
+<li><strong>dumpstate_latest_lastkmsg.log.gz</strong>: Arquivo que contém o log persistente mais recente do kernel após uma reinicialização.</li>
+</ul>
+</li>
+<li><code>log/dumpstate-stats.txt</code><ul>
+<li><strong>dumpstate-stats.txt</strong>: Arquivo que contém estatísticas geradas durante a coleta do estado do sistema.  </li>
+</ul>
+</li>
+<li><code>log/dumpstate_sys_error.zip</code><ul>
+<li><strong>dumpstate_sys_error.zip</strong>: Arquivo compactado que contém informações sobre erros críticos do sistema.</li>
+</ul>
+</li>
+<li><code>log/lom_log.txt</code><ul>
+<li><strong>lom_log.txt</strong>: Arquivo que contém registros relacionados ao armazenamento ou monitoramento do sistema.  </li>
+</ul>
+</li>
+<li><code>log/pm_debug_info.txt</code><ul>
+<li><strong>pm_debug_info.txt</strong>: Arquivo que contém informações de depuração do gerenciador de pacotes do sistema.</li>
+</ul>
+</li>
+<li><code>log/power_off_reset_reason.txt</code><ul>
+<li><strong>power_off_reset_reason.txt</strong>: Arquivo que indica a causa do último desligamento ou reinicialização do dispositivo.  </li>
+</ul>
+</li>
+<li><code>log/prev_dump.log</code><ul>
+<li><strong>prev_dump.log</strong>: Arquivo que contém uma captura anterior do estado do sistema antes de um evento crítico.</li>
+</ul>
+</li>
+<li><code>log/radio_PRECONFG_SET.log</code><ul>
+<li><strong>radio_PRECONFG_SET.log</strong>: Arquivo que documenta a configuração inicial do módulo de rádio do dispositivo.</li>
+</ul>
+</li>
+<li><code>log/shutdown_profile.1.txt</code><ul>
+<li><strong>shutdown_profile.1.txt</strong>: Arquivo que contém o perfil de desligamento registrado pelo sistema.  </li>
+</ul>
+</li>
+<li><code>log/shutdown_profile_latest.txt</code><ul>
+<li><strong>shutdown_profile_latest.txt</strong>: Arquivo que contém o perfil de desligamento mais recente do sistema.</li>
+</ul>
+</li>
+<li><code>log/err/</code><ul>
+<li><strong>mobiledata_dns.dat</strong>: Arquivo que contém erros relacionados à resolução DNS em redes móveis.  </li>
+<li><strong>mobiledata_tp2.dat</strong>: Arquivo que contém erros na transferência de pacotes móveis.  </li>
+<li><strong>mobiledata_tp.dat</strong>: Arquivo que contém erros na transferência de pacotes móveis.</li>
+</ul>
+</li>
+<li><code>log/ewlogd/ewlog0_20240920_144426188369.log</code><ul>
+<li><strong>ewlog0_20240920_144426188369.log</strong>: Arquivo que contém registros de eventos do sistema gerados pelo serviço ewlogd.</li>
+</ul>
+</li>
+<li><code>log/imscr/imscr.log.0</code><ul>
+<li><strong>imscr.log.0</strong>: Arquivo que contém registros do componente IMS para serviços de comunicação.</li>
+</ul>
+</li>
+<li><code>log/omc/</code><ul>
+<li><strong>cidmanager.log</strong>: Arquivo que contém informações do gerenciador de códigos de operadora (CID).</li>
+</ul>
+</li>
+<li><strong>csc_update_log.txt</strong>: Arquivo que contém o registro de atualizações do pacote de personalização CSC.  <ul>
+<li><strong>home_fota_update_log.txt</strong>: Arquivo que contém registros de atualizações FOTA na rede doméstica.  </li>
+<li><strong>prev_csc_log.txt</strong>: Arquivo que contém um histórico anterior da configuração da operadora.</li>
+</ul>
+</li>
+<li><code>log/search/0_com.samsung.android.scs_index_encrypted.tar.gz</code><ul>
+<li><strong>0_com.samsung.android.scs_index_encrypted.tar.gz</strong>: Arquivo compactado criptografado que contém dados do índice de pesquisa do sistema.</li>
+</ul>
+</li>
+<li><code>log/sfslog/sfslog.0.gz</code><ul>
+<li><strong>sfslog.0.gz</strong>: Arquivo compactado que contém registros do sistema de arquivos seguros (Secure File System).  </li>
+</ul>
+</li>
+<li><code>log/smartswitch/1726696227738SmartSwitchSimpleLog.log</code><ul>
+<li><strong>1726696227738SmartSwitchSimpleLog.log</strong>: Arquivo que contém registros do processo de transferência de dados através do Smart Switch.  </li>
+</ul>
+</li>
+<li><code>log/update_engine_log/update_engine.20240603-222843</code><ul>
+<li><strong>update_engine.20240603-222843</strong>: Arquivo que contém registros do mecanismo de atualização de software do sistema.  </li>
+</ul>
+</li>
+<li><code>log/wfd/wfdDumpSource.log</code><ul>
+<li><strong>wfdDumpSource.log</strong>: Arquivo que contém a atividade registrada do componente Wifi direct (WFD).</li>
+</ul>
+</li>
+<li><code>log/wifi/</code></li>
+<li><code>system/proc/</code><ul>
+<li><strong>kmsg</strong>: Arquivo que contém o log atual do kernel com atividades do sistema em baixo nível.</li>
+<li><strong>last_kmsg</strong>: Arquivo que contém o último log persistente do kernel após uma reinicialização.</li>
+</ul>
+</li>
+<li><code>sys/fs/pstore/</code></li>
+</ul>
+<h2 id="procesos-y-aplicaciones">Procesos y aplicaciones</h2>
+<h3 id="packagesjson">packages.json</h3>
+<p>As informações desta pasta são geradas pelo módulo <a href="https://github.com/mvt-project/mvt/blob/main/src/mvt/android/modules/adb/packages.py">packages.go</a>.</p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>json</em> e contém a saída do comando <code>adb shell pm list packages</code> , que mostra uma lista de aplicativos instalados no dispositivo.</p>
+<p>O arquivo contém:</p>
+<ul>
+<li>name: Nome do pacote do aplicativo.</li>
+<li>files: Caminho do arquivo APK correspondente com seus respectivos hashes e informações do certificado.</li>
+<li>installer: A partir de qual aplicativo foi instalado.</li>
+<li>uid: O PID associado em execução.</li>
+<li>disabled: Indica se o aplicativo está desativado.</li>
+<li>system: Indica se o pacote pertence ao sistema.</li>
+<li>third_party: Indica se é um aplicativo de terceiros.</li>
+</ul>
+<p><strong>Por que isso é importante?</strong></p>
+<p>O conteúdo deste arquivo inclui informações que permitem identificar os aplicativos instalados e seu status no dispositivo. Isso ajuda os analistas a avaliar se existem aplicativos de risco ou maliciosos, quais permissões eles têm e quais podem comprometer a segurança.</p>
+<p><strong>Estructura del archivo</strong></p>
+<div class="highlight"><pre><span></span><code>[
+    {
+        &quot;name&quot;: &quot;com.whatsapp&quot;,
+        &quot;files&quot;: [
+            {
+                &quot;path&quot;: &quot;/data/app/~~bqy7OQa_ZY_wDTFdG5YZRA==/com.whatsapp-3CExO11mXQz7SoP-3&gt;
+                &quot;local_name&quot;: &quot;&quot;,
+                &quot;md5&quot;: &quot;a6014f075183b8872d115e04f546a19a&quot;,
+                &quot;sha1&quot;: &quot;7c52f9781c44c4902aecb4fc8a13584998e02376&quot;,
+                &quot;sha256&quot;: &quot;26721b2669943d57f9de57614a11077b7c3f3036396d48c3e54cbf0effd2268e&quot;,
+                &quot;sha512&quot;: &quot;21bea0ff94a748826041a1a8b3b9189090340086469ec62d31cf0d263c743fc2e&gt;
+                &quot;error&quot;: &quot;&quot;,
+                &quot;verified_certificate&quot;: true,
+                &quot;certificate&quot;: {
+                    &quot;Md5&quot;: &quot;556c6019249bbc0cab70495178d3a9d1&quot;,
+                    &quot;Sha1&quot;: &quot;38a0f7d505fe18fec64fbf343ecaaaf310dbd799&quot;,
+                    &quot;Sha256&quot;: &quot;3987d043d10aefaf5a8710b3671418fe57e0e19b653c9df82558feb5ffce5&gt;
+                    &quot;ValidFrom&quot;: &quot;2010-06-25T23:07:16Z&quot;,
+                    &quot;ValidTo&quot;: &quot;2044-02-15T23:07:16Z&quot;,
+                    &quot;Issuer&quot;: &quot;C=US, ST=California, L=Santa Clara, O=WhatsApp Inc., OU=Engin&gt;
+                    &quot;Subject&quot;: &quot;C=US, ST=California, L=Santa Clara, O=WhatsApp Inc., OU=Engi&gt;
+                    &quot;SignatureAlgorithm&quot;: &quot;DSA-SHA1&quot;,
+                    &quot;SerialNumber&quot;: 1277507236
+                },
+                &quot;certificate_error&quot;: &quot;&quot;,
+                &quot;trusted_certificate&quot;: true
+            }
+        ],
+        &quot;installer&quot;: &quot;com.facebook.system&quot;,
+        &quot;uid&quot;: 10267,
+        &quot;disabled&quot;: false,
+        &quot;system&quot;: false,
+        &quot;third_party&quot;: true
+    }
+]
+</code></pre></div>
+<h3 id="apks">apks/</h3>
+<p>As informações desta pasta são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/packages.go">packages.go</a>.</p>
+<p><strong>Informações contidas</strong></p>
+<p>Este diretório armazena os arquivos APK (pacotes de aplicativos Android) extraídos do dispositivo. Estes são os arquivos de instalação dos aplicativos que estavam presentes no sistema no momento da análise.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>A análise dos APKs permite examinar os aplicativos instalados no dispositivo, identificar possíveis amostras de malware ou aplicativos maliciosos, bem como validar as versões instaladas e suas assinaturas.</p>
+<h3 id="processestxt">processes.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/processes.go">processes.go</a>.</p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>json</em> e contém a saída do comando <code>adb shell ps -A</code> , que mostra informações detalhadas sobre os processos em execução.</p>
+<p>Este arquivo apresenta as informações de forma estruturada, ordenadas por identificadores, detalhes da execução, consumo de recursos e status do processo.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>Este arquivo permite identificar processos que são executados de maneira incomum ou que são executados por usuários não autorizados como resultado de uma escalada de privilégios. Da mesma forma, podemos garantir que os processos e suas hierarquias correspondam às configurações estabelecidas ou normais.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>[
+    {
+        &quot;pid&quot;: 1,
+        &quot;uid&quot;: 0,
+        &quot;ppid&quot;: 0,
+        &quot;pgroup&quot;: 0,
+        &quot;psid&quot;: 0,
+        &quot;filename&quot;: &quot;(init)&quot;,
+        &quot;priority&quot;: 0,
+        &quot;state&quot;: &quot;S&quot;,
+        &quot;user_time&quot;: 0,
+        &quot;kernel_time&quot;: 0,
+        &quot;path&quot;: &quot;/system/bin/init&quot;,
+        &quot;context&quot;: &quot;u:r:init:s0&quot;,
+        &quot;previous_context&quot;: &quot;u:r:kernel:s0&quot;,
+        &quot;command_line&quot;: [&quot;/system/bin/init&quot;, &quot;second_stage&quot;],
+        &quot;env&quot;: null,
+        &quot;cwd&quot;: &quot;/&quot;
+    },
+    {
+        &quot;pid&quot;: 2,
+        &quot;uid&quot;: 0,
+        &quot;ppid&quot;: 0,
+        &quot;pgroup&quot;: 0,
+        &quot;psid&quot;: 0,
+        &quot;filename&quot;: &quot;(kthreadd)&quot;,
+        &quot;priority&quot;: 0,
+        &quot;state&quot;: &quot;S&quot;,
+        &quot;user_time&quot;: 0,
+        &quot;kernel_time&quot;: 0,
+        &quot;path&quot;: &quot;&quot;,
+        &quot;context&quot;: &quot;u:r:kernel:s0&quot;,
+        &quot;previous_context&quot;: &quot;u:r:kernel:s0&quot;,
+        &quot;command_line&quot;: null,
+        &quot;env&quot;: null,
+        &quot;cwd&quot;: &quot;&quot;
+    },
+    {
+        &quot;pid&quot;: 20430,
+        &quot;uid&quot;: 0,
+        &quot;ppid&quot;: 0,
+        &quot;pgroup&quot;: 0,
+        &quot;psid&quot;: 0,
+        &quot;filename&quot;: &quot;(com.whatsapp)&quot;,
+        &quot;priority&quot;: 0,
+        &quot;state&quot;: &quot;&quot;,
+        &quot;user_time&quot;: 0,
+        &quot;kernel_time&quot;: 0,
+        &quot;path&quot;: &quot;&quot;,
+        &quot;context&quot;: &quot;u:r:untrusted_app:s0:c11,c257,c512,c768&quot;,
+        &quot;previous_context&quot;: &quot;u:r:init:s0&quot;,
+        &quot;command_line&quot;: [
+            &quot;com.whatsapp&quot;
+        ],
+        &quot;env&quot;: null,
+        &quot;cwd&quot;: &quot;&quot;
+    },
+]
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://developer.android.com/guide/components/processes-and-threads?hl=es-419">Visão geral dos processos e subprocessos</a></li>
+</ul>
+<h3 id="servicestxt">services.txt</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/services.go">services.go</a></p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>txt</em> e contém a saída do comando <code>adb shell service list</code>, que mostra informações detalhadas sobre os serviços em execução.</p>
+<p>A estrutura do arquivo é o nome do serviço e o processo ou pacote que está em execução para esse serviço.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>Este arquivo permite identificar os serviços em execução ou, inversamente, identificar se um serviço não estava em execução. Isso é útil para identificar se todos os serviços necessários estão em execução para manter a integridade da segurança do dispositivo.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>Found 368 services:
+0   AtlasService: [android.atlas.service]
+1   DockObserver: []
+9   accessibility: [android.view.accessibility.IAccessibilityManager]
+10  account: [android.accounts.IAccountManager]
+11  activity: [android.app.IActivityManager]
+13  adb: [android.debug.IAdbManager]
+16  alarm: [android.app.IAlarmManager]
+26  android.hardware.power.IPower/default: [android.hardware.power.IPower]
+27  android.hardware.power.stats.IPowerStats/default: []
+43  anrmanager: [android.app.IAnrManager]
+44  anti_root_dialog: [com.oplus.exsystemservice.antirootdialog.IAntiRootDialog]
+50  appops: [com.android.internal.app.IAppOpsService]
+56  audio: [android.media.IAudioService]
+61  battery: []
+63  batterystats: [com.android.internal.app.IBatteryStats]
+68  bugreport: [android.os.IDumpstate]
+70  cacheinfo: []
+72  clipboard: [android.content.IClipboard]
+78  connectivity: [android.net.IConnectivityManager]
+84  cpuinfo: []
+85  critical.log: []
+89  dbinfo: []
+130 input: [android.hardware.input.IInputManager]
+133 installd: []
+146 location: [android.location.ILocationManager]
+149 logcat: [android.os.logcat.ILogcatManagerService]
+169 meminfo: []
+181 netstats: [android.net.INetworkStatsService]
+191 notification: [android.app.INotificationManager]
+234 package: [android.content.pm.IPackageManager]
+238 permission: [android.os.IPermissionController]
+240 permissionmgr: [android.permission.IPermissionManager
+242 phone: [com.android.internal.telephony.ITelephony]
+247 power: [android.os.IPowerManager]
+248 power_hal_mgr_service: [com.mediatek.powerhalmgr.IPowerHalMgr]
+249 power_monitor: [com.oplus.os.IOplusPowerMonitor]
+250 powerstats: []
+252 processinfo: [android.os.IProcessInfoService]
+253 procstats: [com.android.internal.app.procstats.IProcessStats]
+255 recovery: [android.os.IRecoverySystem]
+273 sensorservice: [android.gui.SensorServer]
+274 serial: [android.hardware.ISerialManager]
+276 settings: []
+298 system_server_dumper: []
+299 system_update: [android.os.ISystemUpdateManager]
+301 telecom: [com.android.internal.telecom.ITelecomService]
+302 telephony.registry: [com.android.internal.telephony.ITelephonyRegistry]
+314 tracing.proxy: [android.tracing.ITracingServiceProxy]
+322 usb: [android.hardware.usb.IUsbManager]
+323 user: [android.os.IUserManager]
+354 virtualdevice: [android.companion.virtual.IVirtualDeviceManager]
+355 vodata: [com.mediatek.ims.internal.IVoDataService]
+357 vold: []
+358 vpn_management: [android.net.IVpnManager]
+363 wifi: [android.net.wifi.IWifiManager]
+367 window: [android.view.IWindowManager]
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://developer.android.com/develop/background-work/services?hl=es-419">Como funcionam os serviços no Android?</a></li>
+</ul>
+<h3 id="root_binariesjson">root_binaries.json</h3>
+<p>Este arquivo está no formato <em>json</em> e contém a saída do comando <code>adb shell which -a</code> aplicado a uma lista de binários para saber se eles estão presentes no sistema.</p>
+<p>Os binários aos quais ele se aplica são usados para obter acesso root ou elevar privilégios no dispositivo.</p>
+<p>A lista de binários e arquivos é:</p>
+<ul>
+<li>su</li>
+<li>busybox</li>
+<li>supersu</li>
+<li>Superuser.apk</li>
+<li>KingoUser.apk</li>
+<li>SuperSu.apk</li>
+<li>magisk</li>
+<li>magiskhide</li>
+<li>magiskinit</li>
+<li>magiskpolicy</li>
+</ul>
+<p>Se nenhum desses arquivos estiver presente no dispositivo, o conteúdo do arquivo estará vazio.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>Este arquivo detecta ferramentas de rooting, o que pode ser um indicativo de acessos não autorizados e escalonamento de privilégios que podem expor alguma vulnerabilidade.  Da mesma forma, permite ao analista identificar binários suspeitos que podem ter sido instalados sem o conhecimento do usuário e ajuda a determinar se o dispositivo foi manipulado.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<p>O arquivo vazio tem a seguinte estrutura:</p>
+<div class="highlight"><pre><span></span><code>[]
+</code></pre></div>
+<p>Quando o módulo identifica binários relacionados ao rooting nas rotas padrão do sistema no dispositivo, ele conterá uma lista dessas rotas para os binários detectados:</p>
+<div class="highlight"><pre><span></span><code>[
+        &quot;/system/xbin/su&quot;,
+        &quot;/system/bin/su&quot;,
+        &quot;/data/local/xbin/su&quot;,
+        &quot;/data/local/bin/busybox&quot;,
+        &quot;/sbin/su&quot;,
+        &quot;/su/bin/magisk&quot;,
+        &quot;/system/bin/.ext/.su&quot;,
+        &quot;/data/local/tmp/Superuser.apk&quot;,
+        &quot;/data/local/tmp/magiskhide&quot;
+]
+</code></pre></div>
+<h2 id="informacoes-dos-arquivos-no-dispositivo">Informações dos arquivos no dispositivo</h2>
+<h3 id="backupab">backup.ab</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/backup.go">backup.go</a>.
+Este módulo foi projetado especificamente para fazer cópias de segurança dos dados armazenados em dispositivos móveis com Android.</p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato binário e contém dados relacionados com a cópia de segurança de aplicações e configurações do dispositivo. Os dados binários presentes neste arquivo estão compactados e incluem informações confidenciais do dispositivo.</p>
+<p>Dependendo da opção selecionada no androidqf, o conteúdo do arquivo pode ser apenas os SMS ou pode ser uma cópia dos dados das aplicações que têm declarada no seu manifesto a possibilidade de realizar cópias.</p>
+<p>Este arquivo compactado pode ser analisado pelo MVT através do comando <code>mvt-android check-backup backup.ab</code></p>
+<p><strong>Por que é importante?</strong></p>
+<p>No caso de uma análise forense, este backup permite analisar os SMS em busca de links suspeitos ou maliciosos.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>(Binary data containing app backups and settings)
+414e 4452 4f49 4420 4241 434b 5550 0a35
+0a30 0a6e 6f6e 650a 6170 7073 2f63 6f6d
+2e61 6e64 726f 6964 2e63 7473 2e63 7473
+7368 696d 2f5f 6d61 6e69 6665 7374 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 3030 3036
+3030 2000 3031 3735 3000 0000 3031 3735
+3000 0000 3030 3030 3030 3034 3537 3600
+3000 0000 0000 0000 0000 0000 3031 3430
+3134 0020 3000 0000 0000 0000 0000 0000
+</code></pre></div>
+<p><strong>Saiba mais</strong></p>
+<ul>
+<li><a href="https://github.com/nelenkov/android-backup-extractor">Extração de arquivos de backup | Android Backup Extractor</a></li>
+<li><a href="https://digitalforensicforest.com/2016/01/28/android-backup-file-ab-analysis/">Análise de arquivos de backup no Android</a></li>
+<li><a href="https://docs.mvt.re/en/latest/android/backup/">Verificar um backup do Android (mensagens SMS) - Mobile Verification Toolkit</a> </li>
+</ul>
+<h3 id="filesjson">files.json</h3>
+<p>As informações deste arquivo são geradas pelo módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/files.go">files.go</a></p>
+<p><strong>Informações contidas</strong></p>
+<p>Este arquivo está no formato <em>json</em> e contém o resultado da pesquisa de arquivos usando o comando <em>find.</em></p>
+<p>O comando completo <em>find</em> é <code>adb shell find ‘/’ -maxdepth 1 -printf ‘%T@ %m %s %u %g %p\n’ 2\&gt; /dev/null</code> e é aplicado às seguintes pastas:</p>
+<ul>
+<li>/sdcard/</li>
+<li>/system/</li>
+<li>/system_ext/</li>
+<li>/vendor/</li>
+<li>/cust/</li>
+<li>/product/</li>
+<li>/apex/</li>
+<li>/data/local/tmp/</li>
+<li>/data/media/0/</li>
+<li>/data/misc/radio/</li>
+<li>/data/vendor/secradio/</li>
+<li>/data/log/</li>
+<li>/tmp/</li>
+<li>/data/data/</li>
+</ul>
+<p>Cada arquivo inclui metadados como: o caminho completo do arquivo, tamanho, marca de tempo (indica a última modificação do arquivo e o último acesso ao arquivo), permissões do arquivo, identificador do proprietário, mensagens de erro e hashes sha1, sha256, sha512, md5, se estiverem pré-calculados.</p>
+<p><strong>Por que isso é importante?</strong></p>
+<p>Este arquivo é relevante para identificar arquivos de interesse em uma investigação forense, incluindo arquivos potencialmente usados por invasores para comprometer um dispositivo e fazer as análises oportunas que permitam rastrear atividades maliciosas.</p>
+<p><strong>Exemplo do conteúdo do arquivo</strong></p>
+<div class="highlight"><pre><span></span><code>{
+&quot;path&quot;: &quot;/sdcard/Android/.Trash/com.sec.android.app.myfiles/.nomedia&quot;,
+        &quot;size&quot;: 62,
+        &quot;mode&quot;: &quot;-rw-rw----&quot;,
+        &quot;user_id&quot;: 10276,
+        &quot;user_name&quot;: &quot;&quot;,
+        &quot;group_id&quot;: 1023,
+        &quot;group_name&quot;: &quot;&quot;,
+        &quot;changed_time&quot;: 1722868692,
+        &quot;modified_time&quot;: 1722868692,
+        &quot;access_time&quot;: 1714937715,
+        &quot;error&quot;: &quot;&quot;,
+        &quot;context&quot;: &quot;u:object_r:fuse:s0&quot;,
+        &quot;sha1&quot;: &quot;&quot;,
+        &quot;sha256&quot;: &quot;&quot;,
+        &quot;sha512&quot;: &quot;&quot;,
+        &quot;md5&quot;: &quot;&quot;
+}
+</code></pre></div>
+<h2 id="comentarios">Comentários</h2>
+<p>Tem comentários ou sugestões sobre este recurso? Você pode usar a função de comentários mostrada abaixo para deixar suas ideias ou observações. Por favor, certifique-se de seguir nosso <a href="../../community/code-of-conduct">código de conduta</a>. A função de comentários leva diretamente à seção de <a href="https://github.com/Socialtic/forensics/discussions">Discussions do Github</a>, onde você também pode participar das discussões de forma direta.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+<!-- Insert generated snippet here -->
+
+
+
+<script src="https://giscus.app/client.js" data-repo="socialtic/forensics" data-repo-id="R_kgDONvIuiA" data-category="General" data-category-id="DIC_kwDONvIuiM4CuEFV" data-mapping="pathname" data-strict="0" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-reference-mvt-bugreport-dictionary/index.html" class="md-footer__link md-footer__link--next" aria-label="Próximo: Diccionario de archivos generados por mvt bugreport">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Diccionario de archivos generados por mvt bugreport
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
+<div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://docs.mvt.re/en/latest/license/">MVT License</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/socialtic" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/socialtic/forensics/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://socialtic.org" target="_blank" rel="noopener" title="socialtic.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant.prefetch", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.footer", "content.action.view", "content.action.edit", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.26099bd0.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9d1edc04.min.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../assets/document_dates/core/core.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../assets/document_dates/core/core.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../assets/document_dates/core/core.js"></script>
+      
+    
+  </body>
+</html>
