@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.010a373c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7d528353.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1394,11 +1394,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion-del-tutorial" class="md-nav__link">
+  <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Conclusión del tutorial
+          Conclusión
         </span>
       
     </span>
@@ -1730,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/00-glossary.md" class="md-nav__link">
+      <a href="../../references/00-glossary/index.html" class="md-nav__link">
         
   
   
@@ -2212,7 +2212,7 @@
 
 
 <h1 id="tutorial-explorando-androidqf-para-la-adquisicion-de-informacion-en-android">Tutorial - Explorando AndroidQF para la adquisición de información en Android</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-18T00:00:00'>2025-08-18</time></span><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-10T18:18:05+00:00'>2025-10-10</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org/quienes-somos/" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class="avatar" src="../../assets/external/avatars.githubusercontent.com/Socialtic.png"></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-18T00:00:00'>2025-08-18</time></span><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-22T17:30:56+00:00'>2025-10-22</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org/quienes-somos/" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class="avatar" src="../../assets/external/avatars.githubusercontent.com/Socialtic.png"></div></div></div></div>
 
 <p>Este documento forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el <a data-preview="" href="../../references/00-glossary/index.html#diataxis">marco de referencia de documentación técnica Diataxis</a>.</p>
 <p>Este recurso en particular se enmarca dentro de la categoría de <a href="https://diataxis.fr/tutorials/">tutoriales</a>, y contiene actividades prácticas guiadas para familiarizarse con una extracción forense a través de la herramienta <a href="https://github.com/mvt-project/androidqf">AndroidQF</a>.</p>
@@ -2332,7 +2332,7 @@
 <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>./androidqf-XXX
 </code></pre></div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *chmod +x* para agregar permisos de ejecución al binario" src="../../../assets/01-tutorial/08-captura-windows-explorador-binario-andoridqf.png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *chmod +x* para agregar permisos de ejecución al binario" src="../../assets/01-tutorial/08-captura-linux-permisos-ejecucion-andoridqf.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 8</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>chmod +x</em> para agregar permisos de ejecución al binario</p>
 </figcaption>
@@ -2341,7 +2341,7 @@
 <div class="tabbed-block">
 <p>Como se indicó anteriormente, para sistemas operativos Windows <strong>solamente existe un binario disponible</strong>, que llevará un nombre similar a <em>androidqf_v1.7.0_windows_amd64_signed.exe</em>. Para obtener AndroidQF debes descargar este archivo. En la imagen 9 mostramos una carpeta con el binario (archivo <em>.exe</em>) descargado. </p>
 <figure>
-<p><img alt=" Captura de pantalla del explorador de archivos de Windows con la carpeta del binario en la carpeta donde se guardará la extracción forense." src="../../../assets/01-tutorial/09-captura-linux-permisos-ejecucion-andoridqf.png" title="imagen 1" /></p>
+<p><img alt=" Captura de pantalla del explorador de archivos de Windows con la carpeta del binario en la carpeta donde se guardará la extracción forense." src="../../assets/01-tutorial/09-captura-windows-explorador-binario-andoridqf.png" title="imagen 1" /></p>
 <figcaption>
 <p><strong>Imagen 9</strong>. Captura de pantalla del explorador de archivos de Windows con la carpeta del binario en la carpeta donde se guardará la extracción forense.</p>
 </figcaption>
@@ -2710,17 +2710,23 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <p>Este binario lee información del sistema del dispositivo en los directorios /proc, /sys, /system a través de los subcomandos <em>ps (</em>que recolecta la información de los procesos en ejecución) y <em>find</em> (que genera registros de archivos presentes en estos directorios con sus metadatos y hashes). Esta información es devuelta por el colector en formato JSON y viaja por adb shell al binario de AndroidQF que está siendo ejecutado en el equipo de cómputo para guardarse en la salida de la adquisición.</p>
 <p>El collector no ejecuta ningún comando adb, sin embargo, sus comandos equivalentes podrían ser los siguientes:</p>
 <p><strong>Para el comando ps (procesos):</strong></p>
-<p><div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ps<span class="w"> </span><span class="c1"># (1)!</span>
+<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ps<span class="w"> </span><span class="c1"># (1)!</span>
 </code></pre></div>
-1. Este comando lista los procesos en ejecución en el dispositivo (PID, nombre, usuario, estado).</p>
+<ol>
+<li>Este comando lista los procesos en ejecución en el dispositivo (PID, nombre, usuario, estado).</li>
+</ol>
 <p><strong>Para el comando find (registro de archivos):</strong></p>
-<p><div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ls/stat<span class="w"> </span>+<span class="w"> </span>adb<span class="w"> </span>pull<span class="w"> </span>+<span class="w"> </span>hashing<span class="w"> </span><span class="c1"># (1)!</span>
+<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ls/stat<span class="w"> </span>+<span class="w"> </span>adb<span class="w"> </span>pull<span class="w"> </span>+<span class="w"> </span>hashing<span class="w"> </span><span class="c1"># (1)!</span>
 </code></pre></div>
-1. Donde:
-    * ls: lista archivos en un directorio.<br />
-    * stat: muestra atributos de un archivo (tamaño, permisos, MAC times, UID/GID).<br />
-    * adb pull: copia archivos del dispositivo al host.<br />
-    * hashing: calcula sumas de verificación (MD5, SHA1, SHA256, etc.) para asegurar integridad.</p>
+<ol>
+<li>Donde:<ul>
+<li>ls: lista archivos en un directorio.  </li>
+<li>stat: muestra atributos de un archivo (tamaño, permisos, MAC times, UID/GID).  </li>
+<li>adb pull: copia archivos del dispositivo al host.  </li>
+<li>hashing: calcula sumas de verificación (MD5, SHA1, SHA256, etc.) para asegurar integridad.</li>
+</ul>
+</li>
+</ol>
 <h4 id="backup">Backup</h4>
 <p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/backup.go">Backup</a> módulo realiza una copia de seguridad del dispositivo mediante <em>adb backup</em> según la opción seleccionada (solo SMS, todo el dispositivo o nada). El archivo generado se guarda como <em>backup.ab</em> en la carpeta de la adquisición.</p>
 <p>Este módulo permite obtener una copia de los SMS o de la información del sistema backup donde encontramos la evidencia preservada que ayude a la identificación de vectores de ataque en posibles ataques digitales que deriven de phishing.</p>
@@ -2825,8 +2831,8 @@ adb<span class="w"> </span>shell<span class="w"> </span>cmd<span class="w"> </sp
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ls<span class="w"> </span>-R<span class="w"> </span>/data/local/tmp/
 </code></pre></div>
 <p>Comando equivalente en adb para extraerlos:</p>
-<p><code>shell
-adb pull /data/local/tmp/ &lt;ruta_local&gt;</code></p>
+<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>pull<span class="w"> </span>/data/local/tmp/<span class="w"> </span>&lt;ruta_local&gt;
+</code></pre></div>
 <h2 id="verificacion-de-la-extraccion">Verificación de la extracción</h2>
 <p>Una vez finalizada la ejecución de AndroidQF, es importante validar que la adquisición se completó correctamente. Para ello, realiza los siguientes pasos:</p>
 <ol>
@@ -2837,33 +2843,33 @@ adb pull /data/local/tmp/ &lt;ruta_local&gt;</code></p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Puedes usar el comando <em>grep</em> para realizar una búsqueda dentro de la carpeta de la adquisición:</p>
-<p><code>shell
-grep -i "WARNING\|ERROR" command.log</code></p>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;WARNING\|ERROR&quot;</span><span class="w"> </span>command.log
+</code></pre></div>
 <p>La salida estará en texto plano:</p>
-<p><code>shell
-2025-07-28T13:05:36-06:00 [ERROR] Failed to get file paths for package com.adobe.reader: exit status 1: 
-2025-07-28T13:05:55-06:00 [ERROR] Failed to get file paths for package com.whova.event: exit status 1: 
-2025-07-28T13:07:27-06:00 [ERROR] Failed to get file paths for package im.vector.app: exit status 1: 
-2025-07-28T13:10:09-06:00 [ERROR] Failed to get file paths for package sh.file.opener.shell.editor.app: exit status 1: 
-2025-07-28T13:29:51-06:00 [DEBUG] From: /data/system/uiderrors.txt
-2025-07-28T13:29:51-06:00 [DEBUG] To: /home/lightyear/Documentos/ST/ST2025/extracciones qf/a7de07b3-36d8-4589-9854-1bc666c2c873/logs/data/system/uiderrors.txt
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /data/system/uiderrors.txt: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /proc/kmsg: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /proc/last_kmsg: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /sys/fs/pstore/console-ramoops: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /data/anr/: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /data/anr/anr_2025-07-23-03-47-27-988: 
-2025-07-28T13:29:52-06:00 [ERROR] Failed to pull log file /data/log/: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/settingsprovider.txt: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/dark_mode_log0.txt.lck: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/dark_mode_log0.txt: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/knoxsdk.log.0.lck: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/knoxsdk.log.0: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/LockSettingsLog_Enroll.log: 
-2025-07-28T13:30:01-06:00 [ERROR] Failed to pull log file /data/log/setupwizard.txt: 
-2025-07-28T13:30:01-06:00 [ERROR] Failed to pull log file /data/log/appwidget_history_log0.txt.lck: 
-2025-07-28T13:30:01-06:00 [ERROR] Failed to pull log file /data/log/appwidget_history_log0.txt: 
-2025-07-28T13:30:01-06:00 [ERROR] Failed to pull log file</code></p>
+<div class="highlight"><pre><span></span><code><span class="m">2025</span>-07-28T13:05:36-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>file<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>package<span class="w"> </span>com.adobe.reader:<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:05:55-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>file<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>package<span class="w"> </span>com.whova.event:<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:07:27-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>file<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>package<span class="w"> </span>im.vector.app:<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:10:09-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>file<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>package<span class="w"> </span>sh.file.opener.shell.editor.app:<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>DEBUG<span class="o">]</span><span class="w"> </span>From:<span class="w"> </span>/data/system/uiderrors.txt
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>DEBUG<span class="o">]</span><span class="w"> </span>To:<span class="w"> </span>/home/lightyear/Documentos/ST/ST2025/extracciones<span class="w"> </span>qf/a7de07b3-36d8-4589-9854-1bc666c2c873/logs/data/system/uiderrors.txt
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/system/uiderrors.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/proc/kmsg:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/proc/last_kmsg:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/sys/fs/pstore/console-ramoops:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/anr/:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/anr/anr_2025-07-23-03-47-27-988:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:52-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/settingsprovider.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/dark_mode_log0.txt.lck:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/dark_mode_log0.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/knoxsdk.log.0.lck:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/knoxsdk.log.0:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/LockSettingsLog_Enroll.log:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:01-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/setupwizard.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:01-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/appwidget_history_log0.txt.lck:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:01-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/appwidget_history_log0.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:01-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>
+</code></pre></div>
 <p>La imagen 34 muestra la salida de búsqueda de errores en un sistema Linux.</p>
 <figure>
 <p><img alt=" Captura de pantalla de terminal de linux con el comando *grep* para buscar errores en el archivo command.log generado por AndoridQF." src="../../assets/01-tutorial/34-captura-pantalla-terminal-linux-errores.png" title="imagen 1" /></p>
@@ -2889,25 +2895,26 @@ grep -i "WARNING\|ERROR" command.log</code></p>
 <p>Verifica la existencia del archivo <em>acquisition.json</em> y abrelo</p>
 <p>Este archivo resume los detalles de la extracción. Su creación implica que AndroidQF finalizó correctamente la extracción forense del dispositivo. </p>
 <p>Ejemplo de la salida del archivo <em>acquisition.json</em>:</p>
-<p><code>{
-"uuid": "a7de07b3-36d8-4589-9854-1bc666c2c873",
-"androidqf_version": "f77a04f",
-"storage_path": "/home/user/acquisition/folder qf/a7de07b3-36d8-4589-9854-1bc666c2c873",
-"started": "2025-07-28T19:02:46.15453512Z",
-"completed": "2025-07-28T19:30:22.947074074Z",
-"collector": {
-"ExePath": "/data/local/tmp/collector",
-"Installed": false,
-"Adb": {
-"ExePath": "/usr/bin/adb",
-"Serial": ""
+<div class="highlight"><pre><span></span><code>{
+&quot;uuid&quot;: &quot;a7de07b3-36d8-4589-9854-1bc666c2c873&quot;,
+&quot;androidqf_version&quot;: &quot;f77a04f&quot;,
+&quot;storage_path&quot;: &quot;/home/user/acquisition/folder qf/a7de07b3-36d8-4589-9854-1bc666c2c873&quot;,
+&quot;started&quot;: &quot;2025-07-28T19:02:46.15453512Z&quot;,
+&quot;completed&quot;: &quot;2025-07-28T19:30:22.947074074Z&quot;,
+&quot;collector&quot;: {
+&quot;ExePath&quot;: &quot;/data/local/tmp/collector&quot;,
+&quot;Installed&quot;: false,
+&quot;Adb&quot;: {
+&quot;ExePath&quot;: &quot;/usr/bin/adb&quot;,
+&quot;Serial&quot;: &quot;&quot;
 },
-"Architecture": "arm64-v8a"
+&quot;Architecture&quot;: &quot;arm64-v8a&quot;
 },
-"tmp_dir": "/data/local/tmp/",
-"sdcard": "/sdcard/",
-"cpu": "arm64-v8a"
-}</code></p>
+&quot;tmp_dir&quot;: &quot;/data/local/tmp/&quot;,
+&quot;sdcard&quot;: &quot;/sdcard/&quot;,
+&quot;cpu&quot;: &quot;arm64-v8a&quot;
+}
+</code></pre></div>
 </li>
 <li>
 <p>Comprueba la creación de archivos y carpetas de salida</p>
@@ -2947,7 +2954,7 @@ grep -i "WARNING\|ERROR" command.log</code></p>
 </figcaption>
 </figure>
 <p>Identificar que una extracción fue realizada exitosamente implica un proceso de análisis, de habilidad y de instinto para leer líneas con distintos formatos e identificar todos los nombres de los archivos de salida. Todo tu esfuerzo ayuda a que la comunidad refuerce estas herramientas para hacerlas mejor en la sociedad civil.</p>
-<h2 id="conclusion-del-tutorial">Conclusión del tutorial</h2>
+<h2 id="conclusion">Conclusión</h2>
 <p>¡Felicidades! Has completado con éxito el proceso de adquisición forense con AndroidQF. Ejecutar una extracción de información forense no es una tarea sencilla, pero ahora dominas los pasos esenciales para realizar extracciones seguras, documentadas y con consentimiento. AndroidQF te permitirá como analista a apoyar en investigaciones desde tu laboratorio, organización o causa si eres  analista independiente sobre vigilancia, amenazas digitales y documentación de incidentes o ataques digitales. Tus nuevas habilidades son cruciales para reforzar el uso de estas herramientas en beneficio de muchas comunidad y la sociedad civil.</p>
 <p>Ahora que tienes la extracción, el siguiente paso es que puedas interpretar la información obtenida, pues una vez que una extracción fue realizada exitosamente es necesario comenzar un proceso de análisis de la información contenida en esta extracción.</p>
 <p>Para apoyarte en este análisis, este repositorio incluye un recurso de referencia clave: el <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">Diccionario de archivos generados por AndroidQF</a>. Con este recurso, podrás:</p>

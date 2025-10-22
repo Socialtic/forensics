@@ -9,8 +9,6 @@
         <meta name="description" content="Documentación para investigaciones forenses consentidas en Sociedad Civil">
       
       
-        <meta name="author" content="{'name': 'José Martínez', 'url': 'https://socialtic.org/quienes-somos/', 'description': 'SocialTIC'}">
-      
       
         <link rel="canonical" href="https://forensics.socialtic.org/en/tutorials/01-tutorial-learning-androidqf/index.html">
       
@@ -35,11 +33,11 @@
     
     
       
-        <title>Tutorial - Explorando AndroidQF para la adquisición de información en Android - SocialTIC Forensics</title>
+        <title>Tutorial - Exploring AndroidQF for forensic acquisition on Android devices - SocialTIC Forensics</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.010a373c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7d528353.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -124,7 +122,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-explorando-androidqf-para-la-adquisicion-de-informacion-en-android" class="md-skip">
+        <a href="#tutorial-exploring-androidqf-for-forensic-acquisition-on-android-devices" class="md-skip">
           Skip to content
         </a>
       
@@ -138,17 +136,12 @@
     
     
     
-        <div class="forensics-announce">
-            This page has not yet been translated into English, therefore it is displayed in Spanish.
-            <a href="/en/community/how-to-contribute/">Help us translate!</a>
-        </div>
-    
     
     <script>
         const gGM_SELECT_VERSION = "Select version";
         const gGMC_TRANSLATE_CTA = "Help us translate!";
         const gGMC_PAGE_LOCALE = "en";
-        const gGMC_FILE_LOCALE = "es";
+        const gGMC_FILE_LOCALE = "en";
         const gGMC_TRANSLATE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 12c0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2 0 .37-.03.73-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10C6.47 2 2 6.5 2 12s4.5 10 10 10c.59 0 1.16-.06 1.72-.16A5.9 5.9 0 0 1 13 19c0-.29.03-.57.07-.85-.32.63-.67 1.24-1.07 1.81-.83-1.2-1.5-2.53-1.91-3.96h3.72a5.95 5.95 0 0 1 2.59-2.4c.06-.53.1-1.06.1-1.6M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2zm.82 2H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m6.34 6H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2m.25-9.56c1.84.63 3.37 1.9 4.33 3.56h-2.95a15.7 15.7 0 0 0-1.38-3.56M23 18v2h-3v3h-2v-3h-3v-2h3v-3h2v3z"/></svg>';
     </script>
     
@@ -186,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tutorial - Explorando AndroidQF para la adquisición de información en Android
+              Tutorial - Exploring AndroidQF for forensic acquisition on Android devices
             
           </span>
         </div>
@@ -1003,11 +996,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requisitos-para-seguir-este-tutorial" class="md-nav__link">
+  <a href="#requirements-to-follow-this-tutorial" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Requisitos para seguir este tutorial
+          Requirements to follow this tutorial
         </span>
       
     </span>
@@ -1016,25 +1009,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acerca-de-androidqf" class="md-nav__link">
+  <a href="#about-androidqf" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Acerca de AndroidQF
+          About AndroidQF
         </span>
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Acerca de AndroidQF">
+    <nav class="md-nav" aria-label="About AndroidQF">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#que-hace-androidqf-a-nivel-tecnico" class="md-nav__link">
+  <a href="#what-does-androidqf-do-at-a-technical-level" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          ¿Qué hace AndroidQF a nivel técnico?
+          What does AndroidQF do at a technical level?
         </span>
       
     </span>
@@ -1043,11 +1036,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#por-que-es-util-para-hacer-analisis-forense-en-sociedad-civil" class="md-nav__link">
+  <a href="#why-is-it-useful-for-forensic-analysis-in-civil-society" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          ¿Por qué es útil para hacer análisis forense en sociedad civil?
+          Why is it useful for forensic analysis in civil society?
         </span>
       
     </span>
@@ -1061,11 +1054,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#revision-de-configuraciones-en-el-dispositivo-android" class="md-nav__link">
+  <a href="#step-1-reviewing-configurations-on-the-android-device" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Revisión de configuraciones en el dispositivo Android
+          Step 1 - Reviewing configurations on the Android device
         </span>
       
     </span>
@@ -1074,25 +1067,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#obteniendo-androidqf" class="md-nav__link">
+  <a href="#step-2-obtaining-androidqf" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Obteniendo AndroidQF
+          Step 2 - Obtaining AndroidQF
         </span>
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Obteniendo AndroidQF">
+    <nav class="md-nav" aria-label="Step 2 - Obtaining AndroidQF">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#descarga-e-instalacion-de-androidqf-desde-su-repositorio-oficial" class="md-nav__link">
+  <a href="#downloading-and-installing-androidqf-from-the-official-repository" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Descarga e instalación de AndroidQF desde su repositorio oficial
+          Downloading and installing AndroidQF from the official repository
         </span>
       
     </span>
@@ -1101,11 +1094,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alternativa-compilacion-de-binario-de-androidqf-para-linux" class="md-nav__link">
+  <a href="#alternative-compiling-the-androidqf-binary-for-linux" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Alternativa: Compilación de binario de AndroidQF para Linux
+          Alternative: Compiling the AndroidQF Binary for Linux
         </span>
       
     </span>
@@ -1119,25 +1112,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exploracion-y-ejecucion-androidqf" class="md-nav__link">
+  <a href="#exploring-and-running-androidqf" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Exploración y ejecución AndroidQF
+          Exploring and running AndroidQF
         </span>
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exploración y ejecución AndroidQF">
+    <nav class="md-nav" aria-label="Exploring and running AndroidQF">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exploracion-de-androidqf" class="md-nav__link">
+  <a href="#exploration-of-androidqf" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Exploración de AndroidQF
+          Exploration of AndroidQF
         </span>
       
     </span>
@@ -1146,11 +1139,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejecucion-de-androidqf" class="md-nav__link">
+  <a href="#running-androidqf" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Ejecución de AndroidQF
+          Running AndroidQF
         </span>
       
     </span>
@@ -1159,11 +1152,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#consideraciones-durante-la-ejecucion" class="md-nav__link">
+  <a href="#considerations-during-execution" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Consideraciones durante la ejecución
+          Considerations During Execution
         </span>
       
     </span>
@@ -1172,17 +1165,17 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#modulos-ejecutados-durante-una-adquisicion-con-androidqf" class="md-nav__link">
+  <a href="#modules-executed-during-an-acquisition-with-androidqf" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Módulos ejecutados durante una adquisición con AndroidQF
+          Modules executed during an acquisition with AndroidQF
         </span>
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Módulos ejecutados durante una adquisición con AndroidQF">
+    <nav class="md-nav" aria-label="Modules executed during an acquisition with AndroidQF">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1404,11 +1397,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verificacion-de-la-extraccion" class="md-nav__link">
+  <a href="#verifying-the-extraction" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Verificación de la extracción
+          Verifying the extraction
         </span>
       
     </span>
@@ -1417,11 +1410,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion-del-tutorial" class="md-nav__link">
+  <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Conclusión del tutorial
+          Conclusion
         </span>
       
     </span>
@@ -1753,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../references/00-glossary.md" class="md-nav__link">
+      <a href="../../references/00-glossary/index.html" class="md-nav__link">
         
   
   
@@ -2218,7 +2211,7 @@
 
 
   
-    <a href="https://github.com/Socialtic/forensics/edit/main/docs/es/tutorials/01-tutorial-learning-androidqf/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Socialtic/forensics/edit/main/docs/en/tutorials/01-tutorial-learning-androidqf/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2227,294 +2220,298 @@
     
       
     
-    <a href="https://github.com/Socialtic/forensics/raw/main/docs/es/tutorials/01-tutorial-learning-androidqf/index.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/Socialtic/forensics/raw/main/docs/en/tutorials/01-tutorial-learning-androidqf/index.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="tutorial-explorando-androidqf-para-la-adquisicion-de-informacion-en-android">Tutorial - Explorando AndroidQF para la adquisición de información en Android</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-18T00:00:00'>2025-08-18</time></span><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-10T18:18:05+00:00'>2025-10-10</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org/quienes-somos/" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class="avatar" src="../../../assets/external/avatars.githubusercontent.com/Socialtic.png"></div></div></div></div>
+<h1 id="tutorial-exploring-androidqf-for-forensic-acquisition-on-android-devices">Tutorial – Exploring AndroidQF for forensic acquisition on Android devices</h1>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-22T00:00:00'>2025-10-22</time></span><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-22T17:30:56+00:00'>2025-10-22</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='José Martínez'><span class='avatar-text'></span><img class='avatar' src='' /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='Daniel Bedoya'><span class='avatar-text'></span><img class='avatar' src='' /></div></div></div></div>
 
-<p>Este documento forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el <a data-preview="" href="../../references/00-glossary/index.html#diataxis">marco de referencia de documentación técnica Diataxis</a>.</p>
-<p>Este recurso en particular se enmarca dentro de la categoría de <a href="https://diataxis.fr/tutorials/">tutoriales</a>, y contiene actividades prácticas guiadas para familiarizarse con una extracción forense a través de la herramienta <a href="https://github.com/mvt-project/androidqf">AndroidQF</a>.</p>
-<p>Este tutorial tiene el <strong>objetivo de enseñar de forma prácrica</strong> de forma clara y accesible <strong>cómo usar AndroidQF para realizar extracciones forenses en dispositivos Android</strong>, destacando su utilidad en contextos de análisis de amenazas e incidentes que afectan a personas defensoras de derechos humanos, periodistas y organizaciones de la sociedad civil.</p>
+<p>This document is <strong>part of a technical documentation repository</strong> aimed at building a proven, flexible, and accessible knowledge base to <strong>promote consent-based digital forensics in support of civil society</strong>. To organize all contents we use the technical documentation framework <a data-preview="" href="../../references/00-glossary/index.html#diataxis">Diátaxis</a>.</p>
+<p>This resource falls within the <a href="https://diataxis.fr/tutorials/">tutorials</a> category and provides <strong>guided practical activities</strong> to become familiar with the forensic extraction tool <a href="https://github.com/mvt-project/androidqf">AndroidQF</a>.</p>
+<p>The goal of this hands-on tutorial is to <strong>teach how to use AndroidQF to perform forensic extractions on Android devices</strong>, highlighting its usefulness in device analysis and incident response scenarios in support of human rights defenders, journalists, and civil society organizations.</p>
+<hr />
 <div class="admonition tip">
-<p class="admonition-title">¿Cómo seguir este tutorial?</p>
-<p>Este tutorial pretende ser un <strong>recurso para el aprendizaje</strong>, por lo que algunos conceptos se exploran a profundidad, mostrando también alternativas y posibilidades. Si buscas una guía concisa, con instrucciones paso a paso para completar una extracción, consulta nuestra <a href="../../how-tos/04-how-to-extract-with-androidqf/">guía de adquisición con androidqf.</a></p>
-<p>Se recomienda destinar un espacio de tiempo de al menos 90 minutos para la exploración inicial, es especial si no se cuenta con experiencia previa en la herramienta. </p>
+<p class="admonition-title">How to follow this tutorial?</p>
+<p>This tutorial is a resource for <strong>learning and exploration</strong>, so concepts are explored in depth, while also presenting alternatives where possible. If you are looking for a concise, step-by-step guide to complete an extraction, refer to our <a href="../../how-tos/04-how-to-extract-with-androidqf/">guide to data acquisition with AndroidQF</a>.</p>
+<p>To follow this tutorial, we recommend you set aside at least <strong>90 minutes of dedicated time</strong> for the initial exploration, especially if you have no prior experience with the tool.</p>
 </div>
-<h2 id="requisitos-para-seguir-este-tutorial">Requisitos para seguir este tutorial</h2>
-<p>Para poder completar este tutorial es <strong>indispensable</strong> contar con  los siguientes elementos:</p>
+<h2 id="requirements-to-follow-this-tutorial">Requirements to follow this tutorial</h2>
+<p>To complete this tutorial, you <strong>must</strong> have the following:</p>
 <ul>
 <li>
-<p>Un <strong>dispositivo  Android</strong>. El dispositivo debe funcionar y se debe conocer su contraseña, PIN o patrón de desbloqueo, este debe contar con la <strong>depuración USB activa</strong>.</p>
+<p>An <strong>Android device</strong>: The device must be functional, and its password, PIN, or unlock pattern must be known. It must also have <strong>USB debugging enabled</strong>.</p>
 <div class="admonition question">
-<p class="admonition-title">¿Cómo habilitar la depuración por USB?</p>
-<p>Si el dispositivo no tiene activa esta configuración, es necesario que primero sigas los pasos sobre <a href="../../how-tos/02-how-to-enable-developer-options/">¿Cómo habilitar las opciones de desarrollador en diferentes dispositivos Android?</a> y posteriormente, seguir los pasos sobre <a href="../../how-tos/03-how-to-enable-adb/">¿Cómo habilitar ADB (depuración por USB) en diferentes dispositivos Android?</a>. </p>
+<p class="admonition-title">How to enable USB debugging?</p>
+<p>If the device does not have this configuration enabled, first follow the steps in <a href="../../how-tos/02-how-to-enable-developer-options/">How to enable developer options on different Android devices</a>, and then follow the guide on <a href="../../how-tos/03-how-to-enable-adb/">how to enable ADB (USB debugging) on different Android devices</a>.</p>
 </div>
 </li>
 <li>
-<p>Un <strong>equipo de cómputo</strong> con un sistema operativo Windows, Linux o macOS reciente.</p>
+<p>A <strong>computer</strong> running a recent version of Windows, Linux, or macOS.</p>
 </li>
 <li>
-<p>Cable USB para <strong>transferencia de datos</strong> en buen estado </p>
+<p>A <strong>USB data transfer cable</strong> in good condition.</p>
 <div class="admonition info">
-<p class="admonition-title">No todos los cables USB son iguales</p>
-<p>Algunos cables USB no tienen las conexiones necesarias para transferir datos entre el dispositivo móvil y la computadora. Estos cables son útiles para cargar nuestro dispositivo, pero no funcionan para transferir información. Para la extracción, asegúrate de utilizar un cable que permita transferir datos. Es <a href="https://support.konnected.io/how-to-tell-a-usb-charge-only-cable-from-a-usb-data-cable">difícil distinguirlos a simple vista</a>, pero usualmente los cables de carga rápida o aquellos incluidos con los dispositivos suelen ser cables de datos. </p>
+<p class="admonition-title">Not all USB cables are the same</p>
+<p>Some USB cables lack the internal connections required to transfer data between the mobile device and the computer. This type of cable will work for charging but not for data transfer. For forensic extractions, make sure you use a cable that allows <strong>data transfer</strong>.</p>
+<p>It can be <a href="https://support.konnected.io/how-to-tell-a-usb-charge-only-cable-from-a-usb-data-cable">difficult to visually distinguish them</a>, but typically, <strong>fast-charging cables</strong> or <strong>those included with devices</strong> tend to support data transfer.</p>
 </div>
 </li>
 </ul>
-<h2 id="acerca-de-androidqf">Acerca de AndroidQF</h2>
-<p><a href="https://github.com/mvt-project/androidqf">AndroidQF</a> es una herramienta de software libre y de código abierto <strong>enfocada en la extracción forense de dispositivos Android</strong>. Forma parte del <a href="https://github.com/mvt-project/">MVT Project</a>, desarrollada inicialmente por <a href="https://nex.sx/">Claudio Guarnieri</a> y es mantenida actualmente por el <a href="https://securitylab.amnesty.org/es/">Laboratorio de Seguridad de Amnistía Internacional</a>. </p>
-<p>Su nombre viene del inglés <em>Android Quick Forensics</em> (Forense Rápido en Android), y su diseño y elaboración están enfocados en <strong>facilitar la adquisición de información para realizar análisis forenses consensuados</strong> en contexto  de la sociedad civil.</p>
-<p>AndroidQF es destacado dentro de los grupos técnicos que realizan extracciones como una <strong><a data-preview="" href="../../references/00-glossary/index.html#herramienta-portable">herramienta portable</a> de fácil uso, ya que puede ejecutarse en Windows, Linux y macOS</strong> mediante binarios precompilados.</p>
-<h3 id="que-hace-androidqf-a-nivel-tecnico">¿Qué hace AndroidQF a nivel técnico?</h3>
-<p>Técnicamente, AndroidQF es un <a href="https://developer.mozilla.org/en-US/docs/Glossary/Wrapper">wrapper</a> forense sobre <a data-preview="" href="../../references/00-glossary/index.html#adb">ADB</a>, esto significa que automatiza comandos ADB empaquetados en <a href="https://github.com/mvt-project/androidqf/tree/main/modules">módulos</a> que ejecutan operaciones específicas y que siguen un flujo concreto. </p>
-<p>Algunas de los componentes generales de AndroidQF son:</p>
+<h2 id="about-androidqf">About AndroidQF</h2>
+<p><a href="https://github.com/mvt-project/androidqf">AndroidQF</a> is a free and open-source software tool <strong>intended to support the forensic extraction of information from Android devices</strong>. It is part of the <a href="https://github.com/mvt-project/">MVT Project</a>, initially developed by <a href="https://nex.sx/">Claudio Guarnieri</a> and currently maintained by the <a href="https://securitylab.amnesty.org/es/">Amnesty International Security Lab</a>.</p>
+<p>AndroidQF stands for <em>Android Quick Forensics</em>, and its goal is to <strong>facilitate the acquisition of information when engaging in consented forensic analysis</strong> in civil society contexts.</p>
+<p>AndroidQF is a <strong><a data-preview="" href="../../references/00-glossary/index.html#portable-tool">portable tool</a></strong>, meaning it does not need to be installed, and can be executed directly using <strong>Windows, Linux, and macOS</strong> precompiled binaries.</p>
+<h3 id="what-does-androidqf-do-at-a-technical-level">What does AndroidQF do at a technical level?</h3>
+<p>Technically, AndroidQF is a forensic <a href="https://developer.mozilla.org/en-US/docs/Glossary/Wrapper">wrapper</a> around <a data-preview="" href="../../references/00-glossary/index.html#adb">ADB</a>. This means it automates ADB commands, packaged into <a href="https://github.com/mvt-project/androidqf/tree/main/modules">modules</a> that execute specific operations following a defined workflow. The main components include: </p>
 <ul>
-<li><strong>Interfaz de ejecución.</strong> Muestra una interfaz de línea de comandos con la que interactúa la persona y genera el registro de toda la actividad durante la ejecución.  </li>
-<li><strong>Gestión de módulos.</strong> Maneja el flujo de ejecución específico de cada módulo.  </li>
-<li><strong>Extracción forense.</strong> Realiza la adquisición de datos forenses usando comandos adb.</li>
+<li><strong>Execution interface.</strong> Displays a command-line interface for user interaction and logs all activity during execution.  </li>
+<li><strong>Module management.</strong> Handles the execution flow of each module.  </li>
+<li><strong>Forensic extraction.</strong> Performs forensic data acquisition using adb commands.</li>
 </ul>
-<h3 id="por-que-es-util-para-hacer-analisis-forense-en-sociedad-civil">¿Por qué es útil para hacer análisis forense en sociedad civil?</h3>
-<p>Su diseño permite realizar <strong>extracciones rápidas y seguras de  dispositivos Android</strong>, sin necesidad de herramientas comerciales o configuraciones avanzadas. </p>
-<p>Esto la convierte en una herramienta accesible y confiable para investigadores, defensores de derechos humanos, periodistas y laboratorios de análisis forense digital, especialmente porque:</p>
+<h3 id="why-is-it-useful-for-forensic-analysis-in-civil-society">Why is it useful for forensic analysis in civil society?</h3>
+<p>AndroidQF design allows for <strong>quick and secure extractions of Android devices</strong> without the need for commercial tools or complex configurations, which makes it an accessible and reliable tool for researchers, human rights defenders, journalists, and digital forensic laboratories. </p>
+<p>Some of the key features include: </p>
 <ul>
-<li><strong>Puede usarse de manera portable</strong> sin necesidad de realizar una instalación compleja.  </li>
-<li>El <strong>control de la información forense es a nivel local</strong> y no se comparten datos por algún servicio web o nube  </li>
-<li>Su modularidad <strong>permite decidir exactamente qué datos obtener</strong>, esto según el nivel de riesgo de una persona.  </li>
-<li>La herramienta y su documentación entran en la categoría de <strong>software libre y código abierto</strong>, por lo que su código fuente es transparente y consultable por cualquier persona interesada en conocer cómo funciona la herramienta.</li>
+<li><strong>It is a portable tool</strong>, which means it does not need to be installed.  </li>
+<li><strong>Forensic data is managed locally</strong>, without relying on any web service or cloud-based storage.  </li>
+<li>Its modularity <strong>allows users to decide exactly what data to acquire</strong>, depending on a person’s level of risk.  </li>
+<li>The tool and its documentation fall under the category of <strong>free and open-source software</strong>, meaning its source code is transparent and can be reviewed by anyone interested in understanding how it works.</li>
+<li>The <strong>ability to verify* what forensic information was extracted</strong> and how the process was carried out <strong>increases transparency and trust</strong>, helping to reduce the technical and ethical risks associated with consent-based forensic analysis.</li>
 </ul>
-<p>La facilidad para conocer qué información forense fue extraída y cuál fue el proceso, permite brindar mayor transparencia y confianza al proceso, de forma tal que se reduzcan los riesgos técnicos y éticos del análisis forense consensuado.</p>
-<p>De forma complementaria a este tutorial, en este repositorio se encuentra un <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">Diccionario de archivos generados por la herramienta androidqf</a>, un material de referencia que contiene <strong>información acerca de los archivos generados</strong>, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</p>
-<h2 id="revision-de-configuraciones-en-el-dispositivo-android">Revisión de configuraciones en el dispositivo Android</h2>
-<p>Para iniciar este tutorial, es importante <strong>confirmar las configuraciones necesarias en el dispositivo Android y del equipo de cómputo</strong>, esto asegurará que haya una buena transmisión de información entre dispositivos al realizar la extracción forense.</p>
-<p>Con la depuración USB activa, es momento de <strong>conectar el dispositivo móvil al equipo de cómputo</strong> a través del cable de transferencia de archivos. Cuando conectes el teléfono, selecciona <strong>permitir</strong> en el momento en que el dispositivo Android <strong>solicite permiso de acceso a los datos del dispositivo.</strong></p>
+<p>Complementary to this tutorial, we have also published a <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">Dictionary of files generated by the AndroidQF tool</a>, a reference material that provides <strong>detailed information each of the files generated</strong>, how to use them, where to find specific information, and in what format it can be found.</p>
+<h2 id="step-1-reviewing-configurations-on-the-android-device">Step 1 - Reviewing configurations on the Android device</h2>
+<p>To begin this tutorial, it’s important to <strong>confirm that the necessary configurations are properly set both on the Android device and the computer</strong>, ensuring a reliable data transmission between devices during the forensic extraction process.</p>
+<p>With USB debugging enabled, it’s time to <strong>connect the mobile device to the computer</strong> using the data transfer cable. When you connect the phone, select <strong>Allow</strong> when the Android device <strong>requests permission to access device data.</strong></p>
 <figure>
-<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de acceso a datos." src="../../../assets/01-tutorial/01-captura-android-permisos-datos.png" title="imagen 1" /></p>
+<p><img alt="Screenshot of an Android Samsung device requesting permission to access data." src="../../../assets/01-tutorial/01-captura-android-permisos-datos.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 1</strong>. Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de acceso a datos.</p>
+<p><strong>Image 1.</strong> Screenshot of an Android Samsung device requesting permission to access data.</p>
 </figcaption>
 </figure>
-<p>Posteriormente verifica en el panel de notificaciones que el dispositivo se encuentra conectado en modo <strong>USB para transferir archivos</strong> (ver imagen 2), para ello, da clic en la notificación de Sistema Android Y selecciona <em>USB para Transferir archivos/Android Auto</em> )ver imagen 3). Si no se observa ninguna notificación, puedes revisar las <strong>configuraciones de usb</strong> en el menú de ajustes del dispositivo, verificando que la opción de <em>transferencia de archivos</em> se encuentra habilitada. </p>
+<p><strong>On the device</strong>, verify in the notification panel that the device is connected in <strong>USB mode for file transfer</strong> (see image 2). To do this, click on the Android System notification and select <em>USB for file transfer/Android Auto</em> (see image 3).  </p>
 <figure>
-<p><img alt=" Captura de pantalla del panel de notificaciones en dispositivo móvil android." src="../../../assets/01-tutorial/02-captura-android-panel-notificaciones.png" title="imagen 1" /></p>
+<p><img alt="Screenshot of the notification panel on an Android device." src="../../../assets/01-tutorial/02-captura-android-panel-notificaciones.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 2</strong>. Captura de pantalla del panel de notificaciones en dispositivo móvil android.</p>
+<p><strong>Image 2.</strong> Screenshot of the notification panel on an Android device.</p>
 </figcaption>
 </figure>
+<p>If no notification appears, you can check the <strong>USB settings</strong> in the device’s settings menu and confirm that the <em>file transfer</em> option is enabled.</p>
 <figure>
-<p><img alt="  Captura de pantalla de dispositivo móvil android con los ajustes de uso USB para transferir archivos" src="../../../assets/01-tutorial/03-captura-android-ajustes-usb.png" title="imagen 1" /></p>
+<p><img alt="Screenshot of an Android device showing USB settings for file transfer." src="../../../assets/01-tutorial/03-captura-android-ajustes-usb.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 3</strong>. Captura de pantalla de dispositivo móvil Android con los ajustes de uso USB para transferir archivos.</p>
+<p><strong>Image 3.</strong> Screenshot of an Android device showing USB settings for file transfer.</p>
 </figcaption>
 </figure>
-<h2 id="obteniendo-androidqf">Obteniendo AndroidQF</h2>
-<p>En esta sección se detalla <strong>cómo descargar el binario y preparar tu computadora</strong> para ejecutar AndroidQF. Además, para profundizar en la puesta a punto del binario y <strong>explorar una alternativa</strong>, se muestran los pasos para compilar tu propio binario en un sistema Linux. </p>
-<h3 id="descarga-e-instalacion-de-androidqf-desde-su-repositorio-oficial">Descarga e instalación de AndroidQF desde su repositorio oficial</h3>
-<p>Para comenzar necesitas descargar el <a data-preview="" href="../../references/00-glossary/index.html#binario">binario</a> de AndroidQF desde su <a href="https://github.com/mvt-project/androidqf/releases/">repositorio oficial de GitHub</a>.</p>
-<p>Es importante que consideres que la descarga correcta del binario <strong>depende de la arquitectura de tu procesador y de tu sistema operativo</strong>. A continuación te mostramos los detalles para sistemas operativos Windows y Linux/MacOS. </p>
+<h2 id="step-2-obtaining-androidqf">Step 2 - Obtaining AndroidQF</h2>
+<p>This section explains <strong>how to download the AndroidQF binary and prepare your computer</strong> to run it. Additionally, for those who wish to explore further, this section also includes the steps you need to follow in order to compile your own AndroidQF binary on a Linux system.</p>
+<h3 id="downloading-and-installing-androidqf-from-the-official-repository">Downloading and installing AndroidQF from the official repository</h3>
+<p>To begin, you’ll need to download the <a data-preview="" href="../../references/00-glossary/index.html#binary">binary</a> of AndroidQF from its <a href="https://github.com/mvt-project/androidqf/releases/">official GitHub repository</a>.</p>
+<p>It’s important to note that the correct binary depends on <strong>your processor architecture and operating system</strong>. Below are the details for Windows and Linux/macOS systems.</p>
 <div class="admonition info">
-<p class="admonition-title">Disponibilidad en Windows</p>
-<p>El repositorio oficial de AndroidQF únicamente cuenta con el binario de Windows para una arquitectura amd64, por lo que si tu <strong>arquitectura en Windows es arm, no podrás continuar con este tutorial</strong> a menos que cuentes con un sistema operativo <strong>Linux o macOS particionado o virtualizado</strong> en tu equipo de computo.</p>
+<p class="admonition-title">Availability on Windows</p>
+<p>The official AndroidQF repository <strong>only provides the Windows binary for amd64</strong> architecture. Therefore, if your <strong>Windows system runs on an ARM architecture, you won’t be able to continue with this tutorial</strong> unless you have a <strong>Linux or macOS system installed or virtualized</strong> on your computer.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux y MacOS</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux &amp; MacOS</label><label for="__tabbed_1_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>En Linux y macOS: Abre la terminal y escribe <em>uname -m</em>. La salida de este comando te dirá la arquitectura de tu procesador (x86_64 o arm64). La imagen 4 muestra un ejemplo en un sistema Linux. </p>
+<p>Open the terminal and type <em>uname -m</em>. The output of this command will show your processor architecture (x86_64 or arm64). Image 4 shows an example on a Linux system.</p>
 <figure>
-<p><img alt="  Captura de pantalla de terminal de Linux con la salida del comando *uname -m.*" src="../../../assets/01-tutorial/04-captura-linux-comando-uname.png" title="imagen 1" /></p>
+<p><img alt="Screenshot of a Linux terminal showing the output of the *uname -m* command." src="../../../assets/01-tutorial/04-captura-linux-comando-uname.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 4</strong>. Captura de pantalla de terminal de Linux con la salida del comando <em>uname -m.</em></p>
+<p><strong>Image 4.</strong> Screenshot of a Linux terminal showing the output of the <em>uname -m</em> command.</p>
 </figcaption>
 </figure>
-<p>Dependiendo de esta salida, descarga el binario correspondiente en la lista de descargas del <a href="https://github.com/mvt-project/androidqf/releases/">repositorio oficial de AndroidQF</a>. La imagen 5 muestra la lista de descargas. </p>
+<p>Depending on this output, download the corresponding binary from the <a href="https://github.com/mvt-project/androidqf/releases/">official AndroidQF repository</a>. Image 5 shows the download list.</p>
 <figure>
-<p><img alt="  Captura de pantalla de lista de descargas de androidqf en el repositorio oficial de github." src="../../../assets/01-tutorial/05-captura-pantalla-repositorio-descargas-androidqf.png" title="imagen 1" /></p>
+<p><img alt="Screenshot of the AndroidQF download list in the official GitHub repository." src="../../../assets/01-tutorial/05-captura-pantalla-repositorio-descargas-androidqf.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 5</strong>. Captura de pantalla de lista de descargas de androidqf en el repositorio oficial de github.</p>
+<p><strong>Image 5.</strong> Screenshot of the AndroidQF download list in the official GitHub repository.</p>
 </figcaption>
 </figure>
-<p>En la imagen 6 se muestra el archivo descargado, en este caso particular la versión 1.7.0. La versión podría variar conforme se realicen actualizaciones a la herramienta. </p>
+<p>Image 6 shows the downloaded file, in this case version 1.7.0. The version may vary as the tool is updated.</p>
 <figure>
-<p><img alt="  Imagen de referencia de descarga de binario de AndroidQF en su versión 1.7.0 para sistema Linux amd64" src="../../../assets/01-tutorial/06-captura-pantalla-descarga-binario-androidqf.png" title="imagen 1" /></p>
+<p><img alt="Reference image showing the AndroidQF binary version 1.7.0 downloaded for Linux amd64." src="../../../assets/01-tutorial/06-captura-pantalla-descarga-binario-androidqf.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 6</strong>. Imagen de referencia de descarga de binario de AndroidQF en su versión 1.7.0 para sistema Linux amd64</p>
+<p><strong>Image 6.</strong> Reference image showing the AndroidQF binary version 1.7.0 downloaded for Linux amd64.</p>
 </figcaption>
 </figure>
-<p>Opcionalmente, puedes mover el binario descargado a una carpeta exclusiva de la herramienta o a una carpeta donde realices extracciones forenses, aunque puedes mantener el binario en la carpeta de descargas.   </p>
+<p>Optionally, you can move the downloaded binary to a dedicated folder for the tool or to a folder where you perform forensic extractions, although you can also keep it in your Downloads folder.</p>
 <figure>
-<p><img alt="  Captura de pantalla de terminal de linux con ejecución de comando *mv* para mover el binario descargado" src="../../../assets/01-tutorial/07-captura-linux-comando-mv.png" title="imagen 1" /></p>
+<p><img alt="Screenshot of a Linux terminal running the *mv* command to move the downloaded binary." src="../../../assets/01-tutorial/07-captura-linux-comando-mv.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 7</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>mv</em> para mover el binario descargado</p>
+<p><strong>Image 7.</strong> Screenshot of a Linux terminal running the <em>mv</em> command to move the downloaded binary.</p>
 </figcaption>
 </figure>
-<p>Una vez que tengas el binario en la carpeta de preferencia, es necesario asignar permisos de ejecución a AndroidQF, para ello debes usar el comando, ejemplificado en la imagen 8:</p>
+<p>Once the binary is in your preferred folder, you’ll need to grant execution permissions to AndroidQF by using the following command, as shown in image 8:</p>
 <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>./androidqf-XXX
 </code></pre></div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *chmod +x* para agregar permisos de ejecución al binario" src="../../../assets/01-tutorial/08-captura-windows-explorador-binario-andoridqf.png" title="imagen 1" /></p>
+<p><img alt="Screenshot of a Linux terminal running the *chmod +x* command to add execution permissions to the binary." src="../../../assets/01-tutorial/08-captura-linux-permisos-ejecucion-andoridqf.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 8</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>chmod +x</em> para agregar permisos de ejecución al binario</p>
+<p><strong>Image 8.</strong> Screenshot of a Linux terminal running the <em>chmod +x</em> command to add execution permissions to the binary.</p>
 </figcaption>
 </figure>
 </div>
 <div class="tabbed-block">
-<p>Como se indicó anteriormente, para sistemas operativos Windows <strong>solamente existe un binario disponible</strong>, que llevará un nombre similar a <em>androidqf_v1.7.0_windows_amd64_signed.exe</em>. Para obtener AndroidQF debes descargar este archivo. En la imagen 9 mostramos una carpeta con el binario (archivo <em>.exe</em>) descargado. </p>
+<p>As previously mentioned, for Windows operating systems <strong>only one binary is available</strong>, typically named <em>androidqf_v1.7.0_windows_amd64_signed.exe</em>. To obtain AndroidQF, download this file. Image 9 shows a folder containing the downloaded binary (.exe file).</p>
 <figure>
-<p><img alt=" Captura de pantalla del explorador de archivos de Windows con la carpeta del binario en la carpeta donde se guardará la extracción forense." src="../../../assets/01-tutorial/09-captura-linux-permisos-ejecucion-andoridqf.png" title="imagen 1" /></p>
+<p><img alt="Screenshot of Windows File Explorer showing the folder with the binary where the forensic extraction will be stored." src="../../../assets/01-tutorial/09-captura-windows-explorador-binario-andoridqf.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 9</strong>. Captura de pantalla del explorador de archivos de Windows con la carpeta del binario en la carpeta donde se guardará la extracción forense.</p>
+<p><strong>Image 9.</strong> Screenshot of Windows File Explorer showing the folder with the binary where the forensic extraction will be stored.</p>
 </figcaption>
 </figure>
-<p>Opcionalmente, puedes mover el binario descargado a una carpeta exclusiva de la herramienta o a una carpeta donde realices extracciones forenses, aunque puedes mantener el binario en la carpeta de descargas.</p>
+<p>Optionally, you can move the downloaded binary to a dedicated folder for the tool or to a folder where you perform forensic extractions, although keeping it in your Downloads folder also works.</p>
 </div>
 </div>
 </div>
 <div class="admonition failure">
-<p class="admonition-title">Conflictos con Antivirus</p>
-<p>En caso de que tu equipo de cómputo Windows o macOS cuente con algún <strong>antivirus</strong> instalado, es posible que este software pueda prevenir y detener la descarga y ejecución de AndroidQF. Por lo tanto, en caso de tener problemas con la descarga o ejecución, te recomendamos que lo <strong>desactives temporalmente.</strong> Algunos antivirus pueden identificar el binario de AndroidQF como una amenaza y aplicar reglas de seguridad sobre la ejecución de este. </p>
-<p>Si tienes <strong>Windows Defender, no es necesario que lo desactives.</strong> </p>
+<p class="admonition-title">Antivirus Conflicts</p>
+<p>If your Windows or macOS computer has an <strong>antivirus</strong> installed, it may prevent or block the download and execution of AndroidQF. 
+Therefore, if you encounter issues downloading or running the binary, we recommend <strong>temporarily disabling your antivirus</strong>. 
+Some antivirus programs may incorrectly flag the AndroidQF binary as a threat and enforce security rules that block its execution.  </p>
+<p>If you are using <strong>Windows Defender, it is not necessary to disable it.</strong></p>
 </div>
-<h3 id="alternativa-compilacion-de-binario-de-androidqf-para-linux">Alternativa: Compilación de binario de AndroidQF para Linux</h3>
-<p>Adicionalmente, en este tutorial te presentamos la alternativa de <strong>compilar el binario de AndroidQF</strong> para Linux. Esta opción te brinda la posibilidad de generar el binario directamente en tu sistema y evitar depender únicamente de los binarios publicados en los lanzamientos oficiales. Esto <strong>no es un paso obligatorio</strong>, pero te permite comprender como utilizar el repositorio de código para generar el archivo ejecutable paso a paso. </p>
-<p>Si no deseas explorar la compilación, o estás utilizando un equipo con Windows, puedes continuar el tutorial en la sección de <a href="#exploracion-y-ejecucion-androidqf">exploración y ejecución de AndroidQF</a></p>
+<h3 id="alternative-compiling-the-androidqf-binary-for-linux">Alternative: Compiling the AndroidQF Binary for Linux</h3>
+<p>Additionally, this tutorial presents an alternative way to obtain the AndroidQF binary: <strong>compiling the source code to produce a binary</strong> for Linux. This option allows you to generate the executable file directly on your system, avoiding dependence on the binaries published in the official releases.</p>
+<p>This step is <strong>not mandatory</strong>, but it is useful if you want to understand how to use the source code to build the executable file. If you prefer not to explore compilation, or if you are using a Windows system, <strong>you can skip ahead</strong> to the section on <a href="#">exploring and running AndroidQF</a>.</p>
 <div class="admonition tip">
-<p class="admonition-title">Integridad del binario de AndroidQF</p>
-<p>Compilar el proyecto desde el código fuente también te da la ventaja de verificar la integridad del software, tener el binario construido a partir de las últimas actualizaciones en el código fuente de la herramienta y asegurarte de que el binario se adapta a tu propio entorno de trabajo.</p>
+<p class="admonition-title">Integrity of the AndroidQF Binary</p>
+<p>Compiling the project from source code allows you to <strong>verify the integrity of the software</strong>.</p>
 </div>
-<p><strong>Paso 1 - Actualiza el sistema</strong> </p>
-<p>Utiliza el gestor de paquetes para asegurarse de que todo esté al día. </p>
+<p><strong>Step 1 - Update the system</strong></p>
+<p>Use the package manager to make sure packages are up to date.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
 </code></pre></div>
-<p><strong>Paso 2 - Instala las dependencias requeridas</strong> </p>
-<p>Go 1.23, make, git, unzip y wget. Es importante no usar la versión de Go incluida en los repositorios, ya que es antigua. </p>
-<p>Si tienes una instalación previa, elimínala con:</p>
+<p><strong>Step 2 - Install the required dependencies</strong></p>
+<p>Install Go 1.23, make, git, unzip, and wget. It’s important not to use the Go version included in the system repositories, as it is usually outdated.</p>
+<p>If you already have a previous installation, remove it with:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>-y<span class="w"> </span>golang-go<span class="w"> </span>golang
 sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/local/go
 </code></pre></div>
-<p>Ahora descarga e instala la versión oficial de Go, para este ejemplo se está utilizando la 1.23 pero es necesario <strong>descargar la más reciente</strong>.</p>
+<p>Now download and install the official version of Go. In this example, version 1.23 is used, but always <strong>download the most recent one</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/tmp
 wget<span class="w"> </span>https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
 sudo<span class="w"> </span>tar<span class="w"> </span>-C<span class="w"> </span>/usr/local<span class="w"> </span>-xzf<span class="w"> </span>go1.23.1.linux-amd64.tar.gz
 </code></pre></div>
-<p>Agrega Go al PATH para que el sistema lo reconozca:</p>
+<p>Add go to the system PATH: </p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/go/bin:<span class="nv">$PATH</span>
 </code></pre></div>
-<p>Una vez hecho esto se recomienda confirmar la versión de Go instalada</p>
+<p>You can then confirm the installed version of Go. </p>
 <div class="highlight"><pre><span></span><code>go<span class="w"> </span>version
 </code></pre></div>
-<p><strong>Paso 3 - Clona el repositorio</strong></p>
-<p>Con el entorno listo, se clona el repositorio oficial de AndroidQF desde GitHub y se ingresa en la carpeta descargada. </p>
+<p><strong>Step 3 - Clone the repository</strong></p>
+<p>With the environment ready, clone the official AndroidQF repository from GitHub and navigate into the downloaded folder.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-project/androidqf.git
 <span class="nb">cd</span><span class="w"> </span>androidqf
 </code></pre></div>
-<p><strong>Paso 4 -Compila el binario</strong> </p>
-<p>Dentro del proyecto lo primero es compilar el módulo collector, que es el encargado de ejecutarse en los dispositivos Android durante la extracción. </p>
+<p><strong>Step 4 - Compile the binary</strong> </p>
+<p>Within the project, the first step is to compile the collector module, which is the module that handles the forensic extraction on the device.</p>
 <div class="highlight"><pre><span></span><code>make<span class="w"> </span>collector
 </code></pre></div>
-<p>Espera hasta que termine la construcción del collector, tal y como se muestra en la figura 10. .</p>
+<p>Wait until the collect finishes building up, as shown on image 10. </p>
 <figure>
 <p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando build collector." src="../../../assets/01-tutorial/10-captura-linux-make-collector.png" title="imagen 1" /></p>
 <figcaption>
-<p><strong>Imagen 10</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>build collector.</em></p>
+<p><strong>Image 10</strong>. Screenshot of a linux terminal running the command <em>build collector.</em></p>
 </figcaption>
 </figure>
-<p>Posteriormente se compila la versión de AndroidQF para Linux utilizando la instrucción. tal y como se muestra en la figura 11. </p>
+<p>Subsequently, the Linux version of AndroidQF is compiled using the command <em>make</em>, as shown in Figure 11.</p>
 <div class="highlight"><pre><span></span><code>make<span class="w"> </span>linux
 </code></pre></div>
 <figure>
 <p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *make linux.*" src="../../../assets/01-tutorial/11-captura-linux-builder-done.png" title="imagen 1" /></p>
 <figcaption>
-<p><strong>Imagen 11</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>make linux.</em></p>
+<p><strong>Image 11</strong>. Screenshot of a linux terminal running the command <em>make linux.</em></p>
 </figcaption>
 </figure>
-<p>Al finalizar la compilación se generan los binarios dentro de la carpeta <em>build</em>. Para ello puedes listar la carpeta y confirmar la compilación de los binarios con el siguiente comando, tal y como se muestra en la figura 12: </p>
+<p>At the end of the compilation, the binaries are generated inside the <em>build</em> folder. You can list the folder and verify the compilation of the binaries with the following command, as shown in Figure 12:</p>
 <div class="highlight"><pre><span></span><code>ls<span class="w"> </span>build/
 </code></pre></div>
 <figure>
 <p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando ls build/." src="../../../assets/01-tutorial/12-captura-linux-ls-build.png" title="imagen 1" /></p>
 <figcaption>
-<p><strong>Imagen 12</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>ls build/.</em></p>
+<p><strong>Imagen 12</strong>. Screenshot of a linux terminal running the command <em>ls build/.</em></p>
 </figcaption>
 </figure>
-<p>Para comprobar que todo salió bien puedes pasar a la siguiente sección donde abordará la exploración de esta herramientas.</p>
-<h2 id="exploracion-y-ejecucion-androidqf">Exploración y ejecución AndroidQF</h2>
-<h3 id="exploracion-de-androidqf">Exploración de AndroidQF</h3>
-<p>En esta sección vamos a explorar AndroidQF, para conocer los parámetros de ejecución que tiene la herramienta. <strong>Entenderlos te permitirá controlar y personalizar el tipo de extracción forense que deseas realizar</strong>, estos parámetros son parte de los comandos que guían a la herramienta para que funcione correctamente. </p>
-<p>AndroidQF integra una lista completa de parámetros disponibles a través de su parámetro <em>- –help</em> (o su forma abreviada <em>-h</em>). Esto funciona en Linux, macOS y WIndows mediante el siguiente comando:</p>
+<p>At this point, <strong>you have generated the binary file</strong> necessary to complete an AndroidQF extraction. In the next section we will explore the tool and confirm the generated binary works properly. </p>
+<h2 id="exploring-and-running-androidqf">Exploring and running AndroidQF</h2>
+<h3 id="exploration-of-androidqf">Exploration of AndroidQF</h3>
+<p>In this section, we will explore AndroidQF to understand the execution parameters of the tool. <strong>Understanding them will allow you to control and customize the type of forensic extraction you want to perform</strong>, as these parameters are part of the commands that guide the tool to function correctly.</p>
+<p>AndroidQF includes a complete list of available parameters through its <em>--help</em> parameter (or its shorthand <em>-h</em>). This works on Linux, macOS, and Windows using the following command:</p>
 <div class="highlight"><pre><span></span><code>./androidqf_vXXX_<span class="w"> </span>--help
 </code></pre></div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Comando help en Linux/MacOS</label><label for="__tabbed_2_2">Comando help en Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><em>help</em> command in Linux/MacOS</label><label for="__tabbed_2_2"><em>help</em> command on Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Ejemplo en Linux:</p>
+<p>Output of help command in Linux:</p>
 <figure>
 <p><img alt=" Captura de pantalla de terminal de linux con ejecución de parámetro *–help*." src="../../../assets/01-tutorial/13-captura-androidqf-help.png" title="imagen 1" /></p>
 <figcaption>
-<p><strong>Imagen 13</strong>. Captura de pantalla de terminal de Linux con ejecución de parámetro <em>–help</em>.</p>
+<p><strong>Image 13</strong>. Screenshot of a linux terminal running AndroidQF with the parameter <em>–help</em>.</p>
 </figcaption>
 </figure>
 </div>
 <div class="tabbed-block">
-<p>Ejemplo en Windows: </p>
-<p>En la carpeta donde tienes guardado el binario de AndroidQF da clic derecho y selecciona opción Abrir en terminal, tal y como se muestra en la imagen 14:</p>
+<p>Output of help command in Windows: </p>
+<p>In the folder where you have saved the AndroidQF binary, right-click and select the option "Open in Terminal," as shown in image 14:</p>
 <figure>
-<p><img alt=" Captura de pantalla de carpeta de Windows con el menú derecho activo y la opción *abrir en terminal* identificado" src="../../../assets/01-tutorial/14-captura-windows-abrir-terminal.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of a Windows folder with the right-click menu open and the *Open in Terminal* option highlighted" src="../../../assets/01-tutorial/14-captura-windows-abrir-terminal.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 14</strong>. Captura de pantalla de carpeta de Windows con el menú derecho activo y la opción <em>abrir en terminal</em> identificado</p>
+<p><strong>Image 14</strong>. Screenshot of a Windows folder with the right-click menu open and the <em>Open in Terminal</em> option highlighted</p>
 </figcaption>
 </figure>
-<p>Una vez en la termina, puedes ejecutar el comando con el parámetro <em>–help</em>, tal y como se muestra en la imagen 15.   </p>
+<p>Once in the terminal, you can execute the command with the <em>–help</em> parameter, as shown in image 15.</p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de Windows Powershell con el parámetro *–help* ejecutado." src="../../../assets/01-tutorial/15-captura-windows-androidqf-help.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Windows Powershell terminal with the *–help* parameter executed" src="../../../assets/01-tutorial/15-captura-windows-androidqf-help.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 15</strong>. Captura de pantalla de terminal de Windows Powershell con el parámetro <em>–help</em> ejecutado.</p>
+<p><strong>Image 15</strong>. Screenshot of Windows Powershell terminal with the <em>–help</em> parameter executed.</p>
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Esto muestra un menú de ayuda en la terminal con todos los parámetros disponibles. Los más importantes al realizar una extracción forense son los siguientes:</p>
+<p>The most important options and parameters for conducting a forensic extraction are:</p>
 <ul>
-<li><em>-s</em>: Si tienes varios dispositivos conectados, puedes usar este parámetro para especificar el dispositivo a analizar.</li>
+<li><em>-s</em>: If you have multiple devices connected, you can use this parameter to specify which device to analyze.</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Identificar dispositivos en Linux/MacOS</label><label for="__tabbed_3_2">Identificar dispositivos en Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Identifying devices in Linux/MacOS</label><label for="__tabbed_3_2">Identifying devices in Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>En el caso de macOS y Linux puedes listar los dispositivos con adb, te dejamos esta guía de <a href="https://www-xda--developers-com.translate.goog/install-adb-windows-macos-linux/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc">Cómo instalar ADB en macOS y Linux</a>.</p>
-<p>El comando para listar dispositivos en macOS y Linux es:</p>
+<p>In the case of macOS and Linux, you can list devices using adb. Here is a guide on <a href="https://www-xda--developers-com.translate.goog/install-adb-windows-macos-linux/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc">How to install ADB on macOS and Linux</a>.</p>
+<p>The command to list devices on macOS and Linux is:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>devices
 </code></pre></div>
-<p>El resultado se muestra en la imagen 16. </p>
+<p>The result is shown in image 16.</p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con ejecución de comando *adb devices.*" src="../../../assets/01-tutorial/16-captura-linux-adb-devices.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Linux terminal with the *adb devices* command executed" src="../../../assets/01-tutorial/16-captura-linux-adb-devices.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 16</strong>. Captura de pantalla de terminal de linux con ejecución de comando <em>adb devices.</em></p>
+<p><strong>Image 16</strong>. Screenshot of Linux terminal with the <em>adb devices</em> command executed</p>
 </figcaption>
 </figure>
 </div>
 <div class="tabbed-block">
-<p>En el caso de Windows, cuando ejecutas el binario de AndroidQF por primera vez, se crea el ejecutable de ADB y se puede utilizar para listar los dispositivos:</p>
+<p>In the case of Windows, when you run the AndroidQF binary for the first time, the ADB executable is created and can be used to list connected devices:</p>
 <div class="highlight"><pre><span></span><code>.<span class="se">\a</span>db.exe<span class="w"> </span>devices<span class="w"> </span>
 </code></pre></div>
-<p>El resultado se muestra en la imagen 17. </p>
+<p>The result is shown in image 17.</p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de Windows PowerShell con ejecución del ejecutable *adb* y el parámetro *devices.*" src="../../../assets/01-tutorial/17-captura-windows-adb-devices.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Windows PowerShell terminal with the *adb* executable and *devices* parameter executed" src="../../../assets/01-tutorial/17-captura-windows-adb-devices.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 17</strong>. Captura de pantalla de terminal de Windows PowerShell con ejecución del ejecutable <em>adb</em> y el parámetro <em>devices.</em></p>
+<p><strong>Image 17</strong>. Screenshot of Windows PowerShell terminal with the <em>adb</em> executable and <em>devices</em> parameter executed</p>
 </figcaption>
 </figure>
-<p>Una vez que se identifican los dispositivos conectados, es posible agregar el numero de serie utilizando el parámetro -s, tal y como se muestra en la imagen 18. </p>
+<p>Once the connected devices are identified, it is possible to add the serial number using the -s parameter, as shown in image 18.</p>
 <div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial
 </code></pre></div>
 <figure>
 <p><img alt="  Captura de pantalla de terminal de linux con integración del parámetro *-s*." src="../../../assets/01-tutorial/18-captura-androidqf-serial-number.png" title="imagen 1" /></p>
 <figcaption>
-<p><strong>Imagen 18</strong>.  Captura de pantalla de terminal de Linux con integración del parámetro <em>-s</em>.</p>
+<p><strong>Imagen 18</strong>.  Screenshot of a linux terminal with the parameter <em>-s</em>.</p>
 </figcaption>
 </figure>
 </div>
@@ -2522,275 +2519,280 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </div>
 <ul>
 <li>
-<p>-o: Te permite indicar un output o carpeta de salida donde se guardarán los archivos extraídos.  </p>
-<p>Si no se especifica un output o una carpeta de salida, AndroidQF identificará el dispositivo una vez que permita la depuración USB y generará una carpeta con un identificador único (UUID). En esta carpeta se almacenará la extracción. El nombre de estas carpetas al ser un UUID suele tener nombres como 0caba18f-20a7-48d0-b9ba-724fdaa3ff85 o a577ae94-0a47-479c-82c5-c8017bfb7175.</p>
-<p>Como ejemplo en este tutorial, se utiliza el parámetro <em>-o</em> para definir la carpeta de salida de la extracción en lugar de dejar que AndroidQF genere un UUID. De esta manera, el comando creará una carpeta que tendrá un nombre más legible, que combina la fecha en formato año-mes-día con un texto adicional de identificación, que en esta ejemplificación llamaremos <em>acquisition01</em>.</p>
+<p>-o: Allows you to specify an output or destination folder where the extracted files will be saved.  </p>
+<p>If no output or destination folder is specified, <strong>AndroidQF will identify the device once USB debugging is enabled and will generate a folder with a unique identifier (UUID)</strong>. This folder will store the extraction. The names of these folders, being UUIDs, usually look like 0caba18f-20a7-48d0-b9ba-724fdaa3ff85 or a577ae94-0a47-479c-82c5-c8017bfb7175.</p>
+<p>As an example in this tutorial, the ** <em>-o</em> parameter is used to define the output folder for the extraction<em><em> instead of letting AndroidQF generate a UUID. This way, the command will create a folder with a more readable name, combining the date in year-month-day format with an additional identification text at the end, in this example </em>acquisition01</em>.</p>
 <div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>-identificador
 </code></pre></div>
 <figure>
 <p><img alt="  Captura de pantalla de terminal de linux con integración del parámetro *-o*." src="../../../assets/01-tutorial/19-captura-andoridqf-output.png" title="imagen 1" /></p>
 <figcaption>
-<p><strong>Imagen 19</strong>.  Captura de pantalla de terminal de linux con integración del parámetro <em>-o</em>.</p>
+<p><strong>Image 19</strong>.  Screenshot of a linux terminal with the parameter <em>-o</em>.</p>
 </figcaption>
 </figure>
 </li>
 <li>
-<p><em>--verbose</em> o <em>-v</em>: Opcionalmente puede activar el modo detallado. La terminal mostrará información en tiempo real del proceso, útil para la depuración. Esta información es la misma que se guarda en el archivo <a href="https://forensics.socialtic.org/references/01-reference-diccionario-androidqf/01-reference-diccionario-androidqf.html#commandlog"><em>command.log</em></a> generado automáticamente después de cada ejecución.</p>
+<p><em>--verbose</em> or <em>-v</em>: Optionally, you can enable verbose mode. The terminal will display real-time information about the process, which is useful for debugging. This information is the same as what is saved in the <a href="https://forensics.socialtic.org/references/01-reference-diccionario-androidqf/01-reference-diccionario-androidqf.html#commandlog"><em>command.log</em></a> file, which is automatically generated after each execution.</p>
 <div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>-complemento-opcional<span class="w"> </span>-v
 </code></pre></div>
 <figure>
 <p><img alt="  Captura de pantalla de terminal de linux con integración del parámetro *-o*." src="../../../assets/01-tutorial/20-captura-androidqf-verbose.png" title="imagen 1" /></p>
 <figcaption>
-<p><strong>Imagen 20</strong>.  Captura de pantalla de terminal de linux con integración del parámetro <em>-v</em>.</p>
+<p><strong>Image 20</strong>.  Screenshot of a linux terminal with the parameter <em>-v</em>.</p>
 </figcaption>
 </figure>
 </li>
 </ul>
-<h3 id="ejecucion-de-androidqf">Ejecución de AndroidQF</h3>
-<p>Antes de ejecutar el binario de AndoridQF, enciende y desbloquea el dispositivo móvil que ya conectaste al equipo de computo. </p>
-<p>Sin importar cuál sistema operativo utilices en tu equipo de cómputo, primero es necesario identificar los parámetros del comando de ejecución de AndroidQF según las necesidades de tu análisis. Para este ejemplo utilizamos el siguiente comando: </p>
+<h3 id="running-androidqf">Running AndroidQF</h3>
+<p>When you are ready to execute the AndroidQF binary, <strong>turn on and unlock the mobile device</strong> that you have already connected to your computer.</p>
+<p>Regardless of which operating system you use on the computer, it is first necessary prepare the command that we will execute with the correct parameters depending on the analysis needs. In this case, we use the following command:</p>
 <div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span>/ruta/de/salida/<span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>-complemento<span class="w"> </span><span class="c1"># (1)!</span>
 </code></pre></div>
 <ol>
-<li>Utilizamos los parámetros <strong>-s</strong> para indicar el número serial y <strong>-o</strong> para especificar la ruta de salida. Utilizamos también el comando <strong>date</strong> para incluir de forma automática la fecha en el nombre de la carpeta. </li>
+<li>We use the <strong>-s</strong> parameter to specify the serial number and <strong>-o</strong> to indicate the output path. We also use the <strong>date</strong> command to automatically include the date in the folder name.</li>
 </ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Ejecución en Linux/MacOS</label><label for="__tabbed_4_2">Ejecución en Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Running on Linux/MacOS</label><label for="__tabbed_4_2">Running on Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Para ejecutar AndroidQF en un sistema Linux/MacOS, debemos abrir una terminal en la ubicación donde almacenamos el binario y ejecutar el comando que presentamos anteriormente.  </p>
+<p>To run AndroidQF on a Linux or MacOS system, open a terminal in the location where the binary is stored and execute the command shown above.</p>
 <div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span>/ruta/de/salida/<span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>-acquisition01
 </code></pre></div>
-<p>En la imagen 21 te presentamos un ejemplo de la salida en un sistema Linux. </p>
+<p>In image 21, we show an example of the output on a Linux system.</p>
 <figure>
-<p><img alt="  Captura de pantalla de terminal de Linux con comando de ejecución preparado" src="../../../assets/01-tutorial/21-captura-linux-ejecucion-andoridqf.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Linux terminal with prepared execution command" src="../../../assets/01-tutorial/21-captura-linux-ejecucion-andoridqf.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 21</strong>.  Captura de pantalla de terminal de Linux con comando de ejecución preparado.</p>
+<p><strong>Image 21</strong>. Screenshot of Linux terminal with prepared execution command.</p>
 </figcaption>
 </figure>
 </div>
 <div class="tabbed-block">
-<p>En windows abordaremos dos maneras:</p>
+<p>On Windows, we will cover two ways:</p>
 <ol>
-<li>Desde la <strong>terminal</strong>:</li>
+<li>From the <strong>terminal</strong>:</li>
 </ol>
-<p>Con tu terminal abierta en la carpeta donde se encuentra el binario de AndoridQF, ejecuta el binario mediante el comando con los parámetros necesarios según tu análisis (similar al caso de Linux y macOS)</p>
-<div class="highlight"><pre><span></span><code>./androidqf.exe<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>Get-Date<span class="w"> </span>-Format<span class="w"> </span><span class="s1">&#39;yyyy-MM-dd&#39;</span><span class="k">)</span><span class="s2">-acquisition01</span>
+<p>With your terminal open in the folder where the AndroidQF binary is located, execute the binary using the command with the necessary parameters according to your analysis (similar to the Linux and MacOS case).</p>
+<div class="highlight"><pre><span></span><code>./androidqf.exe<span class="w"> </span>-s<span class="w"> </span>serial-number<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>Get-Date<span class="w"> </span>-Format<span class="w"> </span><span class="s1">&#39;yyyy-MM-dd&#39;</span><span class="k">)</span><span class="s2">-acquisition01</span>
 </code></pre></div>
 <figure>
-<p><img alt="  Captura de pantalla de la terminal de Windows PowerShell con comando de ejecución preparado." src="../../../assets/01-tutorial/22-captura-windows-ejecuion-androidqf-terminal.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Windows PowerShell terminal with prepared execution command." src="../../../assets/01-tutorial/22-captura-windows-ejecuion-androidqf-terminal.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 22</strong>. Captura de pantalla de la terminal de Windows PowerShell con comando de ejecución preparado.</p>
+<p><strong>Image 22</strong>. Screenshot of Windows PowerShell terminal with prepared execution command.</p>
 </figcaption>
 </figure>
 <ol>
-<li>Iniciando el ejecutable <strong>desde el explorador de archivos</strong>:</li>
+<li>Launching the executable <strong>from File Explorer</strong>:</li>
 </ol>
-<p>En la carpeta donde se guardó el binario se puede ejecutar el binario con doble clic.</p>
+<p>In the folder where the binary is saved, you can run it by double-clicking.</p>
 <figure>
-<p><img alt="  Captura de pantalla del explorador de archivos con la carpeta de descarga del binario de androidqf." src="../../../assets/01-tutorial/23-captura-windows-ejecuion-androidqf-interfaz.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of File Explorer with the folder containing the AndroidQF binary." src="../../../assets/01-tutorial/23-captura-windows-ejecuion-androidqf-interfaz.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 23</strong>. Captura de pantalla del explorador de archivos con la carpeta de descarga del binario de androidqf.</p>
+<p><strong>Image 23</strong>. Screenshot of File Explorer with the folder containing the AndroidQF binary.</p>
 </figcaption>
 </figure>
-<p>Aparecerá un <strong>mensaje de protección de Windows</strong> diciendo que el sistema evitó ejecutar la aplicación para evitar riesgos, sin embargo, al ser AndroidQF una herramienta libre y de código abierto con constantes mejoras no hay una distribución comercial.</p>
-<p>Para ello da clic en <strong>“Más información”</strong> </p>
+<p>A <strong>Windows protection message</strong> will appear stating that the system prevented the application from running to avoid risks. However, since AndroidQF is a free and open-source tool with constant updates, it is not a commercial distribution.</p>
+<p>Click <strong>“More info”</strong> </p>
 <figure>
-<p><img alt=" Captura de pantalla de ventana emergente de protección de Windows." src="../../../assets/01-tutorial/24-captura-windows-proteccion.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Windows protection popup." src="../../../assets/01-tutorial/24-captura-windows-proteccion.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 24</strong>. Captura de pantalla de ventana emergente de protección de Windows.</p>
+<p><strong>Image 24</strong>. Screenshot of Windows protection popup.</p>
 </figcaption>
 </figure>
-<p>Selecciona <strong>“Ejecutar de todas formas”</strong></p>
+<p>Select <strong>“Run anyway”</strong></p>
 <figure>
-<p><img alt=" Captura de pantalla de ventana emergente de protección de Windows con la selección de *Ejecutar de todas formas*." src="../../../assets/01-tutorial/25-captura-windows-ejecucion.png" title="imagen 25" /></p>
+<p><img alt=" Screenshot of Windows protection popup with *Run anyway* selected." src="../../../assets/01-tutorial/25-captura-windows-ejecucion.png" title="image 25" /></p>
 <figcaption>
-<p><strong>Imagen 25</strong>. Captura de pantalla de ventana emergente de protección de Windows con la selección de <em>Ejecutar de todas formas</em>.</p>
+<p><strong>Image 25</strong>. Screenshot of Windows protection popup with <em>Run anyway</em> selected.</p>
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<h3 id="consideraciones-durante-la-ejecucion">Consideraciones durante la ejecución</h3>
+<h3 id="considerations-during-execution">Considerations During Execution</h3>
 <div class="admonition info">
-<p class="admonition-title">Pasos equivalentes para todos los sistemas</p>
-<p>Los próximos pasos se aplicarán de la <strong>misma manera</strong> en los 3 sistemas operativos considerados en este tutorial: <strong>Linux, Windows and macOS.</strong>    </p>
+<p class="admonition-title">Equivalent steps for all systems</p>
+<p>The following steps apply <strong>the same way</strong> across the three operating systems considered in this tutorial: <strong>Linux, Windows, and macOS.</strong>    </p>
 </div>
-<p>Esta sección contempla las acciones y consideraciones <strong>una vez que comienza la ejecución</strong>, es decir, en cuanto ejecutamos el comando mostrado en la sección anterior. </p>
-<p>Cuando inicia la ejecución, es necesario realizar algunas configuraciones en la terminal y otras el dispositivo Android. Estas configuraciones son secuenciales, por lo que es <strong>recomendable que estar alerta del proceso de ejecución de la extracción</strong>, a continuación se mencionan estas configuraciones de manera explícita:</p>
+<p>This section covers actions and considerations <strong>once execution begins</strong>, that is, as soon as we run the command shown in the previous section. </p>
+<p>When execution starts, some configurations must be made in the terminal (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span>) and others on the Android device (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span>). These configurations are sequential, so it is <strong>recommended to stay alert during the extraction process</strong>. </p>
 <ol>
 <li>
-<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span> - en el teléfono:</strong> Cuando aparezca el mensaje <strong><em>¿Permitir depuración por USB?</em></strong>, da clic en <strong><em>“Permitir siempre desde esta computadora”</em></strong> y luego <strong><em>“Aceptar”</em></strong> o <strong><em>“Permitir”</em></strong>.  </p>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span> - On the phone:</strong> When the message <strong><em>Allow USB debugging?</em></strong> appears, click <strong><em>“Always allow from this computer”</em></strong> and then <strong><em>“OK”</em></strong> or <strong><em>“Allow”</em></strong>.  </p>
 <figure>
-<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de depuración y confianza al equipo de cómputo para transferir archivos." src="../../../assets/01-tutorial/26-captura-android-permiso-depuracion.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Android Samsung device requesting debugging and trust permission to transfer files." src="../../../assets/01-tutorial/26-captura-android-permiso-depuracion.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 26</strong>. Captura de pantalla de dispositivo móvil Android Samsung solicitando permiso de depuración y confianza al equipo de cómputo para transferir archivos.</p>
+<p><strong>Image 26</strong>. Screenshot of Android Samsung device requesting debugging and trust permission to transfer files.</p>
 </figcaption>
 </figure>
 </li>
 <li>
-<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> - en la terminal:</strong> Posteriormente AndroidQF preguntará el tipo de respaldo que realizará la herramienta:</p>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> - In the terminal:</strong> AndroidQF will then ask what type of backup it should perform:</p>
 <ul>
-<li><strong>Only</strong> <strong>SMS</strong>: Realiza un respaldo limitado que incluye solo mensajes SMS y MMS.  </li>
-<li><strong>Everything</strong>: Ejecuta un respaldo completo del dispositivo mediante adb backup.  </li>
-<li><strong>No</strong> <strong>Backup</strong>: Omite completamente la generación de respaldos; solo extrae otros artefactos vía ADB.</li>
+<li><strong>Only SMS</strong>: Performs a limited backup including only SMS and MMS messages.  </li>
+<li><strong>Everything</strong>: Executes a full device backup via adb backup.  </li>
+<li><strong>No Backup</strong>: Skips backup generation entirely; only extracts other artifacts via ADB.</li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Para el ejemplo usamos la opción <strong>Only-SMS</strong> para limitar la extracción únicamente a mensajes, reduciendo la exposición de datos personales innecesarios. Si el contexto del caso se considera de alto riesgo o implica investigación más sofisticada se recomienda marcar la opción  <strong>Everything</strong>, aunque la opción <strong>Only-SMS</strong> en la mayoría de los casos sigue siendo suficiente para buscar intentos de phishing mediante SMS.*</p>
+<p class="admonition-title">Note</p>
+<p>For this example, we use the <strong>Only-SMS</strong> option to limit extraction to messages, reducing unnecessary exposure of personal data. If the case context is high-risk or requires more sophisticated investigation, it is recommended to choose <strong>Everything</strong>, although <strong>Only-SMS</strong> is sufficient in most cases for detecting phishing attempts via SMS. Please also be aware that the backup function used in this command has been deprecated, and <strong>is not used commonly</strong> by the majority of applications. </p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el menú backup de AndroidQF y la opción *Only-SMS* seleccionada." src="../../../assets/01-tutorial/27-captura-linux-only-sms.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Linux terminal with AndroidQF backup menu and *Only-SMS* selected." src="../../../assets/01-tutorial/27-captura-linux-only-sms.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 27</strong>. Captura de pantalla de terminal de linux con el menú backup de AndroidQF y la opción <em>Only-SMS</em> seleccionada.</p>
+<p><strong>Image 27</strong>. Screenshot of Linux terminal with AndroidQF backup menu and <em>Only-SMS</em> selected.</p>
 </figcaption>
 </figure>
 </li>
 <li>
-<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span> - en el teléfono:</strong> Al seleccionar el tipo de respaldo, el teléfono solicitará utilizar una contraseña temporal de cifrado para este. En nuestro ejemplo utilizamos <strong>la contraseña “sd”</strong> de seguridad digital en español,**** tal y como se muestra en la figura 28. </p>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span> - On the phone:</strong> When selecting the backup type, the phone will request a temporary password for encryption. In this example, we use <strong>the password “sd”</strong> (digital security), as shown in figure 28. </p>
 <div class="admonition note">
-<p class="admonition-title">Sobre la definición de contraseñas para el respaldo</p>
-<p>En este paso, la herramienta solicita una contraseña para el cifrado del respaldo. Para este ejemplo utilizaremos la contraseña "sd" de seguridad digital.</p>
-<p>Dependiendo del contexto y el caso puedes elegir la contraseña adecuada, aunque si se realizan extracciones de manera continua se puede utilizar la misma contraseña como una practica interna de tu equipo.</p>
-<p>Si bien reutilizar contraseñas no es una práctica de seguridad digital recomendada, es importante considerar el contexto y recordar que está contraseña protegerá únicamente uno de los archivos incluidos en la extracción forense. Sin embargo, los demás archivos recolectados no estarán cifrados, por lo que independientemente de la contraseña que se utilice, debemos manejar la carpeta de extracción como información sensible, y almacenarla únicamente en medios con medidas y estándares de protección adicional de acuerdo a nuestra política interna de manejo y protección de la información.</p>
+<p class="admonition-title">About Backup Passwords</p>
+<p>At this step, the tool asks for a password to encrypt the backup. In this example, we use "sd" (digital security in Spanish). Depending on the context and the case, you can choose an appropriate password. If extractions are performed continuously, the same password may be used internally by your team.</p>
+<p>Although reusing passwords is not recommended in digital security practices, it is important to consider the context. This password protects only one of the files included in the forensic extraction. Other collected files are not encrypted, so regardless of the password used, the extraction folder should be treated as sensitive information and stored only on media with additional protection measures according to your internal policies.</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung solicitando la contraseña temporal del backup “sd”" src="../../../assets/01-tutorial/28-captura-android-contrase%C3%B1a.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Android Samsung device requesting temporary backup password “sd”." src="../../../assets/01-tutorial/28-captura-android-contrase%C3%B1a.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 28</strong>. Captura de pantalla de dispositivo móvil Android Samsung solicitando la contraseña temporal del backup.</p>
+<p><strong>Image 28</strong>. Screenshot of Android Samsung device requesting temporary backup password.</p>
 </figcaption>
 </figure>
 </li>
 <li>
-<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span> - en el teléfono:</strong> Posteriormente selecciona el botón<strong>: “Copia de seguridad de mis datos”.</strong></p>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a1 1 0 0 0-1 1v3h-4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h5c1.11 0 2-.89 2-2V8c0-.74-.4-1.38-1-1.72V3a1 1 0 0 0-1-1m-5 6h5v5h-5zm0 7h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-4 2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"/></svg></span> - On the phone:</strong> Next, select the button <strong>“Back up my data.”</strong></p>
 <figure>
-<p><img alt=" Captura de pantalla de dispositivo móvil Android Samsung con la opción “Copia de seguridad de mis datos” seleccionada." src="../../../assets/01-tutorial/29-captura-android-copia-seguridad.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Android Samsung device with “Back up my data” option selected." src="../../../assets/01-tutorial/29-captura-android-copia-seguridad.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 29</strong>. Captura de pantalla de dispositivo móvil Android Samsung con la opción “Copia de seguridad de mis datos” seleccionada.</p>
+<p><strong>Image 29</strong>. Screenshot of Android Samsung device with “Back up my data” option selected.</p>
 </figcaption>
 </figure>
-<p>En la terminal <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span>: Para este momento, AndroidQF estará realizando la copia de seguridad y recolectando la información del backup y la información de las aplicaciones (paquetes) instalados en el dispositivo.</p>
+<p>In the terminal <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span>: At this point, AndroidQF will perform the backup and collect information from the backup and the installed apps (packages) on the device.</p>
 <div class="admonition warning">
-<p class="admonition-title">Errores en las rutas</p>
-<p>En algunas ocasiones, suelen aparecer errores sobre la búsqueda de las rutas donde se encuentran los paquetes, por lo que es común ver algunas de estas marcas de error, sin embargo, <strong>estas marcas de error no afectan la extracción de datos forenses en el dispositivo.</strong>*</p>
+<p class="admonition-title">Path Errors</p>
+<p>Occasionally, errors may appear related to locating package paths, which may show some error markers. However, <strong>these errors do not affect the forensic data extraction from the device.</strong></p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux indicando la recolección de información de paquetes de aplicaciones por parte de AndroidQF." src="../../../assets/01-tutorial/30-captura-linux-recoleccion.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Linux terminal showing collection of application package information by AndroidQF." src="../../../assets/01-tutorial/30-captura-linux-recoleccion.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 30</strong>. Captura de pantalla de terminal de Linux indicando la recolección de información de paquetes de aplicaciones por parte de AndroidQF.</p>
+<p><strong>Image 30</strong>. Screenshot of Linux terminal showing collection of application package information by AndroidQF.</p>
 </figcaption>
 </figure>
 </li>
 <li>
-<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> - en la terminal:</strong> Cuando AndoridQF encuentra todos los paquetes instalados en el dispositivo preguntará qué tipo de copia de las aplicaciones se desea realizar, para ello hay 3 opciones:  </p>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> - In the terminal:</strong> Once AndroidQF identifies all installed packages, it will ask what type of app copies to perform. There are three options:  </p>
 <ul>
-<li><strong>All</strong>: Descarga los APK de todas las aplicaciones, incluidas las del sistema.</li>
-<li><strong>Only</strong> <strong>non-system</strong> <strong>packages</strong>: Descarga solo los APK de aplicaciones instaladas por el usuario.</li>
-<li><em>Do</em><em> </em><em>not</em><em> </em><em>download</em><em> </em><em>any</em>*: Omite completamente la descarga de APKs del dispositivo.</li>
+<li><strong>All</strong>: Downloads APKs of all applications, including system apps.</li>
+<li><strong>Only non-system packages</strong>: Downloads only APKs installed by the user.</li>
+<li><strong>Do not download any</strong>: Skips APK download entirely.</li>
 </ul>
-<p>La recomendación en este punto, es que los analistas realicen la descarga de los paquetes que no son del sistema (Only non-system packages) para permitir el análisis posterior en busca de comportamientos maliciosos, modificaciones, rastreadores, etc.</p>
+<p>The recommendation here is to download only non-system packages to allow later analysis for malicious behavior, modifications, trackers, etc.</p>
 <div class="admonition note">
-<p class="admonition-title">¿Cuál opción es la ideal?</p>
-<p>Aunque nuestra recomendación es seleccionar “Only non-system packages”, la selección depende de tu enfoque de análisis e investigación, por lo que en casos con sospechas de ataques sofisticados se puede utilizar la opción “All”.*</p>
+<p class="admonition-title">Which Option is Ideal?</p>
+<p>While we recommend selecting “Only non-system packages,” the choice depends on your analysis focus. For sophisticated attack cases, the “All” option may be used.*</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src="../../../assets/01-tutorial/31-captura-linux-copia-paquetes.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Linux terminal with AndroidQF app package copy menu and *Only non-system packages* selected." src="../../../assets/01-tutorial/31-captura-linux-copia-paquetes.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 31</strong>. Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “<em>Only non-system packages”</em> seleccionada.</p>
+<p><strong>Image 31</strong>. Screenshot of Linux terminal with AndroidQF app package copy menu and <em>Only non-system packages</em> selected.</p>
 </figcaption>
 </figure>
 </li>
 <li>
-<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> - en la terminal:</strong> Una vez seleccionada la opción de descargas de copias de paquetes, AndroidQF preguntará acerca de eliminar los APKs firmados por desarrolladores o entidades confiables (como Google o el fabricante del dispositivo), esto con el fin de reducir el tamaño de la carpeta de extracción.</p>
-<p>Responde “Yes” para que, al realizar la revisión de la información se pueda enfocar el análisis en los paquetes que sean potencialmente sospechosos, además de que ahorrará tiempo y espacio de almacenamiento.</p>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> - In the terminal:</strong> After selecting the package download option, AndroidQF will ask whether to remove APKs signed by developers or trusted entities (like Google or the device manufacturer) to reduce extraction folder size.</p>
+<p>Respond “Yes” so that the review can focus on potentially suspicious packages and save time and storage space.</p>
 <div class="admonition note">
-<p class="admonition-title">¿Cuál opción es la ideal?</p>
-<p>Aunque nuestra recomendación es seleccionar “Yes”, la selección depende de tu enfoque de análisis e investigación, por lo que en casos con sospechas de ataques sofisticados se puede utilizar la opción “No”.</p>
+<p class="admonition-title">Which Option is Ideal?</p>
+<p>While we recommend selecting “Yes,” the choice depends on your analysis focus. For sophisticated attack cases, “No” may be used.</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src="../../../assets/01-tutorial/32-captura-linux-omision-aplicaciones.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Linux terminal with AndroidQF trusted app omission menu and *Yes* selected." src="../../../assets/01-tutorial/32-captura-linux-omision-aplicaciones.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 32</strong> Captura de pantalla de terminal de Linux con el menú de omisión de aplicaciones con certificado confiable de AndroidQF y la opción Yes seleccionada.</p>
+<p><strong>Image 32</strong>. Screenshot of Linux terminal with AndroidQF trusted app omission menu and <em>Yes</em> selected.</p>
 </figcaption>
 </figure>
-<p>Para este punto, se ejecutarán múltiples tareas de adquisición, como la recopilación de propiedades del dispositivo, logs del sistema, procesos en ejecución, configuraciones, archivos temporales, etc. que explicaremos una a una en la siguiente sección.</p>
+<p>At this point, multiple acquisition tasks will be performed, such as collecting device properties, system logs, running processes, configurations, temporary files, etc., which will be explained in greater detail in the next section.</p>
 <div class="admonition info">
-<p class="admonition-title">Duración del proceso</p>
-<p><strong>Esta etapa puede tomar varios minutos</strong>, dependiendo del modelo del teléfono y la cantidad de datos almacenados. El progreso se muestra línea por línea en la terminal y no requiere intervención adicional, salvo al final, donde se debe presionar Enter para completar.</p>
+<p class="admonition-title">Process Duration</p>
+<p><strong>This stage may take several minutes or even a few hours</strong>, depending on the phone model and amount of stored data. Progress is shown line by line in the terminal and requires no further intervention except at the end, where pressing Enter completes the process.</p>
 </div>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el menú copias de paquetes de aplicaciones de AndroidQF y la opción “*Only non-system packages”* seleccionada." src="../../../assets/01-tutorial/33-captura-pantalla-ejecucion-correcta.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Linux terminal with AndroidQF app package copy menu and *Only non-system packages* selected." src="../../../assets/01-tutorial/33-captura-pantalla-ejecucion-correcta.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 33</strong> Captura de pantalla de terminal de linux con información de ejecución correcta de la extracción forense con AndroidQF y solicitando presionar <em>“Enter”</em> para terminar.</p>
+<p><strong>Image 33</strong>. Screenshot of Linux terminal showing correct forensic extraction execution with AndroidQF, prompting to press <em>“Enter”</em> to finish.</p>
 </figcaption>
 </figure>
 </li>
 </ol>
-<p>Una vez que finalice el proceso de adquisición, la herramienta habrá capturado los archivos e informaciones clave necesarias para un <a data-preview="" href="../../references/00-glossary/index.html#triaje">triaje</a>. En la siguiente sección brindamos una descripción a profundidad de los módulos que se ejecutan. Si no deseas consultar información adicional sobre los módulos de AndroidQF, puedes dirigirte a la sección de <a href="#verificación-de-la-extracción">verificación</a>. </p>
-<h3 id="modulos-ejecutados-durante-una-adquisicion-con-androidqf">Módulos ejecutados durante una adquisición con AndroidQF</h3>
-<p>A continuación se describen los módulos que AndoridQF ejecuta desde que se inicia la adquisición hasta que esta termina, sin embargo, esta descripción únicamente tiene como objetivo ilustrar el proceso de la adquisición, si deseas profundizar en la construcción y estructura de cada módulo,  puedes consultar el <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">Diccionario de archivos generados por AndroidQF</a>. </p>
+<p>Once the acquisition process is complete, the tool will captured the files and key information necessary for a <a data-preview="" href="../../references/00-glossary/index.html#triage">triage</a>. The next section provides an in-depth description of the executed modules. If you do not wish to consult additional module information, you can go directly to the <a href="#verificación-de-la-extracción">verification section</a>.</p>
+<h3 id="modules-executed-during-an-acquisition-with-androidqf">Modules executed during an acquisition with AndroidQF</h3>
+<p>The following section describes the modules that AndroidQF executes from the start to the end of the acquisition. This description is intended only to illustrate the acquisition process. If you want to delve deeper into the construction and structure of each module, you can consult the <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">Dictionary of Files Generated by AndroidQF</a>. </p>
 <h4 id="collector">Collector</h4>
-<p>El <a href="https://github.com/mvt-project/androidqf/tree/main/android-collector">collector</a> es un binario que se carga y ejecuta directamente en el dispositivo Android automáticamente con <em>adb</em> al ejecutar AndroidQF. </p>
-<p>Este binario lee información del sistema del dispositivo en los directorios /proc, /sys, /system a través de los subcomandos <em>ps (</em>que recolecta la información de los procesos en ejecución) y <em>find</em> (que genera registros de archivos presentes en estos directorios con sus metadatos y hashes). Esta información es devuelta por el colector en formato JSON y viaja por adb shell al binario de AndroidQF que está siendo ejecutado en el equipo de cómputo para guardarse en la salida de la adquisición.</p>
-<p>El collector no ejecuta ningún comando adb, sin embargo, sus comandos equivalentes podrían ser los siguientes:</p>
-<p><strong>Para el comando ps (procesos):</strong></p>
-<p><div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ps<span class="w"> </span><span class="c1"># (1)!</span>
+<p>The <a href="https://github.com/mvt-project/androidqf/tree/main/android-collector">collector</a> is a binary that loads and runs directly on the Android device automatically via <em>adb</em> when executing AndroidQF. </p>
+<p>This binary reads system information from the device in the /proc, /sys, and /system directories using the subcommands <em>ps</em> (which collects information on running processes) and <em>find</em> (which generates logs of files present in these directories along with their metadata and hashes). This information is returned by the collector in JSON format and sent via adb shell to the AndroidQF binary running on the computer to be saved in the acquisition output.</p>
+<p>The collector does not execute any adb commands itself; however, its equivalent commands could be the following:</p>
+<p><strong>Command ps (processes):</strong></p>
+<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ps<span class="w"> </span><span class="c1"># (1)</span>
 </code></pre></div>
-1. Este comando lista los procesos en ejecución en el dispositivo (PID, nombre, usuario, estado).</p>
-<p><strong>Para el comando find (registro de archivos):</strong></p>
-<p><div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ls/stat<span class="w"> </span>+<span class="w"> </span>adb<span class="w"> </span>pull<span class="w"> </span>+<span class="w"> </span>hashing<span class="w"> </span><span class="c1"># (1)!</span>
+<ol>
+<li>This command lists the process in execution on the device. </li>
+</ol>
+<p><strong>For the command find (file record):</strong></p>
+<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ls/stat<span class="w"> </span>+<span class="w"> </span>adb<span class="w"> </span>pull<span class="w"> </span>+<span class="w"> </span>hashing<span class="w"> </span><span class="c1"># (1)!</span>
 </code></pre></div>
-1. Donde:
-    * ls: lista archivos en un directorio.<br />
-    * stat: muestra atributos de un archivo (tamaño, permisos, MAC times, UID/GID).<br />
-    * adb pull: copia archivos del dispositivo al host.<br />
-    * hashing: calcula sumas de verificación (MD5, SHA1, SHA256, etc.) para asegurar integridad.</p>
+<ol>
+<li>where:<ul>
+<li>ls: lists files in the folder</li>
+<li>stat: shows file attributes (size, permissions, MAC times, UID/GID).  </li>
+<li>adb pull: copy files from the device to the host.  </li>
+<li>hashing: calculates hashses for integrity verification (MD5, SHA1, SHA256, etc.)</li>
+</ul>
+</li>
+</ol>
 <h4 id="backup">Backup</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/backup.go">Backup</a> módulo realiza una copia de seguridad del dispositivo mediante <em>adb backup</em> según la opción seleccionada (solo SMS, todo el dispositivo o nada). El archivo generado se guarda como <em>backup.ab</em> en la carpeta de la adquisición.</p>
-<p>Este módulo permite obtener una copia de los SMS o de la información del sistema backup donde encontramos la evidencia preservada que ayude a la identificación de vectores de ataque en posibles ataques digitales que deriven de phishing.</p>
-<p>Sus comandos equivalentes en <em>adb</em> son los siguientes:</p>
-<p><strong>Solo SMS</strong></p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/backup.go">Backup</a> module performs a device backup using <em>adb backup</em> according to the selected option (SMS only, entire device, or none). The generated file is saved as <em>backup.ab</em> in the acquisition folder.</p>
+<p>This module allows you to obtain a copy of SMS messages or system backup information where preserved evidence can help identify attack vectors in potential digital attacks derived from phishing.</p>
+<p>Its equivalent <em>adb</em> commands are as follows:</p>
+<p><strong>Only SMS</strong></p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>backup<span class="w"> </span>com.android.providers.telephony
 </code></pre></div>
-<p><strong>Todo</strong></p>
+<p><strong>All</strong></p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>backup<span class="w"> </span>-all
 </code></pre></div>
 <h4 id="bugreport">Bugreport</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/bugreport.go">bugreport</a> genera un reporte completo del sistema del dispositivo mediante la llamada interna al comando:</p>
-<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>bugreport<span class="w"> </span>bugreport.zip
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/bugreport.go">bugreport</a> module generates a complete system report of the device using an internal call to the following command:</p>
+<p><div class="highlight"><pre><span></span><code>adb<span class="w"> </span>bugreport<span class="w"> </span>bugreport.zip
 </code></pre></div>
-<p>A través del método <em>adb.Client.Bugreport()</em>.</p>
-<p>El bugreport devuelve una visión general del estado del dispositivo, incluyendo los logs del sistema, las configuraciones y actividad reciente del dispositivo que resulta información necesaria y valiosa para detectar fallos, comportamientos anormales o sospechosos que se puedan relacionar con algún incidente.</p>
+Through the method <em>adb.Client.Bugreport()</em>.</p>
+<p>The bugreport provides an overview of the device’s status, including system logs, configurations, and recent device activity, which is necessary and valuable information to detect faults, abnormal behavior, or suspicious activity that may be related to an incident.</p>
 <h4 id="dumpsys">Dumpsys</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/dumpsys.go">dumpsys</a> obtiene información del diagnóstico de los servicios en el dispositivo mediante el comando:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/dumpsys.go">dumpsys</a> module gathers diagnostic information from the services on the device using the command:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>dumpsys
 </code></pre></div>
-<p>El reporte de dumpsys proporciona detalles técnicos sobre el estado de los servicios y componentes del sistema que resulta muy útil para identificar configuraciones o comportamientos anormales.</p>
+<p>The dumpsys report provides technical details about the status of system services and components, which is very useful for identifying abnormal configurations or behaviors.</p>
 <h4 id="env">Env</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/env.go">env</a> captura y guarda las variables de entorno activas del dispositivo en el momento de la adquisición. Estas variables son pares clave valor que le dicen al sistema qué rutas y configuraciones está usando realmente (carpetas temporales, almacenamiento externo o librerías cargadas). Su registro ayuda a interpretar el contexto exacto de ejecución del dispositivo.</p>
-<p>El comando equivalente en <em>adb</em> es:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/env.go">env</a> module captures and saves the active environment variables of the device at the time of the acquisition. These variables are key-value pairs that inform the system which paths and configurations are actually being used (temporary folders, external storage, or loaded libraries). Their record helps interpret the exact execution context of the device.</p>
+<p>The equivalent command in <em>adb</em> is:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>env
 </code></pre></div>
 <h4 id="files">Files</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/files.go">files</a> genera un registro de archivos y metadatos en las rutas /sdcard/, /system, /vendor, /data , etc. a través del Collector, pero si este no está disponible, ejecuta el comando adb para buscar archivos y directorios específicos: </p>
-<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>find<span class="w"> </span>&lt;ruta&gt;
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/files.go">files</a> module generates a record of files and metadata in the paths /sdcard/, /system, /vendor/, /data, etc., through the Collector. However, if the Collector is not available, it executes the adb command to search for specific files and directories:</p>
+<p><div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>find<span class="w"> </span>&lt;ruta&gt;
 </code></pre></div>
-<p>La salida de este módulo permite obtener las rutas completas de los archivos presentes en los dispositivos, lo cual ayuda mucho a dar contexto sobre su ubicación y posible creación.</p>
+The output of this module provides the full paths of files present on the device, which is very helpful to give context about their location and possible origin.</p>
 <h4 id="getprop">Getprop</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/getprop.go">getprop</a> recolecta las propiedades del dispositivo como versión de android, numero de compilacion, número de serie, configuraciones de red, fabricante, estado del debug USB y valores relacionados con software y hardware. </p>
-<p>La salida de este módulo nos permite indagar sobre las propiedades, las cuales pueden ser alteradas por software malicioso para ocultar su presencia o para modificar el comportamiento del dispositivo de forma inadvertida.</p>
-<p>Su comando equivalente en <em>adb</em> es:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/getprop.go">getprop</a> module collects device properties such as Android version, build number, serial number, network configurations, manufacturer, USB debugging status, and other software and hardware related values.</p>
+<p>The output of this module allows us to inspect device properties, which can be modified by malicious software to hide its presence or to inadvertently change the device’s behavior.</p>
+<p>Its equivalent command in <em>adb</em> is:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>getprop
 </code></pre></div>
 <h4 id="logcat">Logcat</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/logcat.go">logcat</a> realiza dos procesos clave: primero captura los registros actuales de todos los buffers y guarda la salida como logcat.txt, posteriormente, intenta obtener los registros previos al último reinicio y los guarda como logcat_old.txt (aunque no siempre se pueden recolectar). Estos registros incluyen mensajes del sistema referentes a errores, advertencias, mensajes de aplicaciones, procesos y servicios del sistema operativo, logs de depuración, etc. La información de logcat puede revelar patrones que indican anomalías o comportamientos maliciosos que pueden relacionarse con aplicaciones o procesos específicos.</p>
-<p>Comando equivalente en <em>adb</em> para los registros actuales:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/logcat.go">logcat</a> module performs two key processes: first, it captures the current logs from all buffers and saves the output as logcat.txt; subsequently, it attempts to retrieve the logs from before the last reboot and saves them as logcat_old.txt (although these are not always obtainable). These logs include system messages related to errors, warnings, application messages, processes and OS services, debug logs, etc. Logcat information can reveal patterns indicating anomalies or malicious behavior related to specific apps or processes.</p>
+<p>Equivalent <em>adb</em> command for current logs:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>logcat<span class="w"> </span>-d<span class="w"> </span>-b<span class="w"> </span>all<span class="w"> </span><span class="s2">&quot;*:V&quot;</span>
 </code></pre></div>
-<p>Comando equivalente en <em>adb</em> para los registros previos al último reinicio:</p>
+<p>Equivalent <em>adb</em> command for logs prior to the last reboot:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>logcat<span class="w"> </span>-L<span class="w"> </span>-b<span class="w"> </span>all<span class="w"> </span><span class="s2">&quot;*:V&quot;</span>
 </code></pre></div>
 <h4 id="logs">Logs</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/logs.go">logs</a> lista los ficheros y recopila los archivos de registro del sistema y aplicaciones puntualmente extrae los archivos de: </p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/logs.go">logs</a> module lists and collects system and application log files, specifically extracting files from:</p>
 <pre><code>* /data/system/uiderrors.txt  
 *  /proc/kmsg  
 *  /proc/last\_kmsg  
@@ -2799,109 +2801,108 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 *  /data/log/  
 *  /sdcard/log/
 </code></pre>
-<p>Algunos pueden no ser accesibles por permisos del dispositivo.</p>
-<p>La información puede ser correlacionada a incidentes.</p>
-<p>Comando equivalente en <em>adb</em> para el listado recursivo de cada carpeta:</p>
+<p>Some of these may not be accessible due to device permissions. The information can be correlated with incidents.</p>
+<p>Equivalent <em>adb</em> command for recursive listing of each folder:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ls<span class="w"> </span>-R<span class="w"> </span>&lt;carpeta&gt;
 </code></pre></div>
-<p>Comando equivalente en <em>adb</em> para la descarga de cada archivo:</p>
+<p>Equivalent <em>adb</em> command to download each file:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>pull<span class="w"> </span>&lt;ruta_remota&gt;<span class="w"> </span>&lt;ruta_local&gt;
 </code></pre></div>
 <h4 id="packages">Packages</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/packages.go">packages</a> lista las aplicaciones instaladas y opcionalmente descarga sus APKs. Si una aplicación es descargada, este módulo verifica el certificado de firma del APK y permite eliminar los firmados con certificados de confianza para reducir el volumen a APKs desconocidas. Conocer las aplicaciones que están en el sistema y las que instaló el usuario ayuda a identificar si alguna de ellas es potencialmente maliciosa o es relacionada con algún comportamiento ejecutado en contextos no confiables.</p>
-<p>Comando equivalente en adb para listar los paquetes y sus rutas:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/packages.go">packages</a> module lists installed applications and optionally downloads their APKs. If an application is downloaded, this module verifies the APK signing certificate and allows removing APKs signed with trusted certificates to reduce the volume to unknown APKs. Knowing which applications are on the system and which were installed by the user helps identify potentially malicious apps or those related to suspicious activities.</p>
+<p>Equivalent <em>adb</em> command to list packages and their paths:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>pm<span class="w"> </span>list<span class="w"> </span>packages<span class="w"> </span>-f
 </code></pre></div>
-<p>Comando equivalente en adb para descargar cada APK:</p>
+<p>Equivalent <em>adb</em> command to download each APK:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>pull<span class="w"> </span>&lt;ruta_apk&gt;<span class="w"> </span>&lt;ruta_local&gt;
 </code></pre></div>
 <h4 id="processes">Processes</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/processes.go">processes</a>  obtiene la lista de procesos  mediante el Collector, sin embargo, si este no está disponible ejecuta el siguiente comando adb para obtener los procesos:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/processes.go">processes</a> module obtains the list of processes via the Collector; if the Collector is unavailable, it executes the following adb command to get processes:</p>
 <div class="highlight"><pre><span></span><code><span class="n">adb</span><span class="w"> </span><span class="n">shell</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">-</span><span class="n">A</span>
 </code></pre></div>
-<p>La información de salida de este módulo permite saber qué se estaba ejecutando en el momento de la adquisición y, con collector, incluye cmdline, variables de entorno, cwd y contextos SELinux para detectar procesos anómalos, persistencias y actividad sospechosa.</p>
+<p>The output allows understanding what was running at the time of acquisition and, with the Collector, includes cmdline, environment variables, cwd, and SELinux contexts to detect anomalous processes, persistence, and suspicious activity.</p>
 <h4 id="root-binaries">Root binaries</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/root_binaries.go">root_binaries</a> busca rastros de rooting en el dispositivo revisando si existen binarios o aplicaciones conocidas como su, busybox, magisk, Superuser.apk, etc. Detectar la presencia de estos binarios permite conocer si existen alteraciones en los registros del dispositivo y su sistema o incluso la presencia de permisos escalados.</p>
-<p>Su comando equivalente en <em>adb</em> es (se repite para cada binario sospechoso):</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/root_binaries.go">root_binaries</a> module searches for rooting traces on the device by checking for known binaries or apps like su, busybox, magisk, Superuser.apk, etc. Detecting these binaries indicates possible alterations in device and system logs or the presence of escalated permissions.</p>
+<p>Equivalent <em>adb</em> command (repeated for each suspicious binary):</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>which<span class="w"> </span>-a<span class="w"> </span>su
 </code></pre></div>
 <h4 id="selinux">SELinux</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/selinux.go">SELinux</a> obtiene el estado SELinux en el dispositivo mediante getenforce, donde este puede ser <em>enforcing</em>, <em>permissive</em> o <em>disabled</em>. Este estado indica el nivel de control de acceso que el sistema aplica, por ejemplo, el modo permisible o sidables puede sugerir configuraciones inseguras o manipulaciones que facilitan alguna intrusión, resulta útil para complementar el contexto del comportamiento de un dispositivo.</p>
-<p>Su comando equivalente en <em>adb</em> es:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/selinux.go">SELinux</a> module retrieves the SELinux status using getenforce, which can be <em>enforcing</em>, <em>permissive</em>, or <em>disabled</em>. This indicates the level of access control the system applies. Permissive or disabled modes may suggest insecure configurations or manipulations, useful for contextualizing device behavior.</p>
+<p>Equivalent <em>adb</em> command:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>getenforce
 </code></pre></div>
 <h4 id="services">Services</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/services.go">services</a> obtiene la lista de servicios en ejecución en el sistema. Esta información permite identificar que todos los servicios necesarios estén en ejecución para mantener la integridad de la seguridad del dispositivo. </p>
-<p>Su comando equivalente en <em>adb</em> es:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/services.go">services</a> module lists running system services. This helps ensure all necessary services are active to maintain device security integrity.</p>
+<p>Equivalent <em>adb</em> command:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>service<span class="w"> </span>list
 </code></pre></div>
 <h4 id="settings">Settings</h4>
-<p>El módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/settings.go">settings</a> extrae la configuración del dispositivo en los espacios de nombres system, secure y global usando cmd settings list. Permite conocer ajustes críticos del dispositivo, como configuraciones de red, seguridad o de accesibilidad. Estos datos ayudan a entender cómo estaba configurado el sistema y a detectar cambios anómalos que podrían relacionarse con un ataque o comportamiento sospechoso.</p>
-<p>Su comando equivalente en <em>adb</em> es:</p>
+<p>The <a href="https://github.com/mvt-project/androidqf/blob/main/modules/settings.go">settings</a> module extracts device configuration from system, secure, and global namespaces using <code>cmd settings list</code>. This reveals critical settings like network, security, and accessibility configurations, helping detect anomalous changes related to attacks or suspicious behavior.</p>
+<p>Equivalent <em>adb</em> command:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>cmd<span class="w"> </span>settings<span class="w"> </span>list<span class="w"> </span>system
 adb<span class="w"> </span>shell<span class="w"> </span>cmd<span class="w"> </span>settings<span class="w"> </span>list<span class="w"> </span>secure
 adb<span class="w"> </span>shell<span class="w"> </span>cmd<span class="w"> </span>settings<span class="w"> </span>list<span class="w"> </span>global
 </code></pre></div>
 <h4 id="temp">Temp</h4>
-<p>El módulo temp recopila el contenido del directorio temporal identificado en el dispositivo (por defecto /data/local/tmp/ u otro según lo reporte env). Los archivos se copian a la carpeta tmp/ dentro del directorio de trabajo. El directorio temporal puede contener archivos creados por aplicaciones, instaladores, exploits o herramientas de depuración. Revisarlo permite detectar rastros de ejecución reciente, archivos transitorios sospechosos o evidencias que normalmente no permanecen en almacenamiento persistente.</p>
-<p>Comando equivalente en adb para listar los archivos:</p>
+<p>The temp module collects content from the device’s temporary directory (default /data/local/tmp/ or another reported by env). Files are copied to the tmp/ folder in the working directory. This directory may contain files created by apps, installers, exploits, or debugging tools. Reviewing it can reveal traces of recent execution, suspicious transient files, or evidence that normally does not remain in persistent storage.</p>
+<p>Equivalent <em>adb</em> command to list files:</p>
 <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>ls<span class="w"> </span>-R<span class="w"> </span>/data/local/tmp/
 </code></pre></div>
-<p>Comando equivalente en adb para extraerlos:</p>
-<p><code>shell
-adb pull /data/local/tmp/ &lt;ruta_local&gt;</code></p>
-<h2 id="verificacion-de-la-extraccion">Verificación de la extracción</h2>
-<p>Una vez finalizada la ejecución de AndroidQF, es importante validar que la adquisición se completó correctamente. Para ello, realiza los siguientes pasos:</p>
+<p>Equivalent <em>adb</em> command to extract them:</p>
+<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>pull<span class="w"> </span>/data/local/tmp/<span class="w"> </span>&lt;ruta_local&gt;
+</code></pre></div>
+<h2 id="verifying-the-extraction">Verifying the extraction</h2>
+<p>Once the execution of AndroidQF has finished, it is important to validate that the acquisition was completed successfully. To do this, follow these steps:</p>
 <ol>
 <li>
-<p>Revisar el archivo <em>command.log</em></p>
-<p>Abre el archivo <em>command.log</em> con un editor de texto y busca las palabras <em>WARNING</em> y <em>ERROR</em> para encontrar alertas durante la extracción. Si hay coincidencias en la búsqueda revisa si corresponden a fallos críticos o eventos no relevantes.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">En Linux/MacOS</label><label for="__tabbed_5_2">En Windows</label></div>
+<p>Review the <em>command.log</em> file</p>
+<p>Open the <em>command.log</em> file with a text editor and search for the words <em>WARNING</em> and <em>ERROR</em> to find alerts during the extraction. If matches are found, check whether they correspond to critical failures or non-relevant events.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">On Linux/MacOS</label><label for="__tabbed_5_2">On Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Puedes usar el comando <em>grep</em> para realizar una búsqueda dentro de la carpeta de la adquisición:</p>
-<p><code>shell
-grep -i "WARNING\|ERROR" command.log</code></p>
-<p>La salida estará en texto plano:</p>
-<p><code>shell
-2025-07-28T13:05:36-06:00 [ERROR] Failed to get file paths for package com.adobe.reader: exit status 1: 
-2025-07-28T13:05:55-06:00 [ERROR] Failed to get file paths for package com.whova.event: exit status 1: 
-2025-07-28T13:07:27-06:00 [ERROR] Failed to get file paths for package im.vector.app: exit status 1: 
-2025-07-28T13:10:09-06:00 [ERROR] Failed to get file paths for package sh.file.opener.shell.editor.app: exit status 1: 
-2025-07-28T13:29:51-06:00 [DEBUG] From: /data/system/uiderrors.txt
-2025-07-28T13:29:51-06:00 [DEBUG] To: /home/lightyear/Documentos/ST/ST2025/extracciones qf/a7de07b3-36d8-4589-9854-1bc666c2c873/logs/data/system/uiderrors.txt
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /data/system/uiderrors.txt: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /proc/kmsg: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /proc/last_kmsg: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /sys/fs/pstore/console-ramoops: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /data/anr/: 
-2025-07-28T13:29:51-06:00 [ERROR] Failed to pull log file /data/anr/anr_2025-07-23-03-47-27-988: 
-2025-07-28T13:29:52-06:00 [ERROR] Failed to pull log file /data/log/: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/settingsprovider.txt: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/dark_mode_log0.txt.lck: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/dark_mode_log0.txt: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/knoxsdk.log.0.lck: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/knoxsdk.log.0: 
-2025-07-28T13:30:00-06:00 [ERROR] Failed to pull log file /data/log/LockSettingsLog_Enroll.log: 
-2025-07-28T13:30:01-06:00 [ERROR] Failed to pull log file /data/log/setupwizard.txt: 
-2025-07-28T13:30:01-06:00 [ERROR] Failed to pull log file /data/log/appwidget_history_log0.txt.lck: 
-2025-07-28T13:30:01-06:00 [ERROR] Failed to pull log file /data/log/appwidget_history_log0.txt: 
-2025-07-28T13:30:01-06:00 [ERROR] Failed to pull log file</code></p>
-<p>La imagen 34 muestra la salida de búsqueda de errores en un sistema Linux.</p>
+<p>You can use the <em>grep</em> command to search within the acquisition folder:</p>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;WARNING\|ERROR&quot;</span><span class="w"> </span>command.log
+</code></pre></div>
+<p>The output will be in plain text:</p>
+<div class="highlight"><pre><span></span><code><span class="m">2025</span>-07-28T13:05:36-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>file<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>package<span class="w"> </span>com.adobe.reader:<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:05:55-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>file<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>package<span class="w"> </span>com.whova.event:<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:07:27-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>file<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>package<span class="w"> </span>im.vector.app:<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:10:09-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>file<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>package<span class="w"> </span>sh.file.opener.shell.editor.app:<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>DEBUG<span class="o">]</span><span class="w"> </span>From:<span class="w"> </span>/data/system/uiderrors.txt
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>DEBUG<span class="o">]</span><span class="w"> </span>To:<span class="w"> </span>/home/lightyear/Documentos/ST/ST2025/extracciones<span class="w"> </span>qf/a7de07b3-36d8-4589-9854-1bc666c2c873/logs/data/system/uiderrors.txt
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/system/uiderrors.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/proc/kmsg:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/proc/last_kmsg:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/sys/fs/pstore/console-ramoops:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/anr/:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:51-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/anr/anr_2025-07-23-03-47-27-988:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:29:52-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/settingsprovider.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/dark_mode_log0.txt.lck:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/dark_mode_log0.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/knoxsdk.log.0.lck:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/knoxsdk.log.0:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:00-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/LockSettingsLog_Enroll.log:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:01-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/setupwizard.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:01-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/appwidget_history_log0.txt.lck:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:01-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>/data/log/appwidget_history_log0.txt:<span class="w"> </span>
+<span class="m">2025</span>-07-28T13:30:01-06:00<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>pull<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span>
+</code></pre></div>
+<p>Image 34 shows the search results for errors on a Linux system.</p>
 <figure>
-<p><img alt=" Captura de pantalla de terminal de linux con el comando *grep* para buscar errores en el archivo command.log generado por AndoridQF." src="../../../assets/01-tutorial/34-captura-pantalla-terminal-linux-errores.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Linux terminal with the *grep* command searching for errors in the command.log file generated by AndroidQF." src="../../../assets/01-tutorial/34-captura-pantalla-terminal-linux-errores.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 34</strong> Captura de pantalla de terminal de linux con el comando <em>grep</em> para buscar errores en el archivo command.log generado por AndoridQF.</p>
+<p><strong>Image 34</strong> Screenshot of Linux terminal with the <em>grep</em> command searching for errors in the command.log file generated by AndroidQF.</p>
 </figcaption>
 </figure>
 </div>
 <div class="tabbed-block">
-<p>Abre el archivo con <em>Bloc de notas</em>. Si usas Windows en español presiona  la combinación de teclas <strong>ctrl+b</strong> y si usas WIndows en inglés o portugues, utiliza  <strong>ctrl+f.</strong> Luego escribe <strong><em>WARNING</em></strong> y <strong><em>ERROR</em></strong> en el cuadro de búsqueda.</p>
-<p>La figura 35 muestra la salida de una búsqueda de errores en Windows. en este caso, no se encuentran  errores referentes al proceso de extracción forense.</p>
+<p>Open the file with <em>Notepad</em>. If you are using Windows in Spanish, press <strong>Ctrl+B</strong>, and if you are using Windows in English or Portuguese, use <strong>Ctrl+F</strong>. Then type <strong><em>WARNING</em></strong> and <strong><em>ERROR</em></strong> in the search box.</p>
+<p>Image 35 shows the output of an error search in Windows. In this case, no errors related to the forensic extraction process are found.</p>
 <figure>
-<p><img alt=" Captura de pantalla de Bloc de notas de Windows con la búsqueda de  errores en el archivo command.log generado por AndoridQF." src="../../../assets/01-tutorial/35-captura-pantalla-windows-errores.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of Windows Notepad searching for errors in the command.log file generated by AndroidQF." src="../../../assets/01-tutorial/35-captura-pantalla-windows-errores.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 35</strong> Captura de pantalla de Bloc de notas de Windows con la búsqueda de  errores en el archivo command.log generado por AndoridQF.</p>
+<p><strong>Image 35</strong> Screenshot of Windows Notepad searching for errors in the command.log file generated by AndroidQF.</p>
 </figcaption>
 </figure>
 </div>
@@ -2909,36 +2910,35 @@ grep -i "WARNING\|ERROR" command.log</code></p>
 </div>
 </li>
 <li>
-<p>Verifica la existencia del archivo <em>acquisition.json</em> y abrelo</p>
-<p>Este archivo resume los detalles de la extracción. Su creación implica que AndroidQF finalizó correctamente la extracción forense del dispositivo. </p>
-<p>Ejemplo de la salida del archivo <em>acquisition.json</em>:</p>
-<p><code>{
-"uuid": "a7de07b3-36d8-4589-9854-1bc666c2c873",
-"androidqf_version": "f77a04f",
-"storage_path": "/home/user/acquisition/folder qf/a7de07b3-36d8-4589-9854-1bc666c2c873",
-"started": "2025-07-28T19:02:46.15453512Z",
-"completed": "2025-07-28T19:30:22.947074074Z",
-"collector": {
-"ExePath": "/data/local/tmp/collector",
-"Installed": false,
-"Adb": {
-"ExePath": "/usr/bin/adb",
-"Serial": ""
+<p>Verify the existence of the <em>acquisition.json</em> file and open it</p>
+<p>This file summarizes the details of the extraction. Its creation indicates that AndroidQF successfully completed the forensic extraction of the device. </p>
+<p>Example output of the <em>acquisition.json</em> file:</p>
+<div class="highlight"><pre><span></span><code>{
+&quot;uuid&quot;: &quot;a7de07b3-36d8-4589-9854-1bc666c2c873&quot;,
+&quot;androidqf_version&quot;: &quot;f77a04f&quot;,
+&quot;storage_path&quot;: &quot;/home/user/acquisition/folder qf/a7de07b3-36d8-4589-9854-1bc666c2c873&quot;,
+&quot;started&quot;: &quot;2025-07-28T19:02:46.15453512Z&quot;,
+&quot;completed&quot;: &quot;2025-07-28T19:30:22.947074074Z&quot;,
+&quot;collector&quot;: {
+&quot;ExePath&quot;: &quot;/data/local/tmp/collector&quot;,
+&quot;Installed&quot;: false,
+&quot;Adb&quot;: {
+&quot;ExePath&quot;: &quot;/usr/bin/adb&quot;,
+&quot;Serial&quot;: &quot;&quot;
 },
-"Architecture": "arm64-v8a"
+&quot;Architecture&quot;: &quot;arm64-v8a&quot;
 },
-"tmp_dir": "/data/local/tmp/",
-"sdcard": "/sdcard/",
-"cpu": "arm64-v8a"
-}</code></p>
+&quot;tmp_dir&quot;: &quot;/data/local/tmp/&quot;,
+&quot;sdcard&quot;: &quot;/sdcard/&quot;,
+&quot;cpu&quot;: &quot;arm64-v8a&quot;
+}
+</code></pre></div>
 </li>
 <li>
-<p>Comprueba la creación de archivos y carpetas de salida</p>
-</li>
-</ol>
-<p>Asegurate que se hayan generado los siguientes archivos y carpetas:</p>
+<p>Check the creation of output files and folders</p>
+<p>Ensure that the following files and folders were generated:</p>
 <ul>
-<li>Archivos  </li>
+<li>Files  </li>
 <li>acquisition.json  </li>
 <li>backup.ab  </li>
 <li>bugreport.zip  </li>
@@ -2957,29 +2957,31 @@ grep -i "WARNING\|ERROR" command.log</code></p>
 <li>settings_global.txt  </li>
 <li>settings_secure.txt  </li>
 <li>settings_system.txt  </li>
-<li>Carpetas de salida  </li>
+<li>Output folders  </li>
 <li>apks/  </li>
 <li>logs/  </li>
 <li>tmp/</li>
 </ul>
-<p>Esto significa que los módulos se ejecutaron correctamente.</p>
+</li>
+</ol>
+<p>This means that the modules were executed successfully.</p>
 <figure>
-<p><img alt=" Captura de pantalla de la aplicación archivos en PopOS! mostrando la carpeta de salida de archivos y directorios generados con la extracción forense con AndroidQF." src="../../../assets/01-tutorial/36-captura-pantalla-archivos-salida.png" title="imagen 1" /></p>
+<p><img alt=" Screenshot of the Files application in PopOS! showing the output folder with files and directories generated by the forensic acquisition with AndroidQF." src="../../../assets/01-tutorial/36-captura-pantalla-archivos-salida.png" title="image 1" /></p>
 <figcaption>
-<p><strong>Imagen 36</strong> Captura de pantalla de la aplicación archivos en PopOS! mostrando la carpeta de salida de archivos y directorios generados con la extracción forense con AndroidQF.</p>
+<p><strong>Image 36</strong> Screenshot of the Files application in PopOS! showing the output folder with files and directories generated by the forensic acquisition with AndroidQF.</p>
 </figcaption>
 </figure>
-<p>Identificar que una extracción fue realizada exitosamente implica un proceso de análisis, de habilidad y de instinto para leer líneas con distintos formatos e identificar todos los nombres de los archivos de salida. Todo tu esfuerzo ayuda a que la comunidad refuerce estas herramientas para hacerlas mejor en la sociedad civil.</p>
-<h2 id="conclusion-del-tutorial">Conclusión del tutorial</h2>
-<p>¡Felicidades! Has completado con éxito el proceso de adquisición forense con AndroidQF. Ejecutar una extracción de información forense no es una tarea sencilla, pero ahora dominas los pasos esenciales para realizar extracciones seguras, documentadas y con consentimiento. AndroidQF te permitirá como analista a apoyar en investigaciones desde tu laboratorio, organización o causa si eres  analista independiente sobre vigilancia, amenazas digitales y documentación de incidentes o ataques digitales. Tus nuevas habilidades son cruciales para reforzar el uso de estas herramientas en beneficio de muchas comunidad y la sociedad civil.</p>
-<p>Ahora que tienes la extracción, el siguiente paso es que puedas interpretar la información obtenida, pues una vez que una extracción fue realizada exitosamente es necesario comenzar un proceso de análisis de la información contenida en esta extracción.</p>
-<p>Para apoyarte en este análisis, este repositorio incluye un recurso de referencia clave: el <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">Diccionario de archivos generados por AndroidQF</a>. Con este recurso, podrás:</p>
+<p>Identifying that an acquisition was successfully performed involves a process of analysis, skill, and instinct to read lines in different formats and identify all output file names. All your effort helps the community improve these tools for civil society.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Congratulations! You have successfully completed the forensic acquisition process with AndroidQF. Performing a forensic information extraction is not an easy task, but now you master the essential steps to carry out safe, documented, and consented extractions. **AndroidQF will allow you, as an analyst, to support investigations into Android devices ** from your laboratory, organization, or cause if you are an independent analyst working on surveillance, digital threats, and documentation of incidents or digital attacks. Your new skills are crucial to reinforcing the use of these tools for the benefit of many communities and civil society.</p>
+<p>Now that you have the extraction, <strong>the next step is to interpret the obtained information</strong>, because once an extraction has been successfully completed, it is necessary to begin a process of analyzing the information contained within it.</p>
+<p>To support this analysis, this repository includes a key reference resource: the <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">Dictionary of Files Generated by AndroidQF</a>. With this resource, you will be able to:</p>
 <ul>
-<li>Identificar el contenido de cada archivo de salida.  </li>
-<li>Comprender por qué esta información es importante y cómo usarla en un análisis forense.  </li>
-<li>Entender el formato en el que se entrega la información y cómo visualizarla.</li>
+<li>Identify the content of each output file.  </li>
+<li>Understand why this information is important and how to use it in a forensic analysis.  </li>
+<li>Understand the format in which the information is delivered and how to visualize it.</li>
 </ul>
-<p>El siguiente paso es realizar un análisis más profundo de la información adquirida. </p>
+<p>The next step is to conduct a deeper analysis of the acquired information.</p>
 
 
 
