@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://forensics.socialtic.org/en/references/03-reference-mvt-androidqf-dictionary/index.html">
       
       
+        <link rel="prev" href="../02-reference-mvt-bugreport-dictionary/index.html">
+      
+      
+        <link rel="next" href="../../community/index.html">
       
       
         
@@ -420,10 +424,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../index.html" class="md-tabs__link">
           
   
@@ -1190,6 +1196,8 @@
       
   
   
+    
+  
   
   
     
@@ -1211,16 +1219,19 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -1244,13 +1255,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1351,10 +1362,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../reference/03-reference-mvt-androidqf-dictionary/index.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1370,6 +1390,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1716,6 +1737,46 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../index.html" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../index.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    References
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
@@ -1740,7 +1801,7 @@
 
 
 <h1 id="diccionario-de-archivos-generados-por-la-herramienta-mvt-androidqf">Diccionario de archivos generados por la herramienta MVT-androidqf</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-20'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-20T00:00:00'>2025-11-20</time></span><span data-tippy-content data-tippy-raw='2025-11-20'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-20T20:12:40+00:00'>2025-11-20</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class="avatar" src="../../../assets/external/avatars.githubusercontent.com/Socialtic.png" onerror="this.style.display='none'"></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-20'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-20T00:00:00'>2025-11-20</time></span><span data-tippy-content data-tippy-raw='2025-11-20'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-20T20:31:20+00:00'>2025-11-20</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class="avatar" src="../../../assets/external/avatars.githubusercontent.com/Socialtic.png" onerror="this.style.display='none'"></div></div></div></div>
 
 <h1 id="introduccion">Introducción</h1>
 <p>El presente documento contiene información sobre los archivos generados por la MVT a través del componente <a href="https://github.com/mvt-project/mvt/tree/main/src/mvt/android/modules/androidqf">mvt-check-androidqf.</a> El objetivo de este diccionario, es que la persona analista tenga la facilidad de buscar información específica y conocer el formato en que la información del análisis forense es presentada.</p>
@@ -1756,41 +1817,61 @@
 <li>Procesos y aplicaciones  </li>
 <li>Archivos respaldados</li>
 </ul>
-<p>A su vez cada una de las categorías contiene archivos específicos generados por la herramienta, los cuales se enlistan en el siguiente índice:</p>
-<p><a data-preview="" href="#detalles-de-la-adquisición">Detalles de la adquisición</a>
-    <a data-preview="" href="#info.json">info.json</a>
-    <a data-preview="" href="#command.log">command.log</a>
-    <a data-preview="" href="#timeline.csv">timeline.csv</a>
-<a data-preview="" href="#configuración-del-dispositivo">Configuración del dispositivo</a>
-    <a data-preview="" href="#aqf_getprop.json">aqf_getprop.json</a>
-    <a data-preview="" href="#aqf_settings.json">aqf_settings.json</a>
-    <a data-preview="" href="#mounts.json">mounts.json</a>
-<a data-preview="" href="#procesos-y-aplicaciones">Procesos y aplicaciones</a>
-    <a data-preview="" href="#aqf_packages.json">aqf_packages.json</a>
-    <a data-preview="" href="#root_binaries.py">root_binaries.py</a>
-<a data-preview="" href="#archivos-respaldados">Archivos respaldados</a>
-    <a data-preview="" href="#aqf_files.json">aqf_files.json</a></p>
+<p>A su vez cada una de las categorías contiene archivos específicos generados por la herramienta, los cuales se enlistan en el <strong>siguiente índice de contenidos</strong>:</p>
+<ul>
+<li><a data-preview="" href="#detalles-de-la-adquisición">Detalles de la adquisición</a><ul>
+<li><a data-preview="" href="#info.json">info.json</a></li>
+<li><a data-preview="" href="#command.log">command.log</a></li>
+<li><a data-preview="" href="#timeline.csv">timeline.csv</a></li>
+</ul>
+</li>
+<li><a data-preview="" href="#configuración-del-dispositivo">Configuración del dispositivo</a><ul>
+<li><a data-preview="" href="#aqf_getprop.json">aqf_getprop.json</a></li>
+<li><a data-preview="" href="#aqf_settings.json">aqf_settings.json</a></li>
+<li><a data-preview="" href="#mounts.json">mounts.json</a></li>
+</ul>
+</li>
+<li><a data-preview="" href="#procesos-y-aplicaciones">Procesos y aplicaciones</a><ul>
+<li><a data-preview="" href="#aqf_packages.json">aqf_packages.json</a></li>
+<li><a data-preview="" href="#root_binaries.py">root_binaries.py</a></li>
+</ul>
+</li>
+<li><a data-preview="" href="#archivos-respaldados">Archivos respaldados</a><ul>
+<li><a data-preview="" href="#aqf_files.json">aqf_files.json</a></li>
+</ul>
+</li>
+</ul>
 <p>Durante la ejecución del comando <strong><em>mvt-android check-andoridqf</em><em>,</em> MVT también ejecuta módulos que corresponden a  </strong><em>mvt-android check-bugreport</em><strong> y </strong><em>mvt-android check-backup,</em>** esto siempre y cuando exista una carpeta bugreport.zip y un archivo backup.ab dentro de la carpeta de entrada de una extracción con androidqf.</p>
-<p>En el <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html">diccionario de archivos generados por la herramienta mvt al analizar un bugreport</a> se describe la salida del comando check-bugreport y los archivos resultantes. A continuación se incluyen los enlaces a las secciones de cada uno de los módulos ejecutados por el comando check-androidqf para analizar el bugreport.</p>
-<p><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#configuración-del-dispositivo-configuración-del-dispositivo">Configuración del dispositivo</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#getprop.json">dumpsys_get_prop.json</a>
-<a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#informacion-sobre-registros-y-eventos-del-sistema">Información sobre registros y eventos del sistema</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#dumpsys_adb_state.json">dumpsys_adb_state.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#bugreport_timestamps.json">bugreport_timestamps.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#dbinfo.json">dbinfo.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#receivers.json">dumpsys_receivers.json</a>
-<a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#procesos-y-aplicaciones">Procesos y aplicaciones</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#packages.json">dumpsys_packages.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#activities.json">dumpsys_activities.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#appops.json">dumpsys_appops.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#accesibility.json">dumpsys_accessibility.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#tombstones.json">tombstones.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#battery_daily.json">dumpsys_battery_daily.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#battery_history.json">dumpsys_battery_history.json</a>
-    <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#platform_compact.json">dumpsys_platform_compact.json</a></p>
+<p>En el material de referencia complementario <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html">sobre archivos generados por la herramienta mvt al analizar un bugreport</a> se describe la salida del comando check-bugreport y los archivos resultantes. A continuación se muestra el <strong>las referencias específicas a los módulos ejecutados por el comando check-androidqf para analizar el bugreport:</strong></p>
+<ul>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#configuración-del-dispositivo-configuración-del-dispositivo">Configuración del dispositivo</a><ul>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#getprop.json">dumpsys_get_prop.json</a></li>
+</ul>
+</li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#informacion-sobre-registros-y-eventos-del-sistema">Información sobre registros y eventos del sistema</a><ul>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#dumpsys_adb_state.json">dumpsys_adb_state.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#bugreport_timestamps.json">bugreport_timestamps.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#dbinfo.json">dbinfo.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#receivers.json">dumpsys_receivers.json</a></li>
+</ul>
+</li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#procesos-y-aplicaciones">Procesos y aplicaciones</a><ul>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#packages.json">dumpsys_packages.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#activities.json">dumpsys_activities.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#appops.json">dumpsys_appops.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#accesibility.json">dumpsys_accessibility.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#tombstones.json">tombstones.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#battery_daily.json">dumpsys_battery_daily.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#battery_history.json">dumpsys_battery_history.json</a></li>
+<li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#platform_compact.json">dumpsys_platform_compact.json</a></li>
+</ul>
+</li>
+</ul>
 <p>Asi mismo , también listamos los módulos ejecutado por <strong><em>check-backup</em></strong>, los cuáles se detallan al final de este recurso.  </p>
-<p><a data-preview="" href="#información-sobre-registros-y-eventos-del-sistema">Información sobre registros y eventos del sistema</a><br />
-<a data-preview="" href="#sms.json">sms.json</a></p>
+<ul>
+<li><a data-preview="" href="#información-sobre-registros-y-eventos-del-sistema">Información sobre registros y eventos del sistema</a>  </li>
+<li><a data-preview="" href="#sms.json">sms.json</a></li>
+</ul>
 <h1 id="detalles-de-la-adquisición">Detalles de la adquisición</h1>
 <h2 id="info.json">info.json</h2>
 <p><strong>Información contenida</strong></p>
@@ -1990,113 +2071,115 @@ Este archivo se encuentra en formato <em>csv</em> y almacena una línea de tiemp
 <p>Este archivo se encuentra en formato <em>json</em> y contiene información sobre las particiones y directorios de sistemas de archivos montados en un dispositivo en el espacio de usuario <em>y</em> en el kernel de linux de Android extraídas del archivo <em>mounts.json</em> generado durante una extracción con AndoridQF.</p>
 <p>El módulo se encarga de identificar configuraciones sospechosas en puntos de montaje /system, /vendor, /product y /system_ext como modo de acceso de lectura y escritura, marcas de tiempo noatime o nodiratime, posteriormente se encarga de formatear cada punto de montaje de la siguiente manera:</p>
 <ul>
-<li><strong>device</strong>:  Partición o volumen montado, en android las más comunes son:  </li>
-<li>Particiones de almacenamiento físico   <ul>
-<li>/dev/block/sdX: Dispositivo de almacenamiento físico (<a href="https://new.c.mi.com/es/post/11738">eMMC/UFS</a>) expuesto como sd por el kernel.  </li>
-<li>/dev/block/mmcblk: Dispositivo de almacenamiento eMMC presentado como mmcblk.  </li>
-<li>/dev/block/dm-X: Dispositivo manejado por device-mapper (cifrado, verity o particiones lógicas).  </li>
-<li>/dev/block/by-name/: Enlaces simbólicos que apuntan a las particiones reales por su nombre e.j. system, vendor, userdata.  </li>
-</ul>
-</li>
-<li>Volumen virtual del kernel en RAM  <ul>
-<li>proc: Interfaz virtual para obtener información del kernel y procesos.  </li>
-<li>sysfs: expone información de dispositivos, drivers y parámetros del kernel.  </li>
-<li>selinuxfs: Muestra políticas, estados y etiquetas de SELinux.  </li>
-<li>tracefs: sistema virtual para herramientas de trazado y debugging del kernel.  </li>
-<li>pstore: Almacena registros persistentes de fallos del kernel.  </li>
-<li>bpf: Expone interfaces para programas <a href="https://source.android.com/docs/core/architecture/kernel/bpf">eBPF</a> cargados en el kernel.  </li>
-</ul>
-</li>
-<li>Espacio de usuario  <ul>
-<li>/dev/fuse: Interfaz <a href="https://source.android.com/docs/core/storage/fuse-passthrough">FUSE</a> usada por Android para montar almacenamiento emulado p.j  /storage/emulated.  </li>
-</ul>
-</li>
-<li>Interfaces internas de control de kernel  <ul>
-<li>none: Identificador que indica que el montaje no proviene de un dispositivo real.  </li>
-<li>binder: <a href="https://source.android.com/docs/core/architecture/ipc/binder-overview">Sistema de IPC</a> interno de Android para comunicación entre procesos.  </li>
-</ul>
-</li>
 <li>
-<p>Archivos APEX montados como loopback  </p>
+<p><strong>device</strong>: Partición o volumen montado, en android las más comunes son:</p>
 <ul>
+<li>Particiones de almacenamiento físico<ul>
+<li>/dev/block/sdX: Dispositivo de almacenamiento físico (<a href="https://new.c.mi.com/es/post/11738">eMMC/UFS</a>) expuesto como sd por el kernel.</li>
+<li>/dev/block/mmcblk: Dispositivo de almacenamiento eMMC presentado como mmcblk.</li>
+<li>/dev/block/dm-X: Dispositivo manejado por device-mapper (cifrado, verity o particiones lógicas).</li>
+<li>/dev/block/by-name/: Enlaces simbólicos que apuntan a las particiones reales por su nombre e.j. system, vendor, userdata.</li>
+</ul>
+</li>
+<li>Volumen virtual del kernel en RAM<ul>
+<li>proc: Interfaz virtual para obtener información del kernel y procesos.</li>
+<li>sysfs: Expone información de dispositivos, drivers y parámetros del kernel.</li>
+<li>selinuxfs: Muestra políticas, estados y etiquetas de SELinux.</li>
+<li>tracefs: Sistema virtual para herramientas de trazado y debugging del kernel.</li>
+<li>pstore: Almacena registros persistentes de fallos del kernel.</li>
+<li>bpf: Expone interfaces para programas <a href="https://source.android.com/docs/core/architecture/kernel/bpf">eBPF</a> cargados en el kernel.</li>
+</ul>
+</li>
+<li>Espacio de usuario<ul>
+<li>/dev/fuse: Interfaz <a href="https://source.android.com/docs/core/storage/fuse-passthrough">FUSE</a> usada por Android para montar almacenamiento emulado p.j /storage/emulated.</li>
+</ul>
+</li>
+<li>Interfaces internas de control de kernel<ul>
+<li>none: Identificador que indica que el montaje no proviene de un dispositivo real.</li>
+<li>binder: <a href="https://source.android.com/docs/core/architecture/ipc/binder-overview">Sistema de IPC</a> interno de Android para comunicación entre procesos.</li>
+</ul>
+</li>
+<li>Archivos APEX montados como loopback<ul>
 <li>/dev/block/loopX: Dispositivos de bucle usados para montar paquetes APEX como si fueran particiones reales.</li>
 </ul>
 </li>
-<li>
-<p><strong>mount point</strong>: Ruta de la carpeta raiz del almacenamiento donde se accede a la información, en android suelen ser los siguientes:  </p>
-</li>
-<li>/system: Contiene el sistema operativo principal .  </li>
-<li>/vendor: Incluye componentes y drivers proporcionados por el fabricante del hardware como HALs, firmware y binarios específicos del proveedor.  </li>
-<li>/product: Almacena personalizaciones del fabricante sobre las funciones del sistema y aplicaciones específicas del dispositivo.  </li>
-<li>/data: Área de datos del usuario y almacenamiento de apps.  </li>
-<li>/cache: Espacio temporal usado para archivos de actualización y datos transitorios del sistema.  </li>
-<li>/metadata: Contiene información crítica de dispositivo necesaria para <a href="https://source.android.com/docs/security/features/verifiedboot/avb">AVB</a>, cifrado y validaciones del sistema.  </li>
-<li>/mnt/media_rw/: Punto de montaje para almacenamiento removible o adoptado e.j. SD card  </li>
-<li>/storage/emulated: Vista emulada de almacenamiento interno del usuario.  </li>
-<li>/proc: Sistema virtual que expone información del kernel y procesos (no es almacenamiento real).  </li>
-<li>/sys: Sistema virtual que expone información sobre dispositivos y controladores del kernel.  </li>
-<li>
-<p>/mnt/user/0/emulated: Vista específica del almacenamiento emulado para el usuario 0.</p>
-</li>
-<li>
-<p><strong>filesystem_type</strong>: Tipo de sistema de archivos, en android son los siguientes:  </p>
-</li>
-<li>ext4: Sistema de archivos de Linux usado en particiones internas.  </li>
-<li>f2fs: Sistema de archivos optimizado para almacenamiento flash.  </li>
-<li>erofs: Sistema de archivos de solo lectura optimizado.  </li>
-<li>vfat: Sistema de archivos FAT32 usado para tarjetas SD y almacenamiento externo.  </li>
-<li>sdfat: Implementación extendida de FAT/exFAT.  </li>
-<li>tmpfs: Sistema de archivos temporal en RAM usado para directorios volátiles e.j. /dev, /run, /apex.  </li>
-<li>proc: Sistema de archivos virtual que expone información del kernel y procesos.  </li>
-<li>sysfs: Sistema virtual que muestra información de hardware, drivers y controladores del kernel.  </li>
-<li>selinuxfs: Sistema virtual que expone parámetros y estado de SELinux en el dispositivo.  </li>
-<li>functionfs: Sistema usado para interfaces <a href="https://source.android.com/docs/core/permissions/usb-hal">USB gadget</a> cuando Android actúa como dispositivo USB.  </li>
-<li>incremental-fs: Sistema diseñado para permitir instalar o ejecutar apps “bajo demanda” mientras aún están descargándose.  </li>
-<li>binder: Sistema de comunicación interna IPC de Android.  </li>
-<li>cgroup: Sistema virtual basado en control groups para gestionar recursos por procesos e.j. CPU, memoria.  </li>
-<li>
-<p>fuse: Sistema de archivos en espacio de usuario utilizado para almacenamiento emulado.</p>
-</li>
-<li>
-<p><strong>mount_options</strong>  </p>
-</li>
-<li>modos de acceso  <ul>
-<li>ro: read only  </li>
-<li>rw: read an write   </li>
-</ul>
-</li>
-<li>etiquetas de seguridad  <ul>
-<li>seclabel: Habilita y aplica etiquetas SELinux al sistema de archivos.  </li>
-<li>nodev: Evita que se usen archivos de dispositivo en esa partición.  </li>
-<li>nosuid: Bloquea binarios con <a href="https://www.cbtnuggets.com/blog/technology/system-admin/linux-file-permissions-understanding-setuid-setgid-and-the-sticky-bit">set-UID/set-GID</a> para evitar escalación.  </li>
-<li>noexec: Impide ejecutar archivos desde esa partición.  </li>
-<li>hidepid=invisible: Oculta procesos de otros usuarios en <em>/proc</em>.  </li>
-<li>user_xattr: Permite atributos extendidos definidos por el usuario.  </li>
-<li>acl: Permite listas de control de acceso más detalladas que <em>rwx</em>.  </li>
-<li>inlinecrypt: Usa cifrado en línea soportado por hardware/FS (Android).  </li>
-<li>usrquota: Habilita cuotas por usuario (espacio limitado).  </li>
-<li>grpquota: Habilita cuotas por grupo.  </li>
-</ul>
-</li>
-<li>marcas de tiempo  <ul>
-<li>lazytime: Aplaza la escritura de timestamps al almacenamiento para mejorar el rendimiento.  </li>
-<li>relatime: Actualiza tiempos de acceso solo si es necesario.  </li>
-<li>noatime: Desactiva la actualización del tiempo de acceso.  </li>
 </ul>
 </li>
 <li>
-<p>usuarios o gupos relacionados  </p>
+<p><strong>mount point</strong>: Ruta de la carpeta raíz del almacenamiento donde se accede a la información, en android suelen ser los siguientes:</p>
 <ul>
-<li>uid=0: Propietario del montaje, quien es el usuario <em>root</em>.  </li>
-<li>gid=1000: Grupo base de Android quien es usualmente <em>system</em> o <em>media_rw</em>, según contexto.  </li>
-<li>user_id=0: Usuario principal del sistema Android.  </li>
+<li>/system: Contiene el sistema operativo principal.</li>
+<li>/vendor: Incluye componentes y drivers proporcionados por el fabricante del hardware como HALs, firmware y binarios específicos del proveedor.</li>
+<li>/product: Almacena personalizaciones del fabricante sobre las funciones del sistema y aplicaciones específicas del dispositivo.</li>
+<li>/data: Área de datos del usuario y almacenamiento de apps.</li>
+<li>/cache: Espacio temporal usado para archivos de actualización y datos transitorios del sistema.</li>
+<li>/metadata: Contiene información crítica necesaria para <a href="https://source.android.com/docs/security/features/verifiedboot/avb">AVB</a>, cifrado y validaciones del sistema.</li>
+<li>/mnt/media_rw/: Punto de montaje para almacenamiento removible o adoptado e.j. SD card.</li>
+<li>/storage/emulated: Vista emulada de almacenamiento interno del usuario.</li>
+<li>/proc: Sistema virtual que expone información del kernel y procesos (no es almacenamiento real).</li>
+<li>/sys: Sistema virtual que expone información sobre dispositivos y controladores del kernel.</li>
+<li>/mnt/user/0/emulated: Vista específica del almacenamiento emulado para el usuario 0.</li>
+</ul>
+</li>
+<li>
+<p><strong>filesystem_type</strong>: Tipo de sistema de archivos, en android son los siguientes:</p>
+<ul>
+<li>ext4: Sistema de archivos de Linux usado en particiones internas.</li>
+<li>f2fs: Sistema de archivos optimizado para almacenamiento flash.</li>
+<li>erofs: Sistema de archivos de solo lectura optimizado.</li>
+<li>vfat: Sistema de archivos FAT32 usado para tarjetas SD y almacenamiento externo.</li>
+<li>sdfat: Implementación extendida de FAT/exFAT.</li>
+<li>tmpfs: Sistema de archivos temporal en RAM usado para directorios volátiles e.j. /dev, /run, /apex.</li>
+<li>proc: Sistema de archivos virtual que expone información del kernel y procesos.</li>
+<li>sysfs: Sistema virtual que muestra información de hardware, drivers y controladores del kernel.</li>
+<li>selinuxfs: Sistema virtual que expone parámetros y estado de SELinux en el dispositivo.</li>
+<li>functionfs: Sistema usado para interfaces <a href="https://source.android.com/docs/core/permissions/usb-hal">USB gadget</a> cuando Android actúa como dispositivo USB.</li>
+<li>incremental-fs: Sistema diseñado para instalar o ejecutar apps “bajo demanda” mientras aún están descargándose.</li>
+<li>binder: Sistema de comunicación interna IPC de Android.</li>
+<li>cgroup: Sistema virtual basado en control groups para gestionar recursos por procesos e.j. CPU, memoria.</li>
+<li>fuse: Sistema de archivos en espacio de usuario utilizado para almacenamiento emulado.</li>
+</ul>
+</li>
+<li>
+<p><strong>mount_options</strong></p>
+<ul>
+<li>modos de acceso<ul>
+<li>ro: read only</li>
+<li>rw: read and write</li>
+</ul>
+</li>
+<li>etiquetas de seguridad<ul>
+<li>seclabel: Habilita y aplica etiquetas SELinux al sistema de archivos.</li>
+<li>nodev: Evita que se usen archivos de dispositivo en esa partición.</li>
+<li>nosuid: Bloquea binarios con <a href="https://www.cbtnuggets.com/blog/technology/system-admin/linux-file-permissions-understanding-setuid-setgid-and-the-sticky-bit">set-UID/set-GID</a> para evitar escalación.</li>
+<li>noexec: Impide ejecutar archivos desde esa partición.</li>
+<li>hidepid=invisible: Oculta procesos de otros usuarios en * /proc *.</li>
+<li>user_xattr: Permite atributos extendidos definidos por el usuario.</li>
+<li>acl: Permite listas de control de acceso más detalladas que <em>rwx</em>.</li>
+<li>inlinecrypt: Usa cifrado en línea soportado por hardware/FS (Android).</li>
+<li>usrquota: Habilita cuotas por usuario.</li>
+<li>grpquota: Habilita cuotas por grupo.</li>
+</ul>
+</li>
+<li>marcas de tiempo<ul>
+<li>lazytime: Aplaza la escritura de timestamps al almacenamiento para mejorar el rendimiento.</li>
+<li>relatime: Actualiza tiempos de acceso solo si es necesario.</li>
+<li>noatime: Desactiva la actualización del tiempo de acceso.</li>
+</ul>
+</li>
+<li>usuarios o grupos relacionados<ul>
+<li>uid=0: Propietario del montaje (root).</li>
+<li>gid=1000: Grupo base de Android (system o media_rw).</li>
+<li>user_id=0: Usuario principal del sistema Android.</li>
 <li>group_id=0: Grupo primario del usuario root.</li>
 </ul>
 </li>
-<li>
-<p><strong>is_system_partition</strong>: Valor booleano que responde si la partición es partición /system o /sys  </p>
+</ul>
 </li>
-<li><strong>is_read_write</strong>: Valor booleano que responde si la particion tiene modo de acceso de lectura y escritura.</li>
+<li>
+<p><strong>is_system_partition</strong>: Valor booleano que indica si la partición es /system o /sys.</p>
+</li>
+<li><strong>is_read_write</strong>: Valor booleano que indica si la partición tiene acceso de lectura y escritura.</li>
 </ul>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Los puntos de montaje permiten identificar las <strong>áreas de almacenamiento montadas en el dispositivo</strong>, su origen y cómo están configuradas. Con esta información se pueden conocer los permisos con los que fueron montadas las particiones, los usuarios asociados y en algunos casos las etiquetas de seguridad SELinux aplicadas. Esto resulta útil para la <strong>identificación de montajes que pueden ser sospechosos</strong> de actividades maliciosas en el dispositivo, por ejemplo, una partición del sistema como /system, /vendor, /product particiones cuyo montaje es usualmente de solo lectura se encuentre montada montada con permisos de escritura o carente de etiquetas de seguridad o una partición como /data esté montada con permisos de lectura en subcarpetas que contienen información de aplicaciones podría indicar montajes fraudulentos no autorizados evidenciando comportamientos altamente sospechosos.</p>
@@ -2217,7 +2300,7 @@ El contenido de este archivo incluye información que permite identificar aplica
 <p>Este módulo se encarga extraer los binarios del archivo base para después poder identificar binarios sospechosos de rooting y sus rastros. El formato aplicado es el siguiente:</p>
 <ul>
 <li>path: Ruta al binario de rooting encontrado.  </li>
-<li>binary_name: Nombre del binario, pueden ser los siguientes:  </li>
+<li>binary_name: Nombre del binario, pueden ser los siguientes:  <ul>
 <li>su  </li>
 <li>busybox  </li>
 <li>supersu  </li>
@@ -2228,7 +2311,9 @@ El contenido de este archivo incluye información que permite identificar aplica
 <li>magiskhide  </li>
 <li>magiskinit  </li>
 <li>magiskpolicy  </li>
-<li>desciption: Descripcion del binario de rooting, pueden ser los siguientes:  </li>
+</ul>
+</li>
+<li>desciption: Descripcion del binario de rooting, pueden ser los siguientes:  <ul>
 <li>su: SuperUser binary  </li>
 <li>busybox: BusyBox utilities  </li>
 <li>supersu: SuperSU root management  </li>
@@ -2239,6 +2324,8 @@ El contenido de este archivo incluye información que permite identificar aplica
 <li>magiskhide: Magisk hide utility  </li>
 <li>magiskinit: Magisk init binary  </li>
 <li>magiskpolicy: Magisk policy binary</li>
+</ul>
+</li>
 </ul>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Este archivo detecta herramientas de rooting, lo cual puede representar un indicativo  de accesos no autorizados y escalada de privilegios que pueda exponer alguna vulnerabilidad.  Así mismo, permite al analista identificar binarios sospechosos que podrían haberse instalado sin el conocimiento del usuario y ayuda a determinar si el dispositivo ha sido manipulado.</p>
@@ -2337,22 +2424,28 @@ El contenido de este archivo incluye información que permite identificar aplica
 <li><strong>body</strong>: Contenido el mensaje en texto plano  </li>
 <li><strong>date</strong>: Marca de tiempo en formato Unix del momento de recepción.  </li>
 <li><strong>date_sent</strong>: Marca de tiempo en formato Unix de cuándo el mensaje fue enviado. Si el valor es 0, significa que el mensaje fue recibido.  </li>
-<li><strong>status</strong>: Código de estado del mensaje:  </li>
+<li><strong>status</strong>: Código de estado del mensaje:  <ul>
 <li>-1: Desconocido o sin información  </li>
 <li>0: Completo  </li>
 <li>64: Pendiente de envío  </li>
 <li>128: Borrador  </li>
-<li><strong>type</strong>:Ttipo de mensaje   </li>
+</ul>
+</li>
+<li><strong>type</strong>:Ttipo de mensaje   <ul>
 <li>1: Recibido  </li>
 <li>2: Enviado  </li>
 <li>3: Borrador  </li>
 <li>4: Saliente  </li>
+</ul>
+</li>
 <li><strong>recipients</strong>: Lista de destinatarios del mensaje.  </li>
 <li><strong>read</strong>: Indicador de si el mensaje fue leído (1) o no leído (0).  </li>
 <li><strong>isodate</strong>: Fecha en formato ISO, para facilitar la comprensión.  </li>
-<li><strong>direction</strong>: Dirección del mensaje (si fue enviado o recibido).  </li>
+<li><strong>direction</strong>: Dirección del mensaje (si fue enviado o recibido).  <ul>
 <li>sent: Enviado  </li>
 <li>received: Recibido  </li>
+</ul>
+</li>
 <li><strong>links</strong>: Lista de enlaces identificados dentro del cuerpo del mensaje.</li>
 </ul>
 <p><strong>¿Por qué es importante?</strong></p>
@@ -2463,6 +2556,44 @@ El contenido de este archivo incluye información que permite identificar aplica
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-reference-mvt-bugreport-dictionary/index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: MVT bugreport output file dictionary">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                MVT bugreport output file dictionary
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../community/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Community">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Community
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
