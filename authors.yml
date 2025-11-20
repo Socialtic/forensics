@@ -1,0 +1,13 @@
+authors:
+  dani:
+    name: Daniel Bedoya
+    avatar: overrides/assets/img/avatars/dani-avatar.png 
+    url: https://socialtic.org
+    email: seguridad@socialtic.org
+    description: SocialTIC
+  jose:
+    name: José Martínez
+    avatar: overrides/assets/img/avatars/jose-avatar.png
+    url: https://socialtic.org
+    email: seguridad@socialtic.org
+    description: SocialTIC
