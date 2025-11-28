@@ -1587,25 +1587,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#información-sobre-registros-y-eventos-del-sistema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Información sobre registros y eventos del sistema
-        </span>
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Información sobre registros y eventos del sistema">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#sms.json" class="md-nav__link">
     <span class="md-ellipsis">
@@ -2038,13 +2019,13 @@
 
 
 <h1 id="diccionario-de-archivos-generados-por-la-herramienta-mvt-androidqf">Diccionario de archivos generados por la herramienta MVT-androidqf</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-20'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-20T00:00:00'>2025-11-20</time></span><span data-tippy-content data-tippy-raw='2025-11-28'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-28T20:23:09+00:00'>2025-11-28</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-20'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-20T00:00:00'>2025-11-20</time></span><span data-tippy-content data-tippy-raw='2025-11-28'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-28T21:04:04+00:00'>2025-11-28</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
 
 <p>El presente documento contiene información sobre los archivos generados por la MVT a través del componente <a href="https://github.com/mvt-project/mvt/tree/main/src/mvt/android/modules/androidqf">mvt-check-androidqf.</a> El objetivo de este diccionario, es que la persona analista tenga la facilidad de buscar información específica y conocer el formato en que la información del análisis forense es presentada.</p>
 <p>Este recurso forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el <a href="https://diataxis.fr/">marco de referencia de documentación técnica Diataxis</a>.</p>
 <p>Este recurso en particular se enmarca dentro de la categoría de <a href="https://diataxis.fr/reference">referencias</a>, y contiene información sobre el análisis de la salida de adquisición generados por dispositivos Android mediante el comando <strong><em>mvt-android check-andoridqf</em></strong>  durante el uso de la herramienta MVT (<em>Mobile Verification Toolkit)</em>, desarrollada y mantenida por el <a href="https://securitylab.amnesty.org/es/">Laboratorio de Seguridad de Amnistía Internacional</a> y perteneciente al <a href="https://github.com/mvt-project/">MVT Project</a>. Esto con el objetivo de que una persona analista <strong>conozca los archivos generados, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</strong></p>
 <p>MVT hace referencia a <em>Mobile Verification Toolkit</em>. Esta es una herramienta desarrollada, lanzada y mantenida por el <a href="https://securitylab.amnesty.org/es/">Laboratorio de Seguridad de Amnistía Internacional</a> perteneciente al <a href="https://github.com/mvt-project/">MVT Project</a>.  La intención de esta herramienta es en esencia, facilitar el análisis forense consensuado de dispositivos Android e iOS con el propósito de identificar rastros de compromiso. </p>
-<p>Este recurso se actualizó por última vez el 18 de noviembre de 2025 y para la recopilación de la información se tomó como base el <em>commit</em> <em>339a1d0712c4cc051e880b8a777d2b8b6295e57b.</em></p>
+<p>Este recurso se actualizó por última vez el 18 de noviembre de 2025 y para la recopilación de la información se tomó como base el <a href="https://github.com/mvt-project/mvt/commit/339a1d0712c4cc051e880b8a777d2b8b6295e57b"><em>commit 339a1d0712c4cc051e880b8a777d2b8b6295e57b</em></a>. </p>
 <p>La información generada por <em>mvt-androidqf</em> se puede agrupar en 5 categorías principales:</p>
 <ul>
 <li>Detalles de la adquisición  </li>
@@ -2077,7 +2058,7 @@
 </ul>
 </li>
 </ul>
-<p>Durante la ejecución del comando <strong><em>mvt-android check-andoridqf</em><em>,</em> MVT también ejecuta módulos que corresponden a  </strong><em>mvt-android check-bugreport</em><strong> y </strong><em>mvt-android check-backup,</em>** esto siempre y cuando exista una carpeta bugreport.zip y un archivo backup.ab dentro de la carpeta de entrada de una extracción con androidqf.</p>
+<p>Durante la ejecución del comando <strong><em>mvt-android check-andoridqf</em><em>,</em> MVT también ejecuta módulos que corresponden a  </strong><em>mvt-android check-bugreport</em><strong> y </strong><em>mvt-android check-backup,</em>** esto siempre y cuando exista un archivo bugreport.zip y un archivo backup.ab dentro de la carpeta de entrada de una extracción con androidqf.</p>
 <p>En el material de referencia complementario <a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html">sobre archivos generados por la herramienta mvt al analizar un bugreport</a> se describe la salida del comando check-bugreport y los archivos resultantes. A continuación se muestra el <strong>las referencias específicas a los módulos ejecutados por el comando check-androidqf para analizar el bugreport:</strong></p>
 <ul>
 <li><a data-preview="" href="../02-reference-mvt-bugreport-dictionary/index.html#configuración-del-dispositivo-configuración-del-dispositivo">Configuración del dispositivo</a><ul>
@@ -2111,7 +2092,7 @@
 <h2 id="detalles-de-la-adquisición">Detalles de la adquisición</h2>
 <h3 id="info.json">info.json</h3>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>json</em> y contiene información relacionada con el análisis realizado a una carpeta de salida de una extracción de información forense realizada con AndroidQF. Contiene la siguiente información:</p>
+<p>Este archivo se encuentra en formato <em>json</em> y contiene información relacionada con el análisis realizado a una extracción completada mediante AndroidQF. Contiene la siguiente información:</p>
 <ul>
 <li>Ruta del archivo analizado.  </li>
 <li>Versión utilizada de MVT.  </li>
@@ -2648,7 +2629,6 @@ El contenido de este archivo incluye información que permite identificar aplica
         &quot;md5&quot;: &quot;&quot;
     }
 </code></pre></div>
-<h2 id="información-sobre-registros-y-eventos-del-sistema">Información sobre registros y eventos del sistema</h2>
 <h3 id="sms.json">sms.json</h3>
 <p>La información de este archivo se genera mediante el módulo de backup <a href="https://github.com/mvt-project/mvt/blob/main/src/mvt/android/modules/backup/sms.py">sms</a> y el backup helper <a href="https://github.com/mvt-project/mvt/blob/main/src/mvt/android/modules/backup/helpers.py">helpers</a> y el parser <a href="https://github.com/mvt-project/mvt/blob/main/src/mvt/android/parsers/backup.py">backup</a>.</p>
 <p><strong>Información contenida</strong></p>
