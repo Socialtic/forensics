@@ -441,6 +441,14 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://forensics.socialtic.org/pt/references/02-reference-mvt-bugreport-dictionary/index.html"/>
     </url>
     <url>
+        <loc>https://forensics.socialtic.org/en/references/03-reference-mvt-androidqf-dictionary/index.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://forensics.socialtic.org/en/references/03-reference-mvt-androidqf-dictionary/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://forensics.socialtic.org/references/03-reference-mvt-androidqf-dictionary/index.html"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://forensics.socialtic.org/pt/references/03-reference-mvt-androidqf-dictionary/index.html"/>
+    </url>
+    <url>
         <loc>https://forensics.socialtic.org/en/tutorials/index.html</loc>
         <lastmod>2025-11-28</lastmod>
         <changefreq>daily</changefreq>
@@ -455,14 +463,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://forensics.socialtic.org/en/tutorials/01-tutorial-learning-androidqf/index.html"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://forensics.socialtic.org/tutorials/01-tutorial-learning-androidqf/index.html"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://forensics.socialtic.org/pt/tutorials/01-tutorial-learning-androidqf/index.html"/>
-    </url>
-    <url>
-        <loc>https://forensics.socialtic.org/en/references/03-reference-mvt-androidqf-dictionary/index.html</loc>
-        <lastmod>2025-11-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://forensics.socialtic.org/en/references/03-reference-mvt-androidqf-dictionary/index.html"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://forensics.socialtic.org/references/03-reference-mvt-androidqf-dictionary/index.html"/>
-        <xhtml:link rel="alternate" hreflang="pt" href="https://forensics.socialtic.org/pt/references/03-reference-mvt-androidqf-dictionary/index.html"/>
     </url>
     <url>
         <loc>https://forensics.socialtic.org/pt/index.html</loc>
