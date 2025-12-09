@@ -1493,6 +1493,19 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mountsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          mounts.json
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2181,11 +2194,11 @@
 
 
 <h1 id="diccionario-de-archivos-generados-por-la-herramienta-androidqf">Diccionario de archivos generados por la herramienta androidqf</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-06-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-06-16T00:00:00'>2025-06-16</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-08T20:00:43+00:00'>2025-12-08</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-06-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-06-16T00:00:00'>2025-06-16</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T22:01:03+00:00'>2025-12-09</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
 
 <p>Este documento forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el <a data-preview="" href="../00-glossary/index.html#diataxis/">marco de referencia de documentación técnica Diataxis</a>.</p>
-<p>Este recurso en particular se enmarca dentro de la categoría de <a href="https://diataxis.fr/reference">referencias</a>, y contiene información sobre los archivos generados por <a data-preview="" href="../00-glossary/index.html#androidqf">androidqf</a> al realizar una extracción forense de un dispositivo Android, esto con el objetivo de que una persona analista <strong>conozca los archivos generados, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</strong></p>
-<p>Este recurso se actualizó por última vez el 16 de Junio del 2025 y para la recopilación de la información se tomó como base la <a href="https://github.com/mvt-project/androidqf/tree/v1.7.1">versión 1.7.1</a>.</p>
+<p>Este recurso en particular se enmarca dentro de la categoría de <a href="https://diataxis.fr/reference">referencias</a>, y contiene información sobre los archivos generados por <a data-preview="" href="../00-glossary/index.html#androidqf">androidqf</a> al realizar una extracción forense de un dispositivo Android, esto con el objetivo de que una persona analista <strong>conozca los archivos generados, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</strong> Adicionalmente, se incluyen los comandos ADB equivalentes a cada módulo con el fin de mostrar las consultas que realiza AndroidQF de forma interna y cómo puede replicarse manualmente. En los casos donde la salida del comando ADB difiere del archivo generado por AndroidQF, se agrega también un ejemplo de salida real del comando para mostrar estas diferencias y facilitar su interpretación.</p>
+<p>Este recurso se actualizó por última vez el 26 de Noviembre del 2025 y para la recopilación de la información se tomó como base el <a href="https://github.com/mvt-project/androidqf/commit/e6bbc564bf9d1edfb18886f4b58c05dcf5b23c9c">commit e6bbc564bf9d1edfb18886f4b58c05dcf5b23c9c</a>.</p>
 <p><a href="https://github.com/mvt-project/androidqf">Androidqf</a> es una herramienta de extracción forense que pertenece al <a href="https://github.com/mvt-project/">MVT Project</a>. Es mantenida actualmente por el <a href="https://securitylab.amnesty.org/es/">Laboratorio de Seguridad de Amnistía Internacional</a>.</p>
 <p>Su nombre viene de la frase en inglés <em>Android Quick Forensics</em>. Se caracteriza por ser una <strong>herramienta portable</strong>, es decir se puede ejecutar en Windows, GNU/Linux y Mac OS mediante un binario precompilado, lo que simplifica la <a href="../../explainers/01-explainer-introduction-digital-forensics/index.html#cómo-se-aplica-la-forense-digital-en-la-práctica-de-defensa-de-derechos-humanos">adquisición de información forense</a> de dispositivos Android. </p>
 <p>La información generada por androidqf se puede agrupar en 5 categorías principales:</p>
@@ -2299,7 +2312,7 @@
 <h3 id="getproptxt">getprop.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/getprop.go">getprop.go</a><em>.</em></p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>TXT</em> y contiene la salida del comando de <code>adb getprop</code>, el cual detalla las <strong>propiedades del sistema</strong>.</p>
+<p>Este archivo se encuentra en formato <em>txt</em> y contiene información sobre las propiedades del dispositivo como versión de Android, número de compilación, número de serie, configuraciones de red, fabricante, estado de la depuración USB y valores relacionados con software y hardware. </p>
 <p>Las propiedades del sistema son pares clave-valor de cadenas que se almacenan en el diccionario global <a href="https://xdaforums.com/t/guide-build-prop-wiki.2056266/"><em>build.prop</em></a> o en archivos de descripción <em>.sysprop</em>, y proporcionan una forma conveniente de compartir configuraciones dentro del sistema. </p>
 <p>La información se puede encontrar utilizando el siguiente formato:</p>
 <div class="highlight"><pre><span></span><code>[{prefix}.]{group}[.{subgroup}]*.{name}[.{type}]
@@ -2316,9 +2329,13 @@
 <li><em>vold</em>, relacionado con vold que gestiona el montaje de volúmenes físicos de almacenamiento externo</li>
 </ul>
 <p>Para mayor detalle se puede revisar la <a href="https://android.googlesource.com/platform/system/sepolicy/+/refs/heads/main/private/property_contexts">lista de propiedades ya definidas en el código fuente de Android</a>.</p>
+<p>El comando equivalente de ADB en este módulo es el siguiente: </p>
+<div class="highlight"><pre><span></span><code>adb shell getprop
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Las propiedades brindan información importante sobre el hardware y el software del dispositivo, las cuales pueden ser alteradas por software malicioso para ocultar su presencia o para modificar el comportamiento del dispositivo de forma inadvertida.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <div class="highlight"><pre><span></span><code>[property_name]: [value]
 [aaudio.hw_burst_min_usec]: [2000]
 [aaudio.mmap_exclusive_policy]: [2]
@@ -2341,6 +2358,34 @@
 [ro.vendor.product.cpu.abilist32]: [armeabi-v7a,armeabi]
 [ro.vendor.product.cpu.abilist64]: [arm64-v8a]
 </code></pre></div>
+<p>Ejemplo de contenido devuelto por ejecución de comando ADB:</p>
+<div class="highlight"><pre><span></span><code>[DEVICE_PROVISIONED]: [1]
+[apex.all.ready]: [true]
+[bluetooth.device.class_of_device]: [90,2,12]
+[bluetooth.device.default_name]: [moto g(7) power]
+[bluetooth.hardware.power.operating_voltage_mv]: [3300]
+[bluetooth.profile.a2dp.source.enabled]: [true]
+[bluetooth.profile.asha.central.enabled]: [true]
+[bluetooth.profile.avrcp.target.enabled]: [true]
+[bluetooth.profile.bas.client.enabled]: [true]
+[bluetooth.profile.gatt.enabled]: [true]
+[bluetooth.profile.hfp.ag.enabled]: [true]
+[bluetooth.profile.hid.device.enabled]: [true]
+[bluetooth.profile.hid.host.enabled]: [true]
+[bluetooth.profile.map.server.enabled]: [true]
+[bluetooth.profile.opp.enabled]: [true]
+[bluetooth.profile.pan.nap.enabled]: [true]
+bluetooth.profile.pan.panu.enabled]: [true]
+[bluetooth.profile.pbap.server.enabled]: [true]
+[bluetooth.profile.sap.server.enabled]: [true]
+[bootreceiver.enable]: [0]
+[build.version.extensions.ad_services]: [11]
+[build.version.extensions.r]: [11]
+[build.version.extensions.s]: [11]
+[build.version.extensions.t]: [11]
+[build.version.extensions.u]: [11]
+[cache_key.bluetooth.bluetooth_adapter_get_connection_state]: [2184677357365305812]
+</code></pre></div>
 <p><strong>Aprende más</strong></p>
 <ul>
 <li><a href="https://source.android.com/docs/core/architecture/configuration?hl=es-419#system-properties">Descripción general de la configuración | Propiedades del sistema | Android Open Source Project</a>   </li>
@@ -2351,10 +2396,14 @@
 <h3 id="selinuxtxt">selinux.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/selinux.go">selinux.go</a><em>.</em></p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>txt</em> y contiene la salida del comando de <code>adb shell getenforce</code> e indica la política de seguridad <em>SELinux</em> aplicada en el dispositivo, indicando el modo en el que se encuentra (<em>enforcing</em>, <em>permissive</em>, o <em>disabled</em>).</p>
+<p>Este archivo se encuentra en formato <em>txt</em> y contiene información sobre la política de seguridad la política de seguridad <em>SELinux</em> aplicada en el dispositivo, indicando el modo en el que se encuentra (<em>enforcing</em>, <em>permissive</em>, o <em>disabled</em>).</p>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb shell getenforce
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p><a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux"><em>SELinux</em></a> es una capa de seguridad clave en Android. Cambios en su configuración pueden ser un indicativo de compromisos en la seguridad del dispositivo.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF y comando ADB:</p>
 <div class="highlight"><pre><span></span><code>Enforcing
 </code></pre></div>
 <p><strong>Aprende más</strong></p>
@@ -2366,11 +2415,15 @@
 <h3 id="settings_globaltxt">settings_global.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/settings.go">settings.go</a><em>.</em></p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>txt</em> y contiene la salida del comando <code>adb shell cmd settings list global</code> , el cual muestra preferencias que siempre se aplican de forma idéntica a todos los usuarios definidos (<a href="https://source.android.com/docs/devices/admin/multi-user#user_types">well-defined user</a>). Las aplicaciones pueden leerlas, pero no pueden escribirlas, se trata de preferencias que el usuario debe modificar explícitamente a través de la interfaz de usuario del sistema o API especializadas para esos valores.</p>
+<p>Este archivo se encuentra en formato <em>txt</em> y contiene información sobre las preferencias que se aplican de forma idéntica a todos los usuarios definidos (<a href="https://source.android.com/docs/devices/admin/multi-user#user_types">well-defined user</a>). Las aplicaciones pueden leerlas, pero no pueden escribirlas, se trata de preferencias que el usuario debe modificar explícitamente a través de la interfaz de usuario del sistema o API especializadas para esos valores.</p>
 <p>Estas configuraciones incluyen opciones de desarrollador, arranque, y estado de la conexión de bluetooth, wifi y telefonía. Para ver la <a href="https://developer.android.com/reference/android/provider/Settings.Global">lista completa de preferencias globales</a> se puede revisar la documentación correspondiente de Android.</p>
+<p>El comando equivalente de ADB de este módulo es el siguiente: </p>
+<div class="highlight"><pre><span></span><code>adb shell cmd settings list global
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Permite identificar configuraciones anómalas que podrían comprometer la seguridad, privacidad  o funcionalidad del dispositivo. Configuraciones predeterminadas inusuales pueden señalar intentos de modificar el comportamiento del sistema, intencionados o accidentales.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF y comando ADB:</p>
 <div class="highlight"><pre><span></span><code>Phenotype_boot_count=68
 adb_enabled=1
 airplane_mode_on=0
@@ -2397,12 +2450,16 @@ zram_enabled=1
 <h3 id="settings_securetxt">settings_secure.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/settings.go">settings.go</a><em>.</em></p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>txt</em> y contiene la salida del comando <code>adb shell cmd settings list secure</code>  Muestra preferencias de seguridad del sistema que las aplicaciones pueden leer pero no escribir. Son preferencias que el usuario debe modificar explícitamente a través de la interfaz de usuario de una aplicación del sistema. Las aplicaciones normales no pueden modificar la base de datos de configuraciones de seguridad.</p>
+<p>Este archivo se encuentra en formato <em>txt</em> y contiene información sobre las preferencias de seguridad del sistema que las aplicaciones pueden leer pero no escribir. Son preferencias que el usuario debe modificar explícitamente a través de la interfaz de usuario de una aplicación del sistema. Las aplicaciones normales no pueden modificar la base de datos de configuraciones de seguridad.</p>
 <p>Estas configuraciones incluyen opciones de desarrollador, accesibilidad, ubicación, entrada de datos, bloqueo de pantalla, control parental, text-to-speech, y conexión de bluetooth, wifi y telefonía.</p>
 <p>Para ver la <a href="https://developer.android.com/reference/android/provider/Settings.Secure?hl=es-419">lista completa de preferencias de seguridad</a> se puede revisar la documentación correspondiente de Android.</p>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb shell cmd settings list secure
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Permite identificar configuraciones anómalas que podrían comprometer la seguridad, privacidad  o funcionalidad del dispositivo. Configuraciones predeterminadas inusuales pueden señalar intentos de modificar el comportamiento del sistema, intencionados o accidentales.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF y comando ADB:</p>
 <div class="highlight"><pre><span></span><code>accessibility_allow_diagonal_scrolling=1
 accessibility_button_mode=1
 accessibility_button_target_component=com.android.settings/com.samsung.android.settings.accessibility.shortcut.AmplifyShortcut
@@ -2431,12 +2488,16 @@ wifi_saved_state=0
 <h3 id="settings_systemtxt">settings_system.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/settings.go">settings.go</a><em>.</em></p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>txt</em> y contiene la salida del comando <code>adb shell cmd settings list system</code> , el cual muestra diversas preferencias generales del dispositivo. Estas preferencias afectan la experiencia del usuario y el funcionamiento básico del dispositivo.</p>
+<p>Este archivo se encuentra en formato <em>txt</em> y contiene información sobre las diversas preferencias generales del dispositivo. Estas preferencias afectan la experiencia del usuario y el funcionamiento básico del dispositivo.</p>
 <p>Estas configuraciones incluyen opciones de sensores como el acelerómetro o giroscopio, zona horaria, pantalla, alarmas, sonido, vibración, actualizaciones, y conexión de bluetooth, wifi y telefonía.</p>
 <p>Para ver la <a href="https://developer.android.com/reference/android/provider/Settings.System?hl=es-419">lista completa de preferencias de sistema</a> se puede revisar la documentación correspondiente de Android.</p>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb shell cmd settings list system
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Permite identificar configuraciones anómalas que podrían comprometer la seguridad, privacidad  o funcionalidad del dispositivo. Configuraciones predeterminadas inusuales pueden señalar intentos de modificar el comportamiento del sistema, intencionados o accidentales.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF y comando ADB:</p>
 <div class="highlight"><pre><span></span><code>FOTA_CLIENT_POLLING_TIME=1710699386219
 FOTA_CLIENT_REGISTRATION=1
 FOTA_CLIENT_TEST=0
@@ -2476,7 +2537,7 @@ wireless_fast_charging=0
 <h3 id="envtxt">env.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/env.go">env.go</a><em>.</em></p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>txt</em> y contiene la salida del comando <code>adb shell env</code> el cual muestra la configuración de las variables de entorno de la terminal (shell) <a href="http://mirbsd.de/mksh"><em>mkshrc</em></a> la cual es utilizada por Android.</p>
+<p>Este archivo se encuentra en formato <em>txt</em> y contiene información sobre la la configuración de las variables de entorno de la terminal (shell) <a href="http://mirbsd.de/mksh"><em>mkshrc</em></a> la cual es utilizada por Android.</p>
 <p>Por defecto las variables de <em>mkshrc</em> en Android se encuentran en el archivo <em>mkshrc</em> o <em>profile</em> que puede estar en alguno de los siguientes directorios.</p>
 <div class="highlight"><pre><span></span><code>/system/etc
 /system/etc/profile
@@ -2500,9 +2561,13 @@ $HOME/
 <li>Valores de entorno de ejecución de la máquina virtual de Android  </li>
 <li>Configuraciones de la terminal</li>
 </ul>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb shell env
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Las variables de entorno pueden indicar cambios en las configuraciones de la terminal, del intérprete de comandos, del entorno de ejecución de la máquina virtual de Android o de los puntos de montaje de algunas particiones y carpetas. Esto podría ser un indicador de un comportamiento sospechoso.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <div class="highlight"><pre><span></span><code>_=/system/bin/env
 ANDROID_DATA=/data
 ANDROID_ART_ROOT=/apex/com.android.art
@@ -2528,17 +2593,206 @@ ASEC_MOUNTPOINT=/mnt/asec
 ANDROID_I18N_ROOT=/apex/com.android.i18n
 EXTERNAL_STORAGE=/sdcard
 </code></pre></div>
+<p>Ejemplo de contenido devuelto por ejecución de comando ADB:</p>
+<div class="highlight"><pre><span></span><code>_=/system/bin/env
+ANDROID_DATA=/data
+LOGNAME=shell
+STANDALONE_SYSTEMSERVER_JARS=/apex/com.Android.btservices/javalib/service-bluetooth.jar:/apex/com.Android.devicelock/javalib/service-devicelock.jar:/apex/com.Android.os.statsd/javalib/service-statsd.jar:/apex/com.Android.scheduling/javalib/service-scheduling.jar:/apex/com.Android.tethering/javalib/service-connectivity.jar:/apex/com.Android.uwb/javalib/service-uwb.jar:/apex/com.Android.wifi/javalib/service-wifi.jar
+HOME=/
+DEX2OATBOOTCLASSPATH=/apex/com.Android.art/javalib/core-oj.jar:/apex/com.Android.art/javalib/core-libart.jar:/apex/com.Android.art/javalib/okhttp.jar:/apex/com.Android.art/javalib/bouncycastle.jar:/apex/com.Android.art/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/framework-graphics.jar:/system/framework/framework-location.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/framework-nfc.jar:/system/framework/telephony-ext.jar:/apex/com.Android.i18n/javalib/core-icu4j.jar
+ANDROID_TZDATA_ROOT=/apex/com.Android.tzdata
+USER=shell
+ANDROID_ROOT=/system
+TERM=xterm-256color
+SHELL=/bin/sh
+ANDROID_BOOTLOGO=1
+ANDROID_ASSETS=/system/app
+BOOTCLASSPATH=/apex/com.Android.art/javalib/core-oj.jar:/apex/com.Android.art/javalib/core-libart.jar:/apex/com.Android.art/javalib/okhttp.jar:/apex/com.Android.art/javalib/bouncycastle.jar:/apex/com.Android.art/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/framework-graphics.jar:/system/framework/framework-location.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/framework-n
+</code></pre></div>
 <p><strong>Aprende más</strong></p>
 <ul>
 <li><a href="https://es.wikipedia.org/wiki/Shell_(inform%C3%A1tica)">Shell (informática) - Wikipedia, la enciclopedia libre</a>  </li>
 <li><a href="https://android.stackexchange.com/questions/53389/can-i-update-the-adb-shells-environment-variables/64926#64926">Can I update the adb shell's environment variables? - Android Enthusiasts Stack Exchange</a>   </li>
 <li><a href="https://android.stackexchange.com/questions/217617/update-mksh-to-latest-version/217627#217627">Update mksh to latest version - Android Enthusiasts Stack Exchange</a> </li>
 </ul>
+<h3 id="mountsjson">mounts.json</h3>
+<p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/mounts.go">mounts.go</a>. </p>
+<p><strong>Información contenida</strong></p>
+<p>Este archivo se encuentra en formato <em>json</em> y contiene información sobre las particiones y directorios de sistemas de archivos montados en un dispositivo en el espacio de usuario y en el kernel de linux de Android.</p>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;mount&quot;</span>
+adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;cat /proc/mounts&quot;</span>
+</code></pre></div>
+<p>El comando <em>mount</em> lee la información directamente del kernel, lo que refleja una lista de los sistemas de archivos montados en el dispositivo. Por su parte, el comando <em>cat /proc/mounts</em> accede directamente al archivo <em>/proc/mounts</em>, que es un archivo virtual generado y administrado por el kernel de linux de Android. Este archivo refleja en tiempo real y de manera precisa el estado exacto de todos los sistemas de archivos montados en el dispositivo, incluyendo particiones, volúmenes lógicos y sistemas de archivos temporales.</p>
+<p>El formato en el que se presentan los puntos de montajes es el siguiente: </p>
+<div class="highlight"><pre><span></span><code>&lt;dispositivo&gt; &lt;punto-de-montaje&gt; &lt;tipo&gt; &lt;opciones&gt;
+</code></pre></div>
+<p>Donde cada parámetro significa lo siguiente:</p>
+<ul>
+<li><strong>dispositivo</strong>: Partición o volumen montado, en Android las más comunes son:  <ul>
+<li>Particiones de almacenamiento físico   <ul>
+<li>/dev/block/sdX: Dispositivo de almacenamiento físico (<a href="https://new.c.mi.com/es/post/11738">eMMC/UFS</a>) expuesto como sd por el kernel.  </li>
+<li>/dev/block/mmcblk: Dispositivo de almacenamiento eMMC presentado como mmcblk.  </li>
+<li>/dev/block/dm-X: Dispositivo manejado por device-mapper (cifrado, verity o particiones lógicas).  </li>
+<li>/dev/block/by-name/: Enlaces simbólicos que apuntan a las particiones reales por su nombre e.j. system, vendor, userdata.  </li>
+</ul>
+</li>
+<li>Volumen virtual del kernel en RAM  <ul>
+<li>proc: Interfaz virtual para obtener información del kernel y procesos.  </li>
+<li>sysfs: expone información de dispositivos, drivers y parámetros del kernel.  </li>
+<li>selinuxfs: Muestra políticas, estados y etiquetas de SELinux.  </li>
+<li>tracefs: sistema virtual para herramientas de trazado y debugging del kernel.  </li>
+<li>pstore: Almacena registros persistentes de fallos del kernel.  </li>
+<li>bpf: Expone interfaces para programas <a href="https://source.android.com/docs/core/architecture/kernel/bpf">eBPF</a> cargados en el kernel.  </li>
+</ul>
+</li>
+<li>Espacio de usuario  <ul>
+<li>/dev/fuse: Interfaz <a href="https://source.android.com/docs/core/storage/fuse-passthrough">FUSE</a> usada por Android para montar almacenamiento emulado p.j  /storage/emulated.  </li>
+</ul>
+</li>
+<li>Interfaces internas de control de kernel  <ul>
+<li>none: Identificador que indica que el montaje no proviene de un dispositivo real.  </li>
+<li>binder: <a href="https://source.android.com/docs/core/architecture/ipc/binder-overview">Sistema de IPC</a> interno de Android para comunicación entre procesos.  </li>
+</ul>
+</li>
+<li>Archivos APEX montados como loopback  <ul>
+<li>/dev/block/loopX: Dispositivos de bucle usados para montar paquetes APEX como si fueran particiones reales.  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>punto de montaje</strong>: Ruta de la carpeta raiz del almacenamiento donde se accede a la información, en android suelen ser los siguientes:  <ul>
+<li>/system: Contiene el sistema operativo principal .  </li>
+<li>/vendor: Incluye componentes y drivers proporcionados por el fabricante del hardware como HALs, firmware y binarios específicos del proveedor.  </li>
+<li>/product: Almacena personalizaciones del fabricante sobre las funciones del sistema y aplicaciones específicas del dispositivo.  </li>
+<li>/data: Área de datos del usuario y almacenamiento de apps.  </li>
+<li>/cache: Espacio temporal usado para archivos de actualización y datos transitorios del sistema.  </li>
+<li>/metadata: Contiene información crítica de dispositivo necesaria para <a href="https://source.android.com/docs/security/features/verifiedboot/avb">AVB</a>, cifrado y validaciones del sistema.  </li>
+<li>/mnt/media_rw/: Punto de montaje para almacenamiento removible o adoptado e.j. SD card  </li>
+<li>/storage/emulated: Vista emulada de almacenamiento interno del usuario.  </li>
+<li>/proc: Sistema virtual que expone información del kernel y procesos (no es almacenamiento real).  </li>
+<li>/sys: Sistema virtual que expone información sobre dispositivos y controladores del kernel.  </li>
+<li>/mnt/user/0/emulated: Vista específica del almacenamiento emulado para el usuario 0.  </li>
+</ul>
+</li>
+<li><strong>tipo de sistema de archivos</strong>: Tipo de sistema de archivos, en android son los siguientes:  <ul>
+<li>ext4: Sistema de archivos de Linux usado en particiones internas.  </li>
+<li>f2fs: Sistema de archivos optimizado para almacenamiento flash.  </li>
+<li>erofs: Sistema de archivos de solo lectura optimizado.  </li>
+<li>vfat: Sistema de archivos FAT32 usado para tarjetas SD y almacenamiento externo.  </li>
+<li>sdfat: Implementación extendida de FAT/exFAT.  </li>
+<li>tmpfs: Sistema de archivos temporal en RAM usado para directorios volátiles e.j. /dev, /run, /apex.  </li>
+<li>proc: Sistema de archivos virtual que expone información del kernel y procesos.  </li>
+<li>sysfs: Sistema virtual que muestra información de hardware, drivers y controladores del kernel.  </li>
+<li>selinuxfs: Sistema virtual que expone parámetros y estado de SELinux en el dispositivo.  </li>
+<li>functionfs: Sistema usado para interfaces <a href="https://source.android.com/docs/core/permissions/usb-hal">USB gadget</a> cuando Android actúa como dispositivo USB.  </li>
+<li>incremental-fs: Sistema diseñado para permitir instalar o ejecutar apps “bajo demanda” mientras aún están descargándose.  </li>
+<li>binder: Sistema de comunicación interna IPC de Android.  </li>
+<li>cgroup: Sistema virtual basado en control groups para gestionar recursos por procesos e.j. CPU, memoria.  </li>
+<li>fuse: Sistema de archivos en espacio de usuario utilizado para almacenamiento emulado.  </li>
+</ul>
+</li>
+<li><strong>opciones</strong>: Parámetros del montaje, estos pueden variar según el montaje  <ul>
+<li>Modos de acceso  <ul>
+<li>ro: read only  </li>
+<li>rw: read an write   </li>
+</ul>
+</li>
+<li>Etiquetas de seguridad  <ul>
+<li>seclabel: Habilita y aplica etiquetas SELinux al sistema de archivos.  </li>
+<li>nodev: Evita que se usen archivos de dispositivo en esa partición.  </li>
+<li>nosuid: Bloquea binarios con <a href="https://www.cbtnuggets.com/blog/technology/system-admin/linux-file-permissions-understanding-setuid-setgid-and-the-sticky-bit">set-UID/set-GID</a> para evitar escalación.  </li>
+<li>noexec: Impide ejecutar archivos desde esa partición.  </li>
+<li>hidepid=invisible: Oculta procesos de otros usuarios en <em>/proc</em>.  </li>
+<li>user_xattr: Permite atributos extendidos definidos por el usuario.  </li>
+<li>acl: Permite listas de control de acceso más detalladas que <em>rwx</em>.  </li>
+<li>inlinecrypt: Usa cifrado en línea soportado por hardware/FS (Android).  </li>
+<li>usrquota: Habilita cuotas por usuario (espacio limitado).  </li>
+<li>grpquota: Habilita cuotas por grupo.  </li>
+</ul>
+</li>
+<li>Marcas de tiempo de asociadas a los archivos y directorios   <ul>
+<li>lazytime: Aplaza la escritura de timestamps al almacenamiento para mejorar el rendimiento.  </li>
+<li>relatime: Actualiza tiempos de acceso solo si es necesario.  </li>
+<li>noatime: Desactiva la actualización del tiempo de acceso.  </li>
+</ul>
+</li>
+<li>Usuarios relacionados con los montajes   <ul>
+<li>uid=0: Propietario del montaje, quien es el usuario <em>root</em>.  </li>
+<li>gid=1000: Grupo base de Android quien es usualmente <em>system</em> o <em>media_rw</em>, según contexto.  </li>
+<li>user_id=0: Usuario principal del sistema Android.  </li>
+<li>group_id=0: Grupo primario del usuario root.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>¿Por qué es importante?</strong></p>
+<p>Los puntos de montaje permiten identificar las áreas de almacenamiento montadas en el dispositivo, su origen y cómo están configuradas.</p>
+<p>Con esta información se pueden conocer los permisos con los que fueron montadas las particiones, los usuarios asociados y en algunos casos las etiquetas de seguridad SELinux aplicadas.</p>
+<p>Esto resulta útil para la identificación de montajes que pueden ser sospechosos de actividades maliciosas en el dispositivo, por ejemplo, una partición del sistema como /system, /vendor, /product particiones cuyo montaje es usualmente de solo lectura se encuentre montada montada con permisos de escritura o carente de etiquetas de seguridad o una partición como /data esté montada con permisos de lectura en subcarpetas que contienen información de aplicaciones podría indicar montajes fraudulentos no autorizados evidenciando comportamientos altamente sospechosos.</p>
+<p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
+<div class="highlight"><pre><span></span><code>[
+    &quot;/dev/block/dm-13 on / type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
+    &quot;tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=2839372k,nr_inodes=709843,mode=755)&quot;,
+    &quot;devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600,ptmxmode=000)&quot;,
+    &quot;proc on /proc type proc (rw,relatime,gid=3009,hidepid=invisible)&quot;,
+    &quot;sysfs on /sys type sysfs (rw,seclabel,relatime)&quot;,
+    &quot;selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)&quot;,
+    &quot;tmpfs on /mnt type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)&quot;,
+    &quot;tmpfs on /mnt/installer type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)&quot;,
+    &quot;tmpfs on /mnt/androidwritable type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)&quot;,
+    &quot;/dev/block/sda44 on /metadata type f2fs (rw,sync,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,nogc_merge,discard,discard_unit=block,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,barrier,extent_cache,data_flush,mode=adaptive,active_logs=6,inlinecrypt,alloc_mode=reuse,checkpoint_merge,fsync_mode=strict,memory=normal)&quot;,
+    &quot;/dev/block/dm-14 on /vendor type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
+    &quot;/dev/block/dm-15 on /vendor_dlkm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
+    &quot;/dev/block/dm-16 on /system_dlkm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
+    &quot;/dev/block/dm-17 on /product type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
+    &quot;/dev/block/dm-18 on /odm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
+    &quot;/dev/block/dm-19 on /prism type ext4 (ro,seclabel,relatime)&quot;,
+    &quot;/dev/block/dm-20 on /optics type ext4 (ro,seclabel,relatime)&quot;,
+    &quot;tmpfs on /apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)&quot;,
+    &quot;tmpfs on /bootstrap-apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)&quot;,
+    &quot;tmpfs on /linkerconfig type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)&quot;,
+]
+</code></pre></div>
+<p>Ejemplo de contenido devuelto por ejecución de comando ADB:</p>
+<div class="highlight"><pre><span></span><code>/dev/block/mmcblk0p63 on / type ext4 (ro,seclabel,relatime,discard)
+tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=1812632k,nr_inodes=453158,mode=755)
+devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600,ptmxmode=000)
+proc on /proc type proc (rw,relatime,gid=3009,hidepid=2)
+sysfs on /sys type sysfs (rw,seclabel,relatime)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+tmpfs on /mnt type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1812632k,nr_inodes=453158,mode=755,gid=1000)
+tmpfs on /mnt/installer type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1812632k,nr_inodes=453158,mode=755,gid=1000)
+tmpfs on /mnt/Androidwritable type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1812632k,nr_inodes=453158,mode=755,gid=1000)
+/dev/block/mmcblk0p61 on /vendor type ext4 (ro,seclabel,relatime,discard)
+tmpfs on /apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1812632k,nr_inodes=453158,mode=755)
+tmpfs on /bootstrap-apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1812632k,nr_inodes=453158,mode=755)
+tmpfs on /linkerconfig type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1812632k,nr_inodes=453158,mode=755)
+none on /dev/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+none on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime)
+none on /dev/cpuctl type cgroup (rw,nosuid,nodev,noexec,relatime,cpu)
+none on /dev/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset,noprefix,release_agent=/sbin/cpuset_release_agent)
+none on /dev/memcg type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+none on /dev/stune type cgroup (rw,nosuid,nodev,noexec,relatime,schedtune)
+</code></pre></div>
+<p>Para aprender más:</p>
+<ul>
+<li><a href="https://source.android.com/docs/core/architecture/partitions?hl=es-419">Descripción general de particiones de Android</a>   </li>
+<li><a href="https://source-android-com.translate.goog/docs/core/ota/virtual_ab?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=sge#background">Antecedentes y terminología de particiones dinámicas</a>  </li>
+<li><a href="https://medium.com/@aditi.kale20/file-system-of-android-a89dcbb693f1">File System of Android</a>   </li>
+<li><a href="https://source-android-com.translate.goog/docs/core/architecture/android-kernel-file-system-support?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc">Compatibilidad con el sistema de archivos del kernel de Android</a>  </li>
+<li><a href="https://source.android.com/docs/security/features/selinux/compatibility">SELinux compatibility</a>  </li>
+<li><a href="https://source.android.com/docs/core/ota/apex">APEX file format</a>  </li>
+<li><a href="https://keepcoding.io/blog/sistema-de-ficheros-android/">SIstema de ficheros Android</a> </li>
+</ul>
 <h2 id="registros-y-eventos-del-sistema">Registros y eventos del sistema</h2>
 <h3 id="logcattxt-y-logcat_oldtxt">logcat.txt y logcat_old.txt</h3>
 <p>La información de estos archivos se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/logcat.go">logcat.go</a> .</p>
 <p><strong>Información contenida</strong></p>
-<p>Estos archivos se encuentran en texto plano con extensión .<em>txt</em> y contienen la salida de los comandos <code>adb shell logcat -d -b all</code> y <code>adb shell logcat -L -b all</code> respectivamente, los cuales muestran el registro de mensajes del sistema. Algunos ejemplos de la información contenida son:</p>
+<p>Estos archivos se encuentran en texto plano con extensión .<em>txt</em> y contienen el registro de mensajes del sistema en dos niveles: registros actuales de todos los buffers (logcat.txt) y registros previos al último reinicio (logcat_old.txt). </p>
+<p>Algunos ejemplos de la información contenida son:</p>
 <ul>
 <li>Mensajes de error y advertencia (FATAL EXCEPTION).  </li>
 <li>Mensajes de aplicaciones, procesos y servicios del sistema operativos.  </li>
@@ -2561,16 +2815,41 @@ EXTERNAL_STORAGE=/sdcard
 <li>Etiqueta que indica el componente o proceso del sistema.  </li>
 <li>Descripción y detalles de los mensajes o de los errores.</li>
 </ul>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>#Comando equivalente para los registros actuales
+adb shell logcat -d -b all &quot;*:V&quot;
+#Comando equivalente para los registros previos 
+adb shell logcat -L -b all &quot;*:V&quot;
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Esta información puede ser utilizada para analizar el comportamiento y ejecución de eventos en el sistema y de las aplicaciones del dispositivo para identificar anomalías o patrones que puedan indicar presencia de malware. En términos forenses son de los archivos más relevantes por su contenido.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
 <div class="highlight"><pre><span></span><code>--------- beginning of crash  
-2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: FATAL EXCEPTION: main  
-2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: Process: example.android.app, PID: 12345  
-2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate receiver example.android.app.MyBroadCastReceiver  
-2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: at android.app.ActivityThread.handleReceiver(ActivityThread.java:4861)  
+--------- beginning of events
+09-06 10:36:55.111   544   544 I snet_event_log: [121035042,-1,]
+09-06 10:36:55.125   544   544 I auditd  : SELinux: Loaded service context from:
+09-06 10:36:55.125   544   544 I auditd  :         /system/etc/selinux/plat_service_contexts
+09-06 10:36:55.125   544   544 I auditd  :         /system_ext/etc/selinux/system_ext_service_contexts
+09-06 10:36:55.125   544   544 I auditd  :         /product/etc/selinux/product_service_contexts
+09-06 10:36:55.125   544   544 I auditd  :         /vendor/etc/selinux/vendor_service_contexts
+--------- beginning of kernel
+09-06 10:36:55.187     0     0 I         : [    0.000000,0] Booting Linux on physical CPU 0x0
+09-06 10:36:55.187     0     0 I         : [    0.000000,0] Linux version 4.9.337-perf+ (root@7954fa367a89) (Android (10087095, +pgo, +bolt, +lto, -mlgo, based on r487747c) clang version 17.0.2 (https://Android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)) #1 SMP PREEMPT Sun Sep 15 06:15:22 UTC 2024
+09-06 10:36:55.187     0     0 I         : [    0.000000,0] Boot CPU: AArch64 Processor [51af8014]
+09-06 10:36:55.187     0     0 I [    0.000000,0] Machine: ocean
+09-06 10:36:55.187     0     0 I [    0.000000,0] efi: Getting EFI parameters from FDT:
+09-06 10:36:55.187     0     0 I [    0.000000,0] efi: UEFI not found.
+09-06 10:36:55.187     0     0 I         : [    0.000000,0] Reserved memory: created CMA memory pool at 0x000000008f800000, size 8 MiB
+09-06 10:36:55.187     0     0 I [    0.000000,0] OF: reserved mem: initialized node gpu_region@0, compatible id shared-dma-pool
+09-06 10:36:55.187     0     0 I         : [    0.000000,0] Reserved memory: created CMA memory pool at 0x00000000c7800000, size 8 MiB
+09-06 10:36:55.187     0     0 I [    0.000000,0] OF: reserved mem: initialized node adsp_shmem_device_region@0xc0100000, compatible id shared-dma-pool
+09-06 10:36:55.187     0     0 I         : [    0.000000,0] Reserved memory: created CMA memory pool at 0x00000000fec00000, size 20 MiB
+09-06 10:36:55.187     0     0 I [    0.000000,0] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+09-06 10:36:55.187     0     0 I         : [    0.000000,0] Reserved memory: created CMA memory pool at 0x00000000fe800000, size 4 MiB
+09-06 10:36:55.187     0     0 I [    0.000000,0] OF: reserved mem: initialized node qseecom_ta_region, compatible id shared-dma-pool
+09-06 10:36:55.187     0     0 I         : [    0.000000,0] Reserved memory: created
 2025-01-01 00:00:00.000 12345 12345 E AndroidRuntime: at android.os.Handler.dispatchMessage(Handler.java:106)  
-2025-01-01 00:00:00.000 30144 30860 I ActivityManager: Process example.android.app has died.  
+2025-01-01 00:00:00.000 30144 30860 I ActivityManager: Process example.android.app
 </code></pre></div>
 <p><strong>Aprende más</strong></p>
 <ul>
@@ -2579,17 +2858,21 @@ EXTERNAL_STORAGE=/sdcard
 <h3 id="dumpsystxt">dumpsys.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/dumpsys.go">dumpsys.go</a> .</p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>txt</em> y contiene la salida del comando <code>adb shell dumpsys</code> el cual muestra información detallada sobre los servi`cios en ejecución, incluyendo procesos y aplicaciones.</p>
+<p>Este archivo se encuentra en formato <em>txt</em> contiene información del diagnóstico de los servicios en el dispositivo. El reporte de dumpsys proporciona detalles técnicos sobre el estado de los servicios y componentes del sistema que resulta muy útil para identificar configuraciones o comportamientos anormales.</p>
 <p>El archivo está dividido en secciones específicas para cada servicio siguiendo un orden:</p>
 <ul>
 <li>Lista de servicios activos  </li>
 <li>Detalles de cada servicios  </li>
 <li>Logs detalladas </li>
 </ul>
-<p>Para conocer el listado de servicios que se pueden encontrar en un <em>dumpsys</em> de un dispositivo se puede ejecutar el comando <code>adb shell service list</code></p>
+<p>Para conocer el listado de servicios que se pueden encontrar en un <em>dumpsys</em> de un dispositivo se puede ejecutar el comando <code>adb shell service list</code>. </p>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb shell dumpsys 
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>El archivo brinda una perspectiva completa del estado del sistema en el dispositivo, clave para poder conocer la actividad realizada por servicios, aplicaciones y procesos en el dispositivo. En términos forenses es uno de los archivos más relevantes por su contenido.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF y comando ADB:</p>
 <div class="highlight"><pre><span></span><code>Currently running services:
   accessibility
   account
@@ -2677,7 +2960,7 @@ Current AppOps Service state:
     #2: ModeCallback{f993e3b watchinguid=-1 flags=0x1 op=FINE_LOCATION from uid=u0a124 pid=3315}
     Op READ_CONTACTS:
     #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
-    Op WRIT E_CONTACTS:
+    Op WRITE_CONTACTS:
     #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
     Op READ_CALL_LOG:
     #0: ModeCallback{12983a3 watchinguid=-1 flags=0x0 op=READ_WRITE_HEALTH_DATA from uid=1000 pid=1807}
@@ -2697,7 +2980,7 @@ Current AppOps Service state:
 <h3 id="bugreportzip">bugreport.zip</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/bugreport.go">bugreport.go</a> .</p>
 <p><strong>Información contenida</strong></p>
-<p>Este es un archivo comprimido en formato <em>zip</em> y contiene la salida del comando <code>adb shell bugreport</code> el cual es un informe completo sobre el estado actual del dispositivo que incluye datos del sistema, logs y configuraciones.</p>
+<p>Este es un archivo comprimido en formato <em>zip</em> y contiene un informe completo sobre el estado actual del dispositivo que incluye datos del sistema, logs y configuraciones.</p>
 <p>Este archivo comprimido puede ser analizado por la MVT mediante el comando <code>mvt-android check-bugreport bugreport.zip</code> </p>
 <p>Los archivos y carpetas contenidas en el comprimido incluye los siguiente:</p>
 <ul>
@@ -2735,198 +3018,234 @@ Current AppOps Service state:
 </ul>
 </li>
 </ul>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb bugreport bugreport.zip
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Este comprimido es una fuente de información con mucho valor para el análisis forense para poder identificar el estado general del dispositivo y dar seguimiento a irregularidades o fallas de software o hardware que se presenten en contextos de explotación de vulnerabilidades.</p>
+<p><strong>Ejemplo de contenido del archivo</strong></p>
+<div class="highlight"><pre><span></span><code>/data/user_de/0/com.Android.shell/files/bug...kipped. 41.5 MB/s (4519231 bytes in 0.104s)
+Bug report copied to bugreport.zip
+</code></pre></div>
 <p><strong>Aprende más</strong></p>
 <ul>
 <li><a href="https://developer.android.com/studio/debug/bug-report?hl=es-419">Cómo capturar y leer informes de errores</a></li>
 </ul>
 <h3 id="logs">logs/</h3>
 <p>La información de esta carpeta se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/logs.go">logs.go</a>. </p>
-<p><strong>Información contenida</strong><br />
-Contiene archivos de registro recolectados directamente desde el dispositivo, utilizando el comando <code>adb pull</code> en varias carpetas. </p>
-<p>El módulo accede a rutas específicas del sistema para extraer archivos que documentan el comportamiento, errores y eventos del sistema operativo, las cuales son:</p>
+<p><strong>Información contenida</strong>  </p>
+<p>Esta carpeta contiene una lista de los ficheros y los archivos de registro del sistema y aplicaciones puntualmente extraidos de las siguientes rutas: </p>
 <ul>
-<li>/data/anr/  </li>
-<li>/data/log/  </li>
+<li>/data/system/uiderrors.txt</li>
+<li>/proc/kmsg</li>
+<li>/proc/last_kmsg</li>
+<li>/sys/fs/pstore/console-ramoops </li>
+<li>/data/anr/</li>
+<li>/data/log/</li>
 <li>/sdcard/log/</li>
 </ul>
-<p>Los archivos y carpetas contenidas en este directorio son los siguiente:</p>
+<p>Algunos pueden no ser accesibles por permisos del dispositivo.</p>
 <ul>
-<li>
-<p><code>anr/anr_yyyy-mm-dd-hh-mm-ss</code>  </p>
-<ul>
-<li><strong>anr_yyyy-mm-dd-hh-mm-ss</strong>: Archivo que proporciona un diagnóstico detallado del estado del sistema y de la actividad de un proceso específico.  </li>
+<li>anr  <ul>
+<li>anr_yyyy-mm-dd-hh-mm-ss<ul>
+<li>Archivo que proporciona un diagnóstico detallado del estado del sistema y de la actividad de un proceso específico.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/acore/0_dump_all.zip</code>  </p>
-<ul>
-<li><strong>0_dump_all.zip</strong>: Archivo que contiene un volcado del estado del sistema asociado al proceso acore.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/batterystats/newbatterystats240905095247</code>  </p>
-<ul>
-<li><strong>newbatterystats240905095247</strong>: Archivo que contiene métricas sobre el uso energético del dispositivo.  </li>
+<li>log<ul>
+<li>acore<ul>
+<li>0_dump_all.zip<ul>
+<li>Archivo que contiene un volcado del estado del sistema asociado al proceso acore.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/dropbox.txt</code>  </p>
-<ul>
-<li><strong>dropbox.txt</strong>: Archivo que contiene registros de eventos del sistema gestionados por DropBoxManager.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/dumpstate_debug_history.lst</code>  </p>
-<ul>
-<li><strong>dumpstate_debug_history.lst</strong>: Archivo que contiene el historial de ejecuciones del proceso de recolección de logs del sistema.  </li>
+<li>batterystats<ul>
+<li>newbatterystats240905095247<ul>
+<li>Archivo que contiene métricas sobre el uso energético del dispositivo.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/dumpstate_lastkmsg_20240423_152746_0_MP.log.gz</code>  </p>
-<ul>
-<li><strong>dumpstate_lastkmsg_20240423_152746_0_MP.log.gz</strong>: Archivo que contiene el último mensaje del kernel tras un reinicio inesperado.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/dumpstate_latest_lastkmsg.log.gz</code>  </p>
-<ul>
-<li><strong>dumpstate_latest_lastkmsg.log.gz</strong>: Archivo que contiene el log persistente más reciente del kernel después de un reinicio.  </li>
+<li>dropbox.txt  <ul>
+<li>Archivo que contiene registros de eventos del sistema gestionados por DropBoxManager.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/dumpstate-stats.txt</code>  </p>
-<ul>
-<li><strong>dumpstate-stats.txt</strong>: Archivo que contiene estadísticas generadas durante la recolección del estado del sistema.  </li>
+<li>dumpstate_debug_history.lst<ul>
+<li>Archivo que contiene el historial de ejecuciones del proceso de recolección de logs del sistema.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/dumpstate_sys_error.zip</code>  </p>
-<ul>
-<li><strong>dumpstate_sys_error.zip</strong>: Archivo comprimido que contiene información sobre errores críticos del sistema.  </li>
+<li>dumpstate_lastkmsg_20240423_152746_0_MP.log.gz<ul>
+<li>Archivo que contiene el último mensaje del kernel tras un reinicio inesperado.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/lom_log.txt</code>  </p>
-<ul>
-<li><strong>lom_log.txt</strong>: Archivo que contiene registros relacionados con almacenamiento o monitoreo del sistema.  </li>
+<li>dumpstate_latest_lastkmsg.log.gz<ul>
+<li>Archivo que contiene el log persistente más reciente del kernel después de un reinicio.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/pm_debug_info.txt</code>  </p>
-<ul>
-<li><strong>pm_debug_info.txt</strong>: Archivo que contiene información de depuración del gestor de paquetes del sistema.  </li>
+<li>dumpstate-stats.txt<ul>
+<li>Archivo que contiene estadísticas generadas durante la recolección del estado del sistema.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/power_off_reset_reason.txt</code>  </p>
-<ul>
-<li><strong>power_off_reset_reason.txt</strong>: Archivo que indica la causa del último apagado o reinicio del dispositivo.  </li>
+<li>dumpstate_sys_error.zip<ul>
+<li>Archivo comprimido que contiene información sobre errores críticos del sistema.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/prev_dump.log</code>  </p>
-<ul>
-<li><strong>prev_dump.log</strong>: Archivo que contiene una captura previa del estado del sistema antes de un evento crítico.  </li>
+<li>lom_log.txt<ul>
+<li>Archivo que contiene registros relacionados con almacenamiento o monitoreo del sistema.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/radio_PRECONFG_SET.log</code>  </p>
-<ul>
-<li><strong>radio_PRECONFG_SET.log</strong>: Archivo que documenta la configuración inicial del módulo de radio del dispositivo.  </li>
+<li>pm_debug_info.txt<ul>
+<li>Archivo que contiene información de depuración del gestor de paquetes del sistema.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/shutdown_profile.1.txt</code>  </p>
-<ul>
-<li><strong>shutdown_profile.1.txt</strong>: Archivo que contiene el perfil de apagado registrado por el sistema.  </li>
+<li>power_off_reset_reason.txt<ul>
+<li>Archivo que indica la causa del último apagado o reinicio del dispositivo.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/shutdown_profile_latest.txt</code>  </p>
-<ul>
-<li><strong>shutdown_profile_latest.txt</strong>: Archivo que contiene el perfil del apagado más reciente del sistema.  </li>
+<li>prev_dump.log<ul>
+<li>Archivo que contiene una captura previa del estado del sistema antes de un evento crítico.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/err/</code>  </p>
-<ul>
-<li><strong>mobiledata_dns.dat</strong>: Archivo que contiene errores relacionados con resolución DNS en redes móviles.  </li>
-<li><strong>mobiledata_tp2.dat</strong>: Archivo que contiene errores en la transferencia de paquetes móviles.  </li>
-<li><strong>mobiledata_tp.dat</strong>: Archivo que contiene errores en la transferencia de paquetes móviles.  </li>
+<li>radio_PRECONFG_SET.log<ul>
+<li>Archivo que documenta la configuración inicial del módulo de radio del dispositivo.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/ewlogd/ewlog0_20240920_144426188369.log</code>  </p>
-<ul>
-<li><strong>ewlog0_20240920_144426188369.log</strong>: Archivo que contiene registros de eventos del sistema generados por el servicio ewlogd.  </li>
+<li>shutdown_profile.1.txt<ul>
+<li>Archivo que contiene el perfil de apagado registrado por el sistema.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/imscr/imscr.log.0</code>  </p>
-<ul>
-<li><strong>imscr.log.0</strong>: Archivo que contiene registros del componente IMS para servicios de comunicación.  </li>
+<li>shutdown_profile_latest.txt<ul>
+<li>Archivo que contiene el perfil del apagado más reciente del sistema.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/omc/</code>  </p>
-<ul>
-<li><strong>cidmanager.log</strong>: Archivo que contiene información del gestor de códigos de operador (CID).  </li>
-<li><strong>csc_update_log.txt</strong>: Archivo que contiene el registro de actualizaciones del paquete de personalización CSC.  </li>
-<li><strong>home_fota_update_log.txt</strong>: Archivo que contiene registros de actualizaciones FOTA en red doméstica.  </li>
-<li><strong>prev_csc_log.txt</strong>: Archivo que contiene un historial previo de configuración del operador.  </li>
+<li>err/  <ul>
+<li>mobiledata_dns.dat<ul>
+<li>Archivo que contiene errores relacionados con resolución DNS en redes móviles.</li>
 </ul>
 </li>
-<li>
-<p><code>log/search/0_com.samsung.android.scs_index_encrypted.tar.gz</code>  </p>
-<ul>
-<li><strong>0_com.samsung.android.scs_index_encrypted.tar.gz</strong>: Archivo comprimido cifrado que contiene datos del índice de búsqueda del sistema.  </li>
+<li>mobiledata_tp2.dat<ul>
+<li>Archivo que contiene errores en la transferencia de paquetes móviles.</li>
 </ul>
 </li>
-<li>
-<p><code>log/sfslog/sfslog.0.gz</code>  </p>
-<ul>
-<li><strong>sfslog.0.gz</strong>: Archivo comprimido que contiene registros del sistema de archivos seguro (Secure File System).  </li>
+<li>mobiledata_tp.dat<ul>
+<li>Archivo que contiene errores en la transferencia de paquetes móviles.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/smartswitch/1726696227738SmartSwitchSimpleLog.log</code>  </p>
-<ul>
-<li><strong>1726696227738SmartSwitchSimpleLog.log</strong>: Archivo que contiene registros del proceso de transferencia de datos mediante Smart Switch.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/update_engine_log/update_engine.20240603-222843</code>  </p>
-<ul>
-<li><strong>update_engine.20240603-222843</strong>: Archivo que contiene registros del motor de actualización de software del sistema.  </li>
+<li>ewlogd/<ul>
+<li>ewlog0_20240920_144426188369.log<ul>
+<li>Archivo que contiene registros de eventos del sistema generados por el servicio ewlogd.  </li>
 </ul>
 </li>
-<li>
-<p><code>log/wfd/wfdDumpSource.log</code>  </p>
-<ul>
-<li><strong>wfdDumpSource.log</strong>: Archivo que contiene actividad registrada del componente Wifi direct (WFD).  </li>
 </ul>
 </li>
-<li>
-<p><code>log/wifi/</code>  </p>
-</li>
-<li>
-<p><code>system/proc/</code>  </p>
-<ul>
-<li><strong>kmsg</strong>: Archivo que contiene el log actual del kernel con actividad del sistema a bajo nivel.  </li>
-<li><strong>last_kmsg</strong>: Archivo que contiene el último log persistente del kernel tras un reinicio.  </li>
+<li>imscr/<ul>
+<li>imscr.log.0<ul>
+<li>Archivo que contiene registros del componente IMS para servicios de comunicación.  </li>
 </ul>
 </li>
-<li>
-<p><code>sys/fs/pstore/</code></p>
+</ul>
+</li>
+<li>omc/<ul>
+<li>cidmanager.log<ul>
+<li>Archivo que contiene información del gestor de códigos de operador (CID).  </li>
+</ul>
+</li>
+<li>csc_update_log.txt
+    Archivo que contiene el registro de actualizaciones del paquete de personalización CSC.  </li>
+<li>home_fota_update_log.txt<ul>
+<li>Archivo que contiene registros de actualizaciones FOTA en red doméstica.  </li>
+</ul>
+</li>
+<li>prev_csc_log.txt<ul>
+<li>Archivo que contiene un historial previo de configuración del operador.  </li>
+</ul>
 </li>
 </ul>
+</li>
+<li>search<ul>
+<li>0_com.samsung.android.scs_index_encrypted.tar.gz  <ul>
+<li>Archivo comprimido cifrado que contiene datos del índice de búsqueda del sistema.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sfslog/<ul>
+<li>sfslog.0.gz<ul>
+<li>Archivo comprimido que contiene registros del sistema de archivos seguro (Secure File System).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>smartswitch/<ul>
+<li>1726696227738SmartSwitchSimpleLog.log<ul>
+<li>Archivo que contiene registros del proceso de transferencia de datos mediante Smart Switch.  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>update_engine_log/<ul>
+<li>update_engine.20240603-222843<ul>
+<li>Archivo que contiene registros del motor de actualización de software del sistema.  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>wfd<ul>
+<li>wfdDumpSource.log<ul>
+<li>Archivo que contiene actividad registrada del componente Wifi direct (WFD).  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>wifi</li>
+</ul>
+</li>
+<li>system</li>
+<li>proc<ul>
+<li>kmsg<ul>
+<li>Archivo que contiene el log actual del kernel con actividad del sistema a bajo nivel.</li>
+</ul>
+</li>
+<li>last_kmsg<ul>
+<li>Archivo que contiene el último log persistente del kernel tras un reinicio.  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sys/<ul>
+<li>fs/<ul>
+<li>pstore/</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Los comandos equivalentes de ADB de este módulo son los siguientes:
+Comando equivalente para el listado recursivo de cada carpeta:</p>
+<p><div class="highlight"><pre><span></span><code>adb shell &quot;ls -R /data/anr/&quot;
+adb shell &quot;ls -R /data/log/&quot;
+adb shell &quot;ls -R /sdcard/log/&quot;
+</code></pre></div>
+Comando equivalente para la descarga de cada archivo:</p>
+<div class="highlight"><pre><span></span><code>adb pull /data/system/uiderrors.txt
+adb pull /proc/kmsg
+adb pull /proc/last_kmsg
+adb pull /sys/fs/pstore/console-ramoops
+adb pull /data/anr/
+adb pull /data/log/
+adb pull /sdcard/log/
+</code></pre></div>
+<p><strong>¿Por qué es importante?</strong></p>
+<p>Esta información es importante porque recopila los archivos de registro del sistema y de las aplicaciones, proporcionando información detallada sobre errores y otros eventos del dispositivo. Esto permite conocer el comportamiento del sistema, detectar fallos, identificar rastros de ejecución o anomalías.</p>
 <h2 id="procesos-y-aplicaciones">Procesos y aplicaciones</h2>
 <h3 id="packagesjson">packages.json</h3>
 <p>La información de esta carpeta se genera mediante el módulo <a href="https://github.com/mvt-project/mvt/blob/main/src/mvt/android/modules/adb/packages.py">packages.go</a>.<br />
 <strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>json</em> y contiene la salida del comando <code>adb shell pm list packages</code> , el cual muestra un listado de aplicaciones instaladas en el dispositivo.</p>
+<p>Este archivo se encuentra en formato json y contiene un listado de aplicaciones instaladas en el dispositivo ofreciendo información sobre estas como el nombre de paquete instalado, la ruta donde se encuentra, origen de instalación, su estado actual o si es una aplicación de terceros.</p>
 <p>El archivo contiene:</p>
 <ul>
 <li>name: Nombre del paquete de la aplicación.  </li>
@@ -2937,9 +3256,13 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
 <li>system: Indica si el paquete pertenece al sistema.  </li>
 <li>third_party: Indica si es una aplicación de terceros.</li>
 </ul>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb shell pm list packages -f
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
-<p>El contenido de este archivo incluye información que permite identificar aplicaciones instaladas y cuál es su estado en el dispositivo. Esto ayuda a los analistas a evaluar si existen aplicaciones de riesgo o maliciosas, que permisos tienen y cuales pueden comprometer la seguridad.</p>
+<p>El contenido de este archivo incluye información que permite identificar aplicaciones instaladas y cuál es su origen, ubicación y estado de confianza en el dispositivo. Esto ayuda a los analistas a evaluar si existen aplicaciones de riesgo o maliciosas, que permisos tienen y cuales pueden comprometer la seguridad.</p>
 <p><strong>Estructura del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <div class="highlight"><pre><span></span><code>[
     {
         &quot;name&quot;: &quot;com.whatsapp&quot;,
@@ -2976,20 +3299,54 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
     }
 ]
 </code></pre></div>
+<p>Ejemplo de salida de comando ADB de listado de paquetes:</p>
+<div class="highlight"><pre><span></span><code>package:/system/system_ext/priv-app/QuickAccessWallet/QuickAccessWallet.apk=com.Android.systemui.plugin.globalactions.wallet
+package:/apex/com.Android.mediaprovider/priv-app/MediaProvider@AP2A.240905.003/MediaProvider.apk=com.Android.providers.media.module
+package:/system/product/overlay/IconPackCircularAndroid/IconPackCircularAndroidOverlay.apk=com.Android.theme.icon_pack.circular.Android
+package:/system/app/MotoSignatureApp/MotoSignatureApp.apk=com.motorola.motosignature.app
+package:/system/product/priv-app/Eleven/Eleven.apk=org.lineageos.eleven
+package:/system/app/BookmarkProvider/BookmarkProvider.apk=com.Android.bookmarkprovider
+package:/system/app/CaptivePortalLogin/CaptivePortalLogin.apk=com.Android.captiveportallogin
+package:/system/product/overlay/IconPackFilledSystemUI/IconPackFilledSystemUIOverlay.apk=com.Android.theme.icon_pack.filled.systemui
+package:/apex/com.Android.adservices/priv-app/AdServicesApk@AP2A.240905.003/AdServicesApk.apk=com.Android.adservices.api
+package:/system/system_ext/app/AccessibilityMenu/AccessibilityMenu.apk=com.Android.systemui.accessibility.accessibilitymenu
+package:/system/product/priv-app/MotCamera2/MotCamera2.apk=com.motorola.camera2
+package:/apex/com.Android.uwb/priv-app/ServiceUwbResources@AP2A.240905.003/ServiceUwbResources.apk=com.Android.uwb.resources
+package:/system/system_ext/app/MotoActions/MotoActions.apk=org.lineageos.settings.device
+package:/system/product/priv-app/AndroidAutoStub/AndroidAutoStub.apk=com.google.Android.projection.gearhead
+package:/system/product/overlay/LineageSettingsProvider__lineage_ocean__auto_generated_rro_product.apk=org.lineageos.lineagesettings.auto_generated_rro_product__
+package:/apex/com.Android.cellbroadcast/priv-app/CellBroadcastServiceModule@AP2A.240905.003/CellBroadcastServiceModule.apk=com.Android.cellbroadcastservice
+package:/apex/com.Android.cellbroadcast/priv-app/CellBroadcastApp@AP2A.240905.003/CellBroadcastApp.apk=com.Android.cellbroadcastreceiver.module
+package:/system/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk=com.qualcomm.qti.telephonyservice
+package:/system/product/overlay/FontRubik/FontRubikOverlay.apk=org.lineageos.overlay.font.rubik
+</code></pre></div>
 <h3 id="apks">apks/</h3>
 <p>La información de esta carpeta se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/packages.go">packages.go</a>.</p>
 <p><strong>Información contenida</strong></p>
 <p>Este directorio almacena los archivos APK (paquetes de aplicaciones Android) extraídos del dispositivo. Estos son los archivos de instalación de las aplicaciones que estaban presentes en el sistema en el momento del análisis.</p>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb pull &lt;ruta_apk&gt; &lt;ruta_local&gt;
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>El análisis de los APKs permite examinar las aplicaciones instaladas en el dispositivo, identificar posibles muestras de malware o aplicaciones maliciosas, así como validar las versiones instaladas y sus firmas.</p>
+<p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de comando ADB para la descarga de APKs:</p>
+<div class="highlight"><pre><span></span><code>$ adb pull 
+/system/system_ext/priv-app/QuickAccessWallet/QuickAccessWallet.apk
+/system/system_ext/priv-app/QuickAccessWallet... 0 skipped. 8.6 MB/s (745270 bytes in 0.083s)
+</code></pre></div>
 <h3 id="processestxt">processes.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/processes.go">processes.go</a>. </p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>json</em> y contiene la salida del comando <code>adb shell ps -A</code> , el cual muestra información detallada sobre los procesos que se encuentran en ejecución. </p>
+<p>Este archivo se encuentra en formato <em>json</em> y contiene información detallada sobre los procesos que se encuentran en ejecución. </p>
 <p>Este archivo presenta la información en una forma estructurada teniendo como orden identificadores, detalles de la ejecución, consumo de recursos y estado del proceso.</p>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb shell ps -A
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Este archivo permite identificar procesos que son ejecutados de manera inusual o que son ejecutados por usuarios no autorizados como resultado de una escalada de privilegios. Así mismo, podemos asegurar que los procesos y sus jerarquías coinciden con las configuraciones establecidas o normales.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <div class="highlight"><pre><span></span><code>[
     {
         &quot;pid&quot;: 1,
@@ -3049,6 +3406,35 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
     },
 ]
 </code></pre></div>
+<p>Ejemplo de contenido devuelto por ejecución de comando ADB:</p>
+<div class="highlight"><pre><span></span><code>USER           PID  PPID        VSZ    RSS WCHAN            ADDR S NAME                       
+root             1     0   11066580  10020 0                   0 S init
+root             2     0          0      0 0                   0 S [kthreadd]
+root             4     2          0      0 0                   0 S [kworker/0:0H]
+root             5     2          0      0 0                   0 S [kworker/u16:0]
+root             6     2          0      0 0                   0 S [ksoftirqd/0]
+root             7     2          0      0 0                   0 S [rcu_preempt]
+root             8     2          0      0 0                   0 S [rcu_sched]
+root             9     2          0      0 0                   0 S [rcu_bh]
+root            10     2          0      0 0                   0 S [rcuop/0]
+root            11     2          0      0 0                   0 S [rcuos/0]
+root            12     2          0      0 0                   0 S [rcuob/0]
+root            13     2          0      0 0                   0 S [migration/0]
+root            14     2          0      0 0                   0 S [lru-add-drain]
+root            15     2          0      0 0                   0 S [cpuhp/0]
+root            16     2          0      0 0                   0 S [cpuhp/1]
+system         987     1   10866216   3536 0                   0 S Android.hardware.graphics.allocator@2.0-service
+system         988     1   11113564  10352 0                   0 S Android.hardware.graphics.composer@2.1-service
+system         989     1   10791636   3268 0                   0 S Android.hardware.health@2.1-service
+system         990     1   10784848   3080 0                   0 S Android.hardware.light@2.0-service.msm8953
+system         991     1   10836444   3044 0                   0 S Android.hardware.memtrack@1.0-service
+system         992     1   10866528   4276 0                   0 S Android.hardware.power-service-qti
+system         996     1   10820064   2996 0                   0 S Android.hardware.thermal@1.0-service
+system         999     1   10802340   3188 0                   0 S Android.hardware.usb@1.0-service
+wifi          1002     1   11082236   5180 0                   0 S Android.hardware.wifi-service
+system        1003     1   10870516   3864 0                   0 S vendor.display.color@1.0-service
+system        1004     1   10830264   3552 0                   0 S vendor.lineage.health-service.default
+</code></pre></div>
 <p><strong>Aprende más</strong></p>
 <ul>
 <li><a href="https://developer.android.com/guide/components/processes-and-threads?hl=es-419">Descripción general de los procesos y subprocesos</a></li>
@@ -3056,11 +3442,15 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
 <h3 id="servicestxt">services.txt</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/services.go">services.go</a></p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>txt</em> y contiene la salida del comando <code>adb shell service list</code> el cual muestra información detallada sobre los servicios en ejecución.</p>
+<p>Este archivo se encuentra en formato <em>txt</em> y contiene información detallada sobre los servicios en ejecución.</p>
 <p>La estructura del archivo es el nombre del servicio y el proceso o paquete que está en ejecución para ese servicio.</p>
+<p>El comando equivalente de ADB de este módulo es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>adb shell service list
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Este archivo permite identificar los servicios en ejecución o en sentido contrario identificar si un servicio no se encontraba en ejecución. Esto es útil para identificar que todos los servicios necesarios estén en ejecución para mantener la integridad de la seguridad del dispositivo.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF y comando ADB:</p>
 <div class="highlight"><pre><span></span><code>Found 368 services:
 0   AtlasService: [android.atlas.service]
 1   DockObserver: []
@@ -3127,7 +3517,7 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/root_binaries.go">root_binaries.go</a>. </p>
 <p>Este módulo hace una búsqueda específica de proceso de rooting.</p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>json</em> y contiene la salida del comando <code>adb shell which -a</code> aplicado a una lista de binarios para saber si están presentes en el sistema.</p>
+<p>Este archivo se encuentra en formato <em>json</em> y contiene  una lista de binarios para saber si están presentes en el sistema.</p>
 <p>Los binarios a los que se aplica son utilizados para obtener acceso de root o elevar privilegios en el dispositivo.</p>
 <p>La lista de binarios y archivos es:</p>
 <ul>
@@ -3143,13 +3533,26 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
 <li>magiskpolicy</li>
 </ul>
 <p>Si ninguno de estos archivos está presente en el dispositivo entonces el contenido del archivo será vacío.</p>
+<p>Los comandos equivalentes de ADB de este módulo son los siguientes:</p>
+<div class="highlight"><pre><span></span><code>adb shell &quot;which -a su&quot;
+adb shell &quot;which -a busybox&quot;
+adb shell &quot;which -a supersu&quot;
+adb shell &quot;which -a Superuser.apk&quot;
+adb shell &quot;which -a KingoUser.apk&quot;
+adb shell &quot;which -a SuperSu.apk&quot;
+adb shell &quot;which -a magisk&quot;
+adb shell &quot;which -a magiskhide&quot;
+adb shell &quot;which -a magiskinit&quot;
+adb shell &quot;which -a magiskpolicy&quot;
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Este archivo detecta herramientas de rooting, lo cual puede representar un indicativo  de accesos no autorizados y escalada de privilegios que pueda exponer alguna vulnerabilidad.  Así mismo, permite al analista identificar binarios sospechosos que podrían haberse instalado sin el conocimiento del usuario y ayuda a determinar si el dispositivo ha sido manipulado.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
 <p>El archivo vacío tiene la siguiente estructura:</p>
 <div class="highlight"><pre><span></span><code>[]
 </code></pre></div>
-<p>Cuando el módulo identifica binarios relacionados con el rooting en las rutas estándar del sistema en el dispositivo, contendrá una lista de estas rutas a los binarios detectados:</p>
+<p>Cuando el módulo identifica binarios relacionados con el rooting en las rutas estándar del sistema en el dispositivo, contendrá una lista de estas rutas a los binarios detectados. </p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF y comando ADB:</p>
 <div class="highlight"><pre><span></span><code>[
     &quot;/system/xbin/su&quot;,
     &quot;/system/bin/su&quot;,
@@ -3167,12 +3570,20 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/backup.go">backup.go</a>.</p>
 <p>Este módulo está diseñado específicamente para realizar copias de seguridad de datos que están almacenados en dispositivos móviles con Android.</p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato binario y contiene datos relacionados con la copia de seguridad de aplicaciones y configuraciones del dispositivo. Los datos binarios presentes en este archivo se encuentran comprimidos e incluyen información confidencial del dispositivo.</p>
-<p>Dependiendo de la opción seleccionada en androidqf el contenido del archivo puede ser solamente los SMS o puede ser una copia de datos de aquellas aplicaciones que tienen declarado en su manifiesto la posibilidad de realizar copias.</p>
+<p>Este archivo se encuentra en formato binario y contiene datos relacionados con el la copia de seguridad de aplicaciones y configuraciones del dispositivo. Los datos binarios presentes en este archivo se encuentran comprimidos e incluyen información confidencial del dispositivo.</p>
+<p>Dependiendo de la opción seleccionada en androidqf el contenido del archivo puede ser solamente los SMS o puede ser una copia de datos de aquellas aplicaciones que tienen declarado en su manifiesto la posibilidad de realizar copias. Vale resaltar que esta función es poco utilizada en la actualidad, por lo que no representa un respaldo fiable del dispositivo. </p>
 <p>Este archivo comprimido puede ser analizado por la MVT mediante el comando <code>mvt-android check-backup backup.ab</code></p>
+<p>Los comandos equivalentes de ADB de este módulo son los siguientes:
+Comando equivalente para solo SMS:</p>
+<div class="highlight"><pre><span></span><code>adb backup com.Android.providers.telephony
+</code></pre></div>
+<p>Comando equivalente para respaldo completo:</p>
+<div class="highlight"><pre><span></span><code>adb backup -all
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
-<p>En el caso forense este respaldo permite analizar los SMS en búsqueda de enlaces sospechosos o maliciosos.</p>
+<p>Esta información permite generar una copia de seguridad del dispositivo, lo que ayuda a mantener evidencia relevante como SMS o configuraciones del sistema. También facilita la conservación de información potencialmente relacionada a incidentes de seguridad o ataques de phishing de manera íntegra con posibilidades de usarse para análisis posteriores.</p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <div class="highlight"><pre><span></span><code>(Binary data containing app backups and settings)
 414e 4452 4f49 4420 4241 434b 5550 0a35
 0a30 0a6e 6f6e 650a 6170 7073 2f63 6f6d
@@ -3196,8 +3607,7 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
 <h3 id="filesjson">files.json</h3>
 <p>La información de este archivo se genera mediante el módulo <a href="https://github.com/mvt-project/androidqf/blob/main/modules/files.go">files.go</a></p>
 <p><strong>Información contenida</strong></p>
-<p>Este archivo se encuentra en formato <em>json</em> y contiene el resultado de la busqueda de archivos mediante el comando <em>find.</em></p>
-<p>El comando completo de <em>find</em> es <code>adb shell find '/' -maxdepth 1 -printf '%T@ %m %s %u %g %p\n' 2\&gt; /dev/null</code> y se aplica a las siguientes carpetas:</p>
+<p>Este archivo se encuentra en formato <em>json</em> y genera un registro de archivos y metadatos en las siguientes rutas:</p>
 <ul>
 <li>/sdcard/  </li>
 <li>/system/  </li>
@@ -3215,7 +3625,25 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
 <li>/data/data/</li>
 </ul>
 <p>Cada archivo incluye metadatos como: la ruta completa del archivo, tamaño, marca de tiempo (indica última modificación del archivo y último acceso al archivo), permisos del archivo, identificador del propietario, mensajes de error y hashes sha1, sha256, sha512, md5 si es que están pre-calculados.</p>
+<p>Los comandos equivalentes de ADB de este módulo son los siguientes:</p>
+<div class="highlight"><pre><span></span><code>adb shell &quot;find /sdcard/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /system/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /system_ext/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /vendor/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /cust/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /product/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /apex/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /data/local/tmp/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /data/media/0/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /data/misc/radio/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /data/vendor/secradio/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /data/log/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /tmp/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find / -maxdepth 1 -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+adb shell &quot;find /data/data/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+</code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
+<p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <p>Este archivo tiene relevancia para identificar archivos de interés en una investigación forense, incluyendo potenciales archivos utilizados por atacantes para comprometer un dispositivo y hacer los análisis oportunos que permitan dar seguimiento a actividad maliciosa. </p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
 <div class="highlight"><pre><span></span><code>{
@@ -3236,6 +3664,29 @@ Contiene archivos de registro recolectados directamente desde el dispositivo, ut
         &quot;sha512&quot;: &quot;&quot;,
         &quot;md5&quot;: &quot;&quot;
 }
+</code></pre></div>
+<p>Ejemplo de contenido devuelto por ejecución de comando ADB:</p>
+<div class="highlight"><pre><span></span><code>1762885286.638000649 770 3464 root everybody /sdcard/
+1762885284.208000407 770 3464 root everybody /sdcard/Android
+1762886328.989657481 771 3464 root sdcard_rw /sdcard/Android/data
+1230768000.0 755 4096 root root /system/
+1230768000.0 755 16384 root root /system/lib
+1230768000.0 644 56516 root root /system/lib/aaudio-aidl-cpp.so
+174618780.323371170 755 4096 root root /system_ext/
+1230768000.0 755 4096 root root /system_ext/lib
+1230768000.0 644 197552 root root /system_ext/lib/com.qualcomm.qti.imscmservice@2.0.so
+1230768000.0 755 4096 root shell /vendor/
+1230768000.0 755 4096 root shell /vendor/vendor_dlkm
+1230768000.0 755 4096 root shell /vendor/vendor_dlkm/etc
+174618784.276704897 755 4096 root root /product/
+174618779.613371100 755 4096 root root /product/lib
+174618779.620037767 644 943652 root root /product/lib/libjni_latinimegoogle.so
+210875820.303334210 755 1380 root root /apex/
+210875816.683333849 771 3464 shell shell /data/local/tmp/
+1726625293.972938149 755 4096 root root /
+210875815.30000351 710 80 shell everybody /storage
+1230768000.0 644 11 root root /etc
+1762885284.64667059 771 24576 system system /data/data/
 </code></pre></div>
 <h2 id="comentarios">Comentarios</h2>
 <p>¿Tienes <strong>comentarios o sugerencias</strong> sobre este recurso? Puedes utilizar la <strong>función de comentar que se muestra a continuación</strong> para dejarnos tus ideas o apreciaciones. Por favor asegúrate de seguir nuestro <a href="../../community/code-of-conduct/">código de conducta</a>. La función de comentarios enlaza directamente a la sección de <a href="https://github.com/Socialtic/forensics/discussions"><em>Discussions</em> de Github</a>, donde también <strong>puedes participar en las discusiones de forma directa</strong>, si lo prefieres.   </p>
