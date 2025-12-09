@@ -1088,6 +1088,19 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cifrado-de-extracciones-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Cifrado de extracciones (opcional)
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1139,6 +1152,19 @@
       
         <span class="md-typeset">
           Consideraciones durante la ejecución
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheatsheet-comandos-adb-utilizados-para-obtener-informacion-forense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Cheatsheet: Comandos ADB utilizados para obtener información forense
         </span>
       
     </span>
@@ -2013,7 +2039,7 @@
 
 
 <h1 id="tutorial-explorando-androidqf-para-la-adquisicion-de-informacion-en-android">Tutorial - Explorando AndroidQF para la adquisición de información en Android</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-18T00:00:00'>2025-08-18</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T22:27:14+00:00'>2025-12-09</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-18T00:00:00'>2025-08-18</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T23:34:12+00:00'>2025-12-09</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
 
 <p>Este documento forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el <a data-preview="" href="../../references/00-glossary/index.html#diataxis">marco de referencia de documentación técnica Diataxis</a>.</p>
 <p>Este recurso en particular se enmarca dentro de la categoría de <a href="https://diataxis.fr/tutorials/">tutoriales</a>, y contiene actividades prácticas guiadas para familiarizarse con una extracción forense a través de la herramienta <a href="https://github.com/mvt-project/androidqf">AndroidQF</a>.</p>
@@ -2066,7 +2092,7 @@
 <li>La herramienta y su documentación entran en la categoría de <strong>software libre y código abierto</strong>, por lo que su código fuente es transparente y consultable por cualquier persona interesada en conocer cómo funciona la herramienta.</li>
 </ul>
 <p>La facilidad para conocer qué información forense fue extraída y cuál fue el proceso, permite brindar mayor transparencia y confianza al proceso, de forma tal que se reduzcan los riesgos técnicos y éticos del análisis forense consensuado.</p>
-<p>De forma complementaria a este tutorial, en este repositorio se encuentra un <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">Diccionario de archivos generados por la herramienta androidqf</a>, un material de referencia que contiene <strong>información acerca de los archivos generados</strong>, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</p>
+<p>De forma complementaria a este tutorial, en este repositorio se encuentra un <a data-preview="" href="../../references/01-reference-androidqf-dictionary/index.html">Diccionario de archivos generados por la herramienta androidqf</a>, un material de referencia que contiene <strong>información acerca de los archivos generados</strong>, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</p>
 <h2 id="revision-de-configuraciones-en-el-dispositivo-android">Revisión de configuraciones en el dispositivo Android</h2>
 <p>Para iniciar este tutorial, es importante <strong>confirmar las configuraciones necesarias en el dispositivo Android y del equipo de cómputo</strong>, esto asegurará que haya una buena transmisión de información entre dispositivos al realizar la extracción forense.</p>
 <p>Con la depuración USB activa, es momento de <strong>conectar el dispositivo móvil al equipo de cómputo</strong> a través del cable de transferencia de archivos. Cuando conectes el teléfono, selecciona <strong>permitir</strong> en el momento en que el dispositivo Android <strong>solicite permiso de acceso a los datos del dispositivo.</strong></p>
@@ -2220,6 +2246,53 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </figcaption>
 </figure>
 <p>Para comprobar que todo salió bien puedes pasar a la siguiente sección donde abordará la exploración de esta herramientas.</p>
+<h3 id="cifrado-de-extracciones-opcional">Cifrado de extracciones (opcional)</h3>
+<p>Cuando se realiza una extracción de información forense de un dispositivo, se recolecta información privada, ya que AndoridQF tiene la posibilidad de generar respaldos (backups) de mensajes SMS, listar las aplicaciones instaladas en un dispositivo o mostrar las rutas donde se ha realizado la extracción revelando el nombre o pseudónimo de quien realizó el procedimiento, es por eso que el envío de esta información sin cifrar puede exponer a la persona a quien se acompaña en el proceso de extracción, como a la parte que acompaña, lo que en algunos contexto puede comprometer la seguridad digital o física de una persona.</p>
+<p>Ante estos escenarios, AndroidQF ofrece una alternativa de cifrado automático mediante <a href="https://github.com/FiloSottile/age">claves de cifrado AGE</a> sobre una extracción que se va a realizar.</p>
+<p>Mediante esta alternativa de cifrado, AndroidQF puede detectar una llave pública con la que primero comprime la extracción en .zip, posteriormente cifra el comprimido con <em>AGE</em> y elimina la extracción sin cifrar resultando un archivo en formato: <strong>\&lt;UUID&gt;.zip.age</strong></p>
+<p><strong>Si eres una persona que va a realizar una extracción a nombre de una organización u otra persona analista y vas a utilizar su llave para cifrar extracciones, sigue estos pasos:</strong></p>
+<ul>
+<li>
+<p>Solicita la llave pública que corresponda al analista o usuario quien se planee descifre esta información.  </p>
+<ul>
+<li>Verifica que la llave empiece con <em>age1…</em></li>
+</ul>
+</li>
+<li>
+<p>Crea un archivo <em>.txt</em> llamado <strong>key</strong> en el directorio donde se encuentra el binario de AndroidQF   </p>
+<ul>
+<li>Coloca la llave pública en este archivo y guarda los cambios</li>
+</ul>
+</li>
+</ul>
+<p>Es importante mencionar que una vez que se cifre la información de esta extracción, solo la persona que tiene la llave privada podrá descifrar esta información.</p>
+<p><strong>Si eres una persona analista o quien recibirá la información de las extracciones</strong> como primer paso debes descargar e instalar <em>age</em>, la <a href="https://github.com/FiloSottile/age">documentación oficial</a> menciona los comandos necesarios para diferentes sistemas operativos y manejadores de paquetes, <em>apt</em> por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>age
+</code></pre></div>
+<p>Adicionalmente, esta misma documentación menciona el uso de binarios precompilados y el funcionamiento completo de esta herramienta de cifrado.</p>
+<p>Para los fines de este tutorial, solo es necesario generar un par de llaves, una pública (la que compartes y con la que se cifra la información) y una privada (con la que se descifra la información), esto mediante el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code>age-keygen<span class="w"> </span>-o<span class="w"> </span>my-key.txt
+</code></pre></div>
+<p>La salida creará el archivo <em>my-key.txt</em>, el cual contendrá la marca de tiempo de la creación de las llaves, la clave pública y la clave privada.</p>
+<p>Para poder cifrar las extracciones, es necesario que sigas los siguientes pasos:</p>
+<ul>
+<li>Crea un archivo <em>.txt</em> llamado <strong>key</strong> en el directorio donde se encuentra el binario de AndroidQF y mantenlo abierto  </li>
+<li>Abre el archivo <em>my-key.txt</em> y copia la llave pública  la cual empieza con: <em>age1…</em>  </li>
+<li>Pega la llave en el archivo <em>key.txt</em> y guarda los cambios realizados  </li>
+<li>Comparte esta llave con quien debe cifrar extracciones o utilízala cuando generes extracciones con AndroidQF.</li>
+</ul>
+<p><strong>Si eres quien descifra información</strong>, es necesario seguir los siguientes pasos:</p>
+<ul>
+<li>Crea un archivo <em>.txt</em> llamado <strong>private.key</strong> en el directorio donde se encuentra el binario de AndroidQF y mantenlo abierto  </li>
+<li>Abre el archivo <em>my-key.txt</em> y copia la llave privada  la cual empieza con: <em>AGE-SECRET-KEY-...</em>  </li>
+<li>Pega la llave en el archivo <em>private-key.txt</em> y guarda los cambios realizados  </li>
+<li>
+<p>Ejecuta el siguiente comando para poder descifrar información:</p>
+<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>age<span class="w"> </span>--decrypt<span class="w"> </span>-i<span class="w"> </span>~/path/to/privatekey.txt<span class="w"> </span>-o<span class="w"> </span>&lt;UUID&gt;.zip<span class="w"> </span>&lt;UUID&gt;.zip.age
+</code></pre></div>
+Aunque este proceso de cifrado es opcional, es recomendable que se considere para reducir <a href="../../explainers/02-explainer-risks-threats/index.html">potenciales riesgos</a>.</p>
+</li>
+</ul>
 <h2 id="exploracion-y-ejecucion-androidqf">Exploración y ejecución AndroidQF</h2>
 <h3 id="exploracion-de-androidqf">Exploración de AndroidQF</h3>
 <p>En esta sección vamos a explorar AndroidQF, para conocer los parámetros de ejecución que tiene la herramienta. <strong>Entenderlos te permitirá controlar y personalizar el tipo de extracción forense que deseas realizar</strong>, estos parámetros son parte de los comandos que guían a la herramienta para que funcione correctamente. </p>
@@ -2326,7 +2399,12 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </ul>
 <h3 id="ejecucion-de-androidqf">Ejecución de AndroidQF</h3>
 <p>Antes de ejecutar el binario de AndoridQF, enciende y desbloquea el dispositivo móvil que ya conectaste al equipo de computo. </p>
-<p>Sin importar cuál sistema operativo utilices en tu equipo de cómputo, primero es necesario identificar los parámetros del comando de ejecución de AndroidQF según las necesidades de tu análisis. Para este ejemplo utilizamos el siguiente comando: </p>
+<p>Primero, en caso de utilizar <a href="#cifrado-de-extracciones-opcional">cifrado</a>, asegúrate que la llave de cifrado se encuentre en la carpeta correspondiente junto al binario de AndoridQF. </p>
+<p>Además, sin importar cuál sistema operativo utilices en tu equipo de cómputo, primero es necesario identificar los parámetros del comando de ejecución de AndroidQF según las necesidades de tu análisis. Para este ejemplo utilizamos el siguiente comando: </p>
+<div class="admonition note">
+<p class="admonition-title">Nota sobre el ejemplo</p>
+<p>Para este tutorial, se abordará el comando que identifica al dispositivo por número serial y con salida de carpeta con fecha e identificador. Se omitirá la versión detallada por accesibilidad de lectura.</p>
+</div>
 <div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span>/ruta/de/salida/<span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>-complemento<span class="w"> </span><span class="c1"># (1)!</span>
 </code></pre></div>
 <ol>
@@ -2506,9 +2584,137 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 </li>
 </ol>
 <p>Una vez que finalice el proceso de adquisición, la herramienta habrá capturado los archivos e informaciones clave necesarias para un <a data-preview="" href="../../references/00-glossary/index.html#triaje">triaje</a>. </p>
+<h3 id="cheatsheet-comandos-adb-utilizados-para-obtener-informacion-forense">Cheatsheet: Comandos ADB utilizados para obtener información forense</h3>
+<p>Durante una adquisición forense con AndroidQF se ejecutan diversos módulos que  recopilan información del sistema, procesos, configuraciones, logs y artefactos del dispositivo.</p>
+<p>A continuación se incluye una <strong>cheatsheet</strong> con los comandos <em>adb</em> equivalentes que permiten comprender las acciones que AndroidQF realiza en segundo plano a través de comandos.</p>
+<p>Esta tabla sirve como referencia rápida para entender qué información obtiene cada módulo, cómo podría verificarse manualmente y cuál es el comando base de adb que permite observar datos equivalentes en un análisis forense consensuado, si deseas profundizar en la construcción y estructura de cada módulo,  puedes consultar el <a data-preview="" href="../../references/01-reference-androidqf-dictionary/index.html">Diccionario de archivos generados por AndroidQF</a>. </p>
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Comando adb</th>
+<th style="text-align: center;">Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Información y configuración del dispositivo</strong></td>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>getprop</strong></td>
+<td><code>adb shell getprop</code></td>
+<td style="text-align: center;">Muestra propiedades del sistema/dispositivo</td>
+</tr>
+<tr>
+<td><strong>selinux</strong></td>
+<td><code>adb shell getenforce</code></td>
+<td style="text-align: center;">Devuelve el estado de SELinux</td>
+</tr>
+<tr>
+<td><strong>settings</strong></td>
+<td><pre><code> adb shell cmd settings list system</code><br><code>adb shell cmd settings list secure</code><br><code>adb shell cmd settings list global</code></pre></td>
+<td style="text-align: center;">Extrae configuraciones del sistema, red, seguridad y accesibilidad.</td>
+</tr>
+<tr>
+<td><strong>env</strong></td>
+<td><code>adb shell env</code></td>
+<td style="text-align: center;">Lista variables de entorno activas y rutas del sistema.</td>
+</tr>
+<tr>
+<td><strong>mounts</strong></td>
+<td><pre><code>adb shell "mount"</code><br><code>adb shell "cat /proc/mounts"</code></pre></td>
+<td style="text-align: center;">Muestra los puntos de montaje y tipos de sistema de archivos activos.</td>
+</tr>
+<tr>
+<td><strong>Informes del dispositivo</strong></td>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>logcat</strong></td>
+<td><pre><code>adb shell logcat -d -b all "&#42;:V"</code><br><code>adb shell logcat -L -b all "&#42;:V"</code></pre></td>
+<td style="text-align: center;">Captura los logs actuales y previos al último reinicio.</td>
+</tr>
+<tr>
+<td><strong>dumpsys</strong></td>
+<td><code>adb shell dumpsys</code></td>
+<td style="text-align: center;">Muestra información de diagnóstico sobre todos los servicios activos.</td>
+</tr>
+<tr>
+<td><strong>bugreport</strong></td>
+<td><code>adb bugreport bugreport.zip</code></td>
+<td style="text-align: center;">Genera un reporte completo del sistema con configuraciones y logs.</td>
+</tr>
+<tr>
+<td><strong>logs</strong></td>
+<td><pre><code>adb shell "ls -R /data/anr/"</code><br><code>adb shell "ls -R /data/log/"</code><br><code>adb shell "ls -R /sdcard/log/"</code><br><code>adb pull /data/system/uiderrors.txt</code><br><code>adb pull /proc/kmsg</code><br><code>adb pull /proc/last_kmsg</code><br><code>adb pull /sys/fs/pstore/console-ramoops</code><br><code>adb pull /data/anr/</code><br><code>adb pull /data/log/</code><br><code>adb pull /sdcard/log/</code></pre></td>
+<td style="text-align: center;">Lista y descarga archivos de registro del sistema y errores.</td>
+</tr>
+<tr>
+<td><strong>Información respaldada</strong></td>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>backup only SMS</strong></td>
+<td><pre><code>adb backup</code><br><code>com.Android.providers.telephony</code></pre></td>
+<td style="text-align: center;">Crea copias de seguridad de SMS</td>
+</tr>
+<tr>
+<td><strong>backup all</strong></td>
+<td><code>adb backup -all</code></td>
+<td style="text-align: center;">Crea copias de seguridad del sistema completo.</td>
+</tr>
+<tr>
+<td><strong>files</strong></td>
+<td><pre><code>adb shell "find /sdcard/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /system/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /system_ext/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /vendor/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /cust/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /product/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /apex/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/local/tmp/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/media/0/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/misc/radio/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/vendor/secradio/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/log/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /tmp/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find / -maxdepth 1 -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/data/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code></pre></td>
+<td style="text-align: center;">Muestra archivos y metadatos del sistema.</td>
+</tr>
+<tr>
+<td><strong>tmp</strong></td>
+<td><pre><code>adb shell ls -R /data/local/tmp/</code><br><code>adb pull /data/local/tmp/ &lt;ruta-local&gt;</code></pre></td>
+<td style="text-align: center;">Lista y extrae archivos del directorio temporal del dispositivo.</td>
+</tr>
+<tr>
+<td><strong>Procesos y aplicaciones</strong></td>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>packages list</strong></td>
+<td><code>adb shell pm list packages -f</code></td>
+<td style="text-align: center;">Lista aplicaciones instaladas y permite extraer sus APKs.</td>
+</tr>
+<tr>
+<td><strong>packages download</strong></td>
+<td><code>adb pull &lt;ruta_apk&gt; &lt;ruta_local&gt;</code></td>
+<td style="text-align: center;">Extrae APKs.</td>
+</tr>
+<tr>
+<td><strong>processes</strong></td>
+<td><code>adb shell ps -A</code></td>
+<td style="text-align: center;">Lista los procesos en ejecución en el dispositivo.</td>
+</tr>
+<tr>
+<td><strong>services</strong></td>
+<td><code>adb shell service list</code></td>
+<td style="text-align: center;">Muestra los servicios activos</td>
+</tr>
+<tr>
+<td><strong>root_binaries</strong></td>
+<td><pre><code>adb shell "which -a su"</code><br><code>adb shell "which -a busybox"</code><br><code>adb shell "which -a supersu"</code><br><code>adb shell "which -a Superuser.apk"</code><br><code>adb shell "which -a KingoUser.apk"</code><br><code>adb shell "which -a SuperSu.apk"</code><br><code>adb shell "which -a magisk"</code><br><code>adb shell "which -a magiskhide"</code><br><code>adb shell "which -a magiskinit"</code><br><code>adb shell "which -a magiskpolicy"</code></pre></td>
+<td style="text-align: center;">Busca rastros de rooting o binarios con permisos elevados.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="verificacion-de-la-extraccion">Verificación de la extracción</h2>
 <p>Una vez finalizada la ejecución de AndroidQF, es importante validar que la adquisición se completó correctamente. Para ello, realiza los siguientes pasos:</p>
 <ol>
+<li>
+<p>Si recibiste una extracción cifrada, es necesario descifrar esta información primero, puedes consultar la sección sobre <a href="#cifrado-de-extracciones-opcional">cifrado de extracciones</a>.</p>
+</li>
 <li>
 <p>Revisar el archivo <em>command.log</em></p>
 <p>Abre el archivo <em>command.log</em> con un editor de texto y busca las palabras <em>WARNING</em> y <em>ERROR</em> para encontrar alertas durante la extracción. Si hay coincidencias en la búsqueda revisa si corresponden a fallos críticos o eventos no relevantes.</p>
@@ -2636,7 +2842,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mvt-p
 <li>Comprender por qué esta información es importante y cómo usarla en un análisis forense.  </li>
 <li>Entender el formato en el que se entrega la información y cómo visualizarla.</li>
 </ul>
-<p>El siguiente paso es realizar un análisis más profundo de la información adquirida. </p>
+<p>El siguiente paso es realizar un análisis más profundo de la información adquirida. Para ello, te recomendamos explorar nuestros materiales sobre la MVT, incluyendo el <a data-preview="" href="../../references/03-reference-mvt-androidqf-dictionary/index.html">diccionario de archivos generados por MVT al analizar capturas con AndroidQF</a>. </p>
 
 
 
