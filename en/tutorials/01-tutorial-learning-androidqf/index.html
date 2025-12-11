@@ -2057,7 +2057,7 @@
 
 
 <h1 id="tutorial-exploring-androidqf-for-forensic-acquisition-on-android-devices">Tutorial – Exploring AndroidQF for forensic acquisition on Android devices</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-22T00:00:00'>2025-10-22</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T21:44:41+00:00'>2025-12-11</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='José Martínez'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='Daniel Bedoya'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-22T00:00:00'>2025-10-22</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T22:12:55+00:00'>2025-12-11</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='José Martínez'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='Daniel Bedoya'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
 
 <p>This document is <strong>part of a technical documentation repository</strong> aimed at building a proven, flexible, and accessible knowledge base to <strong>promote consent-based digital forensics in support of civil society</strong>. To organize all contents we use the technical documentation framework <a data-preview="" href="../../references/00-glossary/index.html#diataxis">Diátaxis</a>.</p>
 <p>This resource falls within the <a href="https://diataxis.fr/tutorials/">tutorials</a> category and provides <strong>guided practical activities</strong> to become familiar with the forensic extraction tool <a href="https://github.com/mvt-project/androidqf">AndroidQF</a>.</p>
@@ -2416,13 +2416,16 @@ The output will create the file <em>my-key.txt</em>, which will contain the time
 <h3 id="running-androidqf">Running AndroidQF</h3>
 <p>When you are ready to execute the AndroidQF binary, <strong>turn on and unlock the mobile device</strong> that you have already connected to your computer.</p>
 <p>First, in case you use <a href="#encryption-of-extractions-optional">encryption</a>, make sure that the encryption key is located in the corresponding folder next to the AndoridQF binary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note on the example</p>
+<p>For this tutorial, the command that identifies the device by serial number and outputs a folder with date and identifier will be discussed. The detailed version will be omitted for readability.</p>
+</div>
 <p>In addition, no matter which operating system you use on your computer, it is first necessary to identify the parameters of the AndroidQF run command according to your analysis needs. For this example we use the following command:</p>
-<p><div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span>/ruta/de/salida/<span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>-complemento<span class="w"> </span><span class="c1"># (1)!</span>
+<div class="highlight"><pre><span></span><code>./androidqf<span class="w"> </span>-s<span class="w"> </span>numero-serial<span class="w"> </span>-o<span class="w"> </span>/ruta/de/salida/<span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>-complemento<span class="w"> </span><span class="c1"># (1)!</span>
 </code></pre></div>
-1. We use the <strong>-s</strong> parameter to specify the serial number and <strong>-o</strong> to indicate the output path. We also use the <strong>date</strong> command to automatically include the date in the folder name.</p>
-<p>!!! note "Note on the example".</p>
-<pre><code>For this tutorial, the command that identifies the device by serial number and outputs a folder with date and identifier will be discussed. The detailed version will be omitted for readability.
-</code></pre>
+<ol>
+<li>We use the <strong>-s</strong> parameter to specify the serial number and <strong>-o</strong> to indicate the output path. We also use the <strong>date</strong> command to automatically include the date in the folder name.</li>
+</ol>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Running on Linux/MacOS</label><label for="__tabbed_4_2">Running on Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2600,30 +2603,127 @@ The output will create the file <em>my-key.txt</em>, which will contain the time
 <p>During a forensic acquisition with AndroidQF, various modules are run that collect system information, processes, configurations, logs and device artifacts.</p>
 <p>Below is a <strong>cheatsheet</strong> with the equivalent <em>adb</em> commands that allow you to understand the actions that AndroidQF performs in the background via commands.</p>
 <p>This table serves as a quick reference to understand what information each module gets, how it could be manually verified and what is the base adb command that allows to observe equivalent data in a consensus forensic analysis, if you want to go deeper into the construction and structure of each module, you can refer to the <a data-preview="" href="../../references/01-reference-androidqf-dictionary/index.html">AndroidQF generated file dictionary</a>.</p>
-<p>| Module | adb command | Function | Function
-| ----- | ----- | :---: |
-| <strong>Device information and configuration</strong> | <strong>Device information and configuration
-| </strong>getprop<strong> | <code>adb shell getprop</code> | | Display system/device properties |
-| </strong>selinux<strong> | <code>adb shell getenforce</code> | Returns the status of SELinux |
-| </strong>settings<strong> | <pre><code> adb shell cmd settings list system</code><br><code>adb shell cmd settings list secure</code><br><code>adb shell cmd settings list global</code></pre> | Extracts system, network, security and accessibility settings. |
-| </strong>env<strong> | <code>adb shell env</code> | List active environment variables and system paths. |
-| </strong>mounts<strong> | <pre><code>adb shell "mount"</code><br><br><code>adb shell "cat /proc/mounts"</code></pre> | Displays active mount points and file system types. |
-| </strong>Device reports<strong> | </strong>Device reports
-| <strong>logcat</strong> | <pre><code>adb shell logcat -d -b all "&#42;:V"</code><br><br><code>adb shell logcat -L -b all "&#42;:V"</code></pre> | Captures the current and last reboot logs. |
-| <strong>dumpsys</strong> | <code>adb shell dumpsys</code> | Displays diagnostic information about all active services. |
-| <strong>bugreport</strong> | <code>adb bugreport bugreport.zip</code> | Generates a complete system report with configurations and logs. |
-| <strong>logs</strong> | <pre><code>adb shell "ls -R /data/anr/"</code><br><code>adb shell "ls -R /data/log/"</code><br><code>adb shell "ls -R /sdcard/log/"</code><br><code>adb pull /data/system/uiderrors.txt</code><br><br><code>adb pull /proc/kmsg</code><br><code><br><code>adb pull /proc/last_kmsg</code><br><code><br><code>adb pull /sys/fs/pstore/console-ramoops</code><br><code>adb pull /data/anr/</code><br><code>adb pull /data/log/</code><br><code>adb pull /sdcard/log/</code></code></pre> | List and download system log files and errors. |
-| <strong>Supported information</strong> | <strong>Supported information
-| </strong>backup only SMS<strong> | <pre><code>adb backup</code><br><br><code>com.Android.providers.telephony</code></code></pre> | Create SMS backup copies |
-| </strong>backup all<strong> | <code>adb backup -all</code> | Create backups of the entire system. |
-printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><br><code>adb shell "find /system_ext/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code><br><code>adb shell "find /vendor/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code><code>adb shell "find /cust/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code><code>adb shell "find /product/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><br><code>adb shell "find /apex/ -printf '%T@ %m %s %u %u %g %p\n' 2&gt;/dev/null"</code><br><code><br><code>adb shell "find /data/local/tmp/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code><br><code>adb shell "find /data/media/0/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code><br><code>adb shell "find /data/misc/radio/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><br><code>adb shell "find /data/vendor/secradio/ -printf '%T@ %m %s %u %u %g %p\n' 2&gt;/dev/null"</code><br><code><br><code>adb shell "find /data/log/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><br><code>adb shell "find /tmp/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code><br><code>adb shell "find / -maxdepth 1 -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><br><code>adb shell "find /data/data/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code></pre> | Displays system files and metadata. |
-| </strong>tmp<strong> | <pre><code>adb shell ls -R /data/local/tmp/</code><br><br><code>adb pull /data/local/tmp/ &lt;path-local&gt;</code></pre> | List and extract files from the device's temporary directory. |
-| </strong>Processes and applications<strong> | | |
-| </strong>packages list<strong> | <code>adb shell pm list packages -f</code> | Lists installed applications and allows to extract their APKs. |
-| </strong>packages download<strong> | <code>adb pull &lt;path_apk&gt; &lt;path_local&gt;</code> | Extract APKs. |
-| </strong>processes<strong> | <code>adb shell ps -A</code> | List the processes running on the device. |
-| </strong>services<strong> | <code>adb shell service list</code> | Displays active services |
-| </strong>root_binaries** | <pre><code>adb shell "which -a su"</code><br><code>adb shell "which -a busybox"</code><br><code><br><code>adb shell "which -a supersu"</code><br><code>adb shell "which -a Superuser.apk"</code><br><code>adb shell "which -a KingoUser.apk"</code><br><code>adb shell "which -a SuperSu.apk"</code><br><br><code>adb shell "which -a magisk"</code><br><code>adb shell "which -a magiskhide"</code><br><code><br><code>adb shell "which -a magiskinit"</code><br><code>adb shell "which -a magiskpolicy"</code></pre> | Look for traces of rooting or binaries with elevated permissions. |</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>adb command</th>
+<th style="text-align: center;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Device information and configuration</strong></td>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>getprop</strong></td>
+<td><code>adb shell getprop</code></td>
+<td style="text-align: center;">Display system/device properties</td>
+</tr>
+<tr>
+<td><strong>selinux</strong></td>
+<td><code>adb shell getenforce</code></td>
+<td style="text-align: center;">Returns the status of SELinux</td>
+</tr>
+<tr>
+<td><strong>settings</strong></td>
+<td><pre><code>adb shell cmd settings list system</code><br><code>adb shell cmd settings list secure</code><br><code>adb shell cmd settings list global</code></pre></td>
+<td style="text-align: center;">Extracts system, network, security and accessibility settings.</td>
+</tr>
+<tr>
+<td><strong>env</strong></td>
+<td><code>adb shell env</code></td>
+<td style="text-align: center;">List active environment variables and system paths.</td>
+</tr>
+<tr>
+<td><strong>mounts</strong></td>
+<td><pre><code>adb shell "mount"</code><br><code>adb shell "cat /proc/mounts"</code></pre></td>
+<td style="text-align: center;">Displays active mount points and file system types.</td>
+</tr>
+<tr>
+<td><strong>Device reports</strong></td>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>logcat</strong></td>
+<td><pre><code>adb shell logcat -d -b all "&#42;:V"</code><br><code>adb shell logcat -L -b all "&#42;:V"</code></pre></td>
+<td style="text-align: center;">Captures the current and last reboot logs.</td>
+</tr>
+<tr>
+<td><strong>dumpsys</strong></td>
+<td><code>adb shell dumpsys</code></td>
+<td style="text-align: center;">Displays diagnostic information about all active services.</td>
+</tr>
+<tr>
+<td><strong>bugreport</strong></td>
+<td><code>adb bugreport bugreport.zip</code></td>
+<td style="text-align: center;">Generates a complete system report with configurations and logs.</td>
+</tr>
+<tr>
+<td><strong>logs</strong></td>
+<td><pre><code>adb shell "ls -R /data/anr/"</code><br><code>adb shell "ls -R /data/log/"</code><br><code>adb shell "ls -R /sdcard/log/"</code><br><code>adb pull /data/system/uiderrors.txt</code><br><code>adb pull /proc/kmsg</code><br><code>adb pull /proc/last_kmsg</code><br><code>adb pull /sys/fs/pstore/console-ramoops</code><br><code>adb pull /data/anr/</code><br><code>adb pull /data/log/</code><br><code>adb pull /sdcard/log/</code></pre></td>
+<td style="text-align: center;">List and download system log files and errors.</td>
+</tr>
+<tr>
+<td><strong>Supported information</strong></td>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>backup only SMS</strong></td>
+<td><pre><code>adb backup</code><br><code>com.Android.providers.telephony</code></pre></td>
+<td style="text-align: center;">Create SMS backup copies</td>
+</tr>
+<tr>
+<td><strong>backup all</strong></td>
+<td><code>adb backup -all</code></td>
+<td style="text-align: center;">Create backups of the entire system.</td>
+</tr>
+<tr>
+<td><strong>files</strong></td>
+<td><pre><code>adb shell "find /sdcard/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /system/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /system_ext/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /vendor/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /cust/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /product/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /apex/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/local/tmp/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/media/0/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/misc/radio/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/vendor/secradio/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/log/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /tmp/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find / -maxdepth 1 -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code><br><code>adb shell "find /data/data/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"</code></pre></td>
+<td style="text-align: center;">Displays system files and metadata.</td>
+</tr>
+<tr>
+<td><strong>tmp</strong></td>
+<td><pre><code>adb shell ls -R /data/local/tmp/</code><br><code>adb pull /data/local/tmp/ &lt;path-local&gt;</code></pre></td>
+<td style="text-align: center;">List and extract files from the device's temporary directory.</td>
+</tr>
+<tr>
+<td><strong>Processes and applications</strong></td>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>packages list</strong></td>
+<td><code>adb shell pm list packages -f</code></td>
+<td style="text-align: center;">Lists installed applications and allows you to extract their APKs.</td>
+</tr>
+<tr>
+<td><strong>packages download</strong></td>
+<td><code>adb pull &lt;path_apk&gt; &lt;path_local&gt;</code></td>
+<td style="text-align: center;">Extract APKs.</td>
+</tr>
+<tr>
+<td><strong>processes</strong></td>
+<td><code>adb shell ps -A</code></td>
+<td style="text-align: center;">List the processes running on the device.</td>
+</tr>
+<tr>
+<td><strong>services</strong></td>
+<td><code>adb shell service list</code></td>
+<td style="text-align: center;">Displays active services</td>
+</tr>
+<tr>
+<td><strong>root_binaries</strong></td>
+<td><pre><code>adb shell "which -a su"</code><br><code>adb shell "which -a busybox"</code><br><code>adb shell "which -a supersu"</code><br><code>adb shell "which -a Superuser.apk"</code><br><code>adb shell "which -a KingoUser.apk"</code><br><code>adb shell "which -a SuperSu.apk"</code><br><code>adb shell "which -a magisk"</code><br><code>adb shell "which -a magiskhide"</code><br><code>adb shell "which -a magiskinit"</code><br><code>adb shell "which -a magiskpolicy"</code></pre></td>
+<td style="text-align: center;">Look for traces of rooting or binaries with elevated permissions.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="verifying-the-extraction">Verifying the extraction</h2>
 <p>Once the execution of AndroidQF has finished, it is important to validate that the acquisition was completed successfully. To do this, follow these steps:</p>
 <ol>

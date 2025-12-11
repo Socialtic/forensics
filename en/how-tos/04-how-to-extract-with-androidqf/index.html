@@ -1980,9 +1980,9 @@
 
 
 <h1 id="how-to-guide-how-to-perform-an-acquisition-and-extraction-using-androidqf">How-to guide: How to perform an acquisition and extraction using AndroidQF?</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-21T00:00:00'>2025-08-21</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T21:44:41+00:00'>2025-12-11</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">Daniel Bedoya</a>'><span class='avatar-text'></span><img class='avatar' src='../../../overrides/assets/img/avatars/dani-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-21T00:00:00'>2025-08-21</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T22:12:55+00:00'>2025-12-11</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">Daniel Bedoya</a>'><span class='avatar-text'></span><img class='avatar' src='../../../overrides/assets/img/avatars/dani-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
 
-<p>This document is part of a <strong>technical documentation repository</strong> that aims to establish a proven, flexible and accessible knowledge base to <strong>promote consensual forensic analysis for the benefit of civil society</strong>. To organize the contents, the [technical Diataxis] documentation reference framework(../.../references/00-glossary/index.md#ditaxis) is used.</p>
+<p>This document is part of a <strong>technical documentation repository</strong> that aims to establish a proven, flexible and accessible knowledge base to <strong>promote consensual forensic analysis for the benefit of civil society</strong>. To organize the contents, we use the technical documentation framework  <a href="../.../references/00-glossary/index.md#ditaxis">Diataxis</a>.</p>
 <p>This resource falls within the category <a href="../">how-to guides</a>, provides instructions on how to perform a forensic extraction using the <a data-preview="" href="../../references/00-glossary/index.html#androidqf">AndroidQF</a> tool.</p>
 <h2 id="what-is-androidqf">What is AndroidQF?</h2>
 <p><a href="https://github.com/mvt-project/androidqf">AndroidQF</a> is an open-source software tool useful to extract key information and <a data-preview="" href="../../references/00-glossary/index.html#forensic-artifact">artifacts</a> from an Android device. It is currently maintained by <a href="https://securitylab.amnesty.org/es/">Amnesty International’s Security Lab</a>.</p>
@@ -2013,9 +2013,10 @@
 </ul>
 <div class="highlight"><pre><span></span><code>$ age --decrypt -i ~/path/to/privatekey.txt -o &lt;UUID&gt;.zip &lt;UUID&gt;.zip.age
 </code></pre></div>
-<p>!!! note "Check the key pair".</p>
-<pre><code>Make sure that the private key is the public key pair.## Steps to perform a forensic extraction with AndroidQF
-</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Check the key pair</p>
+<p>Make sure that the private key is the public key pair.## Steps to perform a forensic extraction with AndroidQF</p>
+</div>
 <h3 id="download-the-androidqf-binary"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Download the AndroidQF binary</h3>
 <p>Below are the detailed steps to perform the forensic extraction:</p>
 <ul>
