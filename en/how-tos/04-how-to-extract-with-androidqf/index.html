@@ -122,7 +122,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-perform-an-extraction-with-androidqf" class="md-skip">
+        <a href="#how-to-guide-how-to-perform-an-acquisition-and-extraction-using-androidqf" class="md-skip">
           Skip to content
         </a>
       
@@ -1235,31 +1235,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-do-i-need-to-perform-an-extraction-with-androidqf" class="md-nav__link">
+  <a href="#prerequisites-to-perform-a-forensic-extraction-with-androidqf" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          What do I need to perform an extraction with AndroidQF?
+          Prerequisites to perform a forensic extraction with AndroidQF
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites to perform a forensic extraction with AndroidQF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encryption-of-extractions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Encryption of extractions
         </span>
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#steps-to-perform-a-forensic-extraction-with-androidqf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Steps to perform a forensic extraction with AndroidQF
-        </span>
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps to perform a forensic extraction with AndroidQF">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#download-the-androidqf-binary" class="md-nav__link">
@@ -1979,9 +1979,10 @@
   
 
 
-<h1 id="how-to-perform-an-extraction-with-androidqf">How to perform an extraction with AndroidQF?</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-21T00:00:00'>2025-08-21</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T23:53:07+00:00'>2025-12-09</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">Daniel Bedoya</a>'><span class='avatar-text'></span><img class='avatar' src='../../../overrides/assets/img/avatars/dani-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
+<h1 id="how-to-guide-how-to-perform-an-acquisition-and-extraction-using-androidqf">How-to guide: How to perform an acquisition and extraction using AndroidQF?</h1>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-08-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-21T00:00:00'>2025-08-21</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T20:53:21+00:00'>2025-12-11</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' src='../../../overrides/assets/img/avatars/jose-avatar.png' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">Daniel Bedoya</a>'><span class='avatar-text'></span><img class='avatar' src='../../../overrides/assets/img/avatars/dani-avatar.png' onerror="this.style.display='none'" /></div></div></div></div>
 
+<p>This document is part of a <strong>technical documentation repository</strong> that aims to establish a proven, flexible and accessible knowledge base to <strong>promote consensual forensic analysis for the benefit of civil society</strong>. To organize the contents, the [technical Diataxis] documentation reference framework(../.../references/00-glossary/index.md#ditaxis) is used.</p>
 <p>This resource falls within the category <a href="../">how-to guides</a>, provides instructions on how to perform a forensic extraction using the <a data-preview="" href="../../references/00-glossary/index.html#androidqf">AndroidQF</a> tool.</p>
 <h2 id="what-is-androidqf">What is AndroidQF?</h2>
 <p><a href="https://github.com/mvt-project/androidqf">AndroidQF</a> is an open-source software tool useful to extract key information and <a data-preview="" href="../../references/00-glossary/index.html#forensic-artifact">artifacts</a> from an Android device. It is currently maintained by <a href="https://securitylab.amnesty.org/es/">Amnesty International’s Security Lab</a>.</p>
@@ -1989,16 +1990,34 @@
 <p>AndroidQF acts as a forensic <a href="https://developer.mozilla.org/en-US/docs/Glossary/Wrapper">wrapper</a> around <a data-preview="" href="../../references/00-glossary/index.html#adb">ADB</a>, automating common commands through modules that <strong>enable quick, safe, and local extractions from any operating system</strong> (Linux, Windows, or macOS), without relying on cloud services or complex installations.</p>
 <p>Its utility for civil society contexts lies in its <strong><a data-preview="" href="../../references/00-glossary/index.html#portable-tool">portability</a>, ease of use, and local execution</strong>.</p>
 <p>This guide is complemented by other materials, such as the <a data-preview="" href="../../references/01-reference-androidqf-dictionary/">dictionary of files generated by AndroidQF</a> or the <a href="../../explainers/03-explainer-log-forensics-android/">explainer on log-based forensics for Android devices</a>.</p>
-<h2 id="what-do-i-need-to-perform-an-extraction-with-androidqf">What do I need to perform an extraction with AndroidQF?</h2>
+<h2 id="prerequisites-to-perform-a-forensic-extraction-with-androidqf">Prerequisites to perform a forensic extraction with AndroidQF</h2>
 <p>To perform a forensic extraction with AndroidQF, <strong>you will need</strong>:</p>
 <ul>
 <li>The <strong>Android device to be analyzed</strong>: Enable Developer Mode and USB Debugging. If needed, consult our guides on <a data-preview="" href="../../references/00-glossary/index.html#developer-mode">enabling Developer Options</a> or on how to <a data-preview="" href="../../references/00-glossary/index.html#adb">enable ADB</a>.</li>
 <li><strong>A computer (Windows, Linux, or macOS):</strong> This will be used for the extraction. You must know the chip <a href="https://www.getorchestra.io/guides/determine-your-systems-architecture-x86-64-or-arm64">architecture of your system</a>.</li>
 <li>A <strong>data transfer cable</strong> (phone-to-computer).</li>
 </ul>
-<h2 id="steps-to-perform-a-forensic-extraction-with-androidqf">Steps to perform a forensic extraction with AndroidQF</h2>
-<p>Below are the detailed steps to perform the forensic extraction:</p>
+<h3 id="encryption-of-extractions">Encryption of extractions</h3>
+<p>This procedure allows you to enable automatic encryption of extractions generated by AndroidQF using an <em>AGE</em> public key. It is recommended when the extraction is done remotely, so you have to send or share information through virtual media, so there is a risk of exposure or you follow some privacy policy.</p>
+<p>To do so, follow the steps below:</p>
+<ul>
+<li>If you are the one who decrypts information, you must create a public key and a private key following the <a href="https://github.com/FiloSottile/age">official documentation</a>.</li>
+<li>If you are encrypting the information for someone else to decrypt, ask the person for their public key <a href="https://github.com/FiloSottile/age">AGE</a>.</li>
+<li>In the same directory where the AndroidQF binary is located, create a file named: <em>key.txt</em>.</li>
+<li>Open <em>key.txt</em>, paste the complete public key in a single line and save the changes.</li>
+</ul>
+<p>To decrypt the <em>.zip</em>, all you have to do is the following:</p>
+<ul>
+<li>Create a <em>.txt</em> file called <strong>private.key</strong> in the directory where the andoridqf binary is located and open it and paste the private key which starts with: <em>AGE-SECRET-KEY-...</em>.</li>
+<li>Execute the following command in order to decrypt information:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ age --decrypt -i ~/path/to/privatekey.txt -o &lt;UUID&gt;.zip &lt;UUID&gt;.zip.age
+</code></pre></div>
+<p>!!! note "Check the key pair".</p>
+<pre><code>Make sure that the private key is the public key pair.## Steps to perform a forensic extraction with AndroidQF
+</code></pre>
 <h3 id="download-the-androidqf-binary"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Download the AndroidQF binary</h3>
+<p>Below are the detailed steps to perform the forensic extraction:</p>
 <ul>
 <li>
 <p><strong>Download</strong> the most recent version of the <a href="">binary</a> corresponding to the architecture of your computer. Binaries are available from the releases page of the repository:<a href="https://github.com/mvt-project/androidqf/releases/">https://github.com/mvt-project/androidqf/releases/</a> </p>
@@ -2014,7 +2033,7 @@
 <h3 id="assign-execution-permissions-to-the-binary-linux-and-macos-only"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Assign execution permissions to the binary (Linux and macOS only)</h3>
 <ul>
 <li>
-<p>f you are using Linux or macOS, you must <strong>assign execution permissions to the binary</strong> before running it. Open a <strong>terminal</strong>, navigate to the folder containing the binary, and execute:</p>
+<p>If you are using Linux or macOS, you must <strong>assign execution permissions to the binary</strong> before running it. Open a <strong>terminal</strong>, navigate to the folder containing the binary, and execute:</p>
 <div class="admonition warning">
 <p class="admonition-title">Complete the file name</p>
 <p>The commands below are missing the exact version. <strong>Make sure you use the full name of the binary when completing the commands</strong>. It will look something like this:</p>
@@ -2055,6 +2074,9 @@
 <p><strong>Image 1</strong>. Screen capture of an Android Samsung device asking for data access permission</p>
 </figcaption>
 </figure>
+</li>
+<li>
+<p><strong>Verify</strong> that the key.txt file is in the same folder as the andoridqf binary if you want to encrypt the extraction.</p>
 </li>
 </ul>
 <h3 id="run-androidqf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> Run AndroidQF</h3>
@@ -2207,6 +2229,7 @@
 <h3 id="verify-the-extraction"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9h-4v2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-8 12h2v-2h-2z"/></svg></span> Verify the extraction</h3>
 <p>Once complete,  it is important to <strong>verify that the acquisition was completed successfully</strong>:</p>
 <ul>
+<li>If you have received an encrypted extraction, it is necessary to decrypt this information first, you can refer to the section on <a href="#encryption-of-an-extraction">extraction encryption</a>.</li>
 <li>Open the file <code>command.log</code> and search for warning or error messages. If you find matches, verify the errors and warning messages and ssess whether they are critical failures. </li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux / MacOS</label><label for="__tabbed_2_2">Windows</label></div>
