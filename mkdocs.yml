@@ -34,6 +34,7 @@ nav:
     - Diccionario AndroidQF: 'references/01-reference-androidqf-dictionary/index.md'
     - Diccionario MVT bugreport: 'references/02-reference-mvt-bugreport-dictionary/index.md'
     - Diccionario MVT androidqf: 'references/03-reference-mvt-androidqf-dictionary/index.md'
+    - Cheat sheet forense en Android: 'references/04-reference-cheat-sheet-android/index.md'
   - Comunidad:
     - Comunidad de práctica: 'community/index.md'
     - ¿Por qué contribuir con este repositorio?: 'community/why-support/index.md'
@@ -158,6 +159,7 @@ plugins:
               - AndroidQF output file dictionary: 'references/01-reference-androidqf-dictionary/index.md'
               - MVT bugreport output file dictionary: 'references/02-reference-mvt-bugreport-dictionary/index.md'
               - MVT androdiqf output file dictionary: 'references/03-reference-mvt-androidqf-dictionary/index.md'
+              - Android Forensics Cheat Sheet: 'references/04-reference-cheat-sheet-android/index.md'
             - Community:
               - Consensual forensics community: 'community/index.md'
               - Supporting this effort: 'community/why-support/index.md'

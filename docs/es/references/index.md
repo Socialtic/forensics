@@ -48,6 +48,15 @@ Un ejemplo de una referencia sería un mapa. Es un recurso claro, neutral y prec
 
     [:octicons-arrow-right-24: Diccionario de archivos generados por la herramienta mvt-android check-androidqf ](02-reference-mvt-bugreport-dictionary/)
 
+-   :fontawesome-solid-sheet-plastic:{ .lg .middle }      __Hoja resumende forense en Android__
+
+    ---
+
+    Contiene una hoja resumen sobre las **fases de una investigación forense consentida en un dispositivo Android, incluyendo comandos útiles, enlaces y consideraciones específicas en cada una de las fases.** 
+
+    [:octicons-arrow-right-24: Android Forensics Cheat Sheet](04-reference-cheat-sheet-android/)
+
+
 
 
 

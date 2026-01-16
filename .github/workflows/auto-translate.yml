@@ -35,7 +35,7 @@ jobs:
 
       - name: Run translation script
         env:
-          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY_02 }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: |
           # run the script - will write translated files to disk
           python scripts/translate.py
