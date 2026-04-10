@@ -13,7 +13,7 @@ author:
     description: SocialTIC
 alternate: 
     en: en/references/00-glossary.html
-
+auto-translate: true
 ---
 
 
