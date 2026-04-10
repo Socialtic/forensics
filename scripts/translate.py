@@ -57,7 +57,7 @@ import threading, sys
 
 # Keys and variables. Remove language if you do not want to automatically translate
 DEEPL_API_KEY = os.getenv("DEEPL_API_KEY")
-ALL_LANGS = ["en", "es", "pt"]
+ALL_LANGS = ["es", "pt"]
 ROOT_DIR = Path("docs")
 MAX_CHARS_PER_RUN = 200_000       # hard safety cap ~40-80 pages to translate per run max
 MAX_CHARS_PER_REQUEST = 5_000     # soft cap for tanslation per request
