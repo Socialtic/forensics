@@ -198,7 +198,7 @@ plugins:
               - ¿Cómo realizar una extracción mediante AndroidQF?: 'how-tos/04-how-to-extract-with-androidqf/index.md'
             - Referencias:
               - Home: 'references/index.md'
-              - Glosario: 'references/00-glossary.md'
+              - Glosario: 'references/00-glossary/index.md'
               - Dicionário de arquivos gerados pela ferramenta androidqf: 'references/01-reference-androidqf-dictionary/index.md'
               - Diccionario de archivos generados por mvt bugreport: 'references/02-reference-mvt-bugreport-dictionary/index.md'
               - Diccionario de archivos generados por mvt androidqf: 'references/03-reference-mvt-androidqf-dictionary/index.md'
