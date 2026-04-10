@@ -9,7 +9,7 @@ some_url:
 created: 2025-08-01
 comments: true
 name: jose
-auto-translate: true
+auto-translate: false
 ---
 
 # Guia: ¿Cómo realizar una adquisición y extracción mediante AndroidQF?
