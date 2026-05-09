@@ -1,25 +1,25 @@
 ---
 
-title: Página de inicio forensics ES
+title: Página de inicio forensics PT-BR
 summary: Página de inicio 
 keywords: homepage, home, inicio
 author: Daniel Bedoya Arroyo
 lang: es
 tags: [indice, home]
-last_updated: 2025-07-21
+last_updated: 2026-05-09
 some_url:
 icon: material/home
 hide:
     - footer
-translation-review-pending: true
+translation-review-pending: false
 ---
 
-# Repositório de documentação forense digital consensual para a defesa dos direitos humanos
+# Repositório de documentação forense digital consentida para a defesa dos direitos humanos
 
 
-Este é um repositório de **documentação técnica** que visa estabelecer uma base de conhecimento comprovada, flexível e acessível para **promover a perícia digital consensual em benefício da sociedade civil**. Seu desenvolvimento é liderado pela organização da sociedade civil [SocialTIC] (https://socialtic.org).
+Este é um repositório de **documentação técnica** que visa estabelecer uma base de conhecimento comprovada, flexível e acessível para **promover a perícia digital consentida em benefício da sociedade civil**. Seu desenvolvimento é liderado pela organização da sociedade civil [SocialTIC] (https://socialtic.org).
 
-**A análise forense digital permite a descoberta e o exame de dados de dispositivos e mídias eletrônicas com o objetivo de identificar, recuperar, documentar e interpretar informações digitais e sua conexão com ataques digitais. Este repositório descreve procedimentos padrão, aderindo às práticas recomendadas e concentrando-se em cenários em que existe **consentimento informado**. A intenção é que, por meio dessas investigações, sejam **geradas** evidências forenses de ataques digitais** para impulsionar ações de **responsabilidade**.
+**A análise forense digital permite a descoberta e a avaliação de dados de dispositivos e mídias digitais com o objetivo de identificar, recuperar, documentar e interpretar informações digitais e sua conexão com ataques digitais. Este repositório descreve procedimentos padrão, aderindo às práticas recomendadas e concentrando-se em cenários onde existe **consentimento informado**. A intenção é que, por meio dessas investigações, sejam **geradas** evidências forenses de ataques cibernéticos** para impulsionar ações de **responsabilização**.
 
 <div class="grid cards" markdown>
 
@@ -48,11 +48,11 @@ Para organizar o conteúdo, é utilizada a estrutura de documentação técnica 
 
     [:octicons-arrow-right-24: Índice de explicadores](explicadores/)
 
-- :material-wrench-cog:{ .lg .middle } __Guias de como fazer__
+- :material-wrench-cog:{ .lg .middle } __Guias 'how-to'__
 
     ---
 
-    Receitas para **executar tarefas** por meio de instruções passo a passo.
+    Guias para **executar tarefas** por meio de instruções passo a passo.
 
     [:octicons-arrow-right-24: Índice de guias de instruções](how-tos/)
 
