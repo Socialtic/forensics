@@ -17,13 +17,13 @@ translation-review-pending: false
 # Repositório de documentação forense digital consentida para a defesa dos direitos humanos
 
 
-Este é um repositório de **documentação técnica** que visa estabelecer uma base de conhecimento comprovada, flexível e acessível para **promover a perícia digital consentida em benefício da sociedade civil**. Seu desenvolvimento é liderado pela organização da sociedade civil [SocialTIC] (https://socialtic.org).
+Este é um repositório de **documentação técnica** que visa estabelecer uma base de conhecimento comprovada, flexível e acessível para **promover a perícia digital consentida em benefício da sociedade civil**. Seu desenvolvimento é liderado pela organização da sociedade civil [SocialTIC](https://socialtic.org).
 
-**A análise forense digital permite a descoberta e a avaliação de dados de dispositivos e mídias digitais com o objetivo de identificar, recuperar, documentar e interpretar informações digitais e sua conexão com ataques digitais. Este repositório descreve procedimentos padrão, aderindo às práticas recomendadas e concentrando-se em cenários onde existe **consentimento informado**. A intenção é que, por meio dessas investigações, sejam **geradas** evidências forenses de ataques cibernéticos** para impulsionar ações de **responsabilização**.
+A análise forense digital permite a descoberta e a avaliação de dados de dispositivos e mídias digitais com o objetivo de identificar, recuperar, documentar e interpretar informações digitais e sua conexão com ataques digitais. Este repositório descreve procedimentos padrão, aderindo às práticas recomendadas e concentrando-se em cenários onde existe **consentimento informado**. A intenção é que, por meio dessas investigações, sejam **geradas** evidências forenses de ataques cibernéticos** para impulsionar ações de **responsabilização**.
 
 <div class="grid cards" markdown>
 
-- :material-robot-confused:{ .lg .middle } __Não sabe por onde começar?
+- :material-robot-confused:{ .lg .middle } Não sabe por onde começar?
 
     ---
 
@@ -36,7 +36,7 @@ Este é um repositório de **documentação técnica** que visa estabelecer uma 
 
 ## Conteúdo publicado
 
-Para organizar o conteúdo, é utilizada a estrutura de documentação técnica [Diátaxis] (https://diataxis.fr). Seguindo essa metodologia, organizamos o conteúdo deste repositório nas seguintes categorias:
+Para organizar o conteúdo, é utilizada a estrutura de documentação técnica [Diátaxis](https://diataxis.fr). Seguindo essa metodologia, organizamos o conteúdo deste repositório nas seguintes categorias:
 
 <div class="grid cards" markdown>
 
