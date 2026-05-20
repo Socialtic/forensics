@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: 3.x
 
-      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install mkdocs-material
       - run: pip install mkdocs-document-dates
       - run: pip install mkdocs-static-i18n
       - run: pip install mkdocs-redirects
