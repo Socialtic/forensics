@@ -20,12 +20,12 @@ author:
 !!! warning "" 
     This document has been translated by a non-native English speaker. We appreciate any contribution from advanced or native speakers to review and improve the language. You can [contribute directly through the associated repository](https://github.com/Socialtic/forensics/issues) or get in touch with us at [seguridad@socialtic.org](mailto:seguridad@socialtic.org). Thanks!
 
-This document is part of a **technical documentation repository** whose main objective is to establish a baseline of proven, flexible and accessible knowledge to **boost consented forensic analysis in support of civil society across the globe**. To organize the contents, we use the [technical documentation framework Diátaxis](../../references/00-glossary/index.md##diataxis). 
+This document is part of a **technical documentation repository** whose main objective is to establish a baseline of proven, flexible and accessible knowledge to **boost consented forensic analysis in support of civil society across the globe**. To organize the contents, we use the [technical documentation framework Diátaxis](../../references/00-glossary/index.md#diataxis). 
 
 This resource fits within the [how-to guides](https://diataxis.fr/how-to-guides/) category. It **describes what is informed consent and why it is important** in the context of forensic investigations. It also includes a template that can be used by point of contacts, analysts and forensic labs to obtain and record consent during a forensic investigation. 
 
 !!! abstract "Consideración Legal"
-    This document **does not detail and is not sufficient to establish and maintain [chain of custody](../../references/00-glossary/index.md##chain-of-custody).** These important procedures will be described in a separate piece of documentation in the future. 
+    This document **does not detail and is not sufficient to establish and maintain [chain of custody](../../references/00-glossary/index.md#chain-of-custody).** These important procedures will be described in a separate piece of documentation in the future. 
 
 We appreciate references and reviews by the community of practice to support the development of this document. 
 
