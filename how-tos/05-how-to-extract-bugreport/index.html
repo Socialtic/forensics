@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/img/ST_logo-01-bn.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,11 +71,11 @@
     
       <link rel="stylesheet" href="../../assets/document_dates/tippy/backdrop.css">
     
-      <link rel="stylesheet" href="../../assets/document_dates/tippy/tippy.css">
-    
       <link rel="stylesheet" href="../../assets/document_dates/tippy/scale.css">
     
       <link rel="stylesheet" href="../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/tippy.css">
     
       <link rel="stylesheet" href="../../assets/document_dates/core/core.css">
     
@@ -2076,7 +2076,7 @@
 
 
 <h1 id="guia-como-extraer-un-reporte-de-errores-de-un-dispositivo-android">Guía: ¿Cómo extraer un reporte de errores de un dispositivo Android?</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-08-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-18T00:00:00+00:00'>2025-08-18</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-06-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-06-11T21:56:19+00:00'>2026-06-11</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='daniel.bedoya@socialtic.org' /></div></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-08-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-18T00:00:00+00:00'>2025-08-18</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-08-12'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-08-12T18:56:00+00:00'>2026-08-12</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:bedoyadaniel@gmail.com">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='bedoyadaniel@gmail.com' /></div></div></div></div></div>
 
 <p>Este documento forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el marco de referencia de documentación técnica <a data-preview="" href="../../references/00-glossary/index.html#diataxis">Diataxis</a>.</p>
 <p>Este recurso en particular se enmarca dentro de la categoría de <strong>guías how-to</strong>, y muestra los pasos necesarios para <strong>generar un reporte de errores o <em>bugreport</em></strong><em>,</em> tanto utilizando la <strong>consola de depuración ADB</strong> como a través de la <strong>interfaz gráfica</strong> de un dispositivo.  Este es un <strong>material introductorio</strong>, complementario a otros recursos, como el explainer de forense basada en logs para dispositivos Android y la guía para habilitar ADB; y <strong>forma parte de los pasos a seguir para realizar un triaje inicial</strong>.   </p>
@@ -2095,7 +2095,7 @@
 <div class="tabbed-block">
 <p>Para extraer un bugreport a través de la consola de ADB es necesario: </p>
 <ul>
-<li><strong>El dispositivo Android a ser analizado</strong>: Activar el <a data-preview="" href="../../references/00-glossary/index.html#modo-de-desarrollador">modo desarrollador</a> y <a href="../../references/00-glossary.md#adb">activar la depuración por USB</a>. De ser necesario, consulta nuestras guías sobre habilitar opciones de desarrollador o la guía sobre cómo habilitar ADB   </li>
+<li><strong>El dispositivo Android a ser analizado</strong>: Activar el <a data-preview="" href="../../references/00-glossary/index.html#modo-de-desarrollador">modo desarrollador</a> y <a data-preview="" href="../../references/00-glossary/index.html#adb">activar la depuración por USB</a>. De ser necesario, consulta nuestras guías sobre habilitar opciones de desarrollador o la guía sobre cómo habilitar ADB   </li>
 <li><strong>Computadora Windows, Linux o Mac:</strong> Se utilizará para realizar la extracción.  </li>
 <li>Tener un <strong>cable para transferencia de archivos</strong> telefono-computadora.</li>
 </ul>
@@ -2519,7 +2519,7 @@ dumpstate-stats.txt
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant.prefetch", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.footer", "content.action.view", "content.action.edit", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../assets/document_dates/tippy/popper.min.js"></script>
       

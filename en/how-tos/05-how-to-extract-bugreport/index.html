@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../../assets/img/ST_logo-01-bn.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,11 +71,11 @@
     
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
     
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
-    
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
     
@@ -87,11 +87,11 @@
     
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
     
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
-    
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
     
@@ -2092,7 +2092,7 @@
 
 
 <h1 id="how-to-extract-a-bugreport-from-an-android-device">How to extract a bugreport from an Android device?</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-08-27'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-27T00:00:00+00:00'>2025-08-27</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-06-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-06-11T21:56:19+00:00'>2026-06-11</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='daniel.bedoya@socialtic.org' /></div></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-08-27'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-27T00:00:00+00:00'>2025-08-27</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-08-12'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-08-12T18:56:00+00:00'>2026-08-12</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:bedoyadaniel@gmail.com">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='bedoyadaniel@gmail.com' /></div></div></div></div></div>
 
 <p>This resource falls under the <strong><a href="../">how-to guides</a></strong> and details the steps required to generate a bugreport, both using the ADB debugging console and through the device’s graphical user interface (GUI). It is an introductory material, complementary to other resources such as the <a href="../../explainers/03-explainer-log-forensics-android/">explainer on log-based forensics for Android devices</a> and the guide on <a href="../../how-tos/03-how-to-enable-adb/">how to enable ADB</a>.</p>
 <p><strong>We appreciate the collaboration of <a href="https://rsf.org/en/digital-security-lab">RSF Security Lab</a></strong>, who provided us with a set of guides and screenshots that enabled the development of this resource. </p>
@@ -2121,7 +2121,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Do you need to generate bugreports on several devices? Try ADB</p>
 <p>Extracting a bugreport using ADB might be quicker and more efficient if you need to extract information from more than one device.  </p>
-<p><a href="#generate-a-bugreport-using-adb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Take me to the ADB instructions</a></p>
+<p><a href="#steps-to-generate-a-bugreport-via-the-adb-console"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Take me to the ADB instructions</a></p>
 </div>
 <p>Because of how the Android operating system is developed and the additional customization layers added by each manufacturer, the <strong>exact instructions to generate a bugreport vary slightly across manufacturers</strong>. Below we present instructions for a few common models and customization layers. </p>
 <div class="admonition question">
@@ -2532,7 +2532,7 @@ dumpstate-stats.txt
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant.prefetch", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.footer", "content.action.view", "content.action.edit", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../assets/document_dates/tippy/popper.min.js"></script>
       
