@@ -27,7 +27,7 @@ This resource falls under the **[how-to guides](../)** category and shows the st
 
 [Developer options](https://developer.android.com/studio/debug/dev-options) refer to a hidden menu in the Android operating system that **grants access to additional functions**, primarily intended to support [debugging](https://en.wikipedia.org/wiki/Debugging) during the development of new applications. Embeded in the developer options, there are also advanced settings such as preferences of graphics drivers, network configurations and even experimental features being tested or developed. 
 
-From a digital forensics perspective, particularly when conducting [log-based investigations](../../explainers/03-explainer-log-forensics-android/) using tools such as [MVT](../../references/00-glossary/index.md##mvt) and [AndroidQF](../../references/00-glossary/index.md##androidqf), developer options allow us to **enable key functions like USB debugging, the ADB console, or the generation of bug reports**. For this reason, **enabling the developer options menu is often the first step** in the acquisition process.
+From a digital forensics perspective, particularly when conducting [log-based investigations](../../explainers/03-explainer-log-forensics-android/) using tools such as [MVT](../../references/00-glossary/index.md#mvt) and [AndroidQF](../../references/00-glossary/index.md#androidqf), developer options allow us to **enable key functions like USB debugging, the ADB console, or the generation of bug reports**. For this reason, **enabling the developer options menu is often the first step** in the acquisition process.
 
 
 ## Why are there different ways to enable them?
