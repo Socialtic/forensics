@@ -46,7 +46,7 @@ A continuación se muestran los requisitos para extraer un bugreport a través d
 
     Para extraer un bugreport a través de la consola de ADB es necesario: 
 
-    * **El dispositivo Android a ser analizado**: Activar el [modo desarrollador](../../references/00-glossary/index.md#modo-de-desarrollador) y [activar la depuración por USB](../../references/00-glossary.md#adb). De ser necesario, consulta nuestras guías sobre habilitar opciones de desarrollador o la guía sobre cómo habilitar ADB   
+    * **El dispositivo Android a ser analizado**: Activar el [modo desarrollador](../../references/00-glossary/index.md#modo-de-desarrollador) y [activar la depuración por USB](../../references/00-glossary/index.md#adb). De ser necesario, consulta nuestras guías sobre habilitar opciones de desarrollador o la guía sobre cómo habilitar ADB   
     * **Computadora Windows, Linux o Mac:** Se utilizará para realizar la extracción.  
     * Tener un **cable para transferencia de archivos** telefono-computadora.
 

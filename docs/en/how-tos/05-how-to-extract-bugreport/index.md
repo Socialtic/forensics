@@ -57,7 +57,7 @@ On most Android devices, it is possible to **generate a bugreport without instal
 
     Extracting a bugreport using ADB might be quicker and more efficient if you need to extract information from more than one device.  
 
-    [:octicons-arrow-right-24: Take me to the ADB instructions](#generate-a-bugreport-using-adb)
+    [:octicons-arrow-right-24: Take me to the ADB instructions](#steps-to-generate-a-bugreport-via-the-adb-console)
 
 
 Because of how the Android operating system is developed and the additional customization layers added by each manufacturer, the **exact instructions to generate a bugreport vary slightly across manufacturers**. Below we present instructions for a few common models and customization layers. 

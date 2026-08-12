@@ -340,7 +340,7 @@ Una vez finalizada la ejecución de AndroidQF, es importante **validar que la ad
 
 AndroidQF permite realizar adquirir y extraer evidencia forense de dispositivos Android. Es una **herramienta ampliamente utilizada por laboratorios de la sociedad civil**, debido a su practicidad, simplicidad y portabilidad. En esta guía detallamos el paso a paso a seguir para realizar extracciones utilizando Windows, MacOS o Linux. 
 
-La extracción de potencial evidencia es una de las **[primeras etapas a seguir dentro de una investigación forense](../../explainers/01-explainer-introduction-digital-forensics/index.md#cuáles-son-las-etapas-de-una-investigación-forense)**, y es clave para poder iniciar un triaje. A partir de esta información extraída, se puede iniciar una etapa de análisis, ya sea de forma manual ([pudes consultar el diccionario de archivos aquí](../../references/01-reference-androidqf-dictionary/) o utilizando una herramienta como [MVT](https://docs.mvt.re/en/latest/). 
+La extracción de potencial evidencia es una de las **[primeras etapas a seguir dentro de una investigación forense](../../explainers/01-explainer-introduction-digital-forensics/index.md#cuáles-son-las-etapas-de-una-investigación-forense)**, y es clave para poder iniciar un triaje. A partir de esta información extraída, se puede iniciar una etapa de análisis, ya sea de forma manual ([pudes consultar el diccionario de archivos aquí](../../references/01-reference-androidqf-dictionary/index.md) o utilizando una herramienta como [MVT](https://docs.mvt.re/en/latest/). 
 
 Si deseas contribuir con el desarrollo, la traducción o difusión de este recurso u otros recursos, **revisa nuestra [sección de comunidad](../../community/)** donde encontrarás más información al respecto.
 

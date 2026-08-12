@@ -119,7 +119,7 @@ Below are the detailed steps to perform the forensic extraction:
 
         If no prompt appears asking for permissions, **try the following**: 
 
-        * Verify that [USB Debugging is enabled](../03-how-to-enable-adb/03-how-to-enable-adb.md).
+        * Verify that [USB Debugging is enabled](../03-how-to-enable-adb/index.md).
         * Check **USB configuration settings **and confirm that **File Transfer mode **is selected.
         * Try with a **different cable**. Ensure the cable supports data transfer.
 
@@ -274,7 +274,7 @@ The following steps will be **applied equally** on Linux, Windows, or macOS. Onc
 Once complete,  it is important to **verify that the acquisition was completed successfully**:
 
 
-* If you have received an encrypted extraction, it is necessary to decrypt this information first, you can refer to the section on [extraction encryption](#encryption-of-an-extraction).
+* If you have received an encrypted extraction, it is necessary to decrypt this information first, you can refer to the section on [extraction encryption](#encryption-of-extractions).
 * Open the file ```command.log``` and search for warning or error messages. If you find matches, verify the errors and warning messages and assess whether they are critical failures. 
 
 
