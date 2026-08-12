@@ -15,7 +15,7 @@ authors:
 
 # How-to guide: How to perform an acquisition and extraction using AndroidQF?
 
-This document is part of a **technical documentation repository** that aims to establish a proven, flexible and accessible knowledge base to **promote consensual forensic analysis for the benefit of civil society**. To organize the contents, we use the technical documentation framework  [Diataxis](../.../references/00-glossary/index.md#ditaxis).
+This document is part of a **technical documentation repository** that aims to establish a proven, flexible and accessible knowledge base to **promote consensual forensic analysis for the benefit of civil society**. To organize the contents, we use the technical documentation framework  [Diataxis](../.../references/00-glossary/index.md#diataxis).
 
 This resource falls within the category [how-to guides](../), provides instructions on how to perform a forensic extraction using the [AndroidQF](../../references/00-glossary/index.md#androidqf) tool.
 
