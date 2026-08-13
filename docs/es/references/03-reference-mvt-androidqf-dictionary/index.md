@@ -64,7 +64,7 @@ En el material de referencia complementario [sobre archivos generados por la her
     - [dumpsys_packages.json](../02-reference-mvt-bugreport-dictionary/index.md#packages.json)
     - [dumpsys_activities.json](../02-reference-mvt-bugreport-dictionary/index.md#activities.json)
     - [dumpsys_appops.json](../02-reference-mvt-bugreport-dictionary/index.md#appops.json)
-    - [dumpsys_accessibility.json](../02-reference-mvt-bugreport-dictionary/index.md#accesibility.json)
+    - [dumpsys_accessibility.json](../02-reference-mvt-bugreport-dictionary/index.md#accessibilityjson-accessibilityjson)
     - [tombstones.json](../02-reference-mvt-bugreport-dictionary/index.md#tombstones.json)
     - [dumpsys_battery_daily.json](../02-reference-mvt-bugreport-dictionary/index.md#battery_daily.json)
     - [dumpsys_battery_history.json](../02-reference-mvt-bugreport-dictionary/index.md#battery_history.json)
