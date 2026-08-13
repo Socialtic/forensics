@@ -56,7 +56,7 @@ Este arquivo está no formato *json* e registra informações relacionadas ao pr
 * 
 **Por que isso é importante?**
 
-Essas informações permitem conhecer informações básicas da extração e obter identificadores únicos do sistema que facilitam o [processo de custódia da extração forense](../../explainers/01-explainer-introduction-digital-forensics/index.md#cadena-de-custodia). 
+Essas informações permitem conhecer informações básicas da extração e obter identificadores únicos do sistema que facilitam o [processo de custódia da extração forense](../../explainers/01-explainer-introduction-digital-forensics/index.md#cadeia-de-custódia). 
 
 **Exemplo:**
 
