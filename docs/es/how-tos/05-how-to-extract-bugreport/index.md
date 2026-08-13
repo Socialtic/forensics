@@ -59,7 +59,7 @@ En la mayor parte de los dispositivos Android es posible generar un reporte de e
 
     También es posible extraer un **reporte de errores desde la consola de ADB**. Este procedimiento podría ser más ágil y adecuado para personas analistas que desean extraer reportes de errores de varios dispositivos. 
 
-    [:octicons-arrow-right-24: Llévame a las instrucciones](#pasos-para-generar-un-bugreport-a-través-de-la-interfaz-gráfica)
+    [:octicons-arrow-right-24: Llévame a las instrucciones](#pasos-para-generar-un-bugreport-a-traves-de-la-interfaz-grafica)
 
 Debido a la forma en que se desarrolla el sistema operativo Android y a las capas de personalización que agrega cada fabricante, las **instrucciones exactas para generar un reporte de errores varían levemente**. A continuación presentamos las instrucciones para diferentes fabricantes y versiones del sistema operativo Android. 
 
@@ -67,7 +67,7 @@ Debido a la forma en que se desarrolla el sistema operativo Android y a las capa
 
     El sistema operativo Android basa su núcleo en el proyecto de código abierto [*Android Open Source Project*](https://source.android.com/)*.* Sin embargo, la [mayoría de fabricantes utilizan una versión propietaria de Google](https://www.makeuseof.com/tag/android-really-open-source-matter/), sobre la cuál se agregan capas de personalización adicionales, que en la mayoría de casos son también propietarias. 
 
-    [:octicons-arrow-right-24: Lee más al respecto aquí](../02-how-to-enable-developer-options/index.md#por-qué-hay-diferentes-formas-de-habilitarlas)   
+    [:octicons-arrow-right-24: Lee más al respecto aquí](../02-how-to-enable-developer-options/index.md#por-que-hay-diferentes-formas-de-habilitarlas)   
 
 
 ### Honor Magic 5 Lite (Magic OS) 

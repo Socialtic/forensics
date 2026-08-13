@@ -53,7 +53,7 @@ Durante la ejecución del comando ***mvt-android check-andoridqf**,* MVT tambié
 
 En el material de referencia complementario [sobre archivos generados por la herramienta mvt al analizar un bugreport](../02-reference-mvt-bugreport-dictionary/index.md) se describe la salida del comando check-bugreport y los archivos resultantes. A continuación se muestra el **las referencias específicas a los módulos ejecutados por el comando check-androidqf para analizar el bugreport:**
 
-- [Configuración del dispositivo](../02-reference-mvt-bugreport-dictionary/index.md#configuración-del-dispositivo-configuración-del-dispositivo)
+- [Configuración del dispositivo](../02-reference-mvt-bugreport-dictionary/index.md#configuracion-del-dispositivo-configuracion-del-dispositivo)
     - [dumpsys_get_prop.json](../02-reference-mvt-bugreport-dictionary/index.md#getprop.json)
 - [Información sobre registros y eventos del sistema](../02-reference-mvt-bugreport-dictionary/index.md#informacion-sobre-registros-y-eventos-del-sistema)
     - [dumpsys_adb_state.json](../02-reference-mvt-bugreport-dictionary/index.md#dumpsys_adb_state.json)
@@ -73,7 +73,7 @@ En el material de referencia complementario [sobre archivos generados por la her
 
 Asi mismo , también listamos los módulos ejecutado por ***check-backup***, los cuáles se detallan al final de este recurso.  
 
-- [Información sobre registros y eventos del sistema](#información-sobre-registros-y-eventos-del-sistema)  
+- [Información sobre registros y eventos del sistema](#informacion-sobre-registros-y-eventos-del-sistema)  
 - [sms.json](#sms.json)
 
 ## Detalles de la adquisición {#detalles-de-la-adquisición}

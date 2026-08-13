@@ -86,7 +86,7 @@ En los siguientes enlaces puedes **descargar el borrador de carta de consentimie
 * **Nombre de la organización**: Incluya el nombre de la organización que realiza el análisis forense  
 * **Objetivo de la investigación**: Ajuste el objetivo, según sea necesario, indicando claramente qué acciones se realizarán durante la investigación forense, y con qué objetivo.   
 * **Consentimiento para publicar:** Si el objetivo es publicar los resultados de la investigación, mantenga y ajuste el texto correspondiente para obtener el consentimiento necesario. Si no tiene intención en publicar resultados, elimine esta sección.   
-* **Detalle de la información a recolectar**: Detalle la [información que se recolectará](#qué-información-sensible-se-recolecta-durante-un-análisis-forense) para el análisis forense, dependiendo del tipo de dispositivo y proceso de adquisición.    
+* **Detalle de la información a recolectar**: Detalle la [información que se recolectará](#que-informacion-sensible-se-recolecta-durante-un-analisis-forense) para el análisis forense, dependiendo del tipo de dispositivo y proceso de adquisición.    
 * **Enlace a la política de manejo de la información:** En caso de existir, incluya el enlace a la  política de manejo de la información. **Aclare si la información será compartida con terceras personas.** 
 * **Confidencialidad de la investigación**: Detalle si la participación en la investigación se debe manejar como información confidencial, de forma tal que quién solicita el análisis comprenda si se espera que no se compartan detalles sobre el análisis. 
 

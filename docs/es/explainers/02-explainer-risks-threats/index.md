@@ -178,7 +178,7 @@ A través de este documento hemos presentado una descripción de las actores de 
 
 Nuestra intención a través de este documento no es minimizar o socavar esfuerzos emergentes para hacer más análisis forense desde la sociedad civil. Al contrario, **resaltamos la importancia de implementar prácticas y políticas de seguridad operacional de forma tal que se inicien investigaciones de forma responsable** y sin incrementar el riesgo para personas, ya de por sí, en situaciones vulnerables. 
 
-**Te invitamos a colaborar con la documentación en este repositorio**. Si tienes alguna observación o solicitud, puedes hacerla a través de la [sección de problemas (issues) del repositorio](../../community/how-to-contribute/index.md#propuestas-de-mejora-o-correcciones-a-través-de-issues). Si tienes recursos que deseas integrar a este repositorio documental, escríbenos a [seguridad@socialtic.org](mailto:seguridad@socialtic.org). 
+**Te invitamos a colaborar con la documentación en este repositorio**. Si tienes alguna observación o solicitud, puedes hacerla a través de la [sección de problemas (issues) del repositorio](../../community/how-to-contribute/index.md#propuestas-de-mejora-o-correcciones-a-traves-de-issues). Si tienes recursos que deseas integrar a este repositorio documental, escríbenos a [seguridad@socialtic.org](mailto:seguridad@socialtic.org). 
 
 
 
