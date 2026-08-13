@@ -41,7 +41,7 @@ A continuación se muestran los **pasos a seguir en diferentes modelos y version
 
     El sistema operativo Android basa su núcleo en el proyecto de código abierto [*Android Open Source Project*](https://source.android.com/)*.* Sin embargo, la [mayoría de fabricantes utilizan una versión propietaria de Google](https://www.makeuseof.com/tag/android-really-open-source-matter/), sobre la cuál se agregan capas de personalización adicionales, que en la mayoría de casos son también propietarias. 
 
-    [:octicons-arrow-right-24: Lee más al respecto aquí](../02-how-to-enable-developer-options/index.md#por-qué-hay-diferentes-formas-de-habilitarlas)   
+    [:octicons-arrow-right-24: Lee más al respecto aquí](../02-how-to-enable-developer-options/index.md#por-que-hay-diferentes-formas-de-habilitarlas)   
 
 
 

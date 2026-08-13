@@ -84,4 +84,4 @@ en/
 
 Tal y como se observa, **no existen diferencia en el nombre de los archivos o carpetas**, y la única diferencia radica en el folder en el cual se ubica la documentación. 
 
-Para realizar contribuciones directamente al repositorio en relación a traducciones, se recomienda seguir las instrucciones en la sección de *pull requests* o [solicitudes de integración](../how-to-contribute/index.md#solicitudes-de-integración-a-través-de-pull-request). 
+Para realizar contribuciones directamente al repositorio en relación a traducciones, se recomienda seguir las instrucciones en la sección de *pull requests* o [solicitudes de integración](../how-to-contribute/index.md#solicitudes-de-integracion-a-traves-de-pull-request). 

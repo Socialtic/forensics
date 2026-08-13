@@ -14,7 +14,7 @@ auto-translate: false
 
 # Guia: ¿Cómo realizar una adquisición y extracción mediante AndroidQF?
 
-Este documento forma parte de un **repositorio de documentación técnica** que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para **impulsar el análisis forense consentido en beneficio de la sociedad civil**. Para organizar los contenidos, se utiliza el marco de referencia de documentación [técnica Diataxis](../../references/00-glossary/index.md#diátaxis).
+Este documento forma parte de un **repositorio de documentación técnica** que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para **impulsar el análisis forense consentido en beneficio de la sociedad civil**. Para organizar los contenidos, se utiliza el marco de referencia de documentación [técnica Diataxis](../../references/00-glossary/index.md#diataxis).
 
 Este recurso se enmarca dentro de la categoría de [Guia, how-to](../), y contiene las instrucciones para realizar una extracción forense con la herramienta [AndroidQF](../../references/00-glossary/index.md#androidqf).
 
@@ -340,7 +340,7 @@ Una vez finalizada la ejecución de AndroidQF, es importante **validar que la ad
 
 AndroidQF permite realizar adquirir y extraer evidencia forense de dispositivos Android. Es una **herramienta ampliamente utilizada por laboratorios de la sociedad civil**, debido a su practicidad, simplicidad y portabilidad. En esta guía detallamos el paso a paso a seguir para realizar extracciones utilizando Windows, MacOS o Linux. 
 
-La extracción de potencial evidencia es una de las **[primeras etapas a seguir dentro de una investigación forense](../../explainers/01-explainer-introduction-digital-forensics/index.md#cuáles-son-las-etapas-de-una-investigación-forense)**, y es clave para poder iniciar un triaje. A partir de esta información extraída, se puede iniciar una etapa de análisis, ya sea de forma manual ([pudes consultar el diccionario de archivos aquí](../../references/01-reference-androidqf-dictionary/index.md) o utilizando una herramienta como [MVT](https://docs.mvt.re/en/latest/). 
+La extracción de potencial evidencia es una de las **[primeras etapas a seguir dentro de una investigación forense](../../explainers/01-explainer-introduction-digital-forensics/index.md#cuales-son-las-etapas-de-una-investigacion-forense)**, y es clave para poder iniciar un triaje. A partir de esta información extraída, se puede iniciar una etapa de análisis, ya sea de forma manual ([pudes consultar el diccionario de archivos aquí](../../references/01-reference-androidqf-dictionary/index.md) o utilizando una herramienta como [MVT](https://docs.mvt.re/en/latest/). 
 
 Si deseas contribuir con el desarrollo, la traducción o difusión de este recurso u otros recursos, **revisa nuestra [sección de comunidad](../../community/)** donde encontrarás más información al respecto.
 

@@ -26,7 +26,7 @@ Este recurso foi atualizado pela última vez em 16 de junho de 2025 e, para a co
 
 [Androidqf](https://github.com/mvt-project/androidqf) é uma ferramenta de extração forense que pertence ao [MVT Project](https://github.com/mvt-project/). Desenvolvida inicialmente por [Claudio Guarnieri](https://nex.sx/) e atualmente mantida pelo [Laboratório de Segurança da Anistia Internacional](https://securitylab.amnesty.org/es/).
 
-Seu nome vem da expressão em inglês *Android Quick Forensics*. Caracteriza-se por ser uma **ferramenta portátil**, ou seja, pode ser executada no Windows, GNU/Linux e Mac OS através de um binário pré-compilado para a [aquisição de informações forenses](../../explainers/01-explainer-introduction-digital-forensics/index.md#quais-são-as-etapas-de-uma-investigação-forense) de dispositivos Android. 
+Seu nome vem da expressão em inglês *Android Quick Forensics*. Caracteriza-se por ser uma **ferramenta portátil**, ou seja, pode ser executada no Windows, GNU/Linux e Mac OS através de um binário pré-compilado para a [aquisição de informações forenses](../../explainers/01-explainer-introduction-digital-forensics/index.md#quais-sao-as-etapas-de-uma-investigacao-forense) de dispositivos Android. 
 
 As informações geradas pelo androidqf podem ser agrupadas em 5 categorias principais:
 
@@ -56,7 +56,7 @@ Este arquivo está no formato *json* e registra informações relacionadas ao pr
 * 
 **Por que isso é importante?**
 
-Essas informações permitem conhecer informações básicas da extração e obter identificadores únicos do sistema que facilitam o [processo de custódia da extração forense](../../explainers/01-explainer-introduction-digital-forensics/index.md#cadeia-de-custódia). 
+Essas informações permitem conhecer informações básicas da extração e obter identificadores únicos do sistema que facilitam o [processo de custódia da extração forense](../../explainers/01-explainer-introduction-digital-forensics/index.md#cadeia-de-custodia). 
 
 **Exemplo:**
 
