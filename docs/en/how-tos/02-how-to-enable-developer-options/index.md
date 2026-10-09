@@ -4,7 +4,7 @@ summary: How to enable developer options on an Android device?
 keywords: triage, android, developer options
 lang: en
 tags: [how-to, intro]
-last_updated: 2025-08-14
+last_updated: 2026-10-09
 some_url:
 created: 2025-08-14
 comments: true
@@ -18,14 +18,14 @@ author:
 
 # How to enable developer options on an Android device?
 
-This resource falls under the **[how-to guides](../)** category and shows the steps to enable the _Developer Options_ menu on different Android devices, as well as a brief explanation of **what developer options are** and **why they are useful in digital forensics**. This is introductory material, complementary to other resources such as the explainer on [log-based forensics for Android devices](), and is part of the steps to follow for an initial triage.
+This resource falls under the **[how-to guides](../)** category and shows the steps to enable the _Developer Options_ menu on different Android devices, as well as a brief explanation of **what developer options are** and **why they are useful in digital forensics**. This is introductory material, complementary to other resources such as the explainer on [log-based forensics for Android devices](../../explainers/03-explainer-log-forensics-android/index.md), and is part of the steps to follow for an initial triage.
 
 **We appreciate the collaboration of [RSF Security Lab](https://rsf.org/en/digital-security-lab)**, who provided us with a set of guides and screenshots that enabled the development of this resource. 
 
 
-## What are developer options and why they are helpful?
+## What are developer options and why are they helpful?
 
-[Developer options](https://developer.android.com/studio/debug/dev-options) refer to a hidden menu in the Android operating system that **grants access to additional functions**, primarily intended to support [debugging](https://en.wikipedia.org/wiki/Debugging) during the development of new applications. Embeded in the developer options, there are also advanced settings such as preferences of graphics drivers, network configurations and even experimental features being tested or developed. 
+[Developer options](https://developer.android.com/studio/debug/dev-options) refer to a hidden menu in the Android operating system that **grants access to additional functions**, primarily intended to support [debugging](https://en.wikipedia.org/wiki/Debugging) during the development of new applications. Embedded in the developer options, there are also advanced settings such as preferences of graphics drivers, network configurations and even experimental features being tested or developed. 
 
 From a digital forensics perspective, particularly when conducting [log-based investigations](../../explainers/03-explainer-log-forensics-android/) using tools such as [MVT](../../references/00-glossary/index.md#mvt) and [AndroidQF](../../references/00-glossary/index.md#androidqf), developer options allow us to **enable key functions like USB debugging, the ADB console, or the generation of bug reports**. For this reason, **enabling the developer options menu is often the first step** in the acquisition process.
 
@@ -46,18 +46,34 @@ The result of these additional developments on the base project is a **wide vari
 * [Hello UI](https://beebom.com/motorola-hello-ui-review/): Graphic interface developed by **Motorola**, part of **Lenovo**. [This video](https://www.google.com/url?q=https://www.youtube.com/watch?v%3Di3ZU9-TGJlE&sa=D&source=docs&ust=1753486266796661&usg=AOvVaw14C09MkoaBDTU4pbef9Aqq) shows relevant aspects of the graphic interface. 
 * [Xperia UI](https://en.wikipedia.org/wiki/Sony_Xperia): User interface developed by **Sony**.   
 * [Magic OS](https://en.wikipedia.org/wiki/Honor_\(brand\)#MagicOS): Operating system developed by **Honor**, previously a subsidiary of Huawei.
+* [Funtouch OS](https://en.wikipedia.org/wiki/Funtouch_OS): User interface developed by **Vivo** for its smartphones.
+* [ZenUI](https://en.wikipedia.org/wiki/Asus_ZenFone#ZenUI_interface): User interface developed by **Asus** for its smartphones and tablets.
+* [Nothing OS](https://en.wikipedia.org/wiki/Nothing_(company)#Nothing_OS): User interface developed by **Nothing** for its smartphones.
+* [HiOS](https://en.wikipedia.org/wiki/HiOS): User interface developed by **Tecno**, part of **Transsion**, a Chineese manufacturer.
+* [XOS](https://en.wikipedia.org/wiki/Infinix_Mobile): User interface developed by **Infinix**, also part of **Transsion**, a Chineese manufacturer.
 
 
 ## Step-by-step instructions
 
 The following section shows the steps to **enable the developer options menu on different devices**, along with screenshots of the relevant menus for each interface.
 
-### Google (Pixel OS) 
+### Asus (ZenUI)
 
-To enable the developer options in **Pixel devices** follow these steps, shown also on **image 1**. 
+To enable the developer options in **Asus devices** follow these steps. 
 
 1. Open the device **Settings** ⚙️  
 2. Navigate to the last option **About phone** 📱  
+3. Locate the **Build Number** 🔢   
+4. **Tap 7 times** the  build number, until you see a confirmation message  👆
+
+From now on, the developer options will appear as an additional menu in **Settings**, and **will remain enabled** until they are manually disabled from the developer options menu.
+
+### Google (Pixel OS) / Generic 
+
+To enable the developer options in **Pixel devices** follow these steps, shown also on **image 1**. 
+
+1. Open the device **Settings**.  ⚙️  
+2. Navigate to the last option **About phone**. On **some Android versions** the About phone option is located inside the **Systems > Advanced** menu.  📱  
 3. Navigate to the bottom and locate the **Build Number** 🔢   
 4. **Tap 7 times** the  build number, until you see a confirmation message  👆
 
@@ -96,9 +112,9 @@ To enable the developer options in **Motorola devices** follow these steps, show
 
 From now on, the developer options will appear as an additional menu under **System**, and **will remain enabled** until they are manually disabled from the developer options menu. 
 
-![Steps to enable developer options on a Motorola Edge Neo 40 running Hi OS and Android 13](../../../assets/02-how-to/enable-dev-options-Motorola.gif "image 3")
+![Steps to enable developer options on a Motorola Edge Neo 40 running Hello UI and Android 13](../../../assets/02-how-to/enable-dev-options-Motorola.gif "image 3")
 /// caption
-**Image 3**. Steps to enable developer options on a Motorola Edge Neo 40 running Hi OS and Android 13.
+**Image 3**. Steps to enable developer options on a Motorola Edge Neo 40 running Hello UI and Android 13.
 ///
 
 
@@ -117,6 +133,18 @@ From now on, the developer options will appear as an additional menu under **Sys
 /// caption
 **Image 4**.  Steps to enable developer options on a Nokia G42 5G running Android 13.
 ///
+
+### Nothing (Nothing OS)
+
+To enable the developer options in **Nothing devices** follow these steps. 
+
+1. Open the device **Settings** ⚙️  
+2. Navigate to the option **About phone** 📱  
+3. Tap the box that says **Nothing OS** and shows the version of the operating system 📝  
+4. Locate the **Build Number** 🔢   
+5. **Tap 7 times** the  build number, until you see a confirmation message  👆
+
+From now on, the developer options will appear as an additional menu in **Settings**, and **will remain enabled** until they are manually disabled from the developer options menu. 
 
 ### Oppo Reno 10 (Color OS)
 
@@ -155,7 +183,7 @@ From now on, the developer options will appear as an additional menu under **Add
 
 ### Samsung (One UI)
 
-To enable the developer options in **Samsung devices** follow these steps, shown also on **image 7**. 
+To enable the developer options in **Samsung devices** follow these steps, shown also on **image 7**. Please be aware that Samsung phones sometimes have slightly different menus and interfaces. 
 
 1. Open the device **Settings** ⚙️  
 2. Navigate to the last option **About phone** 📱
@@ -169,6 +197,8 @@ To enable the developer options in **Samsung devices** follow these steps, shown
 **Image 7**. Steps to enable developer options on a Samsung Galaxy A54 with One UI and Android 13
 ///
 
+From now on, the developer options will appear as an additional menu at the bottom of **Settings**, and **will remain enabled** until they are manually disabled from the developer options menu. 
+
 ### Sony (Xperia UI)
 
 To enable the developer options in **Sony devices** follow these steps, shown also on **image 8**. 
@@ -178,13 +208,13 @@ To enable the developer options in **Sony devices** follow these steps, shown al
 3. Navigate to the bottom and locate the **Build Number** 🔢   
 4. **Tap 7 times** the  build number, until you see a confirmation message  👆
 
-From now on, the developer options will appear as an additional menu under **System**, and **will remain enabled** until they are manually disabled from the developer options menu. 
 
 ![Steps to enable developer options on a Sony Xperia 10V with Xperia UI 4.0 and Android 14](../../../assets/02-how-to/enable-dev-options-Sony.gif "image 8")
 /// caption
 **Image 8**.  Steps to enable developer options on a Sony Xperia 10V with Xperia UI 4.0 and Android 14.
 ///
 
+From now on, the developer options will appear as an additional menu under **System**, and **will remain enabled** until they are manually disabled from the developer options menu. 
 
 ### Tecno (Hi OS)
 
@@ -200,21 +230,44 @@ To enable the developer options in **Tecno Spark devices** follow these steps, s
 **Image 9**.  Steps to enable developer options on a Tecno Spark Go with Hi OS and Android 13.
 ///
 
+From now on, the developer options will appear as an additional menu under **System**, and **will remain enabled** until they are manually disabled from the developer options menu. 
+
+### Vivo (Funtouch OS)
+
+To enable the developer options in **Vivo devices** follow these steps. 
+
+1. Open the device **Settings** ⚙️  
+2. Navigate to the option **About phone** 📱  
+3. Open the menu **Software Information** 📝  
+4. Locate the **Build Number** 🔢   
+5. **Tap 7 times** the  build number, until you see a confirmation message  👆
+
+From now on, the developer options will appear as an additional menu in **Settings**, and **will remain enabled** until they are manually disabled from the developer options menu. 
+
 ### Xiaomi (Hyper OS)
 
-To enable the developer options in **Xiaomi devices** follow these steps, shown also on **image 10**. 
+To enable the developer options in **Xiaomi devices** follow these steps, shown also on **image 10**. Please note that in newer Xiaomi devices you do not need to turn on developer options to collect a bugreport. 
 
-1. Abre el menú de **Ajustes** ⚙️  
-2. Ingresa a la opción de **Acerca del teléfono** 📱  
-3. Ubica la información sobre el **Versión de Sistema Operativo** 🔢   
-4. Presiona **7 veces** sobre el número de compilación, hasta que veas un mensaje de confirmación. 👆
+1. Open the device **Settings** ⚙️  
+2. Navigate to the option **About phone** 📱  
+3. Locate the **OS version** 🔢   
+4. **Tap 7 times** the OS version, until you see a confirmation message  👆
 
 ![Steps to enable developer options on a Xiamoi device](../../../assets/02-how-to/enable-dev-options-Xiaomi.gif "image 10")
 /// caption
 **image 10**.  Steps to enable developer options on a Xiamoi device.
 ///
 
-Las opciones de desarrollador aparecerán como un nuevo submenú dentro del apartado de **Opciones avanzadas,** y se **mantendrán habilitadas** hasta que se deshabiliten (desde el menú de opciones de desarrollador). 
+From now on, the developer options will appear as an additional menu in **Settings**, and **will remain enabled** until they are manually disabled from the developer options menu. 
+
+## How to disable developer options?
+
+Once the acquisition is finished, it is a good practice to **disable the developer options menu**, so that the device returns to its original state. To do so, follow these steps:
+
+1. Open the device **Settings** ⚙️  
+2. Navigate to the **Developer Options** menu, in the same location where it appeared after enabling it 🤖  
+3. **Turn off** the switch at the top of the menu ⛔
+
 
 ## Conclusion
 
@@ -228,3 +281,4 @@ If you have access to a **graphical interface not shown in this list** and would
 ## Comments
 
 Do you have any **comment or suggestion** about this resource? You can use the **comment function provided below** to leave your ideas, corrections or thoughts. Please make sure to follow our [code of conduct](../../community/code-of-conduct/) when leaving your comment. If you prefer, you can also participate in the discussion directly in the [github repository](https://github.com/Socialtic/forensics/discussions). 
+
