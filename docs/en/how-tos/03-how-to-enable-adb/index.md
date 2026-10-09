@@ -4,7 +4,7 @@ summary: How to enable the android debug bridge or ADB on Android
 keywords: triage, android, ADB, androidqf
 lang: en
 tags: [how-to, intro]
-last_updated: 2025-08-14
+last_updated: 2026-10-09
 some_url:
 created: 2025-08-14
 comments: true
@@ -18,7 +18,7 @@ author:
 
 # How to enable ADB on an Android device?
 
-This resource falls under the **[how-to guides](../)** and **presents the steps to enable USB debugging**, also known as Android Debug Bridge or ADB, on different Android devices. It also provides a **brief explanation of what USB debugging** is and **why it is useful** in digital forensics. This is introductory material, complementary to other resources such as the explainer on log-based forensics for Android devices and the guide on enabling developer options, and is part of the steps to follow when making an acquisition of forensic evidence from an Android device. 
+This resource falls under the **[how-to guides](../)** category and **presents the steps to enable USB debugging**, also known as Android Debug Bridge or ADB, on different Android devices. It also provides a **brief explanation of what USB debugging** is and **why it is useful** in digital forensics. This is introductory material, complementary to other resources such as the [explainer on log-based forensics for Android devices](../../explainers/03-explainer-log-forensics-android/index.md) and the guide on enabling developer options, and is part of the steps to follow when making an acquisition of forensic evidence from an Android device. 
 
 **We appreciate the collaboration of [RSF Security Lab](https://rsf.org/en/digital-security-lab)**, who provided us with a set of guides and screenshots that enabled the development of this resource. 
 
@@ -27,7 +27,7 @@ This resource falls under the **[how-to guides](../)** and **presents the steps 
 
 ADB stands for [Android Debug Bridge](https://developer.android.com/tools/adb). It is a **command-line tool** that allows direct communication with an Android device over USB, enabling the execution of various actions and commands.
 
-From a digital forensics perspective, particularly in log-based investigations using tools such as AndroidQF, ADB enables **establishing a direct connection with a device**. It is useful in situations where physical access to the device is available and when **the goal is to obtain information directly from the device** using native commands, without relying on additional tools. ADB or USB debugging is **also necessary to complete an extraction using AndroidQF**. 
+From a digital forensics perspective, particularly in log-based investigations using tools such as [AndroidQF](../../references/00-glossary/index.md#androidqf), ADB enables **establishing a direct connection with a device**. It is useful in situations where physical access to the device is available and when **the goal is to obtain information directly from the device** using native commands, without relying on additional tools. ADB or USB debugging is **also necessary to complete an extraction using AndroidQF**. 
 
 
 ## How to enable ADB?
@@ -38,24 +38,24 @@ The following section provides **step-by-step instructions for enabling ADB on d
 
 ??? question "Why is ADB enabled differently on Android devices?"
 
-    The Android operating system is based on the [*Android Open Source Project*](https://source.android.com/)*.* However, most manufacturers [use a propietary version developed by Google](https://www.makeuseof.com/tag/android-really-open-source-matter/), on top of which manufacturers add personalization layers. 
+    The Android operating system is based on the [*Android Open Source Project*](https://source.android.com/)*.* However, most manufacturers [use a proprietary version developed by Google](https://www.makeuseof.com/tag/android-really-open-source-matter/), on top of which manufacturers add personalization layers. 
 
     [:octicons-arrow-right-24: Read more here](../02-how-to-enable-developer-options/index.md#why-are-there-different-ways-to-enable-them) 
 
-The following section shows the steps to **enable ADB menu on different devices**, along with screenshots of the relevant menus for each interface.
+The following section shows the steps to **enable ADB on different devices**, along with screenshots of the relevant menus for each interface.
 
 ### Google (Pixel OS) 
 
-To enable **ADB** it is necessary to have access to the developer options menu. If you have not enabled this menu, you can **[follow these steps to enable developer options on a Pixel device](../02-how-to-enable-developer-options/index.md#google-pixel-os)**, also shown on **image 1**.  
+To enable **ADB** it is necessary to have access to the developer options menu. If you have not enabled this menu, you can **[follow these steps to enable developer options on a Pixel device](../02-how-to-enable-developer-options/index.md#google-pixel-os-generic)**, also shown on **image 1**.  
 
 
 1. Open the device **Settings** ⚙️
 2. Navigate to **System**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖**
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Google Pixel running Android 13.](../../../assets/02-how-to/enable-dev-options-Google.gif "image 1"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Google Pixel running Android 13.](../../../assets/03-how-to/activating-adb-motorola-edge-40-neo.gif "image 1"){: style="height:480px;width:216px"}
 /// caption
 **Image 1**. Steps to enable ADB on a Google Pixel running Android 13.
 ///
@@ -67,11 +67,11 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 
 1. Open the device **Settings** ⚙️
 2. Navigate to **System and Updates**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖**
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Honor Magic Lite running Magic OS 7.1 and Android 13.](../../../assets/03-how-to/activating-adb-honor-magic-lite.gif "image 2"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Honor Magic Lite running Magic OS 7.1 and Android 13.](../../../assets/03-how-to/activating-adb-honor-magic-lite.gif "image 2"){: style="height:480px;width:216px"}
 /// caption
 **Image 2**. Steps to enable ADB on a Honor Magic Lite running Magic OS 7.1 and Android 13.
 ///
@@ -83,13 +83,13 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 
 1. Open the device **Settings** ⚙️
 2. Navigate to **System**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖**
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Motorola Edge Neo 40 running Hi OS and Android 13](../../../how-tos//03-como-habilitar-adb/assets/activating-adb-motorola-edge-40-neo.gif "image 3"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Motorola Edge Neo 40 running Hello UI and Android 13](../../../assets/03-how-to/activating-adb-motorola-edge-40-neo.gif "image 3"){: style="height:480px;width:216px"}
 /// caption
-**Image 3**. Steps to enable ADB on a Motorola Edge Neo 40 running Hi OS and Android 13.
+**Image 3**. Steps to enable ADB on a Motorola Edge Neo 40 running Hello UI and Android 13.
 ///
 
 
@@ -99,11 +99,11 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 
 1. Open the device **Settings** ⚙️
 2. Navigate to **System**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖**
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Nokia G42 5G running Android 13](../../../assets/03-how-to/activating-adb-nokia-g42.gif "image 4"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Nokia G42 5G running Android 13](../../../assets/03-how-to/activating-adb-nokia-g42.gif "image 4"){: style="height:480px;width:216px"}
 /// caption
 **Image 4**.  Steps to enable ADB on a Nokia G42 5G running Android 13.
 ///
@@ -115,13 +115,13 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
   
 1. Open the device **Settings** ⚙️
 2. Navigate to **Additional Settings**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖**
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Oppo device](../../../assets/03-how-to/activating-adb-oppo-reno10-5g.gif "image 5"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Oppo device](../../../assets/03-how-to/activating-adb-oppo-reno10-5g.gif "image 5"){: style="height:480px;width:216px"}
 /// caption
-**Image 5**. Steps to enable ADB on a Oppo device.
+**Image 5**. Steps to enable ADB on an Oppo device.
 ///
 
 
@@ -131,11 +131,11 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 
 1. Open the device **Settings** ⚙️
 2. Navigate to **Additional Settings**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖**
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a  Realme GT2 Pro with RealMe UI 4.0 and Android 13](../../../assets/03-how-to/activating-adb-realme-gt2-pro.gif "image 6"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a  Realme GT2 Pro with RealMe UI 4.0 and Android 13](../../../assets/03-how-to/activating-adb-realme-gt2-pro.gif "image 6"){: style="height:480px;width:216px"}
 /// caption
 **Image 6**. Steps to enable ADB on a Realme GT2 Pro with RealMe UI 4.0 and Android 13
 ///
@@ -145,11 +145,11 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 To enable **ADB** it is necessary to have access to the developer options menu. If you have not enabled this menu, you can **[follow these steps to enable developer options on a Samsung device](../02-how-to-enable-developer-options/index.md#samsung-one-ui)**, also shown on **image 7**.  
 
 1. Open the device **Settings** ⚙️
-2. Navigate to **Developer Oprtions** 🤖**
+2. Navigate to **Developer Options** 🤖**
 3. Enable the first option **USB debugging** 🖥️
-4. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+4. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Samsung Galaxy A54 with One UI and Android 13](../../../assets/03-how-to/activating-adb-samsung-galaxy-a54-5g.gif "image 7"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Samsung Galaxy A54 with One UI and Android 13](../../../assets/03-how-to/activating-adb-samsung-galaxy-a54-5g.gif "image 7"){: style="height:480px;width:216px"}
 /// caption
 **Image 7**. Steps to enable ADB on a Samsung Galaxy A54 with One UI and Android 13
 ///
@@ -160,11 +160,11 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 
 1. Open the device **Settings** ⚙️
 2. Navigate to **System**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖**
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Sony Xperia 10V with Xperia UI 4.0 and Android 14](../../../assets/03-how-to/activating-adb-sony-xperia-10-v.gif "image 8"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Sony Xperia 10V with Xperia UI 4.0 and Android 14](../../../assets/03-how-to/activating-adb-sony-xperia-10-v.gif "image 8"){: style="height:480px;width:216px"}
 /// caption
 **Image 8**.  Steps to enable ADB on a Sony Xperia 10V with Xperia UI 4.0 and Android 14.
 ///
@@ -176,29 +176,42 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 
 1. Open the device **Settings** ⚙️
 2. Navigate to **System**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖**
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Tecno Spark Go with Hi OS and Android 13.](../../../assets/03-how-to/activating-adb-tecno-spark-go-2023.gif "image 9"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Tecno Spark Go with Hi OS and Android 13.](../../../assets/03-how-to/activating-adb-tecno-spark-go-2023.gif "image 9"){: style="height:480px;width:216px"}
 /// caption
 **Image 9**.  Steps to enable ADB on a Tecno Spark Go with Hi OS and Android 13.
 ///
 
 ### Xiaomi (Hyper OS)
 
-To enable **ADB** it is necessary to have access to the developer options menu. If you have not enabled this menu, you can **[follow these steps to enable developer options on a Sony device](../02-how-to-enable-developer-options/index.md#xiaomi-hyper-os)**, also shown on **image 10**.  
+To enable **ADB** it is necessary to have access to the developer options menu. If you have not enabled this menu, you can **[follow these steps to enable developer options on a Xiaomi device](../02-how-to-enable-developer-options/index.md#xiaomi-hyper-os)**, also shown on **image 10**.  
 
 1. Open the device **Settings** ⚙️
 2. Navigate to **Additional Settings**
-3. Navigate to **Developer Oprtions** 🤖**
+3. Navigate to **Developer Options** 🤖
 4. Enable the first option **USB debugging** 🖥️
-5. **Confirm** thtat you want to enable USB debugging in the pop-up menu ✅
+5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Xiamoi device](../../../assets/03-how-to/activating-adb-xiaomi-13t.gif "image 10"){: style="height:480x;width:216px"}
+![Steps to enable ADB on a Xiamoi device](../../../assets/03-how-to/activating-adb-xiaomi-13t.gif "image 10"){: style="height:480px;width:216px"}
 /// caption
-**image 10**.  Steps to enable ADB on a Xiamoi device.
+**Image 10**.  Steps to enable ADB on a Xiaomi device.
 ///
+
+### Other devices
+	
+If your device is not listed above, **USB debugging** is usually the first option inside the **Developer Options** menu. You can also type **USB debugging** in the search bar of the **Settings** menu to find it.
+
+## How to disable ADB?
+	
+Once the acquisition is finished, it is a good practice to **disable USB debugging**, so that the device returns to its original state. To do so, follow these steps:
+	
+1. Open the **Developer Options** menu, in the same location used to enable USB debugging 🤖
+2. **Turn off** the option **USB debugging** ⛔
+	
+If you no longer need the developer options menu, you can also [disable developer options](../02-how-to-enable-developer-options/index.md#how-to-disable-developer-options), which turns off USB debugging as well.
 
 ## Conclusion
 
