@@ -1,6 +1,6 @@
 ---
 title: How to extract a bugreport from an Android device?
-summary: Instructiones extract a bugreport from an Android device
+summary: Instructions extract a bugreport from an Android device
 keywords: triage, android, bugreport, 
 lang: en
 tags: [how-to, intro]
@@ -18,7 +18,7 @@ author:
 # How to extract a bugreport from an Android device?
 
 
-This resource falls under the **[how-to guides](../)** and details the steps required to generate a bugreport, both using the ADB debugging console and through the device’s graphical user interface (GUI). It is an introductory material, complementary to other resources such as the [explainer on log-based forensics for Android devices](../../explainers/03-explainer-log-forensics-android/) and the guide on [how to enable ADB](../../how-tos/03-how-to-enable-adb/).
+This resource falls under the **[how-to guides](../)** category and details the steps required to generate a bugreport, both using the ADB debugging console and through the device’s graphical user interface (GUI). It is an introductory material, complementary to other resources such as the [explainer on log-based forensics for Android devices](../../explainers/03-explainer-log-forensics-android/) and the guide on [how to enable ADB](../../how-tos/03-how-to-enable-adb/).
 
 
 **We appreciate the collaboration of [RSF Security Lab](https://rsf.org/en/digital-security-lab)**, who provided us with a set of guides and screenshots that enabled the development of this resource. 
@@ -26,7 +26,7 @@ This resource falls under the **[how-to guides](../)** and details the steps req
 
 ## What is a bugreport and why is it useful?
 
-As the name suggests, a bugreport is a collection of **logs and diagnostic information** that helps identify and fix errors when developing an Android application.  In the context of consent-based forensic analysis, the bugreport is a valuable forensic artifact for Android device triage, including use with the MVT tool. For instance, Amnesty Tech used a similar technique to [detect the NoviSpy spyware](https://securitylab.amnesty.org/latest/2024/12/tech-guide-detecting-novispy-spyware-with-androidqf-and-the-mobile-verification-toolkit-mvt/).
+As the name suggests, a bugreport is a collection of **logs and diagnostic information** that helps identify and fix errors when developing an Android application.  In the context of consent-based forensic analysis, the bugreport is a valuable forensic artifact for Android device triage, including use with the [MVT tool](../../references/00-glossary/index.md#mvt). For instance, Amnesty Tech used a similar technique to [detect the NoviSpy spyware](https://securitylab.amnesty.org/latest/2024/12/tech-guide-detecting-novispy-spyware-with-androidqf-and-the-mobile-verification-toolkit-mvt/).
 
 Android natively allows generating bugreports both through the [graphical user interface](../../references/00-glossary/index.md#graphical-user-interface) and through the ADB console. Below we include instructions on how to generate a bugreport through both approaches. 
 
@@ -37,13 +37,13 @@ Below are the requirements for extracting a bugreport using the graphical interf
 
 === "GUI"
 
-    To extract the bugreport from the GUI, it is necessary to have access to the Android device and to **enable developer options**. If you are not sure how to enable developer options on your device, consult this [how-to guide](../02-how-to-enable-developer-options/).
+    To extract the bugreport from the GUI, it is necessary to have access to the Android device and, on most devices, to **enable developer options**. If you are not sure how to enable developer options on your device, consult this [how-to guide](../02-how-to-enable-developer-options/).
 
 === "Using ADB"
 
-    To extract Para extraer un bugreport a través de la consola de ADB es necesario: 
+    To extract a bugreport through the ADB console you need:  
 
-    * The **Android device to be analyzed**: Enable Developer Mode and USB Debugging. If needed, consult our guides on [enabling Developer Options](../../references/00-glossary/index.md#developer-mode) or on how to [enable ADB](../../references/00-glossary/index.md#adb).
+    * The **Android device to be analyzed**: Enable Developer Mode and USB Debugging. If needed, consult our guides on [enabling Developer Options](../02-how-to-enable-developer-options/) or on how to [enable ADB](../03-how-to-enable-adb/).
     * **A computer (Windows, Linux, or macOS):** This will be used for the extraction. 
     * A **data transfer cable** (phone-to-computer).
 
@@ -62,18 +62,45 @@ On most Android devices, it is possible to **generate a bugreport without instal
 
 Because of how the Android operating system is developed and the additional customization layers added by each manufacturer, the **exact instructions to generate a bugreport vary slightly across manufacturers**. Below we present instructions for a few common models and customization layers. 
 
+Generating a bugreport **can take a few minutes**. You can keep using the device normally while you wait for the notification that the bugreport is ready.
 
-!!! question "WWhy do instructions vary across devices?"
+!!! question "Why do instructions vary across devices?"
 
-    The Android operating system is based on the [*Android Open Source Project*](https://source.android.com/)*.* However, most manufacturers [use a propietary version developed by Google](https://www.makeuseof.com/tag/android-really-open-source-matter/), on top of which manufacturers add personalization layers. 
+    The Android operating system is based on the [*Android Open Source Project*](https://source.android.com/)*.* However, most manufacturers [use a proprietary version developed by Google](https://www.makeuseof.com/tag/android-really-open-source-matter/), on top of which manufacturers add personalization layers. 
 
     [:octicons-arrow-right-24: Read more here](../02-how-to-enable-developer-options/#why-are-there-different-ways-to-enable-them) 
 
+### Asus (ZenUI)
 
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on an Asus device](../02-how-to-enable-developer-options/index.md#asus-zenui).
+
+Once developer options are enabled, follow these steps to generate a bugreport:
+
+1. Open **Settings**
+2. Go to **Developer Options**
+3. Select **Bug report**
+4. Choose **Full Report**
+5. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
+6. Share the bugreport through a **secure channel**  
+
+### Google (Pixel OS)
+
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Pixel device](../02-how-to-enable-developer-options/index.md#google-pixel-os-generic).
+
+Once developer options are enabled, follow these steps to generate a bugreport:
+
+1. Open **Settings**
+2. Navigate to the menu **System**
+3. Go to **Developer Options**
+4. Select **Take bug report**
+5. Choose **Full report**
+6. Tap **Report**
+7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
+8. Share the bugreport through a **secure channel**   
 
 ### Honor Magic 5 Lite (Magic OS) 
 
-To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Honor device](../02-how-to-enable-developer-options/#honor-magic-os).
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Honor device](../02-how-to-enable-developer-options/index.md#honor-magic-os).
 
 Once developer options are enabled, follow these steps to generate a bugreport (see Image 1):
  
@@ -86,18 +113,30 @@ Once developer options are enabled, follow these steps to generate a bugreport (
 6. Tap “**Report”**
 7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
 8. You will see a warning message informing about sensitive data. Click **Ok**  
-9. Select the preferred mechanism and **share the bugreport**  
+9. Share the bugreport through a **secure channel**  
 
 
 ![ Steps to generate a bug report on a Honor Magic Lite con la versión Magic OS 7.1 en Android 13](../../../assets/05-how-to/bug-report-honor-magic5-lite.gif "image 1"){: style="height:480x;width:216px"}
 /// caption
-**image 1**.  Steps to generate a bug report on a Honor Magic Lite running Magic OS 7.1.
+**Image 1**.  Steps to generate a bug report on a Honor Magic Lite running Magic OS 7.1.
 ///
 
+### Infinix (XOS)
+
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on an Infinix device](../02-how-to-enable-developer-options/index.md).
+
+Once developer options are enabled, follow these steps to generate a bugreport:
+
+1. Open **Settings**
+2. Go to **Developer Options**
+3. Select **Bug report**
+4. Choose **Full Report**
+5. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
+6. Share the bugreport through a **secure channel**
 
 ### Motorola (Hello UI)
 
-To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a  Motorola device](../02-how-to-enable-developer-options/index.md#motorola-hello-ui)**.
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a  Motorola device](../02-how-to-enable-developer-options/index.md#motorola-hello-ui).
 
 Once developer options are enabled, follow these steps to generate a bugreport (see Image 2):
 
@@ -106,14 +145,14 @@ Once developer options are enabled, follow these steps to generate a bugreport (
 3. Go to **Developer Options**
 4. Select **Bug report**
 5. Choose **Full Report**
-6. Tap “**Report”**
+6. Tap **Report**
 7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
 8. You will see a warning message informing about sensitive data. Click **Ok**  
-9. Select the preferred mechanism and **share the bugreport**  
+9. Share the bugreport through a **secure channel**  
 
 ![ Steps to generate a bug report on a Motorola Edge Neo 40 utilizando Hello UI en Android 13](../../../assets/05-how-to/bug-report-motorola-edge-40-neo.gif "image 4"){: style="height:480x;width:216px"}
 /// caption
-**image 2**.  Steps to generate a bug report on a Motorola Edge Neo 40 running Hello UI.
+**Image 2**.  Steps to generate a bug report on a Motorola Edge Neo 40 running Hello UI.
 ///
 
 ### Nokia  
@@ -128,15 +167,28 @@ Once developer options are enabled, follow these steps to generate a bugreport (
 3. Go to **Developer Options**
 4. Select **Bug report**
 5. Choose **Full Report**
-6. Tap “**Report”**
+6. Tap **Report**
 7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
 8. You will see a warning message informing about sensitive data. Click **Ok**  
-9. Select the preferred mechanism and **share the bugreport**  
+9. Share the bugreport through a **secure channel**  
 
 ![ Steps to generate a bug report on a Nokia G42 5G utilizando Android 13\.](../../../assets/05-how-to/bug-report-nokia-g42.gif "image 4"){: style="height:480x;width:216px"}
 /// caption
 **image 3**.  Steps to generate a bug report on a Nokia G42 5G running Android 13.
 ///
+
+### Nothing (Nothing OS)
+
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Nothing device](../02-how-to-enable-developer-options/index.md#nothing-nothing-os).
+
+Once developer options are enabled, follow these steps to generate a bugreport:
+
+1. Open **Settings**
+2. Go to **Developer Options**
+3. Select **Bug report**
+4. Choose **Full Report**
+5. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
+6. Share the bugreport through a **secure channel**   
 
 ### Oppo (Magic OS)
 
@@ -149,16 +201,16 @@ Once developer options are enabled, follow these steps to generate a bugreport (
 3. Go to **Developer Options**
 4. Select **Bug report**
 5. Choose **Full Report**
-6. Tap “**Report”**
+6. Tap **Report**
 7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
 8. You will see a warning message informing about sensitive data. Click **Ok**  
-9. Select the preferred mechanism and **share the bugreport**  
+9. Share the bugreport through a **secure channel**  
 
 
 
 ![Steps to generate a bug report on a OPPO Reno 10 utilizando Android 13](../../../assets/05-how-to/bug-report-oppo-reno10-5g.gif "image 5"){: style="height:480x;width:216px"}
 /// caption
-**image 4**. Steps to generate a bug report on a OPPO Reno 10 running Android 13
+**Image 4**. Steps to generate a bug report on a OPPO Reno 10 running Android 13
 ///
 
 
@@ -173,15 +225,15 @@ Once developer options are enabled, follow these steps to generate a bugreport (
 3. Go to **Developer Options**
 4. Select **Bug report**
 5. Choose **Full Report**
-6. Tap “**Report”**
+6. Tap **Report**
 7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
 8. You will see a warning message informing about sensitive data. Click **Ok**  
-9. Select the preferred mechanism and **share the bugreport**  
+9. Share the bugreport through a **secure channel**  
 
 
 ![ Steps to generate a bug report on a Realme GT2 Pro con RealMe UI 4.0 utilizando Android 13](../../../assets/05-how-to/bug-report-realme-gt2-pro.gif "image 6"){: style="height:480x;width:216px"}
 /// caption
-**image 5**. Steps to generate a bug report on a Realme GT2 Pro with RealMe UI 4.0 and Android 13
+**Image 5**. Steps to generate a bug report on a Realme GT2 Pro with RealMe UI 4.0 and Android 13
 ///
 
 ### Samsung (One UI)
@@ -194,20 +246,20 @@ Once developer options are enabled, follow these steps to generate a bugreport (
 2. Go to **Developer Options**
 3. Select **Bug report**
 4. Choose **Full Report**
-5. Tap “**Report”**
+5. Tap **Report**
 6. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
 7. You will see a warning message informing about sensitive data. Click **Ok**  
-8. Select the preferred mechanism and **share the bugreport**  
+8. Share the bugreport through a **secure channel**  
 
 ![ Steps to generate a bug report on a Samsung Galaxy A54 con One UI en un dispositivo utilizando Android 13](../../../assets/05-how-to/bug-report-samsung-galaxy-a54-5g.gif "image 7"){: style="height:480x;width:216px"}
 /// caption
-**image 6**. Steps to generate a bug report on a Samsung Galaxy A54 with One UI and Android 13
+**Image 6**. Steps to generate a bug report on a Samsung Galaxy A54 with One UI and Android 13
 ///
 
 ### Sony (Xperia UI)
 
 
-To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Sony device](../02-how-to-enable-developer-options/index.md#sony-xperia-ui)**.
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Sony device](../02-how-to-enable-developer-options/index.md#sony-xperia-ui).
 
 Once developer options are enabled, follow these steps to generate a bugreport (see Image 7):
 
@@ -216,20 +268,20 @@ Once developer options are enabled, follow these steps to generate a bugreport (
 3. Go to **Developer Options**
 4. Select **Bug report**
 5. Choose **Full Report**
-6. Tap “**Report”**
+6. Tap **Report**
 7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
 8. You will see a warning message informing about sensitive data. Click **Ok**  
-9. Select the preferred mechanism and **share the bugreport**  
+9. Share the bugreport through a **secure channel**  
 
 ![ Steps to generate a bug report on a Sony Xperia 10V con Xperia UI 4.0 utilizando Android 14\.](../../../assets/05-how-to/bug-report-sony-xperia-10-v.gif "image 8"){: style="height:480x;width:216px"}
 /// caption
-**image 7**. Steps to generate a bug report on a Sony Xperia 10V with Xperia UI 4.0 running Android 14\.
+**Image 7**. Steps to generate a bug report on a Sony Xperia 10V with Xperia UI 4.0 running Android 14\.
 ///
 
 
 ### Tecno (Hi OS)
 
-To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Tecno device](../02-how-to-enable-developer-options/index.md#tecno-hi-os)**.  . 
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Tecno device](../02-how-to-enable-developer-options/index.md#tecno-hi-os). 
 
 Once developer options are enabled, follow these steps to generate a bugreport (see Image 8):
 
@@ -238,37 +290,51 @@ Once developer options are enabled, follow these steps to generate a bugreport (
 3. Go to **Developer Options**
 4. Select **Bug report**
 5. Choose **Full Report**
-6. Tap “**Report”**
-7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
-8. You will see a warning message informing about sensitive data. Click **Ok**  
-9. Select the preferred mechanism and **share the bugreport**  
+6. Tap **Report**
+8. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
+9. You will see a warning message informing about sensitive data. Click **Ok**  
+10. Share the bugreport through a **secure channel**  
 
 ![Pasos para generar un reporte de errores en un dispositivo Tecno Spark Go con Hi OS utilizando Android 13](../../../assets/05-how-to/bug-report-tecno-spark-go-2023.gif"image 9"){: style="height:480x;width:216px"}
 /// caption
-**image 8**.  Steps to generate a bug report on a Tecno Spark Go with Hi OS running Android 13.
+**Image 8**.  Steps to generate a bug report on a Tecno Spark Go with Hi OS running Android 13.
 ///
+
+### Vivo (Funtouch OS)
+
+To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Vivo device](../02-how-to-enable-developer-options/index.md#vivo-funtouch-os).
+
+Once developer options are enabled, follow these steps to generate a bugreport:
+
+1. Open **Settings**
+2. Go to **Developer Options**
+3. Select **Bug report**
+4. Choose **Full Report**
+5. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the sharing settings**.   
+6. Share the bugreport through a **secure channel**   
 
 ### Xiaomi (Hyper OS)
 
-To generate a bugreport you **need access to developer options**. If this menu has not yet been enabled, follow these [steps to enable developer options on a Xiaomi device](../02-how-to-enable-developer-options/#xiaomi-hyper-os). 
-
-Once developer options are enabled, follow these steps to generate a bugreport (see Image 9):
+On Xiaomi devices, you **do not need to enable developer options** to generate a bugreport. Follow these steps to generate a bugreport (see Image 9):
 
 1. Open **Settings**
 2. Navigate to the menu **About phone**
 3. Go to **Detailed info and specs**
 4. Find the information corresponding to **CPU and tap 5 times report**
 5. A notification pop-up will appear warning about personal data in the bugreport. Click **Agree**
-6. Tap “**Report”**
-7. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the file explorer**.   
-8. Locate the bugreport that has been just generated, and clikc to open the **Sharing settings**. 
-9. Select the preferred mechanism and **share the bugreport**  
+6. When the bugreport is complete, a notification indicating "**Bug report captured**" will appear. Tap the notification to **open the file explorer**.   
+7. Locate the bugreport that has been just generated, and click to open the **Sharing settings**. 
+8. Share the bugreport through a **secure channel**  
 
 
 ![Pasos para generar un reporte de errores en un dispositivo Xiaomi 13T.](../../../assets/05-how-to/bug-report-xiaomi-13t.gif "image 10"){: style="height:480x;width:216px"}
 /// caption
 **image 9**.  Steps to generate a bug report on a Xiaomi 13T.
 ///
+
+### After generating the bugreport
+
+Once the bugreport has been shared, it is a good practice to [disable developer options](../02-how-to-enable-developer-options/index.md#how-to-disable-developer-options), so that the device returns to its original state.
 
 
 ## Steps to generate a bugreport via the ADB console
