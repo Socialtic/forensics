@@ -55,7 +55,7 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 4. Enable the first option **USB debugging** 🖥️
 5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Google Pixel running Android 13.](../../../assets/02-how-to/enable-dev-options-Google.gif "image 1"){: style="height:480px;width:216px"}
+![Steps to enable ADB on a Google Pixel running Android 13.](../../../assets/03-how-to/activating-adb-motorola-edge-40-neo.gif "image 1"){: style="height:480px;width:216px"}
 /// caption
 **Image 1**. Steps to enable ADB on a Google Pixel running Android 13.
 ///
