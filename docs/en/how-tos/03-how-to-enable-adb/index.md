@@ -87,7 +87,7 @@ To enable **ADB** it is necessary to have access to the developer options menu. 
 4. Enable the first option **USB debugging** 🖥️
 5. **Confirm** that you want to enable USB debugging in the pop-up menu ✅
 
-![Steps to enable ADB on a Motorola Edge Neo 40 running Hello UI and Android 13](../../../how-tos//03-como-habilitar-adb/assets/activating-adb-motorola-edge-40-neo.gif "image 3"){: style="height:480px;width:216px"}
+![Steps to enable ADB on a Motorola Edge Neo 40 running Hello UI and Android 13](../../../assets/03-how-to/activating-adb-motorola-edge-40-neo.gif "image 3"){: style="height:480px;width:216px"}
 /// caption
 **Image 3**. Steps to enable ADB on a Motorola Edge Neo 40 running Hello UI and Android 13.
 ///
