@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../assets/img/ST_logo-01-bn.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -63,17 +63,17 @@
     
       <link rel="stylesheet" href="../../assets/document_dates/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../../assets/document_dates/tippy/scale.css">
-    
-      <link rel="stylesheet" href="../../assets/document_dates/tippy/tippy.css">
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/light.css">
     
       <link rel="stylesheet" href="../../assets/document_dates/tippy/material.css">
     
       <link rel="stylesheet" href="../../assets/document_dates/tippy/backdrop.css">
     
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/tippy.css">
+    
       <link rel="stylesheet" href="../../assets/document_dates/tippy/shift-away.css">
     
-      <link rel="stylesheet" href="../../assets/document_dates/tippy/light.css">
+      <link rel="stylesheet" href="../../assets/document_dates/tippy/scale.css">
     
       <link rel="stylesheet" href="../../assets/document_dates/core/core.css">
     
@@ -2222,7 +2222,7 @@
 
 
 <h1 id="diccionario-de-archivos-generados-por-la-herramienta-androidqf">Diccionario de archivos generados por la herramienta androidqf</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-06-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-06-16T00:00:00+00:00'>2025-06-16</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-08-13'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-08-13T17:55:10+00:00'>2026-08-13</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' data-src='../../overrides/assets/img/avatars/jose-avatar.png' data-email='seguridad@socialtic.org' /></div></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-06-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-06-16T00:00:00+00:00'>2025-06-16</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-03'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-03T18:32:30+00:00'>2026-11-03</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' data-src='../../overrides/assets/img/avatars/jose-avatar.png' data-email='seguridad@socialtic.org' /></div></div></div></div></div>
 
 <p>Este documento forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el <a data-preview="" href="../00-glossary/index.html#diataxis/">marco de referencia de documentación técnica Diataxis</a>.</p>
 <p>Este recurso en particular se enmarca dentro de la categoría de <a href="https://diataxis.fr/reference">referencias</a>, y contiene información sobre los archivos generados por <a data-preview="" href="../00-glossary/index.html#androidqf">androidqf</a> al realizar una extracción forense de un dispositivo Android, esto con el objetivo de que una persona analista <strong>conozca los archivos generados, cómo utilizarlos, donde buscar información específica y en qué formato la encontrará.</strong> Adicionalmente, se incluyen los comandos ADB equivalentes a cada módulo con el fin de mostrar las consultas que realiza AndroidQF de forma interna y cómo puede replicarse manualmente. En los casos donde la salida del comando ADB difiere del archivo generado por AndroidQF, se agrega también un ejemplo de salida real del comando para mostrar estas diferencias y facilitar su interpretación.</p>
@@ -2256,22 +2256,22 @@
 <p>Esta información permite conocer información básica de la extracción y obtener identificadores únicos del sistema que facilitan el <a href="../../explainers/01-explainer-introduction-digital-forensics/index.html#cadena-de-custodia">proceso de custodia de la extracción  forense</a>. </p>
 <p><strong>Ejemplo:</strong></p>
 <div class="highlight"><pre><span></span><code>{
- &quot;uuid&quot;: &quot;0f615832-ed22-411e-9317-b429d28ecf9a&quot;,
- &quot;androidqf_version&quot;: &quot;v1.7.0-1-gf7642bf&quot;,
- &quot;storage_path&quot;: &quot;/home/user/0f615832-ed22-411e-9317-b429d28ecf9a&quot;,
- &quot;started&quot;: &quot;2025-01-01T18:36:37.443498116Z&quot;,
- &quot;completed&quot;: &quot;2025-01-01T18:50:04.947856405Z&quot;,
- &quot;collector&quot;: {
-  &quot;ExePath&quot;: &quot;/data/local/tmp/collector&quot;,
-  &quot;Installed&quot;: false,
-  &quot;Adb&quot;: {
-   &quot;ExePath&quot;: &quot;/usr/bin/adb&quot;,
+ "uuid": "0f615832-ed22-411e-9317-b429d28ecf9a",
+ "androidqf_version": "v1.7.0-1-gf7642bf",
+ "storage_path": "/home/user/0f615832-ed22-411e-9317-b429d28ecf9a",
+ "started": "2025-01-01T18:36:37.443498116Z",
+ "completed": "2025-01-01T18:50:04.947856405Z",
+ "collector": {
+  "ExePath": "/data/local/tmp/collector",
+  "Installed": false,
+  "Adb": {
+   "ExePath": "/usr/bin/adb",
   },
-  &quot;Architecture&quot;: &quot;arm64-v8a&quot;
+  "Architecture": "arm64-v8a"
  },
- &quot;tmp_dir&quot;: &quot;/data/local/tmp/&quot;,
- &quot;sdcard&quot;: &quot;/sdcard/&quot;,
- &quot;cpu&quot;: &quot;arm64-v8a&quot;
+ "tmp_dir": "/data/local/tmp/",
+ "sdcard": "/sdcard/",
+ "cpu": "arm64-v8a"
 }
 </code></pre></div>
 <h3 id="commandlog">command.log</h3>
@@ -2295,7 +2295,7 @@
 2025-01-01T14:22:52-06:00 [INFO] Collecting device properties...
 2025-01-01T14:22:52-06:00 [INFO] Collecting device diagnostic information. This might take a while...
 2025-01-01T14:24:11-06:00 [INFO] Collecting list of running processes...
-2025-01-01T14:24:11-06:00 [DEBUG] Deploying collector binary &#39;collector_arm64&#39; for architecture &#39;arm64-v8a&#39;.
+2025-01-01T14:24:11-06:00 [DEBUG] Deploying collector binary 'collector_arm64' for architecture 'arm64-v8a'.
 2025-01-01T14:24:11-06:00 [INFO] Collecting list of services...
 2025-01-01T14:24:12-06:00 [INFO] Generating a bugreport for the device...
 2025-01-01T14:26:22-06:00 [DEBUG] Bugreport completed!
@@ -2648,8 +2648,8 @@ BOOTCLASSPATH=/apex/com.Android.art/javalib/core-oj.jar:/apex/com.Android.art/ja
 <p><strong>Información contenida</strong></p>
 <p>Este archivo se encuentra en formato <em>json</em> y contiene información sobre las particiones y directorios de sistemas de archivos montados en un dispositivo en el espacio de usuario y en el kernel de linux de Android.</p>
 <p>El comando equivalente de ADB de este módulo es el siguiente:</p>
-<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;mount&quot;</span>
-adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;cat /proc/mounts&quot;</span>
+<div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">"mount"</span>
+adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">"cat /proc/mounts"</span>
 </code></pre></div>
 <p>El comando <em>mount</em> lee la información directamente del kernel, lo que refleja una lista de los sistemas de archivos montados en el dispositivo. Por su parte, el comando <em>cat /proc/mounts</em> accede directamente al archivo <em>/proc/mounts</em>, que es un archivo virtual generado y administrado por el kernel de linux de Android. Este archivo refleja en tiempo real y de manera precisa el estado exacto de todos los sistemas de archivos montados en el dispositivo, incluyendo particiones, volúmenes lógicos y sistemas de archivos temporales.</p>
 <p>El formato en el que se presentan los puntos de montajes es el siguiente: </p>
@@ -2762,26 +2762,26 @@ adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;c
 <p><strong>Ejemplo del contenido del archivo</strong></p>
 <p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <div class="highlight"><pre><span></span><code>[
-    &quot;/dev/block/dm-13 on / type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
-    &quot;tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=2839372k,nr_inodes=709843,mode=755)&quot;,
-    &quot;devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600,ptmxmode=000)&quot;,
-    &quot;proc on /proc type proc (rw,relatime,gid=3009,hidepid=invisible)&quot;,
-    &quot;sysfs on /sys type sysfs (rw,seclabel,relatime)&quot;,
-    &quot;selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)&quot;,
-    &quot;tmpfs on /mnt type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)&quot;,
-    &quot;tmpfs on /mnt/installer type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)&quot;,
-    &quot;tmpfs on /mnt/androidwritable type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)&quot;,
-    &quot;/dev/block/sda44 on /metadata type f2fs (rw,sync,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,nogc_merge,discard,discard_unit=block,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,barrier,extent_cache,data_flush,mode=adaptive,active_logs=6,inlinecrypt,alloc_mode=reuse,checkpoint_merge,fsync_mode=strict,memory=normal)&quot;,
-    &quot;/dev/block/dm-14 on /vendor type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
-    &quot;/dev/block/dm-15 on /vendor_dlkm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
-    &quot;/dev/block/dm-16 on /system_dlkm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
-    &quot;/dev/block/dm-17 on /product type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
-    &quot;/dev/block/dm-18 on /odm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)&quot;,
-    &quot;/dev/block/dm-19 on /prism type ext4 (ro,seclabel,relatime)&quot;,
-    &quot;/dev/block/dm-20 on /optics type ext4 (ro,seclabel,relatime)&quot;,
-    &quot;tmpfs on /apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)&quot;,
-    &quot;tmpfs on /bootstrap-apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)&quot;,
-    &quot;tmpfs on /linkerconfig type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)&quot;,
+    "/dev/block/dm-13 on / type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)",
+    "tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=2839372k,nr_inodes=709843,mode=755)",
+    "devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600,ptmxmode=000)",
+    "proc on /proc type proc (rw,relatime,gid=3009,hidepid=invisible)",
+    "sysfs on /sys type sysfs (rw,seclabel,relatime)",
+    "selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)",
+    "tmpfs on /mnt type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)",
+    "tmpfs on /mnt/installer type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)",
+    "tmpfs on /mnt/androidwritable type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=2839372k,nr_inodes=709843,mode=755,gid=1000)",
+    "/dev/block/sda44 on /metadata type f2fs (rw,sync,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,nogc_merge,discard,discard_unit=block,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,barrier,extent_cache,data_flush,mode=adaptive,active_logs=6,inlinecrypt,alloc_mode=reuse,checkpoint_merge,fsync_mode=strict,memory=normal)",
+    "/dev/block/dm-14 on /vendor type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)",
+    "/dev/block/dm-15 on /vendor_dlkm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)",
+    "/dev/block/dm-16 on /system_dlkm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)",
+    "/dev/block/dm-17 on /product type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)",
+    "/dev/block/dm-18 on /odm type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)",
+    "/dev/block/dm-19 on /prism type ext4 (ro,seclabel,relatime)",
+    "/dev/block/dm-20 on /optics type ext4 (ro,seclabel,relatime)",
+    "tmpfs on /apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)",
+    "tmpfs on /bootstrap-apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)",
+    "tmpfs on /linkerconfig type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,mode=755)",
 ]
 </code></pre></div>
 <p>Ejemplo de contenido devuelto por ejecución de comando ADB:</p>
@@ -2845,9 +2845,9 @@ none on /dev/stune type cgroup (rw,nosuid,nodev,noexec,relatime,schedtune)
 </ul>
 <p>El comando equivalente de ADB de este módulo es el siguiente:</p>
 <div class="highlight"><pre><span></span><code>#Comando equivalente para los registros actuales
-adb shell logcat -d -b all &quot;*:V&quot;
+adb shell logcat -d -b all "*:V"
 #Comando equivalente para los registros previos 
-adb shell logcat -L -b all &quot;*:V&quot;
+adb shell logcat -L -b all "*:V"
 </code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Esta información puede ser utilizada para analizar el comportamiento y ejecución de eventos en el sistema y de las aplicaciones del dispositivo para identificar anomalías o patrones que puedan indicar presencia de malware. En términos forenses son de los archivos más relevantes por su contenido.</p>
@@ -3254,9 +3254,9 @@ Bug report copied to bugreport.zip
 </ul>
 <p>Los comandos equivalentes de ADB de este módulo son los siguientes:
 Comando equivalente para el listado recursivo de cada carpeta:</p>
-<p><div class="highlight"><pre><span></span><code>adb shell &quot;ls -R /data/anr/&quot;
-adb shell &quot;ls -R /data/log/&quot;
-adb shell &quot;ls -R /sdcard/log/&quot;
+<p><div class="highlight"><pre><span></span><code>adb shell "ls -R /data/anr/"
+adb shell "ls -R /data/log/"
+adb shell "ls -R /sdcard/log/"
 </code></pre></div>
 Comando equivalente para la descarga de cada archivo:</p>
 <div class="highlight"><pre><span></span><code>adb pull /data/system/uiderrors.txt
@@ -3293,37 +3293,37 @@ adb pull /sdcard/log/
 <p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <div class="highlight"><pre><span></span><code>[
     {
-        &quot;name&quot;: &quot;com.whatsapp&quot;,
-        &quot;files&quot;: [
+        "name": "com.whatsapp",
+        "files": [
             {
-                &quot;path&quot;: &quot;/data/app/~~bqy7OQa_ZY_wDTFdG5YZRA==/com.whatsapp-3CExO11mXQz7SoP-3&gt;
-                &quot;local_name&quot;: &quot;&quot;,
-                &quot;md5&quot;: &quot;a6014f075183b8872d115e04f546a19a&quot;,
-                &quot;sha1&quot;: &quot;7c52f9781c44c4902aecb4fc8a13584998e02376&quot;,
-                &quot;sha256&quot;: &quot;26721b2669943d57f9de57614a11077b7c3f3036396d48c3e54cbf0effd2268e&quot;,
-                &quot;sha512&quot;: &quot;21bea0ff94a748826041a1a8b3b9189090340086469ec62d31cf0d263c743fc2e&gt;
-                &quot;error&quot;: &quot;&quot;,
-                &quot;verified_certificate&quot;: true,
-                &quot;certificate&quot;: {
-                    &quot;Md5&quot;: &quot;556c6019249bbc0cab70495178d3a9d1&quot;,
-                    &quot;Sha1&quot;: &quot;38a0f7d505fe18fec64fbf343ecaaaf310dbd799&quot;,
-                    &quot;Sha256&quot;: &quot;3987d043d10aefaf5a8710b3671418fe57e0e19b653c9df82558feb5ffce5&gt;
-                    &quot;ValidFrom&quot;: &quot;2010-06-25T23:07:16Z&quot;,
-                    &quot;ValidTo&quot;: &quot;2044-02-15T23:07:16Z&quot;,
-                    &quot;Issuer&quot;: &quot;C=US, ST=California, L=Santa Clara, O=WhatsApp Inc., OU=Engin&gt;
-                    &quot;Subject&quot;: &quot;C=US, ST=California, L=Santa Clara, O=WhatsApp Inc., OU=Engi&gt;
-                    &quot;SignatureAlgorithm&quot;: &quot;DSA-SHA1&quot;,
-                    &quot;SerialNumber&quot;: 1277507236
+                "path": "/data/app/~~bqy7OQa_ZY_wDTFdG5YZRA==/com.whatsapp-3CExO11mXQz7SoP-3&gt;
+                "local_name": "",
+                "md5": "a6014f075183b8872d115e04f546a19a",
+                "sha1": "7c52f9781c44c4902aecb4fc8a13584998e02376",
+                "sha256": "26721b2669943d57f9de57614a11077b7c3f3036396d48c3e54cbf0effd2268e",
+                "sha512": "21bea0ff94a748826041a1a8b3b9189090340086469ec62d31cf0d263c743fc2e&gt;
+                "error": "",
+                "verified_certificate": true,
+                "certificate": {
+                    "Md5": "556c6019249bbc0cab70495178d3a9d1",
+                    "Sha1": "38a0f7d505fe18fec64fbf343ecaaaf310dbd799",
+                    "Sha256": "3987d043d10aefaf5a8710b3671418fe57e0e19b653c9df82558feb5ffce5&gt;
+                    "ValidFrom": "2010-06-25T23:07:16Z",
+                    "ValidTo": "2044-02-15T23:07:16Z",
+                    "Issuer": "C=US, ST=California, L=Santa Clara, O=WhatsApp Inc., OU=Engin&gt;
+                    "Subject": "C=US, ST=California, L=Santa Clara, O=WhatsApp Inc., OU=Engi&gt;
+                    "SignatureAlgorithm": "DSA-SHA1",
+                    "SerialNumber": 1277507236
                 },
-                &quot;certificate_error&quot;: &quot;&quot;,
-                &quot;trusted_certificate&quot;: true
+                "certificate_error": "",
+                "trusted_certificate": true
             }
         ],
-        &quot;installer&quot;: &quot;com.facebook.system&quot;,
-        &quot;uid&quot;: 10267,
-        &quot;disabled&quot;: false,
-        &quot;system&quot;: false,
-        &quot;third_party&quot;: true
+        "installer": "com.facebook.system",
+        "uid": 10267,
+        "disabled": false,
+        "system": false,
+        "third_party": true
     }
 ]
 </code></pre></div>
@@ -3377,60 +3377,60 @@ package:/system/product/overlay/FontRubik/FontRubikOverlay.apk=org.lineageos.ove
 <p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <div class="highlight"><pre><span></span><code>[
     {
-        &quot;pid&quot;: 1,
-        &quot;uid&quot;: 0,
-        &quot;ppid&quot;: 0,
-        &quot;pgroup&quot;: 0,
-        &quot;psid&quot;: 0,
-        &quot;filename&quot;: &quot;(init)&quot;,
-        &quot;priority&quot;: 0,
-        &quot;state&quot;: &quot;S&quot;,
-        &quot;user_time&quot;: 0,
-        &quot;kernel_time&quot;: 0,
-        &quot;path&quot;: &quot;/system/bin/init&quot;,
-        &quot;context&quot;: &quot;u:r:init:s0&quot;,
-        &quot;previous_context&quot;: &quot;u:r:kernel:s0&quot;,
-        &quot;command_line&quot;: [&quot;/system/bin/init&quot;, &quot;second_stage&quot;],
-        &quot;env&quot;: null,
-        &quot;cwd&quot;: &quot;/&quot;
+        "pid": 1,
+        "uid": 0,
+        "ppid": 0,
+        "pgroup": 0,
+        "psid": 0,
+        "filename": "(init)",
+        "priority": 0,
+        "state": "S",
+        "user_time": 0,
+        "kernel_time": 0,
+        "path": "/system/bin/init",
+        "context": "u:r:init:s0",
+        "previous_context": "u:r:kernel:s0",
+        "command_line": ["/system/bin/init", "second_stage"],
+        "env": null,
+        "cwd": "/"
     },
     {
-        &quot;pid&quot;: 2,
-        &quot;uid&quot;: 0,
-        &quot;ppid&quot;: 0,
-        &quot;pgroup&quot;: 0,
-        &quot;psid&quot;: 0,
-        &quot;filename&quot;: &quot;(kthreadd)&quot;,
-        &quot;priority&quot;: 0,
-        &quot;state&quot;: &quot;S&quot;,
-        &quot;user_time&quot;: 0,
-        &quot;kernel_time&quot;: 0,
-        &quot;path&quot;: &quot;&quot;,
-        &quot;context&quot;: &quot;u:r:kernel:s0&quot;,
-        &quot;previous_context&quot;: &quot;u:r:kernel:s0&quot;,
-        &quot;command_line&quot;: null,
-        &quot;env&quot;: null,
-        &quot;cwd&quot;: &quot;&quot;
+        "pid": 2,
+        "uid": 0,
+        "ppid": 0,
+        "pgroup": 0,
+        "psid": 0,
+        "filename": "(kthreadd)",
+        "priority": 0,
+        "state": "S",
+        "user_time": 0,
+        "kernel_time": 0,
+        "path": "",
+        "context": "u:r:kernel:s0",
+        "previous_context": "u:r:kernel:s0",
+        "command_line": null,
+        "env": null,
+        "cwd": ""
     },
     {
-        &quot;pid&quot;: 20430,
-        &quot;uid&quot;: 0,
-        &quot;ppid&quot;: 0,
-        &quot;pgroup&quot;: 0,
-        &quot;psid&quot;: 0,
-        &quot;filename&quot;: &quot;(com.whatsapp)&quot;,
-        &quot;priority&quot;: 0,
-        &quot;state&quot;: &quot;&quot;,
-        &quot;user_time&quot;: 0,
-        &quot;kernel_time&quot;: 0,
-        &quot;path&quot;: &quot;&quot;,
-        &quot;context&quot;: &quot;u:r:untrusted_app:s0:c11,c257,c512,c768&quot;,
-        &quot;previous_context&quot;: &quot;u:r:init:s0&quot;,
-        &quot;command_line&quot;: [
-            &quot;com.whatsapp&quot;
+        "pid": 20430,
+        "uid": 0,
+        "ppid": 0,
+        "pgroup": 0,
+        "psid": 0,
+        "filename": "(com.whatsapp)",
+        "priority": 0,
+        "state": "",
+        "user_time": 0,
+        "kernel_time": 0,
+        "path": "",
+        "context": "u:r:untrusted_app:s0:c11,c257,c512,c768",
+        "previous_context": "u:r:init:s0",
+        "command_line": [
+            "com.whatsapp"
         ],
-        &quot;env&quot;: null,
-        &quot;cwd&quot;: &quot;&quot;
+        "env": null,
+        "cwd": ""
     },
 ]
 </code></pre></div>
@@ -3562,16 +3562,16 @@ system        1004     1   10830264   3552 0                   0 S vendor.lineag
 </ul>
 <p>Si ninguno de estos archivos está presente en el dispositivo entonces el contenido del archivo será vacío.</p>
 <p>Los comandos equivalentes de ADB de este módulo son los siguientes:</p>
-<div class="highlight"><pre><span></span><code>adb shell &quot;which -a su&quot;
-adb shell &quot;which -a busybox&quot;
-adb shell &quot;which -a supersu&quot;
-adb shell &quot;which -a Superuser.apk&quot;
-adb shell &quot;which -a KingoUser.apk&quot;
-adb shell &quot;which -a SuperSu.apk&quot;
-adb shell &quot;which -a magisk&quot;
-adb shell &quot;which -a magiskhide&quot;
-adb shell &quot;which -a magiskinit&quot;
-adb shell &quot;which -a magiskpolicy&quot;
+<div class="highlight"><pre><span></span><code>adb shell "which -a su"
+adb shell "which -a busybox"
+adb shell "which -a supersu"
+adb shell "which -a Superuser.apk"
+adb shell "which -a KingoUser.apk"
+adb shell "which -a SuperSu.apk"
+adb shell "which -a magisk"
+adb shell "which -a magiskhide"
+adb shell "which -a magiskinit"
+adb shell "which -a magiskpolicy"
 </code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Este archivo detecta herramientas de rooting, lo cual puede representar un indicativo  de accesos no autorizados y escalada de privilegios que pueda exponer alguna vulnerabilidad.  Así mismo, permite al analista identificar binarios sospechosos que podrían haberse instalado sin el conocimiento del usuario y ayuda a determinar si el dispositivo ha sido manipulado.</p>
@@ -3582,15 +3582,15 @@ adb shell &quot;which -a magiskpolicy&quot;
 <p>Cuando el módulo identifica binarios relacionados con el rooting en las rutas estándar del sistema en el dispositivo, contendrá una lista de estas rutas a los binarios detectados. </p>
 <p>Ejemplo de contenido devuelto por ejecución de AndroidQF y comando ADB:</p>
 <div class="highlight"><pre><span></span><code>[
-    &quot;/system/xbin/su&quot;,
-    &quot;/system/bin/su&quot;,
-    &quot;/data/local/xbin/su&quot;,
-    &quot;/data/local/bin/busybox&quot;,
-    &quot;/sbin/su&quot;,
-    &quot;/su/bin/magisk&quot;,
-    &quot;/system/bin/.ext/.su&quot;,
-    &quot;/data/local/tmp/Superuser.apk&quot;,
-    &quot;/data/local/tmp/magiskhide&quot;
+    "/system/xbin/su",
+    "/system/bin/su",
+    "/data/local/xbin/su",
+    "/data/local/bin/busybox",
+    "/sbin/su",
+    "/su/bin/magisk",
+    "/system/bin/.ext/.su",
+    "/data/local/tmp/Superuser.apk",
+    "/data/local/tmp/magiskhide"
 ]
 </code></pre></div>
 <h2 id="informacion-de-archivos-en-el-dispositivo">Información de archivos en el dispositivo</h2>
@@ -3654,43 +3654,43 @@ Comando equivalente para solo SMS:</p>
 </ul>
 <p>Cada archivo incluye metadatos como: la ruta completa del archivo, tamaño, marca de tiempo (indica última modificación del archivo y último acceso al archivo), permisos del archivo, identificador del propietario, mensajes de error y hashes sha1, sha256, sha512, md5 si es que están pre-calculados.</p>
 <p>Los comandos equivalentes de ADB de este módulo son los siguientes:</p>
-<div class="highlight"><pre><span></span><code>adb shell &quot;find /sdcard/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /system/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /system_ext/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /vendor/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /cust/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /product/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /apex/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /data/local/tmp/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /data/media/0/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /data/misc/radio/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /data/vendor/secradio/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /data/log/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /tmp/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find / -maxdepth 1 -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
-adb shell &quot;find /data/data/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/dev/null&quot;
+<div class="highlight"><pre><span></span><code>adb shell "find /sdcard/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /system/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /system_ext/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /vendor/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /cust/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /product/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /apex/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /data/local/tmp/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /data/media/0/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /data/misc/radio/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /data/vendor/secradio/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /data/log/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /tmp/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find / -maxdepth 1 -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
+adb shell "find /data/data/ -printf '%T@ %m %s %u %g %p\n' 2&gt;/dev/null"
 </code></pre></div>
 <p><strong>¿Por qué es importante?</strong></p>
 <p>Ejemplo de contenido devuelto por ejecución de AndroidQF:</p>
 <p>Este archivo tiene relevancia para identificar archivos de interés en una investigación forense, incluyendo potenciales archivos utilizados por atacantes para comprometer un dispositivo y hacer los análisis oportunos que permitan dar seguimiento a actividad maliciosa. </p>
 <p><strong>Ejemplo del contenido del archivo</strong></p>
 <div class="highlight"><pre><span></span><code>{
-&quot;path&quot;: &quot;/sdcard/Android/.Trash/com.sec.android.app.myfiles/.nomedia&quot;,
-        &quot;size&quot;: 62,
-        &quot;mode&quot;: &quot;-rw-rw----&quot;,
-        &quot;user_id&quot;: 10276,
-        &quot;user_name&quot;: &quot;&quot;,
-        &quot;group_id&quot;: 1023,
-        &quot;group_name&quot;: &quot;&quot;,
-        &quot;changed_time&quot;: 1722868692,
-        &quot;modified_time&quot;: 1722868692,
-        &quot;access_time&quot;: 1714937715,
-        &quot;error&quot;: &quot;&quot;,
-        &quot;context&quot;: &quot;u:object_r:fuse:s0&quot;,
-        &quot;sha1&quot;: &quot;&quot;,
-        &quot;sha256&quot;: &quot;&quot;,
-        &quot;sha512&quot;: &quot;&quot;,
-        &quot;md5&quot;: &quot;&quot;
+"path": "/sdcard/Android/.Trash/com.sec.android.app.myfiles/.nomedia",
+        "size": 62,
+        "mode": "-rw-rw----",
+        "user_id": 10276,
+        "user_name": "",
+        "group_id": 1023,
+        "group_name": "",
+        "changed_time": 1722868692,
+        "modified_time": 1722868692,
+        "access_time": 1714937715,
+        "error": "",
+        "context": "u:object_r:fuse:s0",
+        "sha1": "",
+        "sha256": "",
+        "sha512": "",
+        "md5": ""
 }
 </code></pre></div>
 <p>Ejemplo de contenido devuelto por ejecución de comando ADB:</p>
@@ -3903,10 +3903,10 @@ adb shell &quot;find /data/data/ -printf &#39;%T@ %m %s %u %g %p\n&#39; 2&gt;/de
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant.prefetch", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.footer", "content.action.view", "content.action.edit", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.highlight", "search.suggest", "search.share", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant.prefetch", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.footer", "content.action.view", "content.action.edit", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../assets/document_dates/tippy/popper.min.js"></script>
       
