@@ -13,8 +13,8 @@ author:
     name: Daniel
     url: https://socialtic.org/quienes-somos/
     description: SocialTIC
-
 translation-review-pending: false
+
 ---
 
 # Tutorial: Using MVT for Technical Triage of Android Devices
