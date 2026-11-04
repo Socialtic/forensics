@@ -9,8 +9,6 @@
         <meta name="description" content="Documentación para investigaciones forenses consentidas en Sociedad Civil">
       
       
-        <meta name="author" content="{'name': 'Daniel', 'url': 'https://socialtic.org/quienes-somos/', 'description': 'SocialTIC'}">
-      
       
         <link rel="canonical" href="https://forensics.socialtic.org/en/tutorials/02-tutorial-mvt-android-triage/index.html">
       
@@ -31,7 +29,7 @@
     
     
       
-        <title>Tutorial - Uso de MVT para el triaje técnico de dispositivos Android - SocialTIC Forensics</title>
+        <title>Tutorial: Using MVT for Technical Triage of Android Devices - SocialTIC Forensics</title>
       
     
     
@@ -61,33 +59,33 @@
     
       <link rel="stylesheet" href="../../../assets/document_dates/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+    
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/light.css">
-    
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
-    
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
     
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
     
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+    
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/light.css">
-    
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
-    
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
     
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
     
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
     
@@ -116,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-uso-de-mvt-para-el-triaje-tecnico-de-dispositivos-android" class="md-skip">
+        <a href="#translation-review-pending-false" class="md-skip">
           Skip to content
         </a>
       
@@ -130,17 +128,12 @@
     
     
     
-        <div class="forensics-announce">
-            This page has not yet been translated into English, therefore it is displayed in Spanish.
-            <a href="/en/community/how-to-contribute/">Help us translate!</a>
-        </div>
-    
     
     <script>
         const gGM_SELECT_VERSION = "Select version";
         const gGMC_TRANSLATE_CTA = "Help us translate!";
         const gGMC_PAGE_LOCALE = "en";
-        const gGMC_FILE_LOCALE = "es";
+        const gGMC_FILE_LOCALE = "en";
         const gGMC_TRANSLATE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 12c0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2 0 .37-.03.73-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10C6.47 2 2 6.5 2 12s4.5 10 10 10c.59 0 1.16-.06 1.72-.16A5.9 5.9 0 0 1 13 19c0-.29.03-.57.07-.85-.32.63-.67 1.24-1.07 1.81-.83-1.2-1.5-2.53-1.91-3.96h3.72a5.95 5.95 0 0 1 2.59-2.4c.06-.53.1-1.06.1-1.6M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2zm.82 2H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m6.34 6H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2m.25-9.56c1.84.63 3.37 1.9 4.33 3.56h-2.95a15.7 15.7 0 0 0-1.38-3.56M23 18v2h-3v3h-2v-3h-3v-2h3v-3h2v3z"/></svg>';
     </script>
     
@@ -178,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tutorial - Uso de MVT para el triaje técnico de dispositivos Android
+              Tutorial: Using MVT for Technical Triage of Android Devices
             
           </span>
         </div>
@@ -1749,7 +1742,7 @@
 
 
   
-    <a href="https://github.com/Socialtic/forensics/edit/main/docs/es/tutorials/02-tutorial-mvt-android-triage/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Socialtic/forensics/edit/main/docs/en/tutorials/02-tutorial-mvt-android-triage/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1758,94 +1751,112 @@
     
       
     
-    <a href="https://github.com/Socialtic/forensics/raw/main/docs/es/tutorials/02-tutorial-mvt-android-triage/index.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/Socialtic/forensics/raw/main/docs/en/tutorials/02-tutorial-mvt-android-triage/index.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="tutorial-uso-de-mvt-para-el-triaje-tecnico-de-dispositivos-android">Tutorial: Uso de MVT para el triaje técnico de dispositivos Android</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-11-03T00:00:00+00:00'>2026-11-03</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-03'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-03T18:32:30+00:00'>2026-11-03</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='daniel.bedoya@socialtic.org' /></div></div></div></div></div>
-
-<h2 id="introduccion">Introducción</h2>
-<p>Este documento forma <strong>parte de un repositorio de documentación técnica</strong> que tiene como objetivo establecer una base de conocimientos probados, flexibles y accesibles para <strong>impulsar el análisis forense consentido en beneficio de la sociedad civil</strong>. Para organizar los contenidos, se utiliza el <a data-preview="" href="../../references/00-glossary/index.html#diataxis">marco de referencia de documentación técnica Diataxis</a>.</p>
-<p>Este recurso es un <a href="https://diataxis.fr/tutorials/">tutorial</a> que busca facilitar el aprendizaje de los conceptos y habilidades necesarias para realizar un triaje técnico forense con la herramienta <a href="https://github.com/mvt-project/mvt">Mobile Verification Toolkit</a>. Esta herramienta forense de código abierto, desarrollada por el <a href="https://securitylab.amnesty.org/">Security Lab de Amnistía Internacional</a>, permite <strong>analizar artefactos forenses de dispositivos Android e iOS en busca de señales de compromiso</strong>.</p>
-<p>En este contexto, entendemos como triaje técnico la evaluación, con consentimiento de la persona dueña, de artefactos extraídos de un dispositivo móvil para <strong>determinar si existen indicios, indicadores o comportamientos que coincidan con vectores de ataque conocidos</strong>, y que por lo tanto justifiquen un análisis forense de mayor profundidad. Por lo tanto, el resultado del triaje técnico no es una confirmación ni un descarte de una posible intrusión, sino una decisión fundamentada sobre cómo proceder con un caso.</p>
-<p>La MVT procesa la información que ya fue extraída previamente, por ejemplo, utilizando la herramienta con AndroidQF. No accede al dispositivo directamente ni realiza la extracción de datos por sí misma, sino que agrupa y organiza la información, y la compara contra un conjunto de heurísticas de comportamiento sospechoso, e indicadores de compromiso (IOCs), por ejemplo señales conocidas de spyware como <a href="https://securitylab.amnesty.org/latest/2026/07/inside-pegasus-the-evolution-of-the-worlds-most-notorious-spyware/">Pegasus</a> o <a href="https://securitylab.amnesty.org/latest/2025/12/intellexa-leaks-predator-spyware-operations-exposed/">Predator</a>, o familias de stalkerware.</p>
-<p>Al finalizar este tutorial, <strong>sabrás cómo instalar la MVT, cómo ejecutar un triaje sobre una extracción de AndroidQF y cómo interpretar metódicamente sus resultados a través de un ejemplo guiado mediante un caso hipotético</strong>, que contempla el proceso completo de triaje: desde la entrevista de triaje hasta la construcción de una línea de tiempo de hallazgos.</p>
-<p>La versión original de este documento fue elaborada en idioma Español por el equipo de SocialTIC. <strong>Agradecemos las revisiones y sugerencias</strong> del equipo de 0xCHE. Cualquier error o omisión es responsabilidad de los autores.</p>
-<p>Reconocemos el <strong>esfuerzo y liderazgo del Laboratorio de Seguridad de Amnistía Internacional en el desarrollo de la herramienta MVT</strong>, así como el fortalecimiento de la comunidad forense consentida alrededor del mundo a través de su programa <a href="https://securitylab.amnesty.org/digital-forensics-fellowship/">Digital Forensics Fellowship</a>. Este material busca ser compatible y complementarios con estos esfuerzos tecnológicos y metodológicos.</p>
-<p>Este documento se complementa con otros recursos de este repositorio, incluyendo:</p>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-11-04T20:57:01+00:00'>2026-11-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-04T20:57:01+00:00'>2026-11-04</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='daniel.bedoya@socialtic.org' /></div></div></div></div></div>
+<hr />
+<p>title: Tutorial: Using MVT for Technical Triage of Android Devices
+summary: Guided excercise to learn how to use MVT to analyze an androidqf extraction
+keywords: triage, android, mvt, androidqf
+lang: en
+tags: [tutorial, android, mvt]
+last_updated: 2026-11-04
+some_url:
+created: 2026-11-04
+comments: true
+author:
+    name: Daniel
+    url: https://socialtic.org/quienes-somos/
+    description: SocialTIC</p>
+<h2 id="translation-review-pending-false">translation-review-pending: false</h2>
+<h1 id="tutorial-using-mvt-for-technical-triage-of-android-devices">Tutorial: Using MVT for Technical Triage of Android Devices</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This document is part of a technical documentation repository whose main objective is to establish a baseline of proven, flexible and accessible knowledge to boost consensual forensic analysis in support of civil society across the globe. To organize the contents, we use the technical documentation framework <a data-preview="" href="../../references/00-glossary/index.html#diataxis">Diataxis</a>.</p>
+<p>This resource is a <a href="https://diataxis.fr/tutorials/">tutorial</a> designed to learn the concepts and skills necessary to perform a technical forensic triage using the <a href="https://github.com/mvt-project/mvt">Mobile Verification Toolkit</a>. This open-source forensic tool, developed by the <a href="https://securitylab.amnesty.org/">Amnesty International Security Lab</a>, allows users to <strong>analyze forensic artifacts from Android and iOS devices for signs of compromise</strong>.</p>
+<p>In this context, we define technical triage as the evaluation, with the owner’s consent, of artifacts extracted from a mobile device to <strong>determine whether there are clues, indicators, or behaviors that match known attack vectors</strong>, and which therefore warrant a more in-depth forensic analysis. The result of a technical triage is therefore neither a confirmation nor a dismissal of a possible intrusion, but rather an informed decision on how to proceed with a case.</p>
+<p>MVT processes information that has already been extracted, for example, using the AndroidQF tool. It does not access the device directly or extract data on its own, but rather aggregates and organizes the information, comparing it against a set of heuristics for suspicious behavior and indicators of compromise (IOCs), such as known signs of spyware like <a href="https://securitylab.amnesty.org/latest/2026/07/inside-pegasus-the-evolution-of-the-worlds-most-notorious-spyware/">Pegasus</a> or <a href="https://securitylab.amnesty.org/latest/2025/12/intellexa-leaks-predator-spyware-operations-exposed/">Predator</a>, or stalkerware families.</p>
+<p>By the end of this tutorial, <strong>we will know how to install MVT, how to triage an AndroidQF extraction, and how to methodically interpret its results through a guided example based on a hypothetical case</strong>, which covers the entire triage process: from the triage interview to building a timeline of findings.</p>
+<p>The original version of this document was written in Spanish by the SocialTIC team. <strong>We appreciate the reviews and suggestions</strong> from the 0xCHE team. Any errors or omissions are the responsibility of the authors. It was automatically translated using the <a href="https://github.com/Socialtic/forensics/blob/main/scripts/translate-readme.md">translation script</a> and manually reviewed before publication.</p>
+<p>We acknowledge the <strong>efforts and leadership of Amnesty International’s Security Lab in developing the MVT tool</strong>, as well as its work to strengthen the global digital forensics community through its <a href="https://securitylab.amnesty.org/digital-forensics-fellowship/">Digital Forensics Fellowship</a>. This material is intended to be compatible with and complementary to these technological and methodological efforts.</p>
+<p>This document is complemented by other resources in this repository, including:</p>
 <ul>
-<li><a href="../../explainers/04-explainer-introduction-android-triage/index.md">Explainer: Introducción al triaje técnico de dispositivos Android</a>, que cubre aspectos conceptuales sobre el sistema operativo Android y cómo puede ser vulnerado.</li>
-<li><a href="../../explainers/05-explainer-mvt-android-triage/index.html">Explainer: Explorando la herramienta MVT para el triaje técnico de dispositivos Android</a>, que contiene información sobre el funcionamiento de MVT y los módulos para Android.</li>
-<li><a href="../../how-tos/how-tos/06-how-to-triage-android-mvt/">How-to: Triaje técnico de dispositivos Android utilizando MVT</a>, con los comandos y pasos para realizar un triaje con MVT de forma directa.</li>
-<li>Guías para la extracción forense de artefactos, incluyendo <a href="../../how-tos/05-how-to-extract-bugreport/index.html">la guía how-to para extracción de un bugreport</a> y <a href="../../how-tos/04-how-to-extract-with-androidqf/index.html">la guía how-to para la extracción con AndroidQF</a>.</li>
-<li>Materiales de referencia con información sobre las salidas de la MVT:</li>
-<li><a data-preview="" href="../../references/02-reference-mvt-bugreport-dictionary/index.html">Diccionario de archivos de salida del análisis de bugreport con MVT</a></li>
-<li><a data-preview="" href="../../references/03-reference-mvt-androidqf-dictionary/index.html">Diccionario de archivos de salida del análisis de AndroidQF con MVT</a></li>
+<li><a href="../../explainers/04-explainer-introduction-android-triage/index.md">Explainer: Introduction to technical triage of Android devices</a>, which covers conceptual aspects of the Android operating system and how it can be compromised.</li>
+<li><a href="../../explainers/05-explainer-mvt-android-triage/index.html">Explainer: Exploring the MVT tool for technical triage of Android devices</a>, which contains information on how MVT works and its modules for Android.</li>
+<li><a href="../../how-tos/06-how-to-triage-android-mvt/index.md">How-to: Technical triage of Android devices using MVT</a>, which provides the commands and steps for triaging directly with MVT.</li>
+<li>Guides for the forensic extraction of artifacts, including <a href="../../how-tos/05-how-to-extract-bugreport/index.html">the how-to guide for extracting a bugreport</a> and <a href="../../how-tos/04-how-to-extract-with-androidqf/index.html">the how-to guide for extraction using AndroidQF</a>.</li>
+<li>Reference materials with information on MVT output:<ul>
+<li><a data-preview="" href="../../references/02-reference-mvt-bugreport-dictionary/index.html">MVT bugreport output file dictionary</a></li>
+<li><a data-preview="" href="../../references/01-reference-androidqf-dictionary/index.html">AndroidQF output file dictionary</a></li>
 </ul>
-<h2 id="requerimientos-para-seguir-este-tutorial">Requerimientos para seguir este tutorial</h2>
-<p>Para seguir este tutorial, es necesario que consideres los siguientes requerimientos:</p>
-<ul>
-<li><strong>Computadora</strong>: Necesitas un equipo de cómputo, como una laptop o un equipo de escritorio. De preferencia, el equipo deberá tener un sistema operativo Linux o MacOS, pues las herramientas a instalar tienen una mayor compatibilidad con estos sistemas operativos. En caso de contar con un sistema operativo Windows, se puede optar por crear una <a href="https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview">Máquina Virtual Linux</a> o instalar <a href="https://learn.microsoft.com/es-es/windows/wsl/install">Windows Subsystem For Linux</a>.</li>
-<li><strong>Descargar la muestra forense a analizar</strong>: Para seguir este tutorial necesitas una muestra forense para analizar con MVT.</li>
-<li>Descarga la muestra de prueba para este ejercicio desde <a href="https://drive.google.com/file/d/1OpTwa5Bm5j34UaEY7j4hzI6D5OnwMr4E/view?usp=drive_link">este enlace</a>.</li>
-<li>Si deseas analizar una muestra diferente, te recomendamos primero completar este tutorial y el <a href="../01-tutorial-learning-androidqf/index.html">Tutorial Explorando AndroidQF para la extracción forense en Android</a> para familiarizarte con las herramientas, y posteriormente puedes utilizar las guías how-to para guiar tu proceso de extracción y triaje.</li>
-<li><strong>Instalación del software git:</strong> Necesitas <a href="https://github.com/git-guides/install-git">instalar git en tu computadora</a>, ya que la instalación de la herramienta se hace a través del repositorio oficial.</li>
-<li><strong>Instalación de herramientas:</strong> En <a href="#instalacion-de-la-mvt">la sección de instalación</a> de este tutorial, se detallan los pasos a seguir para la instalación de MVT.</li>
-<li><strong>Conocimientos previos:</strong> Este tutorial asume que tienes familiaridad básica con la línea de comandos (navegar entre carpetas, ejecutar comandos simples) y con conceptos generales de triaje forense, como la importancia de una entrevista inicial y el manejo responsable de datos sensibles. Antes de iniciar, te recomendamos revisar el <a href="../../explainers//04-explainer-introduction-android-triage/">material explicativo sobre triaje técnico en dispositivos Android</a> y el <a href="../../explainers/05-explainer-mvt-android-triage/index.html">material explicativo sobre triaje técnico usando MVT</a>.</li>
+</li>
 </ul>
-<p><strong>A continuación se presenta un contexto de incidente ficticio y las instrucciones para realizar el proceso de triaje paso a paso</strong> acompañados de explicaciones concisas de interpretación que ayuda a los analistas a llegar a la conclusión del triaje.</p>
-<h2 id="contexto-del-caso">Contexto del caso</h2>
-<p>Para este tutorial, <strong>imagina que eres un analista en forense digital que trabaja con actores de cambio social como periodistas, activistas, defensores de derechos y miembros de la sociedad civil</strong>. Recibiste por correo electrónico una solicitud de apoyo de un colega de confianza para el análisis de un dispositivo móvil (smartphone Android) de una persona colaboradora de un colectivo conocido. Este colega te ayuda a verificar la identidad del colaborador, te pone en contexto de la situación y te menciona que realizó una entrevista inicial y una extracción de dicho dispositivo. A continuación te detalla el incidente y la información disponible.</p>
-<h3 id="incidente">Incidente</h3>
-<p>La extracción corresponde al dispositivo de una persona defensora de derechos humanos, a quien se le retuvo su teléfono durante un periodo de custodia. Se sospecha que durante ese periodo, el actor de amenazas involucrado contó con la capacidad técnica para ejecutar un acceso físico no autorizado al dispositivo.</p>
-<p>La <strong>siguiente información se obtuvo a través de la entrevista inicial:</strong></p>
+<h2 id="requirements-for-following-this-tutorial">Requirements for following this tutorial</h2>
+<p>To follow this tutorial, you need the following:</p>
 <ul>
-<li>El 26 de agosto de 2025, alrededor de las 14:30 GMT-6, la persona fue detenida y entregó su teléfono desbloqueado, por lo que este quedó en posesión del actor.</li>
-<li>El dispositivo permaneció fuera de su control hasta aproximadamente las 11:00 del 27 de agosto de 2025, es decir aproximadamente 20 horas.</li>
-<li>Al recibir de vuelta su dispositivo, este estaba completamente apagado y sin batería.</li>
-<li>En los diez días posteriores, la persona reportó comportamiento anómalo, la batería se consumía rápidamente, notó que había aplicaciones que se congelaban con frecuencia y notó indicadores de privacidad de cámara y micrófono encendiéndose sin que la persona abriera ninguna app.</li>
-<li>Días después, personas ajenas a la situación le expresaron directamente que conocían el contenido de conversaciones privadas suyas, lo cual motivó al colaborador del colectivo a buscar ayuda técnica.</li>
+<li><strong>Computer</strong>: you need a computer, such as a laptop or desktop. Preferably, the computer should run Linux or macOS, as the tools to be installed are more compatible with these operating systems. If you have a Windows operating system, you can create a <a href="https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview">Linux virtual machine</a> or install <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a>.</li>
+<li><strong>Download the forensic sample to analyze</strong>: to follow this tutorial, you need a forensic sample to analyze with MVT.<ul>
+<li>Download the test sample for this exercise from <a href="https://drive.google.com/file/d/1OpTwa5Bm5j34UaEY7j4hzI6D5OnwMr4E/view?usp=drive_link">this link</a>.</li>
+<li>If you want to analyze a different sample, we recommend that you first complete this tutorial and the <a href="../01-tutorial-learning-androidqf/index.html">Tutorial: Exploring AndroidQF for data acquisition on Android</a> to familiarize yourself with the tools. You can then use the how-to guides to guide your extraction and triage process.</li>
+</ul>
+</li>
+<li><strong>Installing Git:</strong> you need to <a href="https://github.com/git-guides/install-git">install Git on your computer</a>, since the tool is installed from its official repository.</li>
+<li><strong>Installing tools:</strong> the <a href="#installing-mvt">installation section</a> of this tutorial details the steps for installing MVT.</li>
+<li><strong>Prior knowledge:</strong> this tutorial assumes you have basic familiarity with the command line (navigating between folders, running simple commands) and with general concepts of forensic triage, such as the importance of an initial interview and the responsible handling of sensitive data. Before you begin, we recommend reviewing the <a href="../../explainers/04-explainer-introduction-android-triage/index.md">explanatory material on technical triage of Android devices</a> and the <a href="../../explainers/05-explainer-mvt-android-triage/index.html">explanatory material on technical triage using MVT</a>.</li>
+</ul>
+<p><strong>Below is a fictional incident scenario and step-by-step instructions for performing the triage process</strong>, accompanied by concise interpretive explanations to help analysts reach a triage conclusion.</p>
+<h2 id="case-context">Case context</h2>
+<p>For this tutorial, <strong>imagine that you are a digital forensics analyst working with at-risk individuals such as journalists, activists, human rights defenders, and members of civil society</strong>. You received an email request for support from a trusted colleague at a human rights organization to analyze a mobile device (Android smartphone) belonging to a collaborator of a well-known collective. This colleague helps you verify the collaborator’s identity, gives you context on the situation, and mentions that they conducted an initial interview and an extraction of the device. They they provide the following incident report. </p>
+<h3 id="incident">Incident</h3>
+<p>The extraction belongs to the device of a human rights defender whose phone was held during a period of detention. It is suspected that during that period, the actor involved had the technical capability to gain unauthorized physical access to the device.</p>
+<p>The <strong>following information was obtained during an initial interview:</strong></p>
+<ul>
+<li>On August 26, 2025, at approximately 14:30 GMT-6, the person was detained and handed over their unlocked phone, which remained in the actor’s possession.</li>
+<li>The device remained out of the person’s control until approximately 11:00 on August 27, 2025, a period of approximately 20 hours.</li>
+<li>When the person received the device back, it was completely turned off and out of battery.</li>
+<li>Over the following ten days, the person reported unusual behavior: the battery drained quickly, apps frequently froze, and the camera and microphone privacy indicators turned on without the person opening any app.</li>
+<li>Days later, people unrelated to the situation told the person directly that they knew the content of their private conversations, which prompted the collective’s collaborator to seek technical support.</li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Esta narrativa se documenta únicamente para dar contexto al análisis técnico. El objetivo de la entrevista de triaje no es confirmar ni descartar hipótesis, <strong>sino identificar eventos, fechas y comportamientos que orienten los siguientes pasos de la investigación.</strong></p>
+<p class="admonition-title">Note</p>
+<p>This narrative is documented solely to provide context for the technical analysis. The purpose of the triage interview is not to confirm or rule out hypotheses, <strong>but to identify events, dates, and behaviors that will guide the next steps of the investigation.</strong></p>
 </div>
-<h2 id="formulacion-de-hipotesis">Formulación de hipótesis</h2>
-<p>Antes de revisar cualquier resultado de la MVT, es indispensable <strong>tener claro qué buscamos probar con el análisis forense</strong>. En este caso, las hipótesis de trabajo son:</p>
+<h2 id="formulating-hypotheses">Formulating hypotheses</h2>
+<p>Before reviewing any MVT results, it is essential to <strong>be clear about what we are trying to prove with the forensic analysis</strong>. In this case, the working hypotheses are:</p>
 <ol>
-<li>Durante el periodo en que el dispositivo estuvo fuera del control de la persona, alguien con acceso físico realizó alguna acción sobre el dispositivo.</li>
-<li>Existe una correlación temporal entre esa posible acción y el comportamiento anómalo reportado por la persona en los días posteriores.</li>
+<li>During the period when the device was out of the person’s control, someone with physical access performed an action on the device.</li>
+<li>There is a temporal correlation between that possible action and the anomalous behavior reported by the person in the following days.</li>
 </ol>
-<h2 id="configurar-la-carpeta-de-trabajo">Configurar la carpeta de trabajo</h2>
-<p>Debes <strong>crear una carpeta de trabajo para almacenar una copia de la extracción recolectada,</strong> considerando un nombre estratégico para dicha carpeta, que puede contener, por ejemplo una combinación de la fecha con un identificador de caso o dispositivo sin datos que permitan identificar a la persona.</p>
-<p>Antes de ejecutar cualquier comando, seguimos las <a href="../../explainers/05-explainer-mvt-android-triage/index.html#recomendaciones-para-el-manejo-de-la-informacion-sensible">prácticas de manejo de datos</a> que se mencionan en el explainer de exploración de MVT para triajes de Android. Aunque una extracción de AndroidQF y un bugreport no contienen información sensible de una persona usuaria, es decir no incluyen fotografías o archivos personales, deben <strong>tratarse con el mismo cuidado y siempre respetando el consentimiento otorgado por la persona solicitante y cualquier acuerdo de retención de datos</strong> que se haya establecido.</p>
-<p>En este caso, vamos a crear la carpeta de trabajo <em>tutorial-triaje-con-mvt</em> y vamos a acceder a ella utilizando los siguientes comandos:</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>tutorial-triaje-con-mvt
-<span class="nb">cd</span><span class="w"> </span>tutorial-triaje-con-mvt
+<h2 id="setting-up-the-working-folder">Setting up the working folder</h2>
+<p>You must <strong>create a working folder to store a copy of the collected extraction,</strong> using a consistent approach. It may contain, for example, a combination of the date and a case or device identifier, without any data that could identify the person.</p>
+<p>Before running any command, we follow the <a href="../../explainers/05-explainer-mvt-android-triage/index.html#recommendations-for-handling-sensitive-information">data handling practices</a> described in the explainer on exploring MVT for Android triage. Although an AndroidQF extraction and a bugreport do not contain sensitive user content, that is, they do not include photographs or personal files, they must be <strong>handled with the same care and always in accordance with the consent granted by the requesting person and any data retention agreements</strong> that have been established.</p>
+<p>In this case, we will create the working folder <em>mvt-triage-tutorial</em> and access it using the following commands:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>mvt-triage-tutorial
+<span class="nb">cd</span><span class="w"> </span>mvt-triage-tutorial
 </code></pre></div>
-<p>Posteriormente, crea la carpeta del caso simulado, refiriendo el número serial del dispositivo ZY323X4MZK, utilizando el siguiente comando.</p>
+<p>Next, create the simulated case folder, referencing the device serial number ZY323X4MZK, using the following command. The command adds the current date and time to the folder name. </p>
 <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>date<span class="w"> </span>+<span class="s2">"%Y-%m-%d"</span><span class="k">)</span><span class="s2">"</span>-android-ZY323X4MZK
 <span class="nb">cd</span><span class="w"> </span><span class="s2">"</span><span class="k">$(</span>date<span class="w"> </span>+<span class="s2">"%Y-%m-%d"</span><span class="k">)</span><span class="s2">"</span>-android-ZY323X4MZK
 </code></pre></div>
-<p>Copia el sample de extracción a la carpeta del caso simulado utilizando el siguiente comando.</p>
+<p>Copy the extraction sample to the simulated case folder using the following command.</p>
 <div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>El siguiente comando mueve el archivo de muestra descargado desde la carpeta de descargas hasta la carpeta de trabajo. Es posible que la ruta exacta cambie en tu caso particular, dependiendo de dónde se almacena el archivo y el idioma del sistema.</p>
+<p class="admonition-title">Note</p>
+<p>The following command moves the downloaded sample file from the Downloads folder to the working folder. The exact path may vary in your case, depending on where the file is stored and the system language.</p>
 </div>
-<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>~/Descargas/android-mvt-tutorial-sample.zip<span class="w"> </span>.
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>~/Downloads/android-mvt-tutorial-sample.zip<span class="w"> </span>.
 </code></pre></div>
-<p>Descomprime la extracción en el directorio de trabajo utilizando el siguiente comando.</p>
+<p>Unzip the extraction into the working folder using the following command.</p>
 <div class="highlight"><pre><span></span><code>unzip<span class="w"> </span>android-mvt-tutorial-sample.zip
 </code></pre></div>
-<h2 id="proceso-de-triaje-con-la-mvt">Proceso de Triaje con la MVT</h2>
-<p>A continuación se detallan los pasos para realizar el triaje con MVT. Para ello, lo primero que necesitas es realizar la <a href="#instalacion-de-la-mvt">instalación de la MVT</a> en tu computadora (ver requisitos del equipo) o <a href="#actualizacion-de-la-mvt">actualiza la MVT</a> si ya la tienes instalada.</p>
-<h3 id="instalacion-de-la-mvt">Instalación de la MVT</h3>
-<p>MVT puede ser instalada como herramienta desde el gestor de paquetes estándar de python a través de su forma aislada (pipx).</p>
-<p>Los pasos para instalar MVT son los siguientes:</p>
+<h2 id="triage-process-with-mvt">Triage process with MVT</h2>
+<p>The steps for performing the triage with MVT are detailed below. First, you need to <a href="#installing-mvt">install MVT</a> on your computer (see the computer requirements) or <a href="#updating-mvt">update MVT</a> if you already have it installed.</p>
+<h3 id="installing-mvt">Installing MVT</h3>
+<p>MVT can be installed as a tool from Python's standard package manager (pipx).</p>
+<p>The steps to install MVT are as follows:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1867,36 +1878,36 @@ pipx<span class="w"> </span>install<span class="w"> </span>--force<span class="w
 </div>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Nota</p>
-<p>Actualmente MVT no tiene un proceso de ejecución formal en Windows. La herramienta puede usarse a través del Windows Subsystem For Linux, sin embargo, no se garantiza su correcto funcionamiento y este tutorial no incluye los pasos de instalación para este caso.</p>
+<p class="admonition-title">Note</p>
+<p>Currently, MVT does not have a formal installation process for Windows. The tool can be used through the Windows Subsystem for Linux; however, proper functionality is not guaranteed, and this tutorial does not include installation steps for this scenario.</p>
 </div>
-<h3 id="actualizacion-de-la-mvt">Actualización de la MVT</h3>
-<p>Para asegurarte que tienes las últimas integraciones de la herramienta cambia al directorio del repositorio clonado (por ejemplo, <code>cd mvt</code>) y ejecuta los siguientes comandos:</p>
+<h3 id="updating-mvt">Updating MVT</h3>
+<p>To make sure you have the latest version of the tool, change to the cloned repository directory (for example, <code>cd mvt</code>) and run the following commands:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull
 pipx<span class="w"> </span>uninstall<span class="w"> </span>mvt
 pipx<span class="w"> </span>install<span class="w"> </span>--force<span class="w"> </span>.
 </code></pre></div>
-<p>Regresa al directorio de trabajo donde tenemos la muestra de trabajo y una vez que te asegures tener la última versión de la herramienta y previo a ejecuciones, <strong>descarga los indicadores de compromiso más recientes utilizando el siguiente comando:</strong></p>
+<p>Go back to the working folder where the sample is located. Once you have made sure you have the latest version of the tool, and before running any analysis, <strong>download the most recent indicators of compromise using the following command:</strong></p>
 <div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Si estás instalando MVT por primera vez, es posible que tengas que cerrar y volver a abrir la terminal para que los comandos de MVT estén disponibles.</p>
+<p class="admonition-title">Note</p>
+<p>If you are installing MVT for the first time, you may need to close and reopen the terminal for the MVT commands to become available.</p>
 </div>
 <div class="highlight"><pre><span></span><code>mvt-android<span class="w"> </span>download-iocs
 </code></pre></div>
-<h3 id="ejecucion-de-mvt-sobre-la-muestra-de-prueba">Ejecución de MVT sobre la muestra de prueba</h3>
-<p>Una vez instalada la herramienta, puedes ejecutar el comando correspondiente para analizar una extracción AndroidQF:</p>
+<h3 id="running-mvt-on-the-test-sample">Running MVT on the test sample</h3>
+<p>You can now run the MVT command to analyze an AndroidQF extraction:</p>
 <div class="highlight"><pre><span></span><code>mvt-android<span class="w"> </span>check-androidqf<span class="w"> </span>./f1b10850-c902-4e67-885a-6ae9b936d76d<span class="w"> </span>-o<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>date<span class="w"> </span>+<span class="s2">"%Y-%m-%d"</span><span class="k">)</span><span class="s2">"</span>-out-androidqf
 </code></pre></div>
-<p>Durante la ejecución, se solicitará escribir la contraseña del archivo <code>backup.ab</code>. La <strong>extracción de ejemplo utiliza la contraseña “sd”</strong>, por lo que deberás introducir estos dos caracteres para continuar:</p>
+<p>During execution, you will be prompted to enter the password for the <code>backup.ab</code> file. <strong>The sample extraction uses the password “sd”</strong>, so you must enter these two characters to continue:</p>
 <div class="highlight"><pre><span></span><code>Enter<span class="w"> </span>backup<span class="w"> </span>password:
 
-Introducir<span class="w"> </span><span class="s2">"sd"</span><span class="w"> </span>como<span class="w"> </span>contraseña<span class="w"> </span>cuando<span class="w"> </span>se<span class="w"> </span>solicite
+Enter<span class="w"> </span><span class="s2">"sd"</span><span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>password<span class="w"> </span>when<span class="w"> </span>prompted
 </code></pre></div>
-<p>Sabrás que el proceso de análisis con la MVT terminó cuando veas el resumen de las alertas, similar al que se muestra a continuación:</p>
+<p>You will know that the MVT analysis is complete when you see the alert summary, similar to the one shown below:</p>
 <div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Esta salida corresponde al resultado de correr el análisis en la muestra de prueba con la versión 2026.10.5 de MVT.</p>
-<p>La misma puede contener diferencias debido a cambios en la herramienta que hacen que nuevos comportamientos sean detectados como sospechosos. Por la forma en que se diseñó este material, estos cambios no deberían afectar tu capacidad de seguir el ejercicio.</p>
+<p class="admonition-title">Note</p>
+<p>This output corresponds to the result of running the analysis on the test sample with MVT version 2026.10.5.</p>
+<p>It may differ due to changes in the tool that cause new behaviors to be detected as suspicious. Given the way this material was designed, these changes should not affect your ability to follow the exercise.</p>
 </div>
 <div class="highlight"><pre><span></span><code>╭──────────────────────────────────────────────────────────────────────────────────────────<span class="w"> </span>ALERTS<span class="w"> </span>──────────────────────────────────────────────────────────────────────────────────────────╮
 │<span class="w"> </span>MVT<span class="w"> </span>produced<span class="w"> </span><span class="m">0</span><span class="w"> </span>INFORMATIONAL<span class="w"> </span>alerts.<span class="w">                                                                                                                                                       </span>│
@@ -1918,7 +1929,7 @@ Introducir<span class="w"> </span><span class="s2">"sd"</span><span class="w"> <
 │<span class="w"> </span>International<span class="err">'</span>s<span class="w"> </span>Security<span class="w"> </span>Lab<span class="w"> </span>at<span class="w"> </span>https://securitylab.amnesty.org/get-help/?c<span class="o">=</span>mvt<span class="w">                                                                                                            </span>│
 ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 </code></pre></div>
-<p><strong>Al usar el argumento -o, la MVT crea carpetas y archivos de salida útiles para el triaje y el análisis forense</strong>. Si quieres entender qué contiene cada uno, puedes apoyarte en <a data-preview="" href="../../references/index.html">los diccionarios de referencia de la MVT que se encuentran disponibles en este repositorio</a>. El siguiente bloque de código lista los contenidos de la carpeta de trabajo utilizando el comando <code>ls</code> luego de completar la ejecución de MVT.</p>
+<p><strong>When using the -o argument, MVT creates output folders and files that are useful for triage and forensic analysis</strong>. If you want to understand what each one contains, you can refer to <a data-preview="" href="../../references/index.html">the MVT reference dictionaries available in this repository</a>. The following code block lists the contents of the working folder using the <code>ls</code> command after MVT has finished running.</p>
 <div class="highlight"><pre><span></span><code>alerts.json
 alerts_timeline.csv
 aqf_files.json
@@ -1947,59 +1958,59 @@ dumpsys_receivers.json
 info.json
 timeline.csv
 </code></pre></div>
-<h3 id="revision-de-salidas">Revisión de salidas</h3>
-<p>Lo primero que veremos en pantalla es un breve resumen de la ejecución, además de las alertas en sus diferentes niveles. En este caso, notarás que ninguna alerta alcanzó el nivel <strong>CRITICAL</strong>, es decir, ningún dato del dispositivo coincidió con los indicadores de compromiso (IOCs) de amenazas conocidas cargados por la MVT.</p>
-<p>Identificamos las siguientes alertas <strong>MEDIUM</strong>:</p>
-<p>Se identifica el paquete de Facebook <strong><em>“com.facebook.katana”</em></strong> como un paquete que no es de sistema, instalado por adb u otro medio. Aunque probablemente se trate de una app preinstalada por el vendedor, es necesario tomar nota para verificar si se relaciona con la información buscada en el triaje.</p>
+<h3 id="reviewing-the-output">Reviewing the output</h3>
+<p>The first thing we will see on screen is a brief summary of the run, along with the alerts at their different levels. In this case, you will notice that no alert reached the <strong>CRITICAL</strong> level, which means that no device data matched the indicators of compromise (IOCs) of known threats loaded by MVT.</p>
+<p>We identified the following <strong>MEDIUM</strong> alerts:</p>
+<p>The Facebook package <strong><em>“com.facebook.katana”</em></strong> was identified as a non-system package, installed via adb or another method. Although it is most likely an app preinstalled by the vendor, it is important to take note of it to verify whether it relates to the information sought in the triage.</p>
 <div class="highlight"><pre><span></span><code>MEDIUM<span class="w"> </span>ALERT<span class="w">   </span><span class="o">[</span>mvt.android.modules.androidqf.aqf_packages<span class="o">]</span><span class="w"> </span>Found<span class="w"> </span>a<span class="w"> </span>non-system<span class="w"> </span>package<span class="w"> </span>installed<span class="w"> </span>via<span class="w"> </span>adb<span class="w"> </span>or<span class="w"> </span>another<span class="w"> </span>method:<span class="w"> </span><span class="s2">"com.facebook.katana"</span>
 </code></pre></div>
-<p>Se identifica que el dispositivo no ha recibido actualizaciones de seguridad por más de seis meses, esto indica que el teléfono ya no tiene soporte de actualizaciones o el usuario no ha actualizado el dispositivo.</p>
+<p>The device has not received security updates for more than six months. This indicates that the phone is no longer supported or that the user has not updated the device.</p>
 <div class="highlight"><pre><span></span><code>MEDIUM<span class="w"> </span>ALERT<span class="w">   </span><span class="o">[</span>mvt.android.modules.androidqf.aqf_getprop<span class="o">]</span><span class="w"> </span>This<span class="w"> </span>phone<span class="w"> </span>has<span class="w"> </span>not<span class="w"> </span>received<span class="w"> </span>security<span class="w"> </span>updates<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>than<span class="w"> </span>six<span class="w"> </span>months<span class="w"> </span><span class="o">(</span>last<span class="w"> </span>update:<span class="w"> </span><span class="m">2021</span>-02-01<span class="o">)</span>.
 </code></pre></div>
-<p>Se identificó que Google Play Protect está deshabilitado. Esto es un indicador importante sobre instalación de aplicaciones externas a Google Play que pueden ser <strong>no confiables</strong>. Es importante tenerlo en consideración a lo largo del triaje.</p>
+<p>Google Play Protect was identified as disabled. This is an important indicator for the installation of apps from outside Google Play, which may be <strong>untrusted</strong>. It is important to keep this in mind throughout the triage.</p>
 <div class="highlight"><pre><span></span><code>MEDIUM<span class="w"> </span>ALERT<span class="w">   </span><span class="o">[</span>mvt.android.modules.androidqf.aqf_settings<span class="o">]</span><span class="w"> </span>Found<span class="w"> </span>suspicious<span class="w"> </span><span class="s2">"global"</span><span class="w"> </span>setting<span class="w"> </span><span class="s2">"upload_apk_enable = 0"</span><span class="w"> </span><span class="o">(</span>disabled<span class="w"> </span>Google<span class="w"> </span>Play<span class="w"> </span>Protect<span class="o">)</span>
 </code></pre></div>
-<p>Se identificó que se desinstaló el paquete <strong><em>“com.republicwireless.tel”</em></strong></p>
+<p>The package <strong><em>“com.republicwireless.tel”</em></strong> was identified as uninstalled.</p>
 <div class="highlight"><pre><span></span><code>MEDIUM<span class="w"> </span>ALERT<span class="w">   </span><span class="o">[</span>mvt.android.modules.bugreport.dumpsys_battery_daily<span class="o">]</span><span class="w"> </span>Detected<span class="w"> </span>uninstall<span class="w"> </span>of<span class="w"> </span>package<span class="w"> </span>com.republicwireless.tel<span class="w"> </span><span class="o">(</span>vers<span class="w"> </span><span class="m">0</span><span class="o">)</span>
 </code></pre></div>
-<p>Se identificó que no se pudo encontrar ningún tombstone, es decir, ningún crash del dispositivo fue identificado por la MVT.</p>
+<p>No tombstones could be found, which means that MVT did not identify any device crash.</p>
 <div class="highlight"><pre><span></span><code>ERROR<span class="w">          </span><span class="o">[</span>mvt.android.modules.bugreport.tombstones<span class="o">]</span><span class="w"> </span>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>any<span class="w"> </span>tombstone<span class="w"> </span>files.<span class="w"> </span>Did<span class="w"> </span>you<span class="w"> </span>provide<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>bugreport<span class="w"> </span>archive?
 </code></pre></div>
-<p>Además de las alertas <strong>MEDIUM</strong>, también hay una alerta de nivel <strong>HIGH,</strong> de la cual tomamos nota:</p>
+<p>In addition to the <strong>MEDIUM</strong> alerts, there is also a <strong>HIGH</strong> alert, which we take note of:</p>
 <div class="highlight"><pre><span></span><code>HIGH<span class="w"> </span>ALERT<span class="w">     </span><span class="o">[</span>mvt.android.modules.androidqf.aqf_files<span class="o">]</span><span class="w"> </span>Found<span class="w"> </span>executable<span class="w"> </span>file<span class="w"> </span>at<span class="w"> </span>suspicious<span class="w"> </span>path<span class="w"> </span><span class="s2">"/data/local/tmp/.studio/process-tracker"</span>
 </code></pre></div>
-<p>Este hallazgo corresponde a un artefacto típico de Android Studio, por lo que es un buen ejemplo de algo que debe documentarse y contrastarse con la entrevista por ejemplo, preguntando a la persona si suele conectar su teléfono a una computadora con fines de desarrollo antes de asumir que se trata de algo relacionado con el incidente.</p>
-<p>Por último, notamos una alerta LOW relacionada con una llave ADB de confianza sin su llave de host correspondiente en la extracción, algo que se debe documentar y que dependiendo del contexto se deberá analizar.</p>
+<p>This finding corresponds to a typical Android Studio artifact, so it is a good example of something that should be documented and cross-checked with the interview, for example, by asking the person if they usually connect their phone to a computer for development purposes, before assuming it is related to the incident.</p>
+<p>Finally, we noted a LOW alert related to a trusted ADB key without its corresponding host key in the extraction, something that should be documented and, depending on the context, analyzed.</p>
 <div class="highlight"><pre><span></span><code>LOW<span class="w"> </span>ALERT<span class="w">      </span><span class="o">[</span>mvt.android.modules.bugreport.dumpsys_adb_state<span class="o">]</span><span class="w"> </span>Found<span class="w"> </span>a<span class="w"> </span>trusted<span class="w"> </span>ADB<span class="w"> </span>host<span class="w"> </span>key,<span class="w"> </span>but<span class="w"> </span>the<span class="w"> </span>AndroidQF<span class="w"> </span>acquisition<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>include<span class="w"> </span>its<span class="w"> </span>host<span class="w"> </span>key:
 <span class="m">71</span>:F7:D8:0B:1A:61:48:32:83:E7:21:0C:47:07:FA:F0<span class="w"> </span><span class="o">(</span>unknown<span class="w"> </span>user<span class="o">)</span>
 </code></pre></div>
-<h4 id="revision-del-commandlog">Revisión del command.log</h4>
-<p>Al revisar command.log con calma y teniendo en consideración la hipótesis (comprobar si hubo actividad durante la ventana en que el dispositivo estuvo fuera de vista de la persona), dos alertas de nivel MEDIUM llaman la atención:</p>
+<h4 id="reviewing-commandlog">Reviewing command.log</h4>
+<p>When carefully reviewing command.log with the hypothesis in mind (checking for activity during the window in which the device was out of the person’s sight), two MEDIUM alerts stand out:</p>
 <div class="highlight"><pre><span></span><code>MEDIUM<span class="w"> </span>ALERT<span class="w">   </span><span class="o">[</span>mvt.android.modules.bugreport.dumpsys_appops<span class="o">]</span><span class="w"> </span>Package<span class="w"> </span><span class="s1">'com.google.android.apps.nbu.files'</span><span class="w"> </span>had<span class="w"> </span>risky<span class="w"> </span>permission<span class="w"> </span><span class="s1">'REQUEST_INSTALL_PACKAGES'</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span>to<span class="w"> </span><span class="s1">'Reject'</span><span class="w"> </span>at<span class="w"> </span><span class="m">2025</span>-08-26<span class="w"> </span><span class="m">15</span>:43:12.384000
 MEDIUM<span class="w"> </span>ALERT<span class="w">   </span><span class="o">[</span>mvt.android.modules.bugreport.dumpsys_appops<span class="o">]</span><span class="w"> </span>Package<span class="w"> </span><span class="s1">'com.google.android.apps.nbu.files'</span><span class="w"> </span>had<span class="w"> </span>risky<span class="w"> </span>permission<span class="w"> </span><span class="s1">'REQUEST_INSTALL_PACKAGES'</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span>to<span class="w"> </span><span class="s1">'Access'</span><span class="w"> </span>at<span class="w"> </span><span class="m">2025</span>-08-26<span class="w"> </span><span class="m">16</span>:25:50.885000
 </code></pre></div>
-<p>Estas líneas muestran que el paquete <strong>com.google.android.apps.nbu.files</strong> (Explorador de Archivos de Google) tuvo un cambio en el permiso <strong><em>REQUEST_INSTALL_PACKAGES</em></strong> (el permiso que le permite a una app instalar otras apps) donde primero fue rechazado a las 15:43 y después otorgado a las 16:25, el mismo día y <strong>dentro de la ventana horaria en la que la persona confirma no tener el dispositivo a la vista.</strong></p>
-<p>Este es el tipo de correlación que buscamos al <strong>conectar la salida técnica con la entrevista de triaje</strong> y la línea de tiempo del caso.</p>
-<h4 id="revision-del-timelinecsv">Revisión del timeline.csv</h4>
-<p>Para profundizar en ese hallazgo, <strong>buscamos ese mismo horario dentro de timeline.csv</strong>:</p>
+<p>These lines show that the package <strong>com.google.android.apps.nbu.files</strong> (Files by Google) had a change in the <strong><em>REQUEST_INSTALL_PACKAGES</em></strong> permission (the permission that allows an app to install other apps): it was first denied at 15:43 and then granted at 16:25, on the same day and <strong>within the time window during which the person confirms they did not have the device in sight.</strong></p>
+<p>This is the kind of correlation we look for when <strong>connecting the technical output with the triage interview</strong> and the case timeline.</p>
+<h4 id="reviewing-timelinecsv">Reviewing timeline.csv</h4>
+<p>To dig deeper into this finding, <strong>we search for that same time in timeline.csv</strong>:</p>
 <div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-C<span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="s2">"2025-08-26 16:25:50.885000"</span><span class="w"> </span>timeline.csv
 </code></pre></div>
-<p>Dentro de la salida encontramos el evento que nos faltaba para entender qué fue lo que ocurrió en ese momento:</p>
+<p>In the output, we find the event we were missing to understand what happened at that moment:</p>
 <div class="highlight"><pre><span></span><code><span class="s2">"2025-08-26 16:25:50"</span>,<span class="s2">"DumpsysPackages"</span>,<span class="s2">"package_install"</span>,<span class="s2">"Install or update of package com.sterminator"</span>
 <span class="s2">"2025-08-26 16:25:50.885000"</span>,<span class="s2">"DumpsysAppops"</span>,<span class="s2">"Access"</span>,<span class="s2">"com.google.android.apps.nbu.files access to REQUEST_INSTALL_PACKAGES: Access"</span>
 <span class="s2">"2025-08-26 16:26:08"</span>,<span class="s2">"DumpsysPackages"</span>,<span class="s2">"package_first_install"</span>,<span class="s2">"Install or update of package com.sterminator"</span>
 <span class="s2">"2025-08-26 16:26:08"</span>,<span class="s2">"DumpsysPackages"</span>,<span class="s2">"package_last_update"</span>,<span class="s2">"Install or update of package com.sterminator"</span>
 </code></pre></div>
-<p>En el mismo instante en el que se otorga el permiso de instalación al Explorador de Archivos, <strong>el timeline registra la instalación de un paquete llamado <em>“com.sterminator”</em></strong>, que no reconocemos. Continuando la revisión del timeline unos minutos después, encontramos actividad adicional asociada a ese mismo paquete, acceso al portapapeles, escaneo de redes wifi, y ventanas emergentes tipo toast, entre otras.</p>
-<h4 id="revision-de-archivos-detected">Revisión de archivos detected</h4>
-<p>Para la revisión de archivos detected listamos la carpeta de resultados generada por la MVT:</p>
+<p>At the same instant that the installation permission is granted to Files by Google, <strong>the timeline records the installation of a package named <em>“com.sterminator”</em></strong>, which we do not recognize. Continuing the review of the timeline a few minutes later, we find additional activity associated with that same package: clipboard access, Wi-Fi network scanning, and pop-up windows, among others.</p>
+<h4 id="reviewing-detected-files">Reviewing <em>detected</em> files</h4>
+<p>To review the <em>detected</em> files, we list the results folder generated by MVT:</p>
 <div class="highlight"><pre><span></span><code>ls<span class="w"> </span>*_detected.json
 </code></pre></div>
-<p>Obtendremos como salida los nombres de los archivos de los módulos que tuvieron coincidencias con patrones que generaron alertas según la MVT, estos deberán ser revisados para entender el contexto de las detecciones:</p>
+<p>The output shows the names of the files for the modules that matched patterns that triggered alerts according to MVT. These should be reviewed to understand the context of the detections:</p>
 <div class="highlight"><pre><span></span><code>aqf_files_detected.json<span class="w">     </span>aqf_packages_detected.json<span class="w">  </span>dumpsys_adb_state_detected.json<span class="w">  </span>dumpsys_battery_daily_detected.json
 aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<span class="w">  </span>dumpsys_appops_detected.json<span class="w">     </span>dumpsys_get_prop_detected.json
 </code></pre></div>
-<p>Al revisar <strong><em>aqf_packages_detected.json</em></strong>, notamos que <strong>com.sterminator</strong> no aparece ahí; el único paquete marcado por la MVT en ese archivo sigue siendo <strong>com.facebook.katana</strong>, detectado únicamente por ser un paquete de terceros instalado fuera de los canales estándar del sistema, sin relación aparente con nuestra hipótesis, además de que se puede observar que su contexto de instalación es ser una aplicación pre instalada por el vendor y que <strong>su certificado es de confianza.</strong></p>
+<p>When reviewing <strong><em>aqf_packages_detected.json</em></strong>, we notice that <strong>com.sterminator</strong> does not appear there. The only package flagged by MVT in that file is still <strong>com.facebook.katana</strong>, detected only because it is a third-party package installed outside the system’s standard channels, with no apparent connection to our hypothesis. We can also see that its installation context is that of an app preinstalled by the vendor, and that <strong>its certificate is trusted.</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">        </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEDIUM"</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aqf_packages"</span><span class="p">,</span>
@@ -2041,7 +2052,7 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 <span class="w">        </span><span class="nt">"matched_indicator"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p>Del mismo modo, <strong><em>dumpsys_appops_detected.json</em></strong> únicamente contiene el cambio de permiso del Explorador de Archivos que ya identificamos, por lo que no contiene los permisos que el propio paquete <strong>com.sterminator</strong> solicitó y utilizó después de instalarse.</p>
+<p>Similarly, <strong><em>dumpsys_appops_detected.json</em></strong> only contains the Files by Google permission change we already identified, so it does not include the permissions that the <strong>com.sterminator</strong> package itself requested and used after it was installed.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">        </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEDIUM"</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dumpsys_appops"</span><span class="p">,</span>
@@ -2101,11 +2112,11 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 <span class="w">        </span><span class="nt">"matched_indicator"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p>Este es un punto importante de aprendizaje, pues <strong>los archivos <em>detected</em> reflejan únicamente lo que las heurísticas e indicadores de la MVT identificaron automáticamente</strong>. En este caso la MVT <strong>no generó ninguna alerta dirigida específicamente al paquete com.sterminator</strong>, ni sus permisos coincidieron con ningún IOC conocido. El hallazgo relevante lo encontramos mediante la revisión manual del command.log y el timeline.csv, guiada por el contexto de la entrevista. Esto refuerza por qué el triaje no debe limitarse únicamente a revisar las alertas automáticas.</p>
-<p>Dado que los archivos detected no aportaron mayor contexto sobre <strong><em>com.sterminator</em></strong>, buscamos ese paquete en el resto de los archivos de resultados ejecutando</p>
+<p>This is an important learning point, since <strong>the <em>detected</em> files only reflect what MVT’s heuristics and indicators identified automatically</strong>. In this case, MVT <strong>did not generate any alert specifically targeting the com.sterminator package</strong>, nor did its permissions match any known IOC. We found the relevant finding by manually reviewing command.log and timeline.csv, guided by the context of the interview. This reinforces why triage cannot be limited to reading the alert summary.</p>
+<p>Since the <em>detected</em> files did not provide further context about <strong><em>com.sterminator</em></strong>, we search for that package in the rest of the results files by running:</p>
 <div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-rl<span class="w"> </span><span class="s2">"com.sterminator"</span><span class="w"> </span>.
 </code></pre></div>
-<p>Identificamos que los siguientes documentos tienen alguna coincidencia con el paquete sospechoso.</p>
+<p>We find that the following files have some match with the suspicious package:</p>
 <div class="highlight"><pre><span></span><code>./aqf_packages.json
 ./aqf_settings.json
 ./dumpsys_activities.json
@@ -2116,8 +2127,8 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 ./dumpsys_receivers.json
 ./timeline.csv
 </code></pre></div>
-<p>Revisando cada uno de estos archivos encontramos lo siguiente:</p>
-<p><strong><em>aqf_packages.json</em></strong> confirma los metadatos del paquete:</p>
+<p>Reviewing each of these files, we find the following:</p>
+<p><strong><em>aqf_packages.json</em></strong> confirms the package metadata:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sterminator"</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2152,11 +2163,11 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 <span class="w">        </span><span class="nt">"third_party"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p>El paquete fue instalado desde <em>/data/app/com.sterminator-.../base.apk</em>, con <strong>"installer": "com.google.android.apps.nbu.files"</strong>, es decir, instalado a través del Explorador de Archivos, no de Google Play Store y con un certificado no confiable <strong>"trusted_certificate": false</strong>.</p>
-<p><strong><em>aqf_settings.json</em></strong> muestra que <strong>com.sterminator</strong> aparece dentro de <em>enabled_notification_policy_access_packages</em>, es decir, se le otorgó acceso a las notificaciones y a la política de "no molestar" del sistema.</p>
+<p>The package was installed from <em>/data/app/com.sterminator-.../base.apk</em>, with <strong>"installer": "com.google.android.apps.nbu.files"</strong>, meaning it was installed through Files by Google, not the Google Play Store, and with an untrusted certificate, <strong>"trusted_certificate": false</strong>.</p>
+<p><strong><em>aqf_settings.json</em></strong> shows that <strong>com.sterminator</strong> appears within <em>enabled_notification_policy_access_packages</em>, meaning it was granted access to notifications and to the system’s “Do Not Disturb” policy.</p>
 <div class="highlight"><pre><span></span><code><span class="s2">"enabled_notification_policy_access_packages"</span>:<span class="w"> </span><span class="s2">"com.motorola.camera2:com.google.android.apps.wellbeing:com.sterminator:com.motorola.arselfie"</span>,
 </code></pre></div>
-<p><strong><em>dumpsys_activities.json</em></strong> muestra que el paquete registra actividades bajo el nombre interno <strong>com.terminator</strong> (com.sterminator/com.terminator.StartActivity, com.sterminator/com.terminator.ConfigMain), lo cual sugiere que la aplicación ha estado activa y ejecutando diferentes acciones.</p>
+<p><strong><em>dumpsys_activities.json</em></strong> shows that the package registers activities under the internal name <strong>com.terminator</strong> (com.sterminator/com.terminator.StartActivity, com.sterminator/com.terminator.ConfigMain), which suggests that the app has been active and performing different actions.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">        </span><span class="nt">"intent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"android.intent.action.MAIN"</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">"package_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sterminator"</span><span class="p">,</span>
@@ -2183,7 +2194,7 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 <span class="w">        </span><span class="nt">"activity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sterminator/com.terminator.StartActivity"</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p><strong><em>dumpsys_appops.json</em></strong> muestra que la aplicación solicitó y utilizó permisos de ubicación exacta, GPS, cámara, micrófono, portapapeles, ventanas de sistema y escaneo de wifi, poco después de haberse instalado, permisos considerados invasivos y que debe verificarse si fueron otorgados por la persona usuaria.</p>
+<p><strong><em>dumpsys_appops.json</em></strong> shows that the app requested and used permissions for precise location, GPS, camera, microphone, clipboard, system windows, and Wi-Fi scanning shortly after it was installed. These permissions are considered invasive, and it must be verified whether they were granted by the user.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">        </span><span class="nt">"package_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sterminator"</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2459,7 +2470,7 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 <span class="w">        </span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"u0a210"</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p><strong><em>dumpsys_battery_history.json</em></strong> confirma múltiples eventos start_top / end_top para com.sterminator, es decir, que el proceso pasó a primer plano en distintos momentos tras su instalación.</p>
+<p><strong><em>dumpsys_battery_history.json</em></strong> confirms multiple start_top / end_top events for com.sterminator, meaning that the process came to the foreground at different times after its installation.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">        </span><span class="nt">"time_elapsed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+5s349ms"</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"start_top"</span><span class="p">,</span>
@@ -2496,7 +2507,7 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 <span class="w">        </span><span class="nt">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p><strong><em>dumpsys_receivers.json</em></strong> muestra que el paquete registró múltiples receptores (BroadcastReceiver), entre ellos varios componentes estándar de las bibliotecas WorkManager y Firebase (ConstraintProxy, ProfileInstallReceiver, FirebaseMessagingDirectBootReceiver), y también un conjunto de receptores con nombres internos propios de la app.</p>
+<p><strong><em>dumpsys_receivers.json</em></strong> shows that the package registered multiple receivers (BroadcastReceiver), including several standard components from the WorkManager and Firebase libraries (ConstraintProxy, ProfileInstallReceiver, FirebaseMessagingDirectBootReceiver), as well as a set of receivers with internal names specific to the app.</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">"android.intent.action.BOOT_COMPLETED"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
@@ -2548,56 +2559,56 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<h3 id="resumen-de-hallazgos-iniciales">Resumen de hallazgos iniciales</h3>
-<p>Con base en la revisión del command.log, el timeline.csv, y la revisión manual de los archivos de resultados, podemos construir la siguiente línea de tiempo:</p>
+<h3 id="summary-of-initial-findings">Summary of initial findings</h3>
+<p>Based on the review of command.log, timeline.csv, and the manual review of the results files, we can build the following timeline:</p>
 <ol>
 <li>
-<p>El día 26 de agosto de 2025, 15:43:12 se registra un primer intento fallido (Reject) de otorgar el permiso <em>REQUEST_INSTALL_PACKAGES</em> a la aplicación Explorador de Archivos de Google.</p>
+<p>On August 26, 2025, at 15:43:12, a first failed attempt (Reject) to grant the <em>REQUEST_INSTALL_PACKAGES</em> permission to the Files by Google app is recorded.</p>
 </li>
 <li>
-<p>El día 26 de agosto de 2025, 16:25:50 se otorga el permiso <em>REQUEST_INSTALL_PACKAGES</em> a la misma aplicación y en el mismo instante el sistema registra la instalación del paquete <strong>com.sterminator</strong>. La revisión manual de <strong><em>aqf_packages.json</em></strong> confirmó que este paquete fue instalado a través del Explorador de Archivos y que su certificado de firma no es confiable</p>
+<p>On August 26, 2025, at 16:25:50, the <em>REQUEST_INSTALL_PACKAGES</em> permission is granted to the same app, and at that same instant the system records the installation of the <strong>com.sterminator</strong> package. The manual review of <strong><em>aqf_packages.json</em></strong> confirmed that this package was installed through Files by Google and that its signing certificate is not trusted.</p>
 </li>
 <li>
-<p>El día 26 de agosto de 2025, 16:26:08 se confirma el primer registro de instalación del paquete.</p>
+<p>On August 26, 2025, at 16:26:08, the first installation record of the package is confirmed.</p>
 </li>
 <li>
-<p>Poco después de la instalación se muestra en el registro de <strong><em>aqf_settings.json</em></strong> que <strong>com.sterminator</strong> fue agregado a la lista <em>enabled_notification_policy_access_packages</em>, es decir, se le otorgó acceso a las notificaciones y a la política de no molestar del sistema, un permiso que no se concede de forma automática.</p>
+<p>Shortly after the installation, <strong><em>aqf_settings.json</em></strong> shows that <strong>com.sterminator</strong> was added to the <em>enabled_notification_policy_access_packages</em> list, meaning it was granted access to notifications and to the system’s Do Not Disturb policy, a permission that is not granted automatically.</p>
 </li>
 <li>
-<p>26 de agosto de 2025 entre las 16:29 y 16:42 el paquete presentó actividad sostenida en primer plano. La revisión del <strong><em>dumpsys_battery_history.json</em></strong> confirma múltiples ciclos start_top / end_top durante este periodo y <strong><em>dumpsys_activities.json</em></strong> registra ejecuciones repetidas de dos actividades internas del paquete bajo <em>com.terminator.StartActivity</em> y <em>com.terminator.ConfigMain</em>, lo que sugiere que la aplicación pudo haber sido configurada o utilizada activamente durante este lapso. En este mismo periodo el <strong><em>dumpsys_appops.json</em></strong> muestra que el paquete solicitó y utilizó permisos sensibles como <strong>ubicación exacta, GPS, cámara, micrófono, portapapeles y ventanas de sistema</strong>, permisos que pueden contrastarse con la persona usuaria para verificar si fueron otorgados con su conocimiento.</p>
+<p>On August 26, 2025, between 16:29 and 16:42, the package showed sustained foreground activity. The review of <strong><em>dumpsys_battery_history.json</em></strong> confirms multiple start_top / end_top cycles during this period, and <strong><em>dumpsys_activities.json</em></strong> records repeated executions of two internal activities of the package, <em>com.terminator.StartActivity</em> and <em>com.terminator.ConfigMain</em>, which suggests that the app may have been configured or actively used during this time. In this same period, <strong><em>dumpsys_appops.json</em></strong> shows that the package requested and used sensitive permissions such as <strong>precise location, GPS, camera, microphone, clipboard, and system windows</strong>, permissions that can be checked with the person to verify whether they were granted with their knowledge.</p>
 </li>
 </ol>
-<p>Adicionalmente, la revisión del <strong><em>dumpsys_receivers.json</em></strong> muestra que además de los receptores estándar de las bibliotecas WorkManager y Firebase, el paquete registró un receptor para android.app.action.DEVICE_ADMIN_ENABLED, lo que indica que la aplicación <strong>solicita privilegios de administrador de dispositivo,</strong> junto con receptores personalizados para el bloqueo de pantalla e intentos de apagado del dispositivo.</p>
-<p>Toda esta actividad, desde la instalación, configuración, solicitud de administrador de dispositivo y uso de permisos sensibles ocurre dentro de la ventana horaria en la que según la entrevista, la persona no tenía el dispositivo en su poder (aproximadamente de las 14:30 del 26 de agosto a las 11:00 del 27 de agosto).</p>
-<p>Es importante identificar que la MVT <strong>no generó ninguna alerta automática ni identificó ninguna coincidencia con indicadores de compromiso conocidos para com.sterminator</strong>. Todos estos hallazgos provienen de la revisión manual de los archivos de resultados, guiada por el contexto de la entrevista y la línea de tiempo del caso, no del resumen de alertas por sí solo.</p>
-<h3 id="pasos-de-analisis-adicionales">Pasos de análisis adicionales</h3>
-<p>Siguiendo este triaje inicial, pudimos confirmar que existe evidencia de la instalación de una aplicación de terceros (<strong>com.sterminator</strong>) a través del Explorador de Archivos durante la ventana temporal en la que el dispositivo estuvo fuera del control de la persona y que dicha aplicación solicitó y utilizó permisos sensibles del sistema poco después de instalarse. La MVT no generó una alerta automática ni una coincidencia con indicadores de compromiso conocidos para este paquete específico.</p>
-<p>Como siguientes pasos se puede:</p>
+<p>Additionally, the review of <strong><em>dumpsys_receivers.json</em></strong> shows that, besides the standard receivers from the WorkManager and Firebase libraries, the package registered a receiver for android.app.action.DEVICE_ADMIN_ENABLED, which indicates that the app <strong>requests device administrator privileges</strong>, along with custom receivers for the lock screen and for attempts to shut down the device.</p>
+<p>All of this activity, from the installation and configuration to the device administrator request and the use of sensitive permissions, happens within the time window during which, according to the interview, the person did not have the device in their possession (approximately from 14:30 on August 26 to 11:00 on August 27).</p>
+<p>It is important to note that MVT <strong>did not generate any automatic alert or identify any match with known indicators of compromise for com.sterminator</strong>. All of these findings come from the manual review of the results files, guided by the context of the interview and the case timeline, not from the alert summary alone.</p>
+<h3 id="additional-analysis-steps">Additional analysis steps</h3>
+<p>Following this initial triage, we were able to confirm that there is evidence of the installation of a third-party app (<strong>com.sterminator</strong>) through Files by Google during the time window in which the device was out of the person’s control, and that this app requested and used sensitive system permissions shortly after it was installed. MVT did not generate an automatic alert or a match with known indicators of compromise for this specific package.</p>
+<p>Next steps may include:</p>
 <ul>
 <li>
-<p>Hacer preguntas específicas a la persona defensora sobre esta actividad, es decir,  si reconoce el nombre <strong>com.sterminator</strong>, si recuerda haber visto ventanas o notificaciones relacionadas con el Explorador de Archivos o con la instalación de una app en ese periodo, si tiene configurado un patrón o PIN de desbloqueo y si el dispositivo tenía habilitadas las Opciones de Desarrollador o la depuración por USB antes del incidente.</p>
+<p>Asking the human rights defender specific questions about this activity, such as whether they recognize the name <strong>com.sterminator</strong>, whether they remember seeing windows or notifications related to Files by Google or to the installation of an app during that period, whether they have an unlock pattern or PIN set up, and whether Developer Options or USB debugging were enabled on the device before the incident.</p>
 </li>
 <li>
-<p>Analizar la aplicación sospechosa, si el archivo sigue presente en la extracción con AndroidQF, se puede realizar un análisis estático y dinámico, revisar los permisos declarados en su manifiesto, el comportamiento de red que presenta y contrastar sus hashes (md5, sha1, sha256) contra herramientas de detección de amenazas como VirusTotal.</p>
+<p>Analyzing the suspicious app: if the base.apk file is still present in the extraction, you can perform static and dynamic analysis, review the permissions declared in its manifest and its network behavior, and compare its hashes (md5, sha1, sha256) against threat detection tools such as VirusTotal.</p>
 </li>
 <li>
-<p>Brindar contención y recomendaciones iniciales a la persona defensora, como evitar seguir usando el dispositivo hasta concluir el análisis, respaldar por separado la información importante, cambiar las credenciales de las cuentas que pudieran haber sido expuestas (correo, redes sociales).</p>
+<p>Providing containment and initial recommendations to the human rights defender, such as avoiding further use of the device until the analysis is complete, backing up important information separately, and changing the credentials of any accounts that may have been exposed (email, social media).</p>
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Es importante resaltar que este es un triaje técnico inicial, y no un análisis forense completo. Lo que hemos documentado hasta aquí es evidencia técnica que amerita una investigación más profunda, incluyendo potencialmente ingeniería inversa de la aplicación instalada por ejemplo. No es una conclusión sobre la naturaleza, el propósito o el origen de dicha aplicación.</p>
+<p class="admonition-title">Note</p>
+<p>It is important to emphasize that this is a triage, not a full forensic analysis. What we have documented so far is technical evidence that warrants a deeper investigation, potentially including reverse engineering of the installed app, for example. It is not a conclusion about the nature, purpose, or origin of that app.</p>
 </div>
-<h2 id="lo-que-aprendiste">Lo que aprendiste</h2>
-<p>En este tutorial <strong>recorrimos los distintos archivos de salida que genera la MVT</strong>, poniendo especial atención en los que resultan clave al investigar una posible sospecha de riesgo, siendo estos command.log como punto de partida, timeline.csv para correlacionar actividad en el tiempo, alerts.json como resumen consolidado de hallazgos y los archivos con sufijo detected para profundizar en cada alerta específica.</p>
-<p>A lo largo del tutorial insistimos que en la práctica resulta fundamental obtener información clave durante la entrevista de triaje, de forma tal que podamos generar hipótesis que sirvan como punto de partida para el triaje técnico, ya que aunque una herramienta forense <strong>no</strong> genere ninguna alerta automática o alguna coincidencia con indicadores de compromiso, es importante considerar que los hallazgos son las principales fuentes de investigación. Fue necesario <strong>conectar una alerta de nivel medio con la ventana de tiempo señalada por la persona entrevistada y revisar manualmente varios archivos de resultados (no solo los <em>detected</em>) para construir una línea de tiempo con sentido y llegar a una conclusión de triaje sólida.</strong></p>
-<p>Sin una hipótesis clara de qué se está buscando y por qué, revisar la salida de la MVT se convierte en buscar una aguja en un pajar, pues nos enfrentamos a líneas, paquetes y eventos en el sistema de archivos, sin ningún hilo conductor que te diga dónde poner la atención.</p>
-<h2 id="conclusion">Conclusión</h2>
-<p><strong>La MVT es una herramienta poderosa, pero, como toda herramienta forense, no reemplaza el criterio de una analista.</strong> Sus alertas automatizadas y sus indicadores de compromiso son un punto de partida valioso, especialmente frente a amenazas ya documentadas, pero como vimos, muchos hallazgos relevantes sólo pueden salir a la luz durante una revisión manual que tiene como base el contexto del caso.</p>
-<p>El triaje técnico no busca certezas absolutas ni conclusiones precipitadas o definitivas, más bien <strong>se enfoca en identificar evidencia suficiente para decidir si un caso amerita un análisis forense más profundo y, al mismo tiempo, ofrecer recomendaciones de contención oportunas a la persona acompañada.</strong> En nuestro ejemplo guiado, esto significó identificar la instalación de una aplicación con permisos y comportamiento que ameritan mayor investigación, sin necesidad de afirmar de antemano de qué se trataba o quién la instaló, algo que corresponde a etapas posteriores del análisis.</p>
-<p>Esperamos que este tutorial te dé una base sólida para comenzar a realizar triajes de dispositivos Android con mayor precisión metodológica.</p>
-<h2 id="comentarios">Comentarios</h2>
-<p>¿Tienes <strong>comentarios o sugerencias</strong> sobre este recurso? Puedes utilizar la <strong>función de comentar que se muestra a continuación</strong> para dejarnos tus ideas o apreciaciones. Por favor asegúrate de seguir nuestro <a href="../../community/code-of-conduct/">código de conducta</a>. La función de comentarios enlaza directamente a la sección de <a href="https://github.com/Socialtic/forensics/discussions"><em>Discussions</em> de Github</a>, donde también <strong>puedes participar en las discusiones de forma directa</strong>, si lo prefieres.   </p>
+<h2 id="what-you-learned">What you learned</h2>
+<p>In this tutorial, <strong>we went through the different output files generated by MVT</strong>, paying special attention to those that are key when investigating a suspected compromise: <code>command.log</code> as a starting point, <code>timeline.csv</code> for correlating activity over time, <code>alerts.json</code> as a consolidated summary of findings, and the files with the <em>detected</em> suffix to dig deeper into each specific alert.</p>
+<p>Throughout the tutorial, we emphasized that in practice it is essential to gather key information during the triage interview so that we can develop hypotheses that serve as a starting point for the technical triage. Even when a forensic tool does <strong>not</strong> generate any automatic alert or match with indicators of compromise, a manual review based on the key data points obtained during the interview can lead to the discovery of suspicious activity. </p>
+<p>Without a clear hypothesis of what you are looking for and why, reviewing MVT output becomes like looking for a needle in a haystack, since you are faced with lines, packages, and file system events, with no common thread to tell you where to focus your attention.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p><strong>MVT is a powerful tool, but, like any forensic tool, it does not replace an analyst’s judgment.</strong> Its automated alerts and indicators of compromise are a valuable starting point, especially for already documented threats, but as we saw, many relevant findings can only come to light during a manual review grounded in the context of the case.</p>
+<p>A good triage does not seek absolute certainty or hasty, definitive conclusions. Rather, <strong>we look for enough evidence to decide whether a case warrants a more in-depth forensic analysis, and to offer timely containment recommendations to the person being supported in the meantime.</strong> In our guided example, this meant identifying the installation of an app with permissions and behavior that warrant further investigation, without needing to state in advance what it was or who installed it, which belongs to later stages of the analysis.</p>
+<p>We hope this tutorial gives you a solid foundation to start performing Android device triage with greater methodological precision.</p>
+<h2 id="comments">Comments</h2>
+<p>Do you have any <strong>comments or suggestions</strong> about this resource? You can use the <strong>comment feature below</strong> to share your ideas or feedback with us. Please be sure to follow our <a href="../../community/code-of-conduct/index.html">code of conduct</a>. The comment feature links directly to the <a href="https://github.com/Socialtic/forensics/discussions"><em>Discussions</em> section on GitHub</a>, where you <strong>can also participate in discussions directly</strong>, if you prefer.</p>
 
 
 
@@ -2612,50 +2623,6 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 
 
 
-
-
-<!-- Insert generated snippet here -->
-
-
-
-<script src="https://giscus.app/client.js" data-repo="socialtic/forensics" data-repo-id="R_kgDONvIuiA" data-category="General" data-category-id="DIC_kwDONvIuiM4CuEFV" data-mapping="pathname" data-strict="0" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
-</script>
-
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
 
                 
               </article>
