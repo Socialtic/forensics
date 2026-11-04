@@ -369,6 +369,12 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://forensics.socialtic.org/pt/explainers/03-explainer-log-forensics-android/index.html"/>
     </url>
     <url>
+        <loc>https://forensics.socialtic.org/en/explainers/04-explainer-introduction-android-triage/index.html</loc>
+        <lastmod>2026-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://forensics.socialtic.org/en/explainers/04-explainer-introduction-android-triage/index.html"/>
+    </url>
+    <url>
         <loc>https://forensics.socialtic.org/en/explainers/05-explainer-mvt-android-triage/index.html</loc>
         <lastmod>2026-11-04</lastmod>
         <changefreq>daily</changefreq>
@@ -439,6 +445,12 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://forensics.socialtic.org/en/how-tos/05-how-to-extract-bugreport/index.html"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://forensics.socialtic.org/how-tos/05-how-to-extract-bugreport/index.html"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://forensics.socialtic.org/pt/how-tos/05-how-to-extract-bugreport/index.html"/>
+    </url>
+    <url>
+        <loc>https://forensics.socialtic.org/en/how-tos/06-how-to-triage-android-mvt/index.html</loc>
+        <lastmod>2026-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://forensics.socialtic.org/en/how-tos/06-how-to-triage-android-mvt/index.html"/>
     </url>
     <url>
         <loc>https://forensics.socialtic.org/en/references/index.html</loc>
