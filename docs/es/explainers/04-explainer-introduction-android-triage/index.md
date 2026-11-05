@@ -78,7 +78,7 @@ A veces, las personas se ponen en contacto para solicitar una **revisión preven
 
 En general, independientemente de las vulnerabilidades específicas que se aprovechen, los atacantes siguen un proceso similar para comprometer los dispositivos y la información almacenada y generada por ellos. Podemos describir esta cadena de ataque del spyware de la siguiente manera:
 
-![Cadena de ataque del spyware: pasos habituales en las infecciones por spyware](../../../en/assets/04-explainer/image1.png"){ loading=lazy }
+![Cadena de ataque del spyware: pasos habituales en las infecciones por spyware](../../../en/assets/04-explainer/image1.png){ loading=lazy }
 /// caption
 **Imagen 1**. Cadena de ataque del spyware. Adaptado del Grupo de Análisis de Amenazas de Google, [Buying Spying: Perspectivas sobre los proveedores de vigilancia comercial](https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Buying_Spying_-_Insights_into_Commercial_Surveillance_Vendors_-_TAG_report.pdf).
 ///
