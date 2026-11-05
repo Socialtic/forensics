@@ -18,9 +18,12 @@ nav:
     - Introducción a la forense digital consentida: 'explainers/01-explainer-introduction-digital-forensics/index.md'
     - Riesgos y amenazas para laboratorios forenses: 'explainers/02-explainer-risks-threats/index.md'
     - Principios para forense basada en logs en Android: 'explainers/03-explainer-log-forensics-android/index.md'
+    - Introducción al triaje técnico en Android: 'explainers/04-explainer-introduction-android-triage/index.md'
+    - Explorando MVT para el triaje técnico en Android: 'explainers/05-explainer-mvt-android-triage/index.md'
   - Tutoriales:
     - Inicio: 'tutorials/index.md'
-    - Explorando AndroidQF para la adquisición de información: 'tutorials/01-tutorial-learning-androidqf/index.md' 
+    - Explorando AndroidQF para la adquisición de información: 'tutorials/01-tutorial-learning-androidqf/index.md'
+    - Uso de MVT para el triaje técnico en Android: 'tutorials/02-tutorial-mvt-android-triage/index.md'
   - How-to's:
     - Inicio: 'how-tos/index.md'
     - ¿Cómo obtener y documentar consentimiento informado?: 'how-tos/01-how-to-obtain-informed-consent/index.md'
@@ -28,6 +31,7 @@ nav:
     - ¿Cómo habilitar ADB en Android?: 'how-tos/03-how-to-enable-adb/index.md'
     - ¿Cómo generar un reporte de errores en Android?: 'how-tos/05-how-to-extract-bugreport/index.md'
     - ¿Cómo realizar una extracción mediante AndroidQF?: 'how-tos/04-how-to-extract-with-androidqf/index.md'
+    - ¿Cómo hacer un triaje técnico en Android utilizando MVT?: 'how-tos/06-how-to-triage-android-mvt/index.md'
   - Referencias:
     - Inicio: 'references/index.md'
     - Glosario: 'references/00-glossary/index.md'
@@ -143,9 +147,12 @@ plugins:
               - Introduction to digital forensics: 'explainers/01-explainer-introduction-digital-forensics/index.md'
               - Risks, threats and mitigations for forensic labs: 'explainers/02-explainer-risks-threats/index.md'
               - Introduction to log-based forensics on Android: 'explainers/03-explainer-log-forensics-android/index.md'
+              - Introduction to technical triage of Android devices: 'explainers/04-explainer-introduction-android-triage/index.md'
+              - Exploring MVT for technical triage on Android: 'explainers/05-explainer-mvt-android-triage/index.md'
             - Tutorials:
               - Home: 'tutorials/index.md'
               - Exploring AndroidQF for data acquisition on Android: 'tutorials/01-tutorial-learning-androidqf/index.md'
+              - Using MVT for technical triage on Android: 'tutorials/02-tutorial-mvt-android-triage/index.md'
             - How-to's:
               - Home: 'how-tos/index.md'
               - How to obtain and document informed consent?: 'how-tos/01-how-to-obtain-informed-consent/index.md'
@@ -153,6 +160,7 @@ plugins:
               - How to enable ADB on Android?: 'how-tos/03-how-to-enable-adb/index.md'
               - How to extract a bugreport on Android?: 'how-tos/05-how-to-extract-bugreport/index.md'
               - How to perform an extraction using AndroidQF?: 'how-tos/04-how-to-extract-with-androidqf/index.md'
+              - How to do a technical triage of an Android device using MVT?: 'how-tos/06-how-to-triage-android-mvt/index.md'
             - References:
               - Home: 'references/index.md'
               - Glossary: 'references/00-glossary/index.md'
@@ -186,9 +194,12 @@ plugins:
               - Introdução à perícia digital consentida para a defesa dos direitos humanos: 'explainers/01-explainer-introduction-digital-forensics/index.md'
               - Riscos e ameaças para laboratórios forenses da sociedade civil: 'explainers/02-explainer-risks-threats/index.md'
               - Princípios para perícia forense baseada em logs em dispositivos Android: 'explainers/03-explainer-log-forensics-android/index.md'
+              - Introdução à triagem técnica no Android: 'explainers/04-explainer-introduction-android-triage/index.md'
+              - Explorando MVT para el triaje técnico en Android: 'explainers/05-explainer-mvt-android-triage/index.md'
             - Tutoriales:
               - Home: 'tutorials/index.md'
               - Explorando AndroidQF para la adquisición de información: 'tutorials/01-tutorial-learning-androidqf/index.md'
+              - Uso de MVT para el triaje técnico en Android: 'tutorials/02-tutorial-mvt-android-triage/index.md'
             - How-to's:
               - Home: 'how-tos/index.md'
               - Como obter um consentimento informado para uma investigação forense?: 'how-tos/01-how-to-obtain-informed-consent/index.md'
@@ -196,6 +207,7 @@ plugins:
               - ¿Cómo habilitar ADB en Android?: 'how-tos/03-how-to-enable-adb/index.md'
               - ¿Cómo generar un reporte de errores en Android?: 'how-tos/05-how-to-extract-bugreport/index.md'
               - ¿Cómo realizar una extracción mediante AndroidQF?: 'how-tos/04-how-to-extract-with-androidqf/index.md'
+              - ¿Cómo realizar un triaje técnico en Android con MVT?: 'how-tos/06-how-to-triage-android-mvt/index.md'
             - Referencias:
               - Home: 'references/index.md'
               - Glosario: 'references/00-glossary/index.md'

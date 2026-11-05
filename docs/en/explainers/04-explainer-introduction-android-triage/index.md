@@ -12,7 +12,7 @@ author:
     name: Daniel
     url: https://socialtic.org/quienes-somos/
     description: SocialTIC
-auto-translate: true
+auto-translate: false
 
 ---
 
@@ -20,7 +20,9 @@ auto-translate: true
 
 This document is part of a **technical documentation repository** which has the main objective of establishing a baseline of proven, flexible and accessible knowledge to **boost consensual forensic analysis in support of civil society across the globe**. To organize the contents, we use the [Diátaxis technical documentation framework](../../references/00-glossary/index.md#diataxis). This particular resource fits within [the explanation category in Diátaxis](https://diataxis.fr/explanation/). It is complementary to other resources in this repository including [how-to guides](../../how-tos/index.md), [tutorials](../../tutorials/index.md) and [references](../../references/index.md).
 
-This document provides an introduction to the technical triage of Android devices. It is a narrative document that details concepts, considerations and technical details that an individual should know before engaging in the technical triage of an Android device. It is complementary to other resources, including:
+This document provides an introduction to the technical triage of Android devices. It is a narrative document that provides insights into concept of triage, the interview that often happens in consented forensic analysis and some technical aspects on hwow Android devices are compromised, that an individual should know before engaging in the technical review of artifacts extracted from an Android device. 
+
+It is complementary to other resources, including:
 
 * [Explainer: Exploring the MVT tool for technical triage of Android devices](../05-explainer-mvt-android-triage/index.md)
 * [Tutorial: Using MVT for technical triage of Android devices](../../tutorials/02-tutorial-mvt-android-triage/index.md)
@@ -31,16 +33,16 @@ This document provides an introduction to the technical triage of Android device
 
 The concept of triage gets used to describe different parts of the [DFIR process](../../references/00-glossary/index.md#dfir-digital-forensics-and-incident-response), so it's worth detailing what we mean by it in the context of this resource and repository.
 
-In classic DFIR usage, triage refers to a quick initial assessment used to decide whether a deeper investigation is required, and where to focus it. The term comes from medical triage: sort and prioritize, don't diagnose. For example, [NIST SP 800-61r3](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r3.pdf) describes triage (in the context of validating incident reports) as a preliminary review to confirm that an incident has occurred and to gauge its severity and urgency, or a judgment call made before deeper investigation begins, not the investigation itself.
+In general, triage refers to a quick initial assessment used to decide whether a deeper investigation is required, and where to focus it. The term comes from [medical triage](https://en.wikipedia.org/wiki/Triage): sort and prioritize, don't diagnose. For example, [NIST SP 800-61r3](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r3.pdf) describes triage (in the context of validating incident reports) as a preliminary review to confirm that an incident has occurred and to gauge its severity and urgency, or a judgment call made before deeper investigation begins, not the investigation itself.
 
 In the context of this resource and repository, we expand this definition of triage to cover two aspects:
 
-* **Non-technical triage:** the interview, context-gathering and hypothesis formulation work that happens before any device is touched. This step shapes what the technical stage should actually look for, and is where [consent considerations](../../how-tos/01-how-to-obtain-informed-consent/index.md) are addressed directly with the person requesting support.
+* **Non-technical triage:** the interview, gathering of context and hypothesis formulation work that happens before any device is touched. This step shapes what the technical stage should actually look for, and is where [consent considerations](../../how-tos/01-how-to-obtain-informed-consent/index.md) are addressed directly with the person requesting support.
 * **Technical review of artifacts:** refers to using acquired information (bugreport, intrusion logs, AndroidQF extraction, etc.) to check it against known IOCs and suspicious patterns or behaviors (TTPs). Importantly, during this initial artifact review, you are looking for signs of potential malicious activity, so that you can decide if further manual analysis is necessary.
 
 It’s worth **differentiating this technical triage from a deeper forensic analysis**, that usually happens through manual review and that can lead to the identification of previously undetected IOCs.
 
-Therefore, in the context of this repository we define **technical triage** as *the bounded, hypothesis-driven review of readily available device artifacts (bugreport, AndroidQF extraction, intrusion logs, etc.) to identify [indicators of compromise](../../references/00-glossary/index.md#indicator-of-compromise-ioc) or [TTPs](../../references/00-glossary/index.md#ttp) consistent with known attack vectors.*
+Therefore, in the context of this repository we define **technical triage** as *the bounded, hypothesis-driven review of available device artifacts (bugreport, AndroidQF extraction, intrusion logs, etc.) to identify [indicators of compromise](../../references/00-glossary/index.md#indicator-of-compromise-ioc) or [TTPs](../../references/00-glossary/index.md#ttp) consistent with known attack vectors.*
 
 ## How to start investigating potential threats on Android devices?
 
@@ -50,7 +52,7 @@ Depending on your role in the investigation, you might have a direct connection 
 
 ### Gathering context before the technical triage
 
-Most of this information is **collected during interviews and conversations** when the case is first received. As with any conversation involving a potential threat, keep [consent](../../how-tos/01-how-to-obtain-informed-consent/index.md) in mind throughout: this information is only available because the person chose to share it, and **how you ask matters as much as what you ask.**
+Most of this information is **collected during interviews and conversations** when the case is first received. Keep in mind this information is only available as long as the person consents to share it. 
 
 Consider also that being the target of an spyware attack has impacts beyond the technical compromise. The [Study on the Psychosocial Impacts of Spyware and the Guide for Psychosocial Accompaniments](https://www.acceso.or.cr/psychosocial-impacts-of-spyware/) explores some of these consequences and provides guidance on how incident responders can incorporate practices that lead to more comprehensive and holistic accompaniment.
  
@@ -62,17 +64,17 @@ Preparing guiding questions and documentation can go a long way toward making su
 * What devices were involved?
 * What actions have already been taken?
 
-**Document** this information as soon as possible after the conversation, and make sure it's available for reference during the technical triage itself. It's easy to lose track of a detail mentioned in an intake call by the time you're several steps into artifact review.
+**Document** this information as soon as possible after the conversation, and make sure it's available for reference during the technical triage itself. It's easy to lose track of a detail mentioned in an intake call days or weeks after it happened. 
 
 ### What to do when there is no clear sign of compromise?
 
-Sometimes people reach out asking for a **preventative or routine check of their devices**, with no specific indicator of malicious activity and no stated reason beyond their risk profile. This is a valid request, and it's still possible to conduct an acquisition and run automated checks against known IOCs. But it's worth being **upfront about the limits of this review**, since it will only surfaces *known* threats, and looking at an entire operating system for traces of malicious activity, with nothing to narrow the search, is challenging and resource intensive.
+Sometimes people reach out asking for a **preventative or routine check of their devices**, with no specific indicator of malicious activity and no stated reason beyond their risk profile. This is a valid request, and it's still possible to conduct an acquisition and run automated checks against known IOCs. But it's worth being **upfront about the limits of this review**, since it will only surfaces *known* threats, and looking at an entire operating system for traces of malicious activity, with nothing to narrow the search, can be challenging and resource intensive.
 
 ### How are Android devices compromised?
 
-In general, regardless of the specific vulnerabilities exploited, attackers follow a similar process to compromise devices and the information stored and produced by them. We can describe this spyware kill chain as follows:
+In general, regardless of the specific vulnerabilities exploited, attackers follow a similar process to compromise devices and extract the information stored and produced by them. We can describe this spyware kill chain as follows:
 
-![Spyware kill chain: common steps in spyware infections](../../../assets/04-explainer/spyware-kill-chain.png "image 1"){ loading=lazy }
+![Spyware kill chain: common steps in spyware infections](../../assets/04-explainer/image1.png "image 1"){ loading=lazy }
 /// caption
 **Image 1**. Spyware kill chain. Adapted from Google Threat Analysis Group, [Buying Spying: Insights into Commercial Surveillance Vendors](https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Buying_Spying_-_Insights_into_Commercial_Surveillance_Vendors_-_TAG_report.pdf).
 ///
@@ -81,7 +83,7 @@ In general, regardless of the specific vulnerabilities exploited, attackers foll
 The steps can be described as follows:
 
 * **Initial delivery:** refers to the initial step conducted by an attacker, which can be the delivery of a phishing message for a 1-click attack, the trigger of a process through a 0-click vulnerability, or network interception to deliver a malicious package.
-* **Exploitation:** in this phase, the package delivered initially is launched, which can lead to remote code execution, sandbox escape or local privilege escalation.
+* **Exploitation:** in this phase, the package delivered initially is launched, which in turn exploit one or several vulnerabilities, that lead to remote code execution, sandbox escape or local privilege escalation.
 * **Installation:** once the package is able to escape the application sandbox and gains sufficient privileges, it installs the spyware agent.
 * **Information gathering:** during this phase, the attacker can collect information of interest, including messages, emails, browsing history, conversations through the microphone, and video or photos through the camera.
 * **Exfiltration:** finally, information is exfiltrated from the device. For this, there is generally communication with a command and control (C2) server. This remote server can send commands and receive collected information.
@@ -92,7 +94,7 @@ Below we describe a few different attack vectors that can be used to gain access
 
 #### Account-level compromise (no device compromise)
 
-Although this is a different type of incident, sometimes, malicious behavior that someone suspects could be an infection of their devcice, for example data exfiltration, can actually be the result of a compromised account rather than a compromised device. Account compromise often results from unsafe security practices and configurations, like password reuse or lack of multi-factor authentication, but it can also result from advanced, targeted or state-sponsored attacks. 
+Although this is a different type of incident, sometimes malicious behavior that someone suspects could be an infection of their devcice (for example data exfiltration) can actually be the result of a compromised account rather than a compromised device. Account compromise often results from unsafe security practices and configurations, like password reuse or lack of multi-factor authentication, but it can also result from advanced, targeted or state-sponsored attacks. 
 
 It is also worth mentioning that Google sometimes sends [alerts when it detects attempts to compromise accounts from goverment backed attackers](https://support.google.com/mail/answer/2591015). Generally these warnings are related to account-level issues, and are not necesarilly an indication of an attempt to target a device. 
 
@@ -105,7 +107,7 @@ Notably, Amnesty International's [Investigation: A Digital Prison”: Surveillan
 
 #### Vulnerability exploitation
 
-These are usually highly targeted attacks, frequently state-sponsored, using a handful of vectors to install spyware on the device:
+These are usually highly targeted attacks, frequently state-sponsored, using a handful of vectors to install mercenary spyware on the device:
 
 * **1-click:** the target has to interact with something (a link, a message) for the exploit to run.
 * **0-click:** no interaction from the target is required at all.
@@ -114,7 +116,7 @@ These are usually highly targeted attacks, frequently state-sponsored, using a h
 
 ## Common Android artifacts
 
-Common artifacts are the elements or traces that remain on a device after a malware infection. They are the raw material for conducting technical triage. Checking these traces, one category at a time, against known indicators and suspicious patterns (informed by the interview) is part of the technical triage.
+Common artifacts are the elements or traces that remain on a device after a malware infection. They are the raw material for conducting a technical triage. Checking these traces, one category at a time, against known indicators and suspicious patterns is part of the technical triage.
 
 * **Messages and links:** are frequently the first step in an attack, used to get a target to click a link, open a file, or install an app.
 * **Browsing history:** can reveal the sites a person visited or was redirected to as part of an attack, even after the initial link is gone from a messaging app.
@@ -152,7 +154,7 @@ Common artifacts are the elements or traces that remain on a device after a malw
 
 Conceptually, it works as a parser and comparator. It takes data collected from a device (via AndroidQF, a bugreport, or intrusion logs) and checks it against known indicators of compromise, while also **making the parsed information itself easier to review**. MVT output should be checked beyond the initial warnings, since the different files it creates include relevant information about the artifacts previously described. The MVT dictionaries available in the [references section](../../references/index.md) provide additional details about each of the files generated by MVT, and the complimentary resource [Explainer: Technical triage using MVT](../05-explainer-mvt-android-triage/index.md) expands further on the tool logic and usage. 
 
-Keep in mind that MVT is not a silver bullet: **running it does not, on its own, confirm or rule out compromise.** It requires manual analysis and review of its output, but MVT can be helpful in surfacing things worth investigating.
+Keep in mind that MVT is not intended to be an automated checker, **running it does not, on its own, confirm or rule out compromise.** It requires manual analysis and review of its output, but MVT can be very helpful in surfacing aspects worth investigating.
 
 #### MVT Android modules
 

@@ -31,5 +31,12 @@ Por ejemplo, una lección para aprender a conducir es usualmente un tutorial, do
     [:octicons-arrow-right-24: Explorando AndroidQF para la extracción forense en Android](01-tutorial-learning-androidqf/)
 
 
+-   :material-shield-search:{ .lg .middle }      __Uso de MVT para el triaje técnico en Android__
+
+    ---
+
+    Ejercicio guiado sobre un **caso hipotético** para aprender a instalar MVT, ejecutar un triaje sobre una extracción de AndroidQF e **interpretar metódicamente sus resultados**, desde la entrevista de triaje hasta la construcción de una línea de tiempo de hallazgos.
+
+    [:octicons-arrow-right-24: Uso de MVT para el triaje técnico de dispositivos Android](02-tutorial-mvt-android-triage/)
 
 </div>

@@ -68,5 +68,12 @@ Por ejemplo, en una receta de cocina se enseña a la persona lectora a completar
     [:octicons-arrow-right-24: ¿Cómo realizar una extracción mediante AndroidQF?](04-how-to-extract-with-androidqf/)
 
 
+-   :material-magnify-scan:{ .lg .middle }      __¿Cómo realizar el triaje técnico de dispositivos Android mediante MVT?__
+
+    ---
+
+    Los **comandos y pasos para realizar el triaje técnico** de un dispositivo Android con **MVT**, desde la instalación hasta la revisión de resultados.
+
+    [:octicons-arrow-right-24: Triaje técnico de dispositivos Android mediante MVT](06-how-to-triage-android-mvt/)
 
 </div>
