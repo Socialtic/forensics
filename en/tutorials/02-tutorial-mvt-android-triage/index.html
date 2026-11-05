@@ -9,10 +9,16 @@
         <meta name="description" content="Documentación para investigaciones forenses consentidas en Sociedad Civil">
       
       
+        <meta name="author" content="{'name': 'Daniel', 'url': 'https://socialtic.org/quienes-somos/', 'description': 'SocialTIC'}">
+      
       
         <link rel="canonical" href="https://forensics.socialtic.org/en/tutorials/02-tutorial-mvt-android-triage/index.html">
       
       
+        <link rel="prev" href="../01-tutorial-learning-androidqf/index.html">
+      
+      
+        <link rel="next" href="../../how-tos/index.html">
       
       
         
@@ -29,7 +35,7 @@
     
     
       
-        <title>Tutorial: Using MVT for Technical Triage of Android Devices - SocialTIC Forensics</title>
+        <title>Tutorial - Using MVT for Technical Triage of Android Devices - SocialTIC Forensics</title>
       
     
     
@@ -171,7 +177,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tutorial: Using MVT for Technical Triage of Android Devices
+              Tutorial - Using MVT for Technical Triage of Android Devices
             
           </span>
         </div>
@@ -361,10 +367,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../index.html" class="md-tabs__link">
           
   
@@ -696,6 +704,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -836,6 +848,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/04-explainer-introduction-android-triage/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to technical triage of Android devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/05-explainer-mvt-android-triage/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exploring MVT for technical triage on Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -846,6 +914,8 @@
       
       
   
+  
+    
   
   
   
@@ -858,20 +928,25 @@
       
         
       
+        
+      
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -895,13 +970,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -942,6 +1017,346 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MVT for technical triage on Android
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MVT for technical triage on Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Introduction
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-for-following-this-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Requirements for following this tutorial
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Case context
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incident" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Incident
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formulating-hypotheses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Formulating hypotheses
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-working-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Setting up the working folder
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triage-process-with-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Triage process with MVT
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Triage process with MVT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Installing MVT
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Updating MVT
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-mvt-on-the-test-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Running MVT on the test sample
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-the-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Reviewing the output
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reviewing the output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-commandlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Reviewing command.log
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-timelinecsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Reviewing timeline.csv
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-detected-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Reviewing <em>detected</em> files
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-initial-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Summary of initial findings
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-analysis-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Additional analysis steps
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          What you learned
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Conclusion
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Comments
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -960,6 +1375,8 @@
       
         
           
+        
+      
         
       
         
@@ -1155,6 +1572,34 @@
     
   
     How to perform an extraction using AndroidQF?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-tos/06-how-to-triage-android-mvt/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to do a technical triage of an Android device using MVT?
   
 
     
@@ -1735,6 +2180,46 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../index.html" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../index.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
@@ -1758,24 +2243,9 @@
   
 
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-11-04T22:51:46+00:00'>2026-11-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-04T22:51:46+00:00'>2026-11-04</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='daniel.bedoya@socialtic.org' /></div></div></div></div></div>
-<hr />
-<p>title: Tutorial: Using MVT for Technical Triage of Android Devices
-summary: Guided excercise to learn how to use MVT to analyze an androidqf extraction
-keywords: triage, android, mvt, androidqf
-lang: en
-tags: [tutorial, android, mvt]
-last_updated: 2026-11-04
-some_url:
-created: 2026-11-04
-comments: true
-author:
-    name: Daniel
-    url: https://socialtic.org/quienes-somos/
-    description: SocialTIC
-translation-review-pending: false</p>
-<hr />
 <h1 id="tutorial-using-mvt-for-technical-triage-of-android-devices">Tutorial: Using MVT for Technical Triage of Android Devices</h1>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-11-04T00:00:00+00:00'>2026-11-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-05T01:31:00+00:00'>2026-11-05</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='daniel.bedoya@socialtic.org' /></div></div></div></div></div>
+
 <h2 id="introduction">Introduction</h2>
 <p>This document is part of a technical documentation repository whose main objective is to establish a baseline of proven, flexible and accessible knowledge to boost consensual forensic analysis in support of civil society across the globe. To organize the contents, we use the technical documentation framework <a data-preview="" href="../../references/00-glossary/index.html#diataxis">Diataxis</a>.</p>
 <p>This resource is a <a href="https://diataxis.fr/tutorials/">tutorial</a> designed to learn the concepts and skills necessary to perform a technical forensic triage using the <a href="https://github.com/mvt-project/mvt">Mobile Verification Toolkit</a>. This open-source forensic tool, developed by the <a href="https://securitylab.amnesty.org/">Amnesty International Security Lab</a>, allows users to <strong>analyze forensic artifacts from Android and iOS devices for signs of compromise</strong>.</p>
@@ -2625,6 +3095,50 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
 
 
 
+
+<!-- Insert generated snippet here -->
+
+
+
+<script src="https://giscus.app/client.js" data-repo="socialtic/forensics" data-repo-id="R_kgDONvIuiA" data-category="General" data-category-id="DIC_kwDONvIuiM4CuEFV" data-mapping="pathname" data-strict="0" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
                 
               </article>
             </div>
@@ -2643,6 +3157,44 @@ aqf_get_prop_detected.json<span class="w">  </span>aqf_settings_detected.json<sp
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-tutorial-learning-androidqf/index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exploring AndroidQF for data acquisition on Android">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Exploring AndroidQF for data acquisition on Android
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../how-tos/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Home">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

@@ -15,14 +15,18 @@
         <link rel="canonical" href="https://forensics.socialtic.org/en/explainers/04-explainer-introduction-android-triage/index.html">
       
       
+        <link rel="prev" href="../03-explainer-log-forensics-android/index.html">
+      
+      
+        <link rel="next" href="../05-explainer-mvt-android-triage/index.html">
       
       
         
-          <link rel="alternate" href="/index.html" hreflang="es">
+          <link rel="alternate" href="../../../explainers/04-explainer-introduction-android-triage/index.html" hreflang="es">
         
           <link rel="alternate" href="index.html" hreflang="en">
         
-          <link rel="alternate" href="/pt/index.html" hreflang="pt">
+          <link rel="alternate" href="../../../pt/explainers/04-explainer-introduction-android-triage/index.html" hreflang="pt">
         
       
       
@@ -220,7 +224,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/index.html" hreflang="es" class="md-select__link">
+            <a href="../../../explainers/04-explainer-introduction-android-triage/index.html" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
@@ -232,7 +236,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="/pt/index.html" hreflang="pt" class="md-select__link">
+            <a href="../../../pt/explainers/04-explainer-introduction-android-triage/index.html" hreflang="pt" class="md-select__link">
               Portuguese
             </a>
           </li>
@@ -339,10 +343,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../index.html" class="md-tabs__link">
           
   
@@ -683,6 +689,8 @@
       
   
   
+    
+  
   
   
     
@@ -698,20 +706,27 @@
       
         
       
+        
+      
+        
+      
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -735,13 +750,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -838,6 +853,347 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to technical triage of Android devices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to technical triage of Android devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-do-we-mean-by-technical-triage-of-android-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          What do we mean by technical triage of Android devices?
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-start-investigating-potential-threats-on-android-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          How to start investigating potential threats on Android devices?
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to start investigating potential threats on Android devices?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gathering-context-before-the-technical-triage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Gathering context before the technical triage
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-when-there-is-no-clear-sign-of-compromise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          What to do when there is no clear sign of compromise?
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-are-android-devices-compromised" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          How are Android devices compromised?
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How are Android devices compromised?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-level-compromise-no-device-compromise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Account-level compromise (no device compromise)
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#malicious-apk-through-physical-proximity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Malicious APK (through physical proximity)
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Vulnerability exploitation
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-android-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Common Android artifacts
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Android artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android-artifacts-reference-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Android artifacts reference table
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-for-technical-triage-of-android-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Tools for technical triage of Android devices
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools for technical triage of Android devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          MVT
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MVT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mvt-android-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          MVT Android modules
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aleapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          ALEAPP
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Conclusion
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Comments
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-explainer-mvt-android-triage/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exploring MVT for technical triage on Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -856,6 +1212,8 @@
       
         
           
+        
+      
         
       
         
@@ -944,6 +1302,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/02-tutorial-mvt-android-triage/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MVT for technical triage on Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -962,6 +1348,8 @@
       
         
           
+        
+      
         
       
         
@@ -1157,6 +1545,34 @@
     
   
     How to perform an extraction using AndroidQF?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-tos/06-how-to-triage-android-mvt/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to do a technical triage of an Android device using MVT?
   
 
     
@@ -1737,6 +2153,46 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../index.html" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../index.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Explainers
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
@@ -1761,10 +2217,11 @@
 
 
 <h1 id="explainer-introduction-to-technical-triage-of-android-devices">Explainer: Introduction to technical triage of Android devices</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-11-04T00:00:00+00:00'>2026-11-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-04T22:51:46+00:00'>2026-11-04</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='daniel.bedoya@socialtic.org' /></div></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-11-04T00:00:00+00:00'>2026-11-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-05T01:31:00+00:00'>2026-11-05</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_author'></span><div class='author-group'><div class='avatar-wrapper' data-name='Daniel' data-tippy-content data-tippy-raw='<a href="mailto:daniel.bedoya@socialtic.org">Daniel</a>'><span class='avatar-text'></span><img class='avatar' data-src='' data-email='daniel.bedoya@socialtic.org' /></div></div></div></div></div>
 
 <p>This document is part of a <strong>technical documentation repository</strong> which has the main objective of establishing a baseline of proven, flexible and accessible knowledge to <strong>boost consensual forensic analysis in support of civil society across the globe</strong>. To organize the contents, we use the <a data-preview="" href="../../references/00-glossary/index.html#diataxis">Diátaxis technical documentation framework</a>. This particular resource fits within <a href="https://diataxis.fr/explanation/">the explanation category in Diátaxis</a>. It is complementary to other resources in this repository including <a href="../../how-tos/index.html">how-to guides</a>, <a href="../../tutorials/index.html">tutorials</a> and <a data-preview="" href="../../references/index.html">references</a>.</p>
-<p>This document provides an introduction to the technical triage of Android devices. It is a narrative document that details concepts, considerations and technical details that an individual should know before engaging in the technical triage of an Android device. It is complementary to other resources, including:</p>
+<p>This document provides an introduction to the technical triage of Android devices. It is a narrative document that provides insights into concept of triage, the interview that often happens in consented forensic analysis and some technical aspects on hwow Android devices are compromised, that an individual should know before engaging in the technical review of artifacts extracted from an Android device. </p>
+<p>It is complementary to other resources, including:</p>
 <ul>
 <li><a href="../05-explainer-mvt-android-triage/index.html">Explainer: Exploring the MVT tool for technical triage of Android devices</a></li>
 <li><a href="../../tutorials/02-tutorial-mvt-android-triage/index.html">Tutorial: Using MVT for technical triage of Android devices</a></li>
@@ -1773,19 +2230,19 @@
 </ul>
 <h2 id="what-do-we-mean-by-technical-triage-of-android-devices">What do we mean by technical triage of Android devices?</h2>
 <p>The concept of triage gets used to describe different parts of the <a data-preview="" href="../../references/00-glossary/index.html#dfir-digital-forensics-and-incident-response">DFIR process</a>, so it's worth detailing what we mean by it in the context of this resource and repository.</p>
-<p>In classic DFIR usage, triage refers to a quick initial assessment used to decide whether a deeper investigation is required, and where to focus it. The term comes from medical triage: sort and prioritize, don't diagnose. For example, <a href="https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r3.pdf">NIST SP 800-61r3</a> describes triage (in the context of validating incident reports) as a preliminary review to confirm that an incident has occurred and to gauge its severity and urgency, or a judgment call made before deeper investigation begins, not the investigation itself.</p>
+<p>In general, triage refers to a quick initial assessment used to decide whether a deeper investigation is required, and where to focus it. The term comes from <a href="https://en.wikipedia.org/wiki/Triage">medical triage</a>: sort and prioritize, don't diagnose. For example, <a href="https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r3.pdf">NIST SP 800-61r3</a> describes triage (in the context of validating incident reports) as a preliminary review to confirm that an incident has occurred and to gauge its severity and urgency, or a judgment call made before deeper investigation begins, not the investigation itself.</p>
 <p>In the context of this resource and repository, we expand this definition of triage to cover two aspects:</p>
 <ul>
-<li><strong>Non-technical triage:</strong> the interview, context-gathering and hypothesis formulation work that happens before any device is touched. This step shapes what the technical stage should actually look for, and is where <a href="../../how-tos/01-how-to-obtain-informed-consent/index.html">consent considerations</a> are addressed directly with the person requesting support.</li>
+<li><strong>Non-technical triage:</strong> the interview, gathering of context and hypothesis formulation work that happens before any device is touched. This step shapes what the technical stage should actually look for, and is where <a href="../../how-tos/01-how-to-obtain-informed-consent/index.html">consent considerations</a> are addressed directly with the person requesting support.</li>
 <li><strong>Technical review of artifacts:</strong> refers to using acquired information (bugreport, intrusion logs, AndroidQF extraction, etc.) to check it against known IOCs and suspicious patterns or behaviors (TTPs). Importantly, during this initial artifact review, you are looking for signs of potential malicious activity, so that you can decide if further manual analysis is necessary.</li>
 </ul>
 <p>It’s worth <strong>differentiating this technical triage from a deeper forensic analysis</strong>, that usually happens through manual review and that can lead to the identification of previously undetected IOCs.</p>
-<p>Therefore, in the context of this repository we define <strong>technical triage</strong> as <em>the bounded, hypothesis-driven review of readily available device artifacts (bugreport, AndroidQF extraction, intrusion logs, etc.) to identify <a data-preview="" href="../../references/00-glossary/index.html#indicator-of-compromise-ioc">indicators of compromise</a> or <a data-preview="" href="../../references/00-glossary/index.html#ttp">TTPs</a> consistent with known attack vectors.</em></p>
+<p>Therefore, in the context of this repository we define <strong>technical triage</strong> as <em>the bounded, hypothesis-driven review of available device artifacts (bugreport, AndroidQF extraction, intrusion logs, etc.) to identify <a data-preview="" href="../../references/00-glossary/index.html#indicator-of-compromise-ioc">indicators of compromise</a> or <a data-preview="" href="../../references/00-glossary/index.html#ttp">TTPs</a> consistent with known attack vectors.</em></p>
 <h2 id="how-to-start-investigating-potential-threats-on-android-devices">How to start investigating potential threats on Android devices?</h2>
 <p>Before conducting a technical triage, you should have access to key information about the case and the request. <strong>Understanding the context, timeline, and history of potential threats is crucial</strong> before you engage with any technical evidence. This can be the difference between trying to find a needle in a haystack and conducting a more intentional and narrow review driven by this hypothesis.</p>
 <p>Depending on your role in the investigation, you might have a direct connection with the person requesting support, or you might be working through a partner on the ground. Either way, in <strong>consensual forensics</strong>, analysts generally have access to contextual information on potential threats, possible vectors, the person's threat history, and the broader context of the case. <strong>This is one of the key advantages of consensual forensics</strong>, when compared to more adversarial approaches used in other contexts.</p>
 <h3 id="gathering-context-before-the-technical-triage">Gathering context before the technical triage</h3>
-<p>Most of this information is <strong>collected during interviews and conversations</strong> when the case is first received. As with any conversation involving a potential threat, keep <a href="../../how-tos/01-how-to-obtain-informed-consent/index.html">consent</a> in mind throughout: this information is only available because the person chose to share it, and <strong>how you ask matters as much as what you ask.</strong></p>
+<p>Most of this information is <strong>collected during interviews and conversations</strong> when the case is first received. Keep in mind this information is only available as long as the person consents to share it. </p>
 <p>Consider also that being the target of an spyware attack has impacts beyond the technical compromise. The <a href="https://www.acceso.or.cr/psychosocial-impacts-of-spyware/">Study on the Psychosocial Impacts of Spyware and the Guide for Psychosocial Accompaniments</a> explores some of these consequences and provides guidance on how incident responders can incorporate practices that lead to more comprehensive and holistic accompaniment.</p>
 <p>Preparing guiding questions and documentation can go a long way toward making sure you collect what you actually need. In general, you should come out of these conversations knowing:</p>
 <ul>
@@ -1795,13 +2252,13 @@
 <li>What devices were involved?</li>
 <li>What actions have already been taken?</li>
 </ul>
-<p><strong>Document</strong> this information as soon as possible after the conversation, and make sure it's available for reference during the technical triage itself. It's easy to lose track of a detail mentioned in an intake call by the time you're several steps into artifact review.</p>
+<p><strong>Document</strong> this information as soon as possible after the conversation, and make sure it's available for reference during the technical triage itself. It's easy to lose track of a detail mentioned in an intake call days or weeks after it happened. </p>
 <h3 id="what-to-do-when-there-is-no-clear-sign-of-compromise">What to do when there is no clear sign of compromise?</h3>
-<p>Sometimes people reach out asking for a <strong>preventative or routine check of their devices</strong>, with no specific indicator of malicious activity and no stated reason beyond their risk profile. This is a valid request, and it's still possible to conduct an acquisition and run automated checks against known IOCs. But it's worth being <strong>upfront about the limits of this review</strong>, since it will only surfaces <em>known</em> threats, and looking at an entire operating system for traces of malicious activity, with nothing to narrow the search, is challenging and resource intensive.</p>
+<p>Sometimes people reach out asking for a <strong>preventative or routine check of their devices</strong>, with no specific indicator of malicious activity and no stated reason beyond their risk profile. This is a valid request, and it's still possible to conduct an acquisition and run automated checks against known IOCs. But it's worth being <strong>upfront about the limits of this review</strong>, since it will only surfaces <em>known</em> threats, and looking at an entire operating system for traces of malicious activity, with nothing to narrow the search, can be challenging and resource intensive.</p>
 <h3 id="how-are-android-devices-compromised">How are Android devices compromised?</h3>
-<p>In general, regardless of the specific vulnerabilities exploited, attackers follow a similar process to compromise devices and the information stored and produced by them. We can describe this spyware kill chain as follows:</p>
+<p>In general, regardless of the specific vulnerabilities exploited, attackers follow a similar process to compromise devices and extract the information stored and produced by them. We can describe this spyware kill chain as follows:</p>
 <figure>
-<p><img alt="Spyware kill chain: common steps in spyware infections" loading="lazy" src="../../../assets/04-explainer/spyware-kill-chain.png" title="image 1" /></p>
+<p><img alt="Spyware kill chain: common steps in spyware infections" loading="lazy" src="../../assets/04-explainer/image1.png" title="image 1" /></p>
 <figcaption>
 <p><strong>Image 1</strong>. Spyware kill chain. Adapted from Google Threat Analysis Group, <a href="https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Buying_Spying_-_Insights_into_Commercial_Surveillance_Vendors_-_TAG_report.pdf">Buying Spying: Insights into Commercial Surveillance Vendors</a>.</p>
 </figcaption>
@@ -1809,7 +2266,7 @@
 <p>The steps can be described as follows:</p>
 <ul>
 <li><strong>Initial delivery:</strong> refers to the initial step conducted by an attacker, which can be the delivery of a phishing message for a 1-click attack, the trigger of a process through a 0-click vulnerability, or network interception to deliver a malicious package.</li>
-<li><strong>Exploitation:</strong> in this phase, the package delivered initially is launched, which can lead to remote code execution, sandbox escape or local privilege escalation.</li>
+<li><strong>Exploitation:</strong> in this phase, the package delivered initially is launched, which in turn exploit one or several vulnerabilities, that lead to remote code execution, sandbox escape or local privilege escalation.</li>
 <li><strong>Installation:</strong> once the package is able to escape the application sandbox and gains sufficient privileges, it installs the spyware agent.</li>
 <li><strong>Information gathering:</strong> during this phase, the attacker can collect information of interest, including messages, emails, browsing history, conversations through the microphone, and video or photos through the camera.</li>
 <li><strong>Exfiltration:</strong> finally, information is exfiltrated from the device. For this, there is generally communication with a command and control (C2) server. This remote server can send commands and receive collected information.</li>
@@ -1817,13 +2274,13 @@
 <p>In addition to understanding the steps attackers generally follow to compromise a device, it is helpful to look specifically at Android devices and the historic reports of compromises against civil society. Understanding the attacker's process, tactics and techniques can help <strong>develop a mental model of what traces to look at</strong> when exploring the evidence. Scanning for anything <em>unusual</em> can be a challenging exercise, especially if we are looking everywhere, at all dates, without clarity on which specific traces we might be after.</p>
 <p>Below we describe a few different attack vectors that can be used to gain access to an Android device. </p>
 <h4 id="account-level-compromise-no-device-compromise">Account-level compromise (no device compromise)</h4>
-<p>Although this is a different type of incident, sometimes, malicious behavior that someone suspects could be an infection of their devcice, for example data exfiltration, can actually be the result of a compromised account rather than a compromised device. Account compromise often results from unsafe security practices and configurations, like password reuse or lack of multi-factor authentication, but it can also result from advanced, targeted or state-sponsored attacks. </p>
+<p>Although this is a different type of incident, sometimes malicious behavior that someone suspects could be an infection of their devcice (for example data exfiltration) can actually be the result of a compromised account rather than a compromised device. Account compromise often results from unsafe security practices and configurations, like password reuse or lack of multi-factor authentication, but it can also result from advanced, targeted or state-sponsored attacks. </p>
 <p>It is also worth mentioning that Google sometimes sends <a href="https://support.google.com/mail/answer/2591015">alerts when it detects attempts to compromise accounts from goverment backed attackers</a>. Generally these warnings are related to account-level issues, and are not necesarilly an indication of an attempt to target a device. </p>
 <h4 id="malicious-apk-through-physical-proximity">Malicious APK (through physical proximity)</h4>
 <p>This doesn't require advanced device exploitation, since it happens when the attackers can physically manipulate the device to install an agent. State-sponsored actors have used this technique, as it was reported by Citizen Lab in 2024, in their <a href="https://citizenlab.ca/research/device-confiscated-by-russian-authorities-returned-with-monokle-type-spyware-installed/">report: Something to Remember Us By</a>, that documents how spyware covertly implanted on a phone returned to a Russian programmer after he was released from custody.</p>
 <p>Notably, Amnesty International's <a href="https://securitylab.amnesty.org/latest/2024/12/a-digital-prison-surveillance-and-the-suppression-of-civil-society-in-serbia/">Investigation: A Digital Prison”: Surveillance and the suppression of civil society in Serbia</a> documents the use of /<em>NoviSpy</em> a new spyware, installed while devices where in phsyical custoy of police, and that allows for capturing sensitive personal data from a target’s phone.</p>
 <h4 id="vulnerability-exploitation">Vulnerability exploitation</h4>
-<p>These are usually highly targeted attacks, frequently state-sponsored, using a handful of vectors to install spyware on the device:</p>
+<p>These are usually highly targeted attacks, frequently state-sponsored, using a handful of vectors to install mercenary spyware on the device:</p>
 <ul>
 <li><strong>1-click:</strong> the target has to interact with something (a link, a message) for the exploit to run.</li>
 <li><strong>0-click:</strong> no interaction from the target is required at all.</li>
@@ -1831,7 +2288,7 @@
 <li><strong>Targeted Advertisement:</strong> In 2026, the <a href="https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/">Citizen Lab report: Exposing AdFection</a> revealed for the first time how targeted ads can be turned into a pipline for zero-click mercenary spyware.  </li>
 </ul>
 <h2 id="common-android-artifacts">Common Android artifacts</h2>
-<p>Common artifacts are the elements or traces that remain on a device after a malware infection. They are the raw material for conducting technical triage. Checking these traces, one category at a time, against known indicators and suspicious patterns (informed by the interview) is part of the technical triage.</p>
+<p>Common artifacts are the elements or traces that remain on a device after a malware infection. They are the raw material for conducting a technical triage. Checking these traces, one category at a time, against known indicators and suspicious patterns is part of the technical triage.</p>
 <ul>
 <li><strong>Messages and links:</strong> are frequently the first step in an attack, used to get a target to click a link, open a file, or install an app.</li>
 <li><strong>Browsing history:</strong> can reveal the sites a person visited or was redirected to as part of an attack, even after the initial link is gone from a messaging app.</li>
@@ -1911,7 +2368,7 @@
 <h3 id="mvt">MVT</h3>
 <p><a href="https://docs.mvt.re/en/latest/">MVT</a> (Mobile Verification Toolkit) is a tool to facilitate the consensual forensic analysis of Android and iOS devices, for the purpose of identifying traces of compromise. It was developed and released by the Amnesty International Security Lab in July 2021 in the context of the Pegasus Project, along with a technical forensic methodology. It continues to be maintained by Amnesty International and other contributors.</p>
 <p>Conceptually, it works as a parser and comparator. It takes data collected from a device (via AndroidQF, a bugreport, or intrusion logs) and checks it against known indicators of compromise, while also <strong>making the parsed information itself easier to review</strong>. MVT output should be checked beyond the initial warnings, since the different files it creates include relevant information about the artifacts previously described. The MVT dictionaries available in the <a data-preview="" href="../../references/index.html">references section</a> provide additional details about each of the files generated by MVT, and the complimentary resource <a href="../05-explainer-mvt-android-triage/index.html">Explainer: Technical triage using MVT</a> expands further on the tool logic and usage. </p>
-<p>Keep in mind that MVT is not a silver bullet: <strong>running it does not, on its own, confirm or rule out compromise.</strong> It requires manual analysis and review of its output, but MVT can be helpful in surfacing things worth investigating.</p>
+<p>Keep in mind that MVT is not intended to be an automated checker, <strong>running it does not, on its own, confirm or rule out compromise.</strong> It requires manual analysis and review of its output, but MVT can be very helpful in surfacing aspects worth investigating.</p>
 <h4 id="mvt-android-modules">MVT Android modules</h4>
 <p>It's useful to know what modules are available for a given command, since which one applies depends on what data you have:</p>
 <ul>
@@ -2008,6 +2465,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03-explainer-log-forensics-android/index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction to log-based forensics on Android">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Introduction to log-based forensics on Android
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-explainer-mvt-android-triage/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Exploring MVT for technical triage on Android">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Exploring MVT for technical triage on Android
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

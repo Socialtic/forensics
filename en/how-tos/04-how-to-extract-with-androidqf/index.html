@@ -16,7 +16,7 @@
         <link rel="prev" href="../05-how-to-extract-bugreport/index.html">
       
       
-        <link rel="next" href="../../references/index.html">
+        <link rel="next" href="../06-how-to-triage-android-mvt/index.html">
       
       
         
@@ -702,6 +702,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -842,6 +846,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/04-explainer-introduction-android-triage/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to technical triage of Android devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explainers/05-explainer-mvt-android-triage/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exploring MVT for technical triage on Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -860,6 +920,8 @@
       
         
           
+        
+      
         
       
         
@@ -948,6 +1010,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/02-tutorial-mvt-android-triage/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MVT for technical triage on Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -968,6 +1058,8 @@
       
         
           
+        
+      
         
       
         
@@ -1370,6 +1462,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-how-to-triage-android-mvt/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to do a technical triage of an Android device using MVT?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2006,7 +2126,7 @@
 
 
 <h1 id="how-to-guide-how-to-perform-an-acquisition-and-extraction-using-androidqf">How-to guide: How to perform an acquisition and extraction using AndroidQF?</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-08-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-21T00:00:00+00:00'>2025-08-21</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-04'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-04T22:51:46+00:00'>2026-11-04</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_authors'></span><div class='author-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' data-src='../../../overrides/assets/img/avatars/jose-avatar.png' data-email='seguridad@socialtic.org' /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">Daniel Bedoya</a>'><span class='avatar-text'></span><img class='avatar' data-src='../../../overrides/assets/img/avatars/dani-avatar.png' data-email='seguridad@socialtic.org' /></div></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-08-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-08-21T00:00:00+00:00'>2025-08-21</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-11-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-11-05T01:31:00+00:00'>2026-11-05</time></span></div><div class='dd-right'><span class='material-icons' data-icon='doc_authors'></span><div class='author-group'><div class='avatar-wrapper' data-name='José Martínez' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">José Martínez</a>'><span class='avatar-text'></span><img class='avatar' data-src='../../../overrides/assets/img/avatars/jose-avatar.png' data-email='seguridad@socialtic.org' /></div><div class='avatar-wrapper' data-name='Daniel Bedoya' data-tippy-content data-tippy-raw='<a href="https://socialtic.org" target="_blank" rel="noopener">Daniel Bedoya</a>'><span class='avatar-text'></span><img class='avatar' data-src='../../../overrides/assets/img/avatars/dani-avatar.png' data-email='seguridad@socialtic.org' /></div></div></div></div></div>
 
 <p>This document is part of a <strong>technical documentation repository</strong> that aims to establish a proven, flexible and accessible knowledge base to <strong>promote consensual forensic analysis for the benefit of civil society</strong>. To organize the contents, we use the technical documentation framework  <a href="../.../references/00-glossary/index.md#diataxis">Diataxis</a>.</p>
 <p>This resource falls within the category <a href="../">how-to guides</a>, provides instructions on how to perform a forensic extraction using the <a data-preview="" href="../../references/00-glossary/index.html#androidqf">AndroidQF</a> tool.</p>
@@ -2430,13 +2550,13 @@
         
         
           
-          <a href="../../references/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Home">
+          <a href="../06-how-to-triage-android-mvt/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: How to do a technical triage of an Android device using MVT?">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Home
+                How to do a technical triage of an Android device using MVT?
               </div>
             </div>
             <div class="md-footer__button md-icon">
