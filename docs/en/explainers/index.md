@@ -44,7 +44,7 @@ In this section you will find **explainers**. According to [Diataxis documentati
 
     [:octicons-arrow-right-24: Introduction to log-based forensics on Android devices](03-explainer-log-forensics-android/)
 
--   :material-cellphone-search:{ .lg .middle }      __Introduction to technical triage of Android devices__
+-   :material-cellphone-information:{ .lg .middle }      __Introduction to technical triage of Android devices__
 
     ---
 
