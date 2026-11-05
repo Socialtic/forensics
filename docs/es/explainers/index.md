@@ -45,7 +45,7 @@ En esta sección encontrarás materiales explicativos o explainers. Según [el m
 
     [:octicons-arrow-right-24: Principios para forense basada en logs en dispositivos Android](03-explainer-log-forensics-android/)
 
--   :material-cellphone-search:{ .lg .middle }      __Introducción al triaje técnico en Android__
+-   :material-cellphone-information:{ .lg .middle }      __Introducción al triaje técnico en Android__
 
     ---
 
