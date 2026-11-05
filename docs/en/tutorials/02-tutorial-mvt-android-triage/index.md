@@ -1,6 +1,6 @@
 ---
 
-title: Tutorial: Using MVT for Technical Triage of Android Devices
+title: Tutorial - Using MVT for Technical Triage of Android Devices
 summary: Guided excercise to learn how to use MVT to analyze an androidqf extraction
 keywords: triage, android, mvt, androidqf
 lang: en

@@ -45,6 +45,21 @@ En esta sección encontrarás materiales explicativos o explainers. Según [el m
 
     [:octicons-arrow-right-24: Principios para forense basada en logs en dispositivos Android](03-explainer-log-forensics-android/)
 
+-   :material-cellphone-search:{ .lg .middle }      __Introducción al triaje técnico en Android__
+
+    ---
+
+    Material introductorio sobre el **triaje técnico de dispositivos Android**, detalla qué entendemos por triaje, la importancia de la **entrevista inicial**, cómo se **comprometen los dispositivos** y qué **artefactos** revisar.
+
+    [:octicons-arrow-right-24: Introducción al triaje técnico de dispositivos Android](04-explainer-introduction-android-triage/)
+
+-   :material-magnify-scan:{ .lg .middle }      __Explorando MVT para el triaje técnico en Android__
+
+    ---
+
+    Explica cómo funciona la herramienta **Mobile Verification Toolkit (MVT)** para el triaje de dispositivos Android, incluyendo sus **comandos y módulos**, cómo leer sus **alertas y niveles de severidad**, y cuáles **archivos de salida priorizar en la revisión**.
+
+    [:octicons-arrow-right-24: Explorando la herramienta MVT para el triaje técnico de dispositivos Android](05-explainer-mvt-android-triage/)
 
 </div>
 

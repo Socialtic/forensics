@@ -66,4 +66,12 @@ A good example is a cooking recipe, where the focus is to achieve a result, in t
     [:octicons-arrow-right-24: How to extract with AndroidQF?](04-how-to-extract-with-androidqf/)
 
 
+-   :material-shield-search:{ .lg .middle }      __How to conduct technical triage of Android devices using MVT__
+
+    ---
+
+    Step-by-step commands to **install MVT, run a check** on a bugreport, AndroidQF extraction or intrusion logs, and **triage its output**.
+
+    [:octicons-arrow-right-24: Technical triage of Android devices using MVT](06-how-to-triage-android-mvt/)
+
 </div>

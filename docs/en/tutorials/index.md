@@ -33,6 +33,12 @@ An example of a tutorial is a car driving lesson. Usually, in a good driving les
 
     [:octicons-arrow-right-24: Exploring AndroidQF for forensic acquisition on Android devices](01-tutorial-learning-androidqf/)
 
+-   :material-shield-search:{ .lg .middle }      __Using MVT for technical triage on Android__
 
+    ---
+
+    A guided exercise on a **hypothetical case** to learn how to install MVT, triage an AndroidQF extraction and **methodically interpret its results**, from the triage interview to building a timeline of findings.
+
+    [:octicons-arrow-right-24: Using MVT for technical triage of Android devices](02-tutorial-mvt-android-triage/)
 
 </div>
