@@ -31,7 +31,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install deepl
+  # usa versión anterior a la 2 para que no falle
+          pip install deepl<2
 
       - name: Run translation script
         env:
