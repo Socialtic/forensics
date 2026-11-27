@@ -6,7 +6,6 @@ lang: es
 tags: [registro de cambios, android, mvt]
 last_updated: 2026-11-27
 some_url:
-icon: material/android
 created: 2026-11-27
 comments: true
 author:
