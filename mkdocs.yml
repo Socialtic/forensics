@@ -13,6 +13,7 @@ nav:
     - Primeros pasos: 'home/getting-started/index.md'
     - Hoja de que ruta: 'home/roadmap/index.md'
     - Comunidad: 'community/index.md'
+    - Registro de cambios: 'community/changelog/index.md'
   - Explainers:
     - Inicio: 'explainers/index.md'
     - Introducción a la forense digital consentida: 'explainers/01-explainer-introduction-digital-forensics/index.md'
@@ -49,6 +50,9 @@ nav:
     - Licencia de uso: 'community/license/index.md'
     - Código de conducta: 'community/code-of-conduct/index.md'
     - Limitación de responsabilidades: 'community/limitation-of-responsibility/index.md'
+    - Registro de cambios:
+      - 'community/changelog/index.md'
+      - '[2026-11] Triaje técnico en Android con MVT': 'community/changelog/2026-11-android-mvt/index.md'
 
 
 theme: 
@@ -121,6 +125,8 @@ plugins:
         - en/how-tos/index.md
         - en/references/index.md
         - en/tutorials/index.md
+        - es/community/changelog/index.md
+        - en/community/changelog/index.md
         - pt/index.md
   - i18n: #Plugin para localización
       reconfigure_material: true
@@ -142,6 +148,7 @@ plugins:
               - Getting started: 'home/getting-started/index.md'
               - Roadmap: 'home/roadmap/index.md'
               - Community: 'community/index.md'
+              - Changelog: 'community/changelog/index.md'
             - Explainers:
               - Home: 'explainers/index.md'
               - Introduction to digital forensics: 'explainers/01-explainer-introduction-digital-forensics/index.md'
@@ -178,6 +185,9 @@ plugins:
               - License of contents: 'community/license/index.md'
               - Code of conduct: 'community/code-of-conduct/index.md'
               - Limitation of responsibilities: 'community/limitation-of-responsibility/index.md'
+              - Changelog:
+                - 'community/changelog/index.md'
+                - '[2026-11] Technical triage on Android with MVT': 'community/changelog/2026-11-android-mvt/index.md'
         - locale: pt
           name: Portuguese
           build: true
@@ -189,6 +199,7 @@ plugins:
               - Getting started: 'home/getting-started/index.md'
               - Roadmap: 'home/roadmap/index.md'
               - Community: 'community/index.md'
+              - Registro de mudanças: 'community/changelog/index.md'
             - Explicadores:
               - Home: 'explainers/index.md'
               - Introdução à perícia digital consentida para a defesa dos direitos humanos: 'explainers/01-explainer-introduction-digital-forensics/index.md'
@@ -223,7 +234,10 @@ plugins:
               - Traducciones y localizaciones: 'community/translation-localization-i10n/index.md'
               - Licencia de uso: 'community/license/index.md'
               - Código de conducta: 'community/code-of-conduct/index.md'
-              - Limitación de responsabilidades: 'community/limitation-of-responsibility/index.md'              
+              - Limitación de responsabilidades: 'community/limitation-of-responsibility/index.md'
+              - Registro de mudanças:
+                - 'community/changelog/index.md'
+                - '[2026-11] Triaje técnico en Android con MVT': 'community/changelog/2026-11-android-mvt/index.md'
   - redirects:
       redirect_maps:
           'iniciar.md': 'https://forensics.socialtic.org/home/getting-started/index.html'
@@ -306,4 +320,3 @@ markdown_extensions:
             include:
               - es/references/*
               - en/references/*
-
